@@ -6,6 +6,17 @@ results/*
 !results/DISCREPANCIES.md
 !results/paper_data.json
 !results/paper_data.md
+!results/AUDIT.md
+!results/audit.json
+!results/selective_accuracy_corrected.json
+!results/missing/
+results/missing/*
+!results/missing/AUDIT_missing.md
+!results/missing/audit_missing.json
+!results/missing/missing_runs.json
+!results/missing/selective_accuracy_corrected.json
+!results/missing/suspect_items.json
+!results/missing/SUSPECT_ITEMS.md
 *.pyc
 __pycache__/
 *.egg-info/

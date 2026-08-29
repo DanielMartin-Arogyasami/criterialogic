@@ -71,3 +71,21 @@ def test_temperature_rejection_fallback():
     p = m.predict(_an_item())
     assert p.abstain is False and p.label is True          # succeeded via fallback
     assert m.temperature is None and c.n_calls == 2        # retried once without temperature
+
+
+def test_predict_batch_is_order_preserving_under_concurrency():
+    """Concurrency is a latency optimization only; it must not permute or drop results."""
+    items = generate_matching_items(harmonized_n2c2_criteria(), n_per_criterion=2, seed=7)
+
+    class _PerItem(OpenAILLMModel):
+        def __init__(self, **kw):
+            super().__init__(cache_dir=None, **kw)
+
+        def predict(self, item):
+            from criterialogic.tasks.base import Prediction
+            return Prediction(item_id=item.item_id, label=True, confidence=0.5)
+
+    serial = _PerItem(concurrency=1).predict_batch(items)
+    parallel = _PerItem(concurrency=8).predict_batch(items)
+    assert [p.item_id for p in serial] == [i.item_id for i in items]
+    assert [p.item_id for p in parallel] == [i.item_id for i in items]

@@ -16,7 +16,9 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from criterialogic.models.base import Model
@@ -36,6 +38,9 @@ from criterialogic.schema.logical_form import (
 from criterialogic.tasks.base import Item, Prediction
 
 DEFAULT_MODEL = os.environ.get("CRITERIALOGIC_LLM_MODEL", "gpt-4o-mini")
+#: Requests are I/O-bound and independent, so a batch runs them concurrently. Results are
+#: unaffected: each item has its own prompt and its own cache key, and order is preserved.
+DEFAULT_CONCURRENCY = int(os.environ.get("CRITERIALOGIC_LLM_CONCURRENCY", "8"))
 _SYSTEM = (
     "You are a careful clinical-trial eligibility assessor. You are given one eligibility "
     "CRITERION (which may nest AND / OR / NOT, temporal windows, and numeric thresholds) and a "
@@ -156,12 +161,15 @@ class OpenAILLMModel(Model):
         cache_dir: str | None = ".criterialogic_cache",
         max_retries: int = 4,
         client=None,
+        concurrency: int | None = None,
     ):
         self.model = model or DEFAULT_MODEL
         self.temperature = temperature
         self.max_retries = max_retries
         self._client = client
         self._cache_dir = Path(cache_dir) if cache_dir else None
+        self.concurrency = max(1, concurrency if concurrency is not None else DEFAULT_CONCURRENCY)
+        self._lock = threading.Lock()
         if self._cache_dir:
             self._cache_dir.mkdir(parents=True, exist_ok=True)
     def info(self) -> dict:
@@ -190,7 +198,8 @@ class OpenAILLMModel(Model):
             # Some reasoning models reject a custom temperature; drop it and stop sending it,
             # rather than failing (which would otherwise abstain on every item).
             if self.temperature is not None and "temperature" in str(e).lower():
-                self.temperature = None
+                with self._lock:
+                    self.temperature = None
                 resp = _call(include_temp=False)
             else:
                 raise
@@ -236,5 +245,11 @@ class OpenAILLMModel(Model):
         except Exception as e:  # per-item graceful failure -> abstain, don't crash the run
             return Prediction(item_id=item.item_id, label=False, confidence=0.0,
                               abstain=True, rationale=f"api/parse error: {type(e).__name__}: {e}")
+    def predict_batch(self, items: list[Item]) -> list[Prediction]:
+        """Concurrent over items, but order-preserving: output[i] corresponds to items[i]."""
+        if self.concurrency <= 1 or len(items) <= 1:
+            return [self.predict(i) for i in items]
+        with ThreadPoolExecutor(max_workers=self.concurrency) as pool:
+            return list(pool.map(self.predict, items))
 # Backwards-compatible alias for the previous stub name.
 ApiLLMModel = OpenAILLMModel

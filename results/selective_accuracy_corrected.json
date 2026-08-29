@@ -1,0 +1,30 @@
+{
+  "matching::rule_based": {
+    "status": "NOT RECOMPUTABLE \u2014 persist per_item_predictions [{item_id, confidence, correct}] and rerun this audit"
+  },
+  "compositional::rule_based": {
+    "status": "NOT RECOMPUTABLE \u2014 persist per_item_predictions [{item_id, confidence, correct}] and rerun this audit"
+  },
+  "compositional_large::rule_based": {
+    "status": "DEGENERATE \u2014 single confidence bin; true curve is flat",
+    "flat_value": 1.0
+  },
+  "matching::negation_blind": {
+    "status": "DEGENERATE \u2014 single confidence bin; true curve is flat",
+    "flat_value": 0.9231
+  },
+  "compositional::negation_blind": {
+    "status": "DEGENERATE \u2014 single confidence bin; true curve is flat",
+    "flat_value": 0.5278
+  },
+  "compositional_large::negation_blind": {
+    "status": "DEGENERATE \u2014 single confidence bin; true curve is flat",
+    "flat_value": 0.61
+  },
+  "matching::openai": {
+    "status": "NOT RECOMPUTABLE \u2014 persist per_item_predictions [{item_id, confidence, correct}] and rerun this audit"
+  },
+  "compositional::openai": {
+    "status": "NOT RECOMPUTABLE \u2014 persist per_item_predictions [{item_id, confidence, correct}] and rerun this audit"
+  }
+}

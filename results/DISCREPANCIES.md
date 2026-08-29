@@ -79,3 +79,33 @@ only with these qualifications, which the code enforces and the wording should m
   demonstrable from the artifact.
 - **Action:** work item W6 — record requested versus effective parameters per call inside the
   cache entry, and key the cache on the effective parameters so a parameter change invalidates it.
+
+## 4. Task C items whose gold label rests on a fact the prompt never states
+
+- **Status:** open — **blocks the §7.3 failure taxonomy**
+- **Location:** `criterialogic/models/llm_api.py::render_patient` vs
+  `criterialogic/oracle.py::_check_temporal`
+- **Paper says:** §7.3 attributes the `gpt-5-nano` matching errors to reasoning failures, four of
+  them to the temporal category.
+- **Code does:** `Fact.current` is a plain `bool` defaulting to `False`, and `_check_temporal`
+  returns it directly for `TemporalOp.CURRENT`, so `current=False` is a definite *false* rather
+  than *unknown*. `render_patient` emits `"currently active"` only when `current` is true and
+  emits nothing when it is false. A present-but-not-current fact therefore renders as
+  `- aspirin for mi prophylaxis: present`, which is textually identical to a fact whose currency
+  was never recorded.
+- **Consequence:** for `match:ASP-FOR-MI:{000,001,003,006}` and `match:ALCOHOL-ABUSE:000` the gold
+  label is `not_met` on the strength of a field the prompt does not contain. The model answered
+  `met` and gave one verbatim rationale across the four aspirin items — the reading the prompt
+  actually supports. These are unanswerable items (verdict **B** in
+  `results/missing/SUSPECT_ITEMS.md`), not temporal-reasoning failures, and they are 4 of the 5
+  errors the taxonomy is computed from.
+- **Evidence:** `results/missing/suspect_items.json`, dumped by `python run_missing.py
+  --dump-suspects`; the oracle's own verdict is correct given the record, so this is a rendering
+  defect, not an oracle defect.
+- **Action:** two candidate fixes, both changing Task C numbers, so the author picks before any
+  rerun. (a) Make the renderer total over the fields the oracle reads — emit
+  `"not currently active"` when `current` is false — which makes the items answerable and keeps
+  the labels. (b) Make `Fact.current` tri-state (`bool | None`) so *unknown currency* is
+  representable and the oracle returns `None` for it, which is the more faithful model but
+  changes gold labels and the unknown-collapse convention. Until one is applied, §7.3 must not
+  report these four items as temporal reasoning failures.
