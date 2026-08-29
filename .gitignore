@@ -12,3 +12,6 @@ __pycache__/
 
 # Secrets: never commit API keys.
 .env
+
+# Single-file bundle used to bootstrap the repo; source of truth is the tree itself.
+CriteriaLogic_bundle.md
