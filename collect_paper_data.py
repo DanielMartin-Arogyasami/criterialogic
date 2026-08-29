@@ -7,7 +7,9 @@ results/paper_data.json (machine-readable). Reports explicitly what CANNOT be fi
 from __future__ import annotations
 
 import json
+import os
 import platform
+import re
 import subprocess
 import sys
 from collections import Counter
@@ -27,6 +29,7 @@ from criterialogic.tasks.compositional import _atom_pool, generate_compositional
 from criterialogic.taxonomy.categories import CATEGORY_DESCRIPTIONS
 
 RESULTS = Path("results")
+_ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 COVERAGES = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
 
@@ -38,6 +41,28 @@ def curve_at(items, preds):
         pt = next((p for p in curve if p["coverage"] >= c - 1e-9), None)
         out[f"{int(c * 100)}%"] = round(pt["accuracy"], 4) if pt else None
     return out
+
+
+def run_pytest() -> dict:
+    """Actually run the suite. A hardcoded count in a reproducibility block goes stale."""
+    p = subprocess.run([sys.executable, "-m", "pytest", "--tb=no", "-q"],
+                       capture_output=True, text=True, timeout=1800)
+    tail = [ln for ln in p.stdout.strip().splitlines() if ln.strip()]
+    summary = tail[-1] if tail else ""
+    m = re.search(r"(\d+) passed", summary)
+    fail = re.search(r"(\d+) failed", summary)
+    return {"passed": int(m.group(1)) if m else None,
+            "failed": int(fail.group(1)) if fail else 0,
+            "exit_code": p.returncode, "summary": summary}
+
+
+def run_ruff() -> dict:
+    p = subprocess.run([sys.executable, "-m", "ruff", "check", ".", "--no-cache"],
+                       capture_output=True, text=True, timeout=600,
+                       env={**os.environ, "NO_COLOR": "1"})
+    out = _ANSI_RE.sub("", p.stdout.strip() or p.stderr.strip())
+    return {"exit_code": p.returncode,
+            "summary": out.splitlines()[-1][:200] if out else ""}
 
 
 def evaluate(model, items, seed):
@@ -161,15 +186,15 @@ def main() -> None:
         "llm_temperature_requested": 0.0,
         "llm_temperature_effective": "none (API default)",
         "llm_temperature_note": (
-            "gpt-5-nano rejects a custom temperature; on the first live call the adapter dropped it "
-            "and every subsequent completion used the API default. This collection pass replayed "
-            "cached responses, so it never re-triggered the fallback."
+            "gpt-5-nano rejects a custom temperature; the adapter drops it and retries, so every "
+            "completion used the API default. The dropped parameter is not recorded per call — "
+            "see results/DISCREPANCIES.md entry 3."
         ),
         "llm_response_cache_entries": len(list(Path(".criterialogic_cache").glob("*.json"))),
         "packages": [p for p in freeze if p.split("==")[0].lower() in
                      {"pydantic", "pydantic-core", "openai", "pytest", "ruff", "criterialogic"}],
-        "tests_passing": 33,
-        "lint": "ruff check . -> All checks passed",
+        "tests": run_pytest(),
+        "lint": run_ruff(),
     }
 
     # ---------------- What cannot be filled ---------------- #
@@ -397,7 +422,7 @@ def write_markdown(d: dict) -> None:
       f"effective **{rp['llm_temperature_effective']}** — {rp['llm_temperature_note']}")
     A(f"- Cached LLM responses: {rp['llm_response_cache_entries']}")
     A(f"- Packages: {', '.join(rp['packages'])}")
-    A(f"- Tests: {rp['tests_passing']} passing · Lint: {rp['lint']}")
+    A(f"- Tests: {rp['tests']['summary']} · Lint: {rp['lint']['summary']}")
     A(f"- Seeds: {d['dataset_composition']['seeds']}")
     A("")
 
