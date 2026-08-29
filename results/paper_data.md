@@ -1,6 +1,6 @@
 # CriteriaLogic — collected data for the paper
 
-Generated 2026-08-29T19:32:51+00:00 · package v0.1.0 · schema v0.1.0 · Python 3.12.10
+Generated 2026-08-29T20:15:09+00:00 · package v0.1.0 · schema v0.1.0 · Python 3.12.10
 
 > **INTEGRITY BANNER — read before using any number below.**
 > Task C here uses the *real, public* n2c2 criterion definitions paired with **synthetic patients**, not the DUA-gated n2c2 records. Task D is **synthetic by construction**. The `rule_based` baseline evaluates an already-structured logical form and is therefore *the oracle itself*: its perfect scores are a software-validation artifact (paper §7.6), **not** an empirical finding. Only the `openai` rows are genuine model measurements, and even those are measured against synthetic patients.

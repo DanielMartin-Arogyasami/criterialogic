@@ -1,7 +1,11 @@
 # Data-release boundary: raw data is NEVER committed (esp. DUA-gated n2c2).
 data/raw/
 data/processed/
-results/
+# Generated run artifacts are transient; only the curated collection outputs below are tracked.
+results/*
+!results/DISCREPANCIES.md
+!results/paper_data.json
+!results/paper_data.md
 *.pyc
 __pycache__/
 *.egg-info/

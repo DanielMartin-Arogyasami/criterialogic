@@ -224,7 +224,7 @@
         "seed": 13,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 1.0,
@@ -274,7 +274,7 @@
         "seed": 29,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 1.0,
@@ -328,7 +328,7 @@
         "seed": 29,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 1.0,
@@ -436,7 +436,7 @@
         "seed": 13,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 0.7273,
@@ -489,7 +489,7 @@
         "seed": 29,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 0.75,
@@ -546,7 +546,7 @@
         "seed": 29,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 0.675,
@@ -656,7 +656,7 @@
         "seed": 13,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:51+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 1.0,
@@ -753,7 +753,7 @@
         "seed": 29,
         "python": "3.12.10",
         "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T19:32:51+00:00"
+        "timestamp_utc": "2026-08-29T20:15:08+00:00"
       },
       "selective_accuracy": {
         "10%": 1.0,
@@ -821,7 +821,7 @@
   "reproducibility": {
     "python": "3.12.10",
     "platform": "Windows-11-10.0.26200-SP0",
-    "timestamp_utc": "2026-08-29T19:32:51+00:00",
+    "timestamp_utc": "2026-08-29T20:15:09+00:00",
     "llm_model_id": "gpt-5-nano",
     "llm_temperature_requested": 0.0,
     "llm_temperature_effective": "none (API default)",
