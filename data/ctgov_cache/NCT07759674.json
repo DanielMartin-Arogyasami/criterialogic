@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Women aged 18-45 years.\n* Diagnosis of polycystic ovary syndrome (PCOS) according to the Rotterdam diagnostic criteria.\n* Eligible for routine metformin therapy as determined by the treating gynecologist.\n* Willing and able to provide written informed consent.\n* Willing to attend scheduled follow-up visits and complete all study assessments over the six-month study period.\n\nExclusion Criteria:\n\n* Pregnancy or breastfeeding.\n* Diagnosis of type 1 diabetes mellitus or established type 2 diabetes requiring insulin therapy.\n* History of chronic kidney disease, chronic liver disease, hematological disorders, malignancy, or other severe systemic diseases.\n* Current use of medications known to affect glucose metabolism, iron metabolism, erythropoietin levels, or hematological parameters within the previous three months, other than routine metformin prescribed as part of the study.\n* Known hypersensitivity or contraindication to metformin. Inability or unwillingness to complete the scheduled follow-up assessments.\n* Participation in another interventional clinical trial during the study period."
+    },
+    "identificationModule": {
+      "briefTitle": "Relationship Between Metformin Treatment, Anemia, and Erythropoietin Levels in Women With Polycystic Ovary Syndrome in Jordan",
+      "nctId": "NCT07759674"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

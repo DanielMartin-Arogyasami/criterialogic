@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Subject is male or female between 18 - 75 years old, providing legally effective, written informed consent in conformance with 45 CFR Parts 160 and 164\n* Subject has a Fitzpatrick Skin Type of I, II, or III, Light Skin Group or IV, V, or VI Dark Skin Group with an approximately equal distribution of all skin types (approximately 10 of each Fitzpatrick skin type) within each group as determined by ITA Angle\n* Subject agrees to undergo the micro needling procedure on their back (a total of 5 sites)\n* Subject should not have their back shaved or waxed 3 days prior to the start of the study\n* Subject is able to read, write, speak, and understand English\n* Subject is in good general health\n* Subject agrees to avoid UV exposure to the test area for the duration of the study\n* Subject is willing to wear loose-fitting clothing that exposes mid to lower back for study visits\n* Subject is dependable and able to follow directions as outlined in the protocol and anticipates being available for all study visits\n* Subject is willing to participate in all study evaluations and follow all instructions\n* Subject has a current Subject Profile Form on file at ECRL\n* Subject has uniform skin color over the test area; ITA° calculation range ≤10-point difference (example: 35.6°-45.6°)\n* Subject agrees to sign a Photography Release Form, providing consent for the capture of digital images for use in relation to this clinical study\n* Subject has completed a HIPAA Authorization Form in conformance with 45 CFR Parts 160 and 164\n\nExclusion Criteria:\n\n* Female subject is pregnant, nursing, planning a pregnancy, or using inadequate birth control\n* Subject has a history of abnormal response to sunlight/UV radiation; sensitivity to any ingredient of the test materials, standard or latex; or any known allergies to sunscreen, cosmetic, and/or toiletry products\n* Subject has a history of or any current significant dermatological condition, such as atopic dermatitis (eczema), psoriasis, skin cancer, melanoma, active dermal lesions, nevi, keloids blemishes, abnormal scarring or moles, lupus, diabetes, or connective tissue disease that would increase the risk associated with participation\n* Subject has received treatment with sympathomimetics, antihistamines, vasoconstrictors, non-steroidal anti-inflammatory agents, and/or systemic or topical corticosteroids within one week prior to initiation of the study.\n* Subject has used a prohibited medication (per separately provided prohibited medication list) within the specified timeframes prior to initiation of the study\n* Subject has used/applied any personal care products (e.g. lotions, sunscreens, sunless tanners) and/or topical medications in/on the testing area (the back between the shoulder blades and the waist line) within 24 hours prior to Day 1 or during the study\n* Subject has any known communicable disease(s) (e.g. HIV, STD's, Hepatitis B, Hepatitis C, etc.)\n* Subject has any skeletal protrusions and/or extreme areas of curvature in the test area\n* Subject with medical treatment/vaccination planned during the study, which would make the subject ineligible, place the subject at undue risk, or confound the outcome of the study, per the discretion of the PI.\n* Subject has undergone any surgical procedure in the last 12 months\n* Subject has undergone chemical or physical treatment procedures in the test area within the last 12 months\n* Subject is planning hospitalization during the study\n* Subject exceeds the weight limit of 300 pounds due to equipment limitations\n* Subject has any condition that might confound the study results, increase the risk associated with participation, or interfere with study participation;\n* Subject has any visible sunburn or suntan in testing area\n* Subject has used an artificial tanning lamp or had recent sun exposure to the test area within the past 2 months\n* Subject has participated in another UV exposure clinical study in the last 2 months, or is currently enrolled in a clinical study utilizing the same test site (i.e., no back patches during a UV exposure study)."
+    },
+    "identificationModule": {
+      "briefTitle": "A Clinical Study to Evaluate the Efficacy and SPF of Two Test Materials According to an Adaptation of the Guidelines of the FDA Sunscreen Drug Products for Over-the-Counter Human Use",
+      "nctId": "NCT07789639"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

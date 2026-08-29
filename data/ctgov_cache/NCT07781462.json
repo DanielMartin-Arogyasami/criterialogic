@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥ 18 years.\n2. Confirmed diagnosis of acute heart failure according to established clinical and echocardiographic criteria.\n3. Confirmed active ICU delirium at enrollment, as defined by:\n\n   * Positive CAM-ICU or ICDSC (score ≥4) at screening AND\n   * RASS ≥ +1 (agitation) or RASS ≤ -1 (hypoactive) indicating a motoric subtype.\n4. Informed consent obtained from the patient or legal representative.\n\nExclusion Criteria:\n\n1. Primary neurological events (e.g., stroke, seizure, traumatic brain injury) as cause of altered mental status.\n2. Severe hepatic dysfunction (e.g., Child-Pugh Class C) or renal impairment (eGFR \\< 30 mL/min/1.73m²).\n3. Known hypersensitivity or contraindication to ketamine or dexmedetomidine.\n4. Current or recent (within 48 hours) use of antipsychotics, benzodiazepines, or other sedatives.\n5. History of psychosis, schizophrenia, or substance use disorder.\n6. Pregnant or lactating women.\n7. Patients requiring deep sedation or neuromuscular blockade for clinical reasons."
+    },
+    "identificationModule": {
+      "briefTitle": "Intravenous Infusion of Low Dose Ketamine Versus Dexmedetomedine for Delirium Treatment in Acute Heart Failure",
+      "nctId": "NCT07781462"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

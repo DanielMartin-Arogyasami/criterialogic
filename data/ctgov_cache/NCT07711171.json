@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* age: 40-75 years old;\n* HbA1c: 7.0 - 10.0%;\n* Moca scale total score between 20-26 (duration of education is more than 10 years) or total score between 20 and 25 (duration of education is less than 10 years);\n* sign informed consent;\n\nExclusion Criteria:\n\n* left-handedness;\n* duration of diabetes is less than 6 years;\n* inability to complete central nervous system magnetic resonance imaging;\n* alcohol or drug addiction history;\n* use of other oral hypoglycemic drugs within 90 days prior to enrollment except for metformin;\n* Family or past history of neurological or psychiatric disorders, pancreatitis, medullary thyroid cancer and multiple endocrine adenomatosis;\n* History of recurrent urinary tract infection and malignant tumor;\n* History of severe gastrointestinal diseases and gastroenteric surgery;\n* Pregnancy/lactation status;\n* Abnormal liver function (liver enzyme index is more than 2.5 times the upper limit of the reference range) or abnormal kidney function (estimated glomerular filtration rate is less than 45ml/min); Type 1 diabetes; other diseases or conditions that reduce the possibility of enrollment or complicate enrollment, such as frequent changes in the working environment and unstable living environment, which are likely to cause loss of follow-up, according to the judgment of the researchers;"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Safety of Canagliflozin in the Treatment of Type 2 Diabetes With Mild Cognitive Impairment",
+      "nctId": "NCT07711171"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

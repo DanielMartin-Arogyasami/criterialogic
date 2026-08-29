@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Provision of signed and dated informed consent form\n* Stated willingness to comply with all study procedures and availability for the duration of the study\n* Diagnosis of epilepsy\n* At least 2 years since participants most recent seizure\n* At most 35% calculated 1-year post-discontinuation seizure risk, based upon the existing multivariable calculator if they are on only 1 ASM, otherwise no such restriction if they are more than 1 ASM\n* Willingness to adhere to the study intervention\n* Taking at least 1 antiseizure medication prior to enrollment\n\nExclusion Criteria:\n\n* Current pregnancy or planned pregnancy during the study period\n* History of epilepsy surgery\n* Large space-occupying radiographic lesion such as a large cortical tumor, large artery stroke, or encephalomalacia from traumatic brain injury.\n* Subject has any other clinically significant conditions or circumstances that in the judgment of the investigator or treating clinician should preclude study participation.\n\nPlease note: The researchers will ask participants not to drive for 2 months after ASM discontinuation if on monotherapy, and exercise caution while driving if stopping one antiseizure medication but remaining on others"
+    },
+    "identificationModule": {
+      "briefTitle": "Outcomes After Planned Discontinuation of AntiSeizure Medication",
+      "nctId": "NCT07750496"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

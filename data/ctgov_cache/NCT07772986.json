@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Healthy (ASA I or II) children.\n* Cooperative (Frankel behavior rating 3 or 4) children\n* children having at least one mandibular primary 2nd molar with deep carious lesion.\n* No radiographic evidence of the developing permanent successor on orthopantomogram.\n* Signs and symptoms typical of irreversible pulpitis or pulp necrosis.\n* patients with minimal crowding (1-3 mm) or perfect alignment according to the Little's Irregularity Index in the lower arch.\n\nExclusion Criteria:\n\n* Non-restorable primary molars.\n* Primary molars with severe infra-occlusion.\n* Presence of iatrogenic or pathological perforation of the pulpal floor.\n* Post-deroofing presence of healthy vital pulp, presenting as uniformly reddish pink vascular tissue.\n* Preoperative radiograph showing signs of internal or external pathological root resorption.\n* Root canal calcification."
+    },
+    "identificationModule": {
+      "briefTitle": "Bioceramic Sealer as an Obturation Material in Retained Primary Molars",
+      "nctId": "NCT07772986"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

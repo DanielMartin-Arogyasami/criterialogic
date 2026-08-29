@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Key Inclusion Criteria\n\n\\- Healthy participants 18 through 64 years of age who do not have medical conditions that put them at a higher risk for severe COVID-19.\n\nKey Exclusion Criteria\n\n* Participants who tested positive for COVID-19 within 6 months (180 days) prior to Visit 1\n* Participants who have recently received a vaccine, or plan to receive a nonstudy COVID-19 or comparator vaccine during participation.\n\nThe complete list of inclusion and exclusion criteria are listed in the protocol."
+    },
+    "identificationModule": {
+      "briefTitle": "A Study to Learn About a COVID-19 Vaccine in Healthy Adults 18 Through 64 Years of Age",
+      "nctId": "NCT07730450"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

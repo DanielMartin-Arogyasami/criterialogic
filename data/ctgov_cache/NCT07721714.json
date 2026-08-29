@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nSubjects age 22 and older with healthy eyes. Nearsightedness between -1.00 diopters and -8.00 diopters.\n\nSubjects with less than or equal to 3.00 diopters of astigmatism.\n\nExclusion Criteria:\n\nSubjects under the age of 22. Subjects with excessively thin corneas. Subjects with topographic evidence of keratoconus. Subjects with ectactic eye disorders. Subjects with autoimmune diseases. Subjects who are pregnant or nursing. Subjects must have similar levels of nearsightedness in each eye. They can not be more than 1.5 diopter of difference between eyes.\n\nSubjects with more than 3.00 diopters of astigmatism Subjects must have similar levels of astigmatism in each eye. They can not have more than 0.75 diopters of difference between eyes."
+    },
+    "identificationModule": {
+      "briefTitle": "SMILE Surgery in One Eye Compared to Ray Tracing-guided LASIK Surgery in the Fellow Eye",
+      "nctId": "NCT07721714"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-23",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

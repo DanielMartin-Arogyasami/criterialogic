@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "INCLUSION CRITERIA\n\n1. Age 4 weeks to 17 years\n2. Positive blood culture with a i) pathogenic bacterium (eg, Staphylococcus aureus, Streptococcus pyogenes, Streptococcus pneumoniae, Enterobacterales, Fusobacterium spp. and other pathogenic bacteria) or ii) preliminary blood culture result (eg, Gram-negative rods or Gram-positive cocci in clusters/chains) judged by the investigator to be clinically relevant (ie, not a contaminant) and for which IV antibiotic therapy would be indicated according to standard guidelines\n3. Clinical stability, defined as: (a) respiratory and haemodynamic stability, without need for oxygen, IV fluid therapy or inotropic support; and (b) well-appearing with signs of clinical improvement (eg, improved physical activity), as judged by the investigator\n4. Tolerating oral fluids and diet, as judged by the investigator\n5. Within the randomization window (see below)\n6. Informed consent obtained from a parent or guardian, and from the patient if aged 15 years or older\n\nRandomization window:\n\nRandomization will take place (1) as soon as possible after eligibility is confirmed, and (2) before completion of a maximum of 4 days (96 hours) of effective IV antibiotic therapy, including the duration of the last IV dose (eg, 8 hours for penicillin and 24 hours for ceftriaxone)\n\nEXCLUSION CRITERIA\n\n1. Complicated infections: a. Suspicion of endocarditis (echocardiography not performed routinely), b. Suspicion of CNS infection or post-septal cellulitis, c. Foreign material (eg, bone infection involving prosthetic material). d. Complicated postoperative course (eg, perforated appendicitis)\n2. Blood culture positive with a. Neisseria meningitidis, b. Streptococcus pneumoniae if afebrile within 24 hours of blood culture collection, c. bacteria considered possible contaminants (eg, coagulase-negative staphylococci, Corynebacterium spp., Micrococcus spp.)\n3. Premature infants with a corrected age of less than 28 days\n4. No available suitable oral antibiotic (eg, due to antimicrobial resistance or contraindications)\n5. Known chronic disease associated with an increased risk of severe infection: i) Immunosuppression, e.g., chemotherapy or biological therapy predisposing to severe infections, ii) Permanent central venous catheter due to an underlying condition, iii) Severe urinary tract abnormalities predisposing to bacteremia, including children receiving prophylactic antibiotic treatment."
+    },
+    "identificationModule": {
+      "briefTitle": "Oral Switch in Pediatric Bloodstream Infections",
+      "nctId": "NCT07791914"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

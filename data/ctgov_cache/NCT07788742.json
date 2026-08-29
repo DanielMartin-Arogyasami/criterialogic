@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 or older at time of consent.\n* Able to read and understand English and provide written informed consent.\n* History of Gastroesophageal Reflux Disease (GERD) with or without heartburn.\n* Diagnosed with nondysplastic Barrett's Esophagus (NBDE) defined as meeting the following within the past 3 years:\n\n  * Endoscopically confirmed BE with segment length ≥2 cm (to avoid those with an irregular Z line), and\n  * Histologic evidence of intestinal metaplasia without dysplasia (\"dysplasia\" includes indefinite for dysplasia).\n* Currently on proton pump inhibitor (PPI) maintenance therapy, defined as PPI prescribed once or twice daily for 3 or more months (defined as 90 days or more) from consent. Any formulation and dosage of PPI will be included, including pantoprazole, omeprazole, esomeprazole, lansoprazole, rabeprazole, dexlansoprazole or their generic equivalents.\n* If currently on twice daily PPI, then able to modify PPI regimen to once daily dosing as part of their routine clinical care.\n* Ability to take oral medication and willing to adhere to study intervention regimen.\n* Willing to follow lifestyle recommendations as outlined in protocol section 5.3\n\nExclusion Criteria:\n\n* Barrett's Esophagus (BE) with dysplasia (indefinite for dysplasia, or low-grade dysplasia, or high-grade dysplasia) diagnosed within 12 months of study entry.\n* Current or prior esophageal adenocarcinoma (EAC).\n* Use of other acid suppressive medications.\n* H. pylori diagnosis or treatment within the past 6 months prior to study entry.\n* History of upper gastrointestinal tract surgery (e.g., esophagectomy or surgery for reflux disease).\n* Current contraindication to 24hr pH impedance test, including:\n\n  * Recent broken nose, nasal surgery, or known deviated septum; or\n  * Bleeding disorders or those taking certain blood-thinning medications and unable to temporarily discontinue use per current clinical guidance may also be excluded due to increased risk of bleeding during catheter insertion; or\n  * Individuals with implanted devices like pacemakers or defibrillators.\n* Known hypersensitivity or allergic reaction to any component of the study intervention.\n* Treatment with another investigational product within 30 days prior to consent.\n* Current use of rilpivirine-containing products.\n* Pregnant, breastfeeding, or considering becoming pregnant or intending to donate ova during the study and for 30 days after the last dose of study drug."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Potassium-Competitive Acid Blockers in Barrett's Esophagus (PCAB BE Study)",
+      "nctId": "NCT07788742"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-26",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

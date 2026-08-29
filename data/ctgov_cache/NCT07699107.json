@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Stated willingness to comply with all study procedures and availability for the duration of the study period\n* History of juvenile idiopathic arthritis (JIA) or chronic anterior uveitis (CAU), diagnosed prior to 16 years of age (patient may be older than 16 at time of enrollment)\n* ≥2 years of age (per FDA approval for use in children with polyarticular JIA)\n* Weight must be ≥15kg\n* Formal diagnosis of JIA-associated uveitis or CAU with no other suspected etiology\n* ≥24 consecutive months of controlled ocular inflammation (≤0.5+ anterior chamber cell, ≤0.5+ vitreous haze, and no active retinal/choroidal lesions in either eye)\n* ≥24 consecutive months of controlled arthritis verified by a pediatric rheumatologist if defined as JIA-associated uveitis\n* ≥24 consecutive months of treatment with adalimumab or biosimilar of adalimumab\n* ≥180 days on a stable dose of adalimumab or biosimilar of adalimumab; dose must be no greater than 20mg (if weight \\<30kg), or 40mg (if weight ≥30kg), injected every two weeks\n* If on biosimilar of adalimumab, ≥90 days on the biosimilar\n* Ability to continue to obtain commercial supply of adalimumab or biosimilar\n* If on a conventional disease-modifying anti-rheumatic drug (cDMARD) (injectable or oral methotrexate, mycophenolate mofetil, azathioprine, or leflunomide), dose must be ≤25 mg weekly for methotrexate, ≤3 g daily for mycophenolate mofetil, ≤250 mg daily for azathioprine, or ≤20 mg daily for leflunomide; dose and route of administration must be stable for ≥90 days\n* Willingness to limit consumption of alcohol during the study period\n* Agreement to avoid live attenuated vaccinations\n* Agreement to use highly effective contraception or abstinence for ≥28 days prior to screening and throughout the study period (for males and females of reproductive age)\n* Suitable, in the opinion of the Investigator, to continue treatment with adalimumab/biosimilar per regional labeling\n\nExclusion Criteria:\n\n* History of acute anterior uveitis characterized by redness and symptoms, including but not limited to floaters, pain, and light sensitivity\n* Intraocular surgery in the past 90 days or planned surgery in the next 24 weeks\n* Severe cataract or opacity preventing view to the posterior pole in both eyes\n* Chronic hypotony (\\<5mmHg for ≥90 days) in either eye\n* Treatment with oral corticosteroids or intraocular corticosteroid injection within the last 24 weeks\n* Use of topical corticosteroid eye drops within the last 90 days\n* Use of nonsteroidal anti-inflammatory drug (NSAID) eye drops within the last 90 days\n* Pregnancy or lactation (a pregnancy test will be conducted at baseline and follow-up visits for females post-menarche)\n* Presence of intraretinal or subretinal fluid in either eye\n* Prior safety or tolerability issues with adalimumab\n* History of cancer, active tuberculosis, or hepatitis B\n* Other medical condition expected to dictate treatment course during the study\n* Any of the following laboratory test results on their most recent tests within the past 90 days prior to screening/enrollment: leukocyte count \\<2500, platelet count ≤75000, hemoglobin\\<9.0, aspartate transaminase (AST) or alanine transaminase (ALT) ≥ 2 times the upper limit of normal range, creatinine ≥1.5"
+    },
+    "identificationModule": {
+      "briefTitle": "Adalimumab Dose Adjustment for Pediatric Uveitis Treatment Trial",
+      "nctId": "NCT07699107"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

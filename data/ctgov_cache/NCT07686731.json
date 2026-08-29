@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adults 18-75 years who are U.S. military Veterans; able to read/understand English and provide written informed consent;\n2. Exposure to a DSM-5 Criterion A traumatic event;\n3. Current PTSD, duration \\> 3 months, CAPS-5 total score ≥ 12\n4. Insomnia diagnosis indicated by ISI score \\>14\n5. If taking non-exclusionary psychotropics (e.g., SSRI/SNRI, tetracyclic antidepressants, tricyclics, antipsychotics, and mood stabilizers, insomnia medication, neuroleptics, anti-psychotics) must be on a dose stable ≥ 4 weeks before randomization.\n6. If in supportive psychotherapy, stable ≥ 6 weeks before randomization (no concurrent exposure-based PTSD or CBT-I).\n7. Women of childbearing potential: negative urine pregnancy test at screening; agree to use a medically acceptable contraception method during treatment.\n\nExclusion Criteria:\n\n1. DSM-5 alcohol, marijuana, and/or other substance use disorder in the last 3 months. Mild alcohol and marijuana use not meeting criteria for disorder permissible;\n2. Lifetime bipolar disorder I or II, schizophrenia, schizoaffective disorder, obsessive-compulsive disorder, or major depressive disorder with psychotic features;\n3. Exposure to trauma in the last 3 months;\n4. Prominent suicidal or homicidal ideation, any suicidal behavior in the past 3 months on the Columbia Suicide Severity Rating Scale (C-SSRS)83, or increased risk of suicide that necessitates additional therapy or inpatient treatment;\n5. Pre-existing sleep apnea by type III device with AHI \\>15 in the absence of adherence to effective treatment (such as CPAP or oral device);\n6. Night shift work or extreme morning or evening tendencies;\n7. Neurologic disorder or systemic illness affecting CNS function;\n8. Chronic or unstable medical illness (i.e., angina, myocardial infarction within the past 6 months, congestive heart failure, preexisting hypotension or orthostatic hypotension, heart block or arrhythmia, chronic renal or hepatic failure, pancreatitis, and severe chronic obstructive pulmonary disease);\n9. Severe cognitive impairment as assessed by the MoCA (or alternative validated threshold per site SOP)\n10. Pregnancy or breastfeeding, or unwillingness to use effective contraception (women of childbearing potential).\n11. Previous adverse reaction to a hypnotic;\n12. Current use of sedative-hypnotics, benzodiazepines, moderate or strong CYP3A inhibitors, or strong CYP3A inducers or Digoxin;\n13. Current participation in exposure-based PTSD or behavioral insomnia treatments."
+    },
+    "identificationModule": {
+      "briefTitle": "Suvorexant 3 - PE-PC",
+      "nctId": "NCT07686731"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

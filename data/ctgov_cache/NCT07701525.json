@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* diagnosed case of PCOS, ≥ 6-months\n\nExclusion Criteria:\n\n* Hyperprolactinemia, hypothyroidism, adrenal hyperplasia or Cushing's syndrome (on history \\& medical record review)"
+    },
+    "identificationModule": {
+      "briefTitle": "Myo-Inositol and D-Chiro-Inositol for Menstrual Irregularities and Hormone Changes in Women With Polycystic Ovarian Syndrome",
+      "nctId": "NCT07701525"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

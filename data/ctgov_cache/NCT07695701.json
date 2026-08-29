@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Key Inclusion Criteria:\n\n* Participants aged 18 to 80\n* Confirmed diagnosis of ATTR-CM requiring targeted therapy\n* At screening: New York Heart Association (NYHA) Class I/II; estimated glomerular filtration rate (eGFR) ≥40 mL/min/1.73m2; left ventricular ejection fraction (LVEF) \\>35%; left ventricular (LV) wall thickness ≥12 mm.\n* Heart failure condition has been clinically stable for at least 6 weeks prior to screening.\n\nKey Exclusion Criteria:\n\n* Current or planned implantation of a cardiac implantable electronic device (eg, pacemaker, implantable cardiac defibrillator).\n* Acute myocardial infarction, acute coronary syndrome or coronary revascularization, or experienced stroke or transient ischemic attack within 90 days prior to screening.\n* Hemodynamic instability.\n* Likely to undergo heart transplantation within 12 months from screening.\n* Confirmed diagnosis of AL amyloidosis at screening.\n* At screening: NYHA Class III/IV; National Amyloidosis Center (NAC) Stage 3.\n* Prior or current treatment with acoramidis."
+    },
+    "identificationModule": {
+      "briefTitle": "Cardiac Magnetic Resonance and Echocardiography Study With Acoramidis",
+      "nctId": "NCT07695701"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

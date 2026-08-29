@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 years or older\n* Undergone spinal surgery (any approach) for treatment of vertebral metastatic disease at UPMC Presbyterian, Shadyside, or Mercy Hospital\n* Planned for discharge to home or acute rehabilitation facility (not hospice)\n* Willing and able to provide written informed consent\n* Able to take oral medications\n* Access to a telephone for follow-up calls\n\nExclusion Criteria:\n\n* Already receiving therapeutic anticoagulation for another indication (e.g., atrial fibrillation, prior VTE, mechanical heart valve)\n* Planned initiation of therapeutic anticoagulation within the next 30 days for another indication\n* Known allergy or hypersensitivity to apixaban\n* History of pathological bleeding (e.g., intracranial hemorrhage, gastrointestinal bleeding requiring transfusion or endoscopic intervention within the past 6 months)\n* Active bleeding at time of planned enrollment\n* Platelet count less than 50,000/mm³ at time of enrollment\n* Hemoglobin less than 8 g/dL at time of enrollment\n* Serum creatinine greater than 2.5 mg/dL\n* ALT or AST greater than 3 times the upper limit of normal\n* Total bilirubin greater than 2 times the upper limit of normal\n* Known severe hepatic impairment (Child-Pugh Class C)\n* Pregnancy or breastfeeding\n* Women of childbearing potential unwilling to use adequate contraception during study participation\n* History of proximal gastrointestinal resection (i.e., gastrectomy and/or proximal small bowel resection) that might alter oral drug absorption\n* Concurrent use of strong dual inhibitors of CYP3A4 and P-gp or moderate CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin, diltiazem)\n* Concurrent use of strong dual inducers of CYP3A4 and P-gp (rifampin, carbamazepine, phenytoin, St. John's Wort)\n* Inability to safely discontinue all antiplatelet medications for the 30-day study drug period, as determined by the treating cardiologist or prescribing physician (aspirin, clopidogrel, ticagrelor)\n* Inability or unwillingness to discontinue chronic NSAID use during the 30-day study drug period (as-needed use less than 3 days per week is acceptable)\n* Planned surgery or invasive procedure within the next 30 days\n* Hospital length of stay 30 days or greater\n* Prisoner or incarcerated individual\n* Any other condition that, in the investigator's opinion, would make the subject unsuitable for study participation or unable to comply with study procedures"
+    },
+    "identificationModule": {
+      "briefTitle": "Extended Prophylactic Anticoagulation Following Spinal Surgery for Metastatic Disease",
+      "nctId": "NCT07713875"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

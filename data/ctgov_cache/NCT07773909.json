@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Newly diagnosed acute myeloid leukemia\n* Age 18 years or older\n* Deemed ineligible for intensive chemotherapy by the treating physician based on age (≥60 years), performance status or comorbidity, financial constraints, or patient unwillingness to receive intensive chemotherapy\n* Written informed consent\n\nExclusion Criteria:\n\n* Acute promyelocytic leukemia\n* Previous treatment with a hypomethylating agent"
+    },
+    "identificationModule": {
+      "briefTitle": "Venetoclax With Hypomethylating Agents in Newly Diagnosed AML Unfit for Intensive Chemotherapy",
+      "nctId": "NCT07773909"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

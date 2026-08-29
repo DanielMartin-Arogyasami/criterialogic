@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male participants aged 50 years or older.\n* Newly diagnosed with benign prostatic hyperplasia (BPH).\n* Moderate to severe lower urinary tract symptoms (LUTS), defined as International Prostate Symptom Score (IPSS) \\> 7.\n* Prostate volume \\>40 mL confirmed by transrectal ultrasonography (TRUS).\n* Sexually active with a baseline International Index of Erectile Function-Erectile Function (IIEF-EF) score \\>10.\n* Prostate-specific antigen (PSA) \\<4 ng/mL and no suspicious findings on digital rectal examination (DRE).\n* Able and willing to provide written informed consent.\n\nExclusion Criteria:\n\n* History of prostate cancer.\n* Previous prostate surgery.\n* Abnormal digital rectal examination suggestive of malignancy.\n* Severe erectile dysfunction (IIEF-EF score ≤10).\n* Uncontrolled diabetes mellitus.\n* Uncontrolled cardiovascular disease.\n* Neurological disorders affecting bladder function.\n* Renal impairment.\n* Hepatic impairment.\n* Active urinary tract infection.\n* Bladder stones or other significant urological pathology.\n* Known hypersensitivity to tamsulosin, tadalafil, or 5-alpha reductase inhibitors.\n* Patients actively seeking fertility treatment.\n* Current use of medications known to significantly affect sexual function.\n* Concurrent use of nitrates or contraindicated antihypertensive medications."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Different Dosing Regimens of Tadalafil or Tamsulosin Combined With 5α-Reductase Inhibitors on Urinary and Sexual Outcomes in Benign Prostatic Hyperplasia",
+      "nctId": "NCT07715448"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

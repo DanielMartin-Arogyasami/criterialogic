@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18 years or older.\n2. Elective isolated coronary artery bypass grafting planned without cardiopulmonary bypass, including off-pump coronary artery bypass through sternotomy or minimally invasive/direct or totally endoscopic coronary artery bypass surgery. Conversion to cardiopulmonary bypass is permitted if clinically required.\n3. Perioperative tranexamic acid planned as part of routine care, with the participant eligible for both oral and intravenous administration according to the applicable product information and local policy.\n4. Written informed consent obtained before randomization.\n5. Routine preoperative laboratory results available, including at least hemoglobin and serum creatinine measured within 30 days before surgery.\n6. Available for in-hospital follow-up and Day 30 assessment.\n\nExclusion Criteria:\n\n1. Emergency surgery, non-isolated cardiac surgery, or planned on-pump coronary artery bypass grafting.\n2. Inability to provide informed consent or comply with the required follow-up.\n3. Hypersensitivity to tranexamic acid or any excipient of the study products.\n4. Contraindication or clinically relevant precaution to tranexamic acid according to the applicable product information, including:\n\n   * active arterial or venous thromboembolic disease or active intravascular clotting;\n   * history of subarachnoid hemorrhage;\n   * acquired defective color vision;\n   * clinically relevant seizure disorder or previous tranexamic-acid-associated seizure;\n   * disseminated intravascular coagulation without predominant hyperfibrinolysis;\n   * active upper urinary tract hematuria with a risk of ureteric obstruction.\n5. Renal function incompatible with the fixed protocol dose, including estimated glomerular filtration rate below 30 mL/min/1.73 m² or dialysis.\n6. Contraindication to either administration route, including inability to swallow tablets, malabsorption precluding oral dosing, or inability to obtain intravenous access.\n7. Pregnancy or breastfeeding.\n8. Participation in another interventional clinical trial that could interfere with study outcomes or safety.\n9. Planned use of another antifibrinolytic agent outside the protocol, including aprotinin or epsilon-aminocaproic acid.\n10. Any new clinical condition identified after randomization but before dosing that, in the investigator's judgment, makes administration of the study treatment unsafe.\n11. Uncontrolled hemodynamic or respiratory instability before administration of the study intervention."
+    },
+    "identificationModule": {
+      "briefTitle": "Oral Versus Intravenous Tranexamic Acid in Off-Pump Coronary Artery Bypass Surgery",
+      "nctId": "NCT07740330"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

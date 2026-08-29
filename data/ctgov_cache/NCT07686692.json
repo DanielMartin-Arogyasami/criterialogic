@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Ambulatory adults age \\>=65 years with HFpEF (EF \\>50%)\n* Hospitalized for HF in the past 12 months\n* TSAT \\<20%\n* Able to walk without assistance\n\nExclusion Criteria:\n\n* Alternative etiologies of HFpEF syndrome:\n* Uncorrected severe valvular heart disease\n* Constrictive pericarditis\n* High output HF\n* Infiltrative cardiomyopathy\n* Safety concerns for participation\n* Known hypersensitivity/allergy to any IV iron formulation\n* History of iron overload (i.e., hemochromatosis)\n* Hemoglobin \\<9 g/dL or \\>13.5 (women)/\\>15.0 (men) g/dL\n* Hospitalized for GI bleed in past 12 months\n* Active infection or inflammatory disease\n* Severe liver disease (i.e., active hepatitis or known cirrhosis)\n* Current or recent use (4 weeks) of IV iron therapy\n* Severe renal impairment (i.e., eGFR \\<15 mL/min/1.73 m2 or Chronic Kidney Disease on dialysis)\n* Estimated life expectancy \\<6 months\n* Unable to provide informed consent\n* Pregnancy, breastfeeding, or planned pregnancy during the study period\n* Current participation in another investigational drug or device study; or participation in such a study within 30 days prior to baseline"
+    },
+    "identificationModule": {
+      "briefTitle": "IV Iron Therapy for Older Adults With Heart Failure With Preserved Ejection Fraction and Iron Deficiency",
+      "nctId": "NCT07686692"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

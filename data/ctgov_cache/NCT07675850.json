@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients aged 19 to 79 years undergoing elective non-cardiac surgery expected to last 60 minutes or longer under general anesthesia with endotracheal intubation\n\nExclusion Criteria:\n\n* Emergency surgery\n* Surgery requiring evoked potential (EP) monitoring\n* Chronic benzodiazepine users\n* Body Mass Index (BMI) ≥ 35 kg/㎡\n* Chronic kidney disease\n* Hepatic dysfunction or chronic liver disease\n* Contraindication or history of hypersensitivity to remimazolam\n* American Society of Anesthesiologists (ASA) physical status ≥ IV\n* Pregnant women\n* Contraindication or history of hypersensitivity to flumazenil"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Safety of Eleveld PK/PD Model-based Dosing During General Anesthesia",
+      "nctId": "NCT07675850"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-06-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

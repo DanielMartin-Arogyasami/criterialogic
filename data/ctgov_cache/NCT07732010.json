@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adults (18 and older)\n2. Ability to provide informed consent and to understand the study procedures\n3. Patients diagnosed with dry eye disease\n4. Presence of dry eye symptoms determined by a validated questionnaire (OSDI- Attachment 1) with scores above a specified threshold AND\n5. Tear film break-up time (TBUT) below a set value (less than 8 seconds)\n6. Schirmer test (w/o drops) value below a set cut-off (less than 10 mm)\n7. Positive findings on ocular surface staining (NEI \\>/equal 3)\n8. Positive conjunctival staining (NEI \\>4)\n9. Moderate meibomian gland dysfunction (MGD)\n\nExclusion Criteria:\n\n* History or presence of any ocular disorder or condition (other than DED) in either eye that would, in the opinion of the investigator, interfere with the interpretation of the study results or subject safety\n* History of ocular surgery within 3 months prior to the Screening visit, including punctal cautery, corneal refractive, or anterior segment surgeries that affect corneal sensitivity (e.g., cataract surgery or any surgery involving limbal or corneal incision) or lid surgery\n* Have had a corneal transplant in either or both eyes\n* Patients with current steroid use\n* Pregnancy"
+    },
+    "identificationModule": {
+      "briefTitle": "TRYPTYR as a Treatment for Patients With Dry Eye Disease (DED)",
+      "nctId": "NCT07732010"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

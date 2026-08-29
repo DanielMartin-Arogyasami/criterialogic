@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 18 to 70 years, male or female.\n* Confirmed H. pylori infection, defined as a positive 13C-urea breath test (13C-UBT) plus at least one positive result from the following: stool H. pylori antigen test, rapid urease test, or gastric mucosal histopathology.\n* No prior history of H. pylori eradication therapy.\n\nExclusion Criteria:\n\n* Known allergy or hypersensitivity to any of the study drugs (keverprazan, amoxicillin, minocycline, bismuth).\n* Acute upper gastrointestinal bleeding, active gastric or duodenal ulcer, acute gastric mucosal injury, or acute duodenal mucosal injury at screening.\n* Severe underlying diseases, including: hepatic or renal insufficiency; immunosuppression; malignancy; severe central nervous system, cardiovascular, or respiratory diseases.\n* Use of antibiotics, bismuth-containing preparations, or Chinese herbal medicines with antimicrobial effects within 4 weeks prior to the screening 13C-UBT; use of proton pump inhibitors (PPIs) or potassium-competitive acid blockers (P-CABs) within 2 weeks prior to the screening 13C-UBT.\n* Risk behaviors such as drug abuse or alcohol dependence.\n* Pregnancy, breastfeeding, or unwillingness to use contraception during the study period.\n* Current use of atazanavir sulfate or rilpivirine hydrochloride at screening.\n* Requirement during the 14-day treatment period for any of the following medications: ergotamine, dihydroergotamine, probenecid, allopurinol, or methotrexate.\n* Inability or unwillingness to provide informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Optimizing H. Pylori Eradication Regimen Under Intensified Acid Suppression",
+      "nctId": "NCT07750938"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

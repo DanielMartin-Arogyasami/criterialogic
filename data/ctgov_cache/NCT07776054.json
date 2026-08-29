@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥19 years\n* Persistent atrial fibrillation\n* H2FPEF score ≥6 or HFA-PEFF score ≥5\n* Restoration of sinus rhythm after electrical cardioversion\n\nExclusion Criteria:\n\n* Previous use of an SGLT2 inhibitor\n* Intracardiac thrombus on transesophageal echocardiography\n* Refusal to participate"
+    },
+    "identificationModule": {
+      "briefTitle": "Clinical Impact of SGLT2 Inhibitor After DC Cardioversion in Persistent AF With HFpEF",
+      "nctId": "NCT07776054"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 to 70 years\n* Confirmed diagnosis of unilateral or bilateral otitis media with effusion (OME), established by otoscopic examination and tympanometry (type B curve)\n* Duration of symptoms of at least 4 weeks prior to enrollment\n* Ability to provide written informed consent\n* Willingness to comply with the study protocol and attend all scheduled visits\n\nExclusion Criteria:\n\nPregnancy or breastfeeding Uncontrolled asthma Chronic obstructive or restrictive pulmonary disease Autoimmune or connective tissue disease Acute sinusitis or acute upper respiratory tract infection at the time of enrollment Cardiovascular, hepatic, or renal disease Use of medications known to affect immune response History of nasal or sinus surgery Receipt of immunotherapy within 3 years prior to enrollment or planned immunotherapy during the study period Any other condition that, in the investigator's judgement, would preclude safe participation or compromise the integrity of the trial"
+    },
+    "identificationModule": {
+      "briefTitle": "Omega-3-Based Nutraceutical Supplementation as Adjunctive Therapy in Adults With Otitis Media With Effusion: A Multicenter, Double-Blind, Randomized Placebo-Controlled Trial",
+      "nctId": "NCT07721610"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-23",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

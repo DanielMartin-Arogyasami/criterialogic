@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n\\- Adult people living with HIV, who are virally suppressed, defined as plasma HIV viral load is \\< 200 copies/mL within 6 months before enrollment. Participants have to have BMI \\> 30 kg/m2.\n\nExclusion Criteria:\n\n* Participants cannot have undergone treatment with any incretin-based treatment within the past 90 days before enrollment. Participants cannot have any AIDS-defining illnesses, active malignancy, or history of decompensated liver failure. Participants cannot be pregnant. Participants cannot have history of acute pancreatitis or a family history of medullary thyroid cancer."
+    },
+    "identificationModule": {
+      "briefTitle": "Tirzepatide's Effects on Epigenetic Aging and Metabolic Restoration in Virally Suppressed People With HIV",
+      "nctId": "NCT07707778"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-16",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

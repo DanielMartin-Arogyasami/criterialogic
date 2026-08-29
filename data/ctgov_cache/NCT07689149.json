@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female participants aged 18 to 65 years.\n* Diagnosis of end-stage kidney disease and being evaluated for or awaiting kidney transplantation.\n* Calculated panel-reactive antibody level (cPRA) ≥90% and a kidney transplant waiting time of ≥5 years.\n* Previous treatment with a conventional desensitization regimen based on intravenous immunoglobulin and/or plasma exchange, with or without rituximab, with traceable medical records.\n* Persistent cPRA ≥90% or unacceptable HLA antibodies after conventional desensitization, resulting in failure to meet the immunological criteria for kidney transplantation.\n* Adequate nonrenal organ function to tolerate the study treatment, including left ventricular ejection fraction \\>50%, resting oxygen saturation \\>94%, AST and ALT \\<3 times the upper limit of normal, total bilirubin \\<34.2 μmol/L, and no active infection.\n* Ability to understand the study procedures, provide written informed consent, and comply with study treatment and follow-up requirements.\n\nExclusion Criteria:\n\n* Inability to understand or comply with the study protocol or follow-up schedule.\n* Known or suspected hereditary complement deficiency.\n* Clinically significant central nervous system disease, including epilepsy, psychotic disorder, organic brain syndrome, cerebrovascular accident, encephalitis, central nervous system vasculitis, or cranial neuropathy requiring intervention.\n* AST, ALT, or GGT \\>3 times the upper limit of normal, or alkaline phosphatase or total bilirubin \\>1.5 times the upper limit of normal.\n* Acute myocardial infarction or unstable angina within 6 months before screening, severe cardiac arrhythmia, or New York Heart Association class III or IV heart failure.\n* Uncontrolled acute or chronic disease unrelated to end-stage kidney disease that may impair tolerance to study treatment.\n* Active or uncontrolled infection requiring systemic treatment.\n* Human immunodeficiency virus infection or uncontrolled active hepatitis B or hepatitis C infection.\n* Participation in another interventional clinical study within 3 months before screening or planned concurrent participation in another interventional study.\n* Previous treatment with another T-cell engager or bispecific T-cell-redirecting therapy.\n* Known severe hypersensitivity to blinatumomab, teclistamab, or any of their excipients.\n* Active malignancy.\n* Pregnancy, breastfeeding, or planned pregnancy during the study period.\n* Previous bone marrow transplantation, hematopoietic stem cell transplantation, or solid-organ transplantation other than kidney transplantation.\n* Receipt of a live vaccine within 30 days before screening or planned receipt of a live vaccine during study treatment.\n* Any other clinically significant condition that, in the investigator's judgment, may increase participant risk, interfere with study procedures, or affect safety or efficacy assessments."
+    },
+    "identificationModule": {
+      "briefTitle": "Safety and Efficacy of BiTE in Desensitization Therapy for Highly Sensitized Kidney Transplant Candidates With cPRA ≥ 90%",
+      "nctId": "NCT07689149"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age \\>18 years. Acute neurologic deficits due to cerebral ischemia/infarction. Clearly defined onset with duration from stroke onset of \\<4.5 hours. Significant neurological deficit (usually NIHSS score of 4-25).\n\nExclusion Criteria:\n\n* CT brain shows showing evidence of intracranial hemorrhage\n* CT brain showing acute or subacute infarct of size about \\>1/3 Middle Cerebral Artery territory.\n* Arterial puncture at non compressible site in previous 7 days\n* History of previous intracranial hemorrhage.\n* Intracranial neoplasm, AV malformation, or aneurysm\n* Recent head injury OR intracranial or intraspinal surgery in last 3 mo.\n* Persistent Elevated BP \\>185/110 mm Hg despite treatment.\n* Active ongoing internal bleeding.\n* Platelet count \\<100 000/mm3.\n* Current use of NOACs OR warfarin with INR \\>1.7 OR Inj.Enoxaparin/Heparin in therapeutic dose\n* Blood glucose concentration \\<2.7mmol/L (\\<50mg/dl).\n\nRelative contraindications: (may consider IV alteplase on individual evaluation).\n\n* Seizure at onset with post ictal residual neurological deficit.\n* Signs of mild stroke in isolation or rapidly improving symptoms.\n* Pregnancy.\n* Recent GI or UT hemorrhage within the last 21 days.\n* Recent MI within previous 3 months (to exclude anterolateral infarct / STEMI)"
+    },
+    "identificationModule": {
+      "briefTitle": "TeleStroke-Guided Thrombolysis for Acute Ischemic Stroke in Oman",
+      "nctId": "NCT07721129"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

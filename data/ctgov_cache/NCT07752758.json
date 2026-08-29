@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18 to 80 years, male or female.\n2. Diagnosis of persistent atrial fibrillation (AF) scheduled for first catheter ablation.\n3. Able to provide written informed consent.\n4. Able to comply with study follow-up and ECG monitoring requirements.\n\nExclusion Criteria:\n\n1. Previous catheter ablation for atrial fibrillation.\n2. Life expectancy \\<12 months due to non-cardiac comorbidities.\n3. Severe valvular heart disease requiring surgery or intervention.\n4. Acute myocardial infarction or stroke within the past 3 months.\n5. Current participation in another investigational drug/device study.\n6. Inability to adhere to study procedures or follow-up.\n7. Pregnancy or breastfeeding (female participants)."
+    },
+    "identificationModule": {
+      "briefTitle": "Ezetimibe for Arrhythmia Recurrence After AF Ablation",
+      "nctId": "NCT07752758"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

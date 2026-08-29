@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. At least 18 years of age at the time of consent\n2. Able to provide written voluntary informed consent\n3. Must have a normal pre-corneal tear film in one or both eyes\\[MC4.1\\]\\[AA4.2\\]\n4. Subjects cannot have instilled any topical ocular drops (including OTC lubricant drops) within 24 hours of Visit 1 and Visit 2.\n5. Able and willing to follow instructions, including participation in all trial assessments and visits\n\nExclusion Criteria:\n\n1. Have any clinically significant ocular surface slit-lamp findings in either eye and/or, in the opinion of the Investigator, have any findings that could interfere with trial parameters including:\n\n   1. History of Stevens-Johnson syndrome\n   2. Active blepharitis or lid margin inflammation\n   3. DED secondary to scarring, irradiation, alkali burns, cicatricial pemphigoid, or destruction of conjunctival goblet cells (as with vitamin A deficiency)\n   4. Abnormal lid anatomy causing incomplete eyelid closure\n   5. Abnormal cornea shape (keratoconus)\n   6. Corneal epithelial defect or significant confluent staining or filaments\n   7. History of ocular malignancy\n2. Pterygium in either eye\n3. Use of any of the following ocular therapies in the study eye within 24 hours prior to Visit 1 and Visit 2: Vuity®, VIZZ™, topical ocular steroid treatments, topical antibiotics, prescription dry eye therapy including varenicline nasal spray, over the counter dry eye therapy (such as artificial tears, re-wetting drops, or Lumify®), TrueTear™ device (intranasal tear neurostimulator), or topical anti-glaucoma medication\n4. Have active uncontrolled ocular allergies or ocular allergies that are expected to be active during the trial period\n5. Have undergone intraocular surgery or ocular laser surgery in the study eye within 3 months prior to Visit 1; have undergone refractive surgery in the study eye within 6 months prior to Visit 1\n6. Have worn contact lenses within 24 hours prior to Visit 1 and Visit 2.\n7. Have active ocular or systemic infection (bacterial, viral, or fungal), including fever\n8. Female subjects who are pregnant, nursing, or planning a pregnancy\n9. Female subjects of childbearing potential who are not using an acceptable means of birth control; acceptable methods of contraception include hormonal (oral, implantable, injectable, or transdermal) contraception; mechanical (spermicide in conjunction with a barrier such as a diaphragm or condom) contraception; intrauterine device; or surgical sterilization of partner. For non-sexually active female subjects, abstinence may be regarded as an adequate method of birth control; however, if the subject becomes sexually active during the trial, she must agree to use adequate birth control as defined above for the remainder of the trial\n10. Have an uncontrolled systemic disease that, in the opinion of the Investigator, will interfere with the trial\n11. Have a known allergy and/or sensitivity to the investigational product or diagnostic substances (e.g. fluorescein) to be used in the study\n12. Are currently enrolled in any investigational or device study or have used Miebo® within 24 hours prior to Visit"
+    },
+    "identificationModule": {
+      "briefTitle": "BL-RX01-TFSTAB-1402",
+      "nctId": "NCT07790211"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

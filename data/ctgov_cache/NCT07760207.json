@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Pediatric patients aged 8-15 years undergoing elective tonsillectomy.\n\nExclusion Criteria:\n\n* Patients younger than 8 years or older than 15 years.\n* Known allergy to magnesium sulfate or bupivacaine.\n* Pre-existing neurological disorders (for example, neuromuscular diseases, epilepsy) that could affect pain perception or magnesium metabolism.\n* Pre-existing cognitive impairment or developmental delay affecting pain assessment.\n* Chronic pain syndromes or regular use of analgesics.\n* Coagulopathy or bleeding disorders."
+    },
+    "identificationModule": {
+      "briefTitle": "Topical Magnesium Sulfate Versus Peritonsillar Bupivacaine for Post-Tonsillectomy Pain Relief in Children",
+      "nctId": "NCT07760207"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

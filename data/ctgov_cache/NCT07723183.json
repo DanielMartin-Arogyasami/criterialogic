@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patient who requires surgical removal of bilateral impacted M3.\n\n  * Patient with impacted bilateral M3 which are sound.\n  * Impacted bilateral M3 classified as Class I or II with Level A or B according to Pell and Gregory's classification.\n  * Presence of M2 adjacent to the M3 to be extracted.\n  * Patient aged 18 to 35 years old.\n  * Patient with periodontal status of:\n  * Basic Periodontal Score (BPE) 2 at lower right and lower left sextants.\n  * Full mouth plaque score \\<30%.\n\nExclusion Criteria:\n\n* Impacted M3 associated in the following conditions:\n\n  * Fracture of angle of mandible.\n  * Radiological evidence of cyst or tumour.\n  * Incomplete root formation.\n  * Acute pulpitis or severe pericoronitis that is not under-controlled.\n  * Gross dental caries.\n\n    * Retained roots of mandibular third molar with history of removal of unerupted/impacted M3.\n    * Patient's age \\<18 years old or \\> 35 years old\n    * M2 with periapical inflammation, periodontitis, distal caries or delayed or non-responsive pulp sensibility test to exclude tooth with perio-endo lesion.\n    * Pregnant woman.\n    * Patient on oral contraceptives.\n    * Current or previous bisphosphonate therapy or history of radiotherapy to the jaws.\n    * Active smoker."
+    },
+    "identificationModule": {
+      "briefTitle": "Soft and Hard Tissue Healing Following Alveolar Ridge Preservation of Mandibular Third Molar Extraction Socket Filled With Auto Tooth Bone Graft or Alloplastic Graft",
+      "nctId": "NCT07723183"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-23",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

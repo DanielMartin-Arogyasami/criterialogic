@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Participants with stage 3 to 5 chronic kidney disease who are not receiving dialysis.\n2. Age older than 60 years.\n3. The participant or a family member has sufficient literacy and is able to comply with dietary diary recording and other study-related examinations.\n4. The underlying cause of chronic kidney disease is clinically stable.\n\nExclusion Criteria:\n\n1. Malignancy, severe cardiovascular disease, osteoporosis, or severe hematopoietic system disease.\n2. Active infection, defined as C-reactive protein greater than 10 mg/L, or current use of nephrotoxic medications.\n3. Limb paralysis or major limb impairment.\n4. Use of immunosuppressive therapy, including cyclosporine or tacrolimus, within the 3 months before cohort enrollment, or use of corticosteroids at a dose equivalent to more than 10 mg/day of prednisone.\n5. Severe gastrointestinal disease affecting nutrient absorption.\n6. Current participation in, or participation within the previous month in, another study related to diet or medication.\n7. Known allergy to Niaoduqing Granules.\n8. Any condition that, in the investigator's judgment, makes the participant unsuitable for the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Niaoduqing Granules in Older Adults With Impaired Kidney Function",
+      "nctId": "NCT07741292"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-03",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Women with PCOS,\n* Sub-fertility attributed to PCOS, \\> 2 years\n\nExclusion Criteria:\n\n* Comorbidities; diabetes, hypertension\n* Chronic medical illness (liver, heart, kidney disease)\n* Undergone ovarian drilling\n* Recent administration of hormonal therapy\n* Abnormal prolactin levels (\\>500 mIU/L), or thyroid function tests (TSH \\>5.2 mIU/L, T3 \\<70 ng/dl and T4 \\<5.2 μg/dl)\n* Obstructed fallopian tubes documented on hysterosalpingography and\n* Abnormal semen analysis of their partners"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of Clomiphene Alone Versus Clomiphene Plus Sildenafil for Ovulation in Women With Polycystic Ovary Syndrome",
+      "nctId": "NCT07769476"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

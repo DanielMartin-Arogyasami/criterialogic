@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 37 to 42 weeks of gestation\n* Planned cesarean section\n\nExclusion Criteria:\n\n* Women with pre-eclampsia\n* Chronic hypertension\n* Multiple pregnancies\n* Preterm or postdate pregnancy\n* Previous cesarean section\n* Gestational diabetes\n* Fetal macrosomia\n* History of bleeding / clotting disorder\n* On anti-coagulation heparin / warfarin therapy\n* Non-reassuring cardiotocograph or poor progress of labor"
+    },
+    "identificationModule": {
+      "briefTitle": "Tranexamic Acid Versus Misoprostol to Reduce Blood Loss During and After Cesarean Section",
+      "nctId": "NCT07712510"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

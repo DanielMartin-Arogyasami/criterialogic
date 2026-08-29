@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria\n\n1. Healthy individuals aged 3 years or above.\n2. The participant (and/or their guardian/legal representative) has provided informed consent, voluntarily agreed to participate, signed the Informed Consent Form, and is able to comply with the requirements of this study protocol.\n\nExclusion Criteria\n\n1. Individuals with a known allergy to any component of the vaccine, including eggs, excipients, formaldehyde, or Triton N-101.\n2. Individuals suffering from an acute illness, severe chronic disease, an acute exacerbation of a chronic disease, common cold, or fever.\n3. Individuals with uncontrolled epilepsy or other progressive neurological disorders, or a history of Guillain-Barré syndrome.\n4. Any other condition considered by the investigator as inappropriate for participation in this study."
+    },
+    "identificationModule": {
+      "briefTitle": "Preliminary Safety Assessment of a Quadrivalent Subunit Influenza Vaccine in China",
+      "nctId": "NCT07710586"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

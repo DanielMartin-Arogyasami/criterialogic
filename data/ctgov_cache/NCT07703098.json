@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age over 18 years.\n* Suspected adrenal insufficiency due to receiving supraphysiological doses of methylprednisolone for more than 4 weeks.\n* Receiving methylprednisolone 4 mg for at least the last 4 weeks.\n* Morning cortisol lower than 300 nmol/L.\n* Inadequate result of a short ACTH test performed on a physiological dose of methylprednisolone (cortisol rise after 30 min under 470 nmol/L AND after 60 min under 500 nmol/L).\n* No further indication for treating the underlying disease, and retreatment with glucocorticoids is not expected in the next 2 years.\n* Consent to participate in the research.\n\nExclusion Criteria:\n\n* Known organic disease of the pituitary-adrenal axis.\n* Body mass over 130 kg.\n* Advanced comorbidities.\n* Advanced heart failure (NYHA IV).\n* Chronic kidney disease IV, eGFR under 30 ml/min.\n* Liver cirrhosis.\n* Active malignant disease.\n* Immune deficiencies.\n* Planned major surgery during the study duration.\n* Receiving drugs affecting cortisol metabolism or interfering with cortisol measurements (e.g., systemic estrogens, strong inducers or inhibitors of CYP3A4).\n* Conditions affecting cortisol metabolism (pregnancy, liver disease, nephrotic syndrome).\n* Alcohol dependence syndrome (consuming more than 21 units of alcohol per week).\n* Shift (night) work.\n* Presence of comorbidities with an expected life expectancy of less than 3 years."
+    },
+    "identificationModule": {
+      "briefTitle": "Hydrocortisone Versus Methylprednisolone for the Treatment of Glucocorticoid-Induced Adrenal Insufficiency",
+      "nctId": "NCT07703098"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Aim 1 Inclusion Criteria:\n\n1. Adult individuals (18 years-old or older)\n2. Healthcare workers (physicians, nurses, advanced practice providers, and other clinical staff) at the Minneapolis Heart Institute\n3. Ability to use the CalmiGo device for 12-weeks\n4. Willingness to complete study questionnaires, have speech and voice samples recorded and analyzed at the beginning of the study.\n\nAIM 2 Inclusion criteria\n\n1. Adult individuals (18 years-old or older)\n2. Healthcare workers (physicians, nurses, advanced practice providers, and other clinical staff) with burnout (Mini-Z 2.0 single item burnout score 3, 4 or 5 on 5 choice item, question 2).\n3. Ability to use the CalmiGo device for 12-weeks\n4. Willingness to complete study questionnaires, have speech and voice samples recorded and analyzed at the beginning and end of the study.\n\nAIM 1 and 2Exclusion Criteria:\n\n1. English is not their preferred language\n2. Current or known history of a voice or speech disorder\n\n   1. Current or history of laryngeal malignancy\n   2. History of laryngeal surgery\n   3. Known diagnosis of a voice disorder: Vocal Cord Nodules, Polyp, or Cyst; Vocal Cord Paralysis; Dysphonia\n   4. Laryngitis\n   5. Dyslexia\n   6. Muscle Tension\n   7. Aphasia\n   8. Stuttering\n   9. Dysarthria\n   10. Essential Tremor\n   11. Neurodegenerative conditions (Parkinson's Disease, Multiple Sclerosis, ALS, MSA, Dementia)\n   12. Severe psychiatric disorder (depression, anxiety, bipolar, schizophrenia, etc.)"
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation of Speech and Voice Biomarkers in Association With Burnout",
+      "nctId": "NCT07780812"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

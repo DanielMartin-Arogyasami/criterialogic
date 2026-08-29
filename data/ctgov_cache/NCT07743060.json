@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Men ≥ 50 years of age with a definitive diagnosis of BPH by a collaborating urologist.\n* Patients with moderate symptoms based onthe International Prostate Symptom Score (IPSS): score 8 to 19\n* No prior use of any alpha-blocker (tamsulosin, silodosin, doxazosin, etc.)\n* Vision adequate for imaging\n* Consent to participate in the study\n* No history of any intraocular surgery; no active or structural ocular disease affecting the pupil/iris, such as glaucoma, uveitis, pseudoexfoliation syndrome, pigment dispersion syndrome.\n* No use of pupil-affecting eye drops within the past 2 weeks\n\nExclusion Criteria:\n\n* High myopia (SE ≤ -6.00 D) or axial length \\> 26.5 mm, in order to control for its effect on choroidal thickness\n* History of trauma or injury to the iris\n* Insufficient image quality during assessments\n* Patient unwilling to continue participation in the study\n* Occurrence of unwanted systemic adverse effects during the study\n* Improper medication adherence during the study\n* Diabetes\n* Hypertension"
+    },
+    "identificationModule": {
+      "briefTitle": "Pupil Size and Choroidal Thickness Changes With Tamsulosin vs. Silodosin in Benign Prostatic Hyperplasia Patients",
+      "nctId": "NCT07743060"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-03",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

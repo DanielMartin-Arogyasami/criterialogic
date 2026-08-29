@@ -1,0 +1,24 @@
+{
+  "api_base": "https://clinicaltrials.gov/api/v2",
+  "query_params": {
+    "filter.advanced": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
+    "fields": "protocolSection.identificationModule.nctId,protocolSection.identificationModule.briefTitle,protocolSection.statusModule.studyFirstPostDateStruct,protocolSection.designModule.studyType,protocolSection.designModule.phases,protocolSection.eligibilityModule.eligibilityCriteria",
+    "sort": "StudyFirstPostDate:desc",
+    "pageSize": "100",
+    "countTotal": "true"
+  },
+  "advanced_expression": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
+  "fields": [
+    "protocolSection.identificationModule.nctId",
+    "protocolSection.identificationModule.briefTitle",
+    "protocolSection.statusModule.studyFirstPostDateStruct",
+    "protocolSection.designModule.studyType",
+    "protocolSection.designModule.phases",
+    "protocolSection.eligibilityModule.eligibilityCriteria"
+  ],
+  "first_posted_from": "2026-01-01",
+  "n_studies_cached": 300,
+  "pages_fetched": 0,
+  "fetched_utc": "2026-08-29T20:28:40+00:00",
+  "rate_limit_requests_per_second": 2.0
+}

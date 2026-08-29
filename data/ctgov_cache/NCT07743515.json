@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Dysfunctional voiding\n\nExclusion Criteria:\n\n* Lower urinary tract trauma (n=1),\n* Urinary tract anomalies\n* Neurological disorders\n* Cognitive impairment\n* Previous treatment for dysfunctional voiding"
+    },
+    "identificationModule": {
+      "briefTitle": "Standard Urotherapy With or Without Biofeedback Based Pelvic Floor Muscle Training for Dysfunctional Voiding in Children",
+      "nctId": "NCT07743515"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-04",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

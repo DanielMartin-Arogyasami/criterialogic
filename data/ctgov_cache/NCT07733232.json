@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥ 18 and ≤ 65 years old.\n2. Diagnosed with type 2 diabetes mellitus (T2DM).\n3. Positive for thyroid peroxidase antibody (TPOAb) and thyroglobulin antibody (TgAb); thyroid ultrasonography indicates diffuse thyroid lesions.\n4. The regimens of hypoglycemic drugs and thyroid-related basic treatments (including drug types and dosages) have remained stable for at least 3 months before enrollment.\n\nExclusion Criteria:\n\n1. Subjects who have used antibiotics, probiotics or prebiotics within 4 weeks prior to screening.\n2. Patients complicated with severe gastrointestinal diseases (e.g., inflammatory bowel disease, active gastrointestinal bleeding).\n3. Patients receiving specialized treatment for hyperthyroidism (Graves' disease) or with a history of thyroid malignancy.\n4. Patients with severe immunosuppression (neutrophil count \\< 1500/mm³, lymphocyte count \\< 500/mm³).\n5. Patients with active severe gastrointestinal bleeding, intestinal perforation, or severe intestinal barrier/mucosal injury.\n6. Patients with intestinal mucosal injury of unknown etiology.\n7. Patients diagnosed with fulminant colitis or toxic megacolon.\n8. Patients with active extraintestinal infection requiring treatment with broad-spectrum antibiotics.\n9. Severe malnutrition (body mass index \\< 15 kg/m²) or severe hypoalbuminemia (serum albumin \\< 25 g/L).\n10. Congenital or acquired immunodeficiency diseases.\n11. Patients who have recently received high-risk immunosuppressants or cytotoxic drugs (e.g., rituximab, doxorubicin), or medium-to-high dose glucocorticoids (e.g., prednisone \\>= 20 mg per day for more than 4 consecutive weeks).\n12. Patients complicated with other autoimmune diseases.\n13. Patients with severe hepatic or renal insufficiency.\n14. Patients with malignant tumors.\n15. Patients with known allergy to capsule ingredients.\n16. Pregnant or lactating females."
+    },
+    "identificationModule": {
+      "briefTitle": "Fecal Microbiota Transplantation for Type 2 Diabetes Mellitus and Hashimoto's Thyroiditis",
+      "nctId": "NCT07733232"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

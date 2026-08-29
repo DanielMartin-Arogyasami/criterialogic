@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female participant aged 50 years or older.\n* Diagnosis of osteoporosis established by the treating rheumatologist.\n* Osteoporotic vertebral fracture diagnosed within the previous month.\n* Pain intensity of ≥3 on a numerical rating scale at the fracture site.\n* Able and willing to provide written informed consent.\n* Affiliated with a French health insurance system.\n\nExclusion Criteria:\n\n* Medical or surgical condition considered by the investigator to be incompatible with study participation.\n* Known hypersensitivity to lidocaine, any excipient of the study treatment, or other amide-type local anesthetics.\n* Current treatment with Class I antiarrhythmic agents (e.g., tocainide, mexiletine) or other local anesthetics.\n* Inflamed or damaged skin at the intended application site (e.g., active herpes zoster lesions, dermatitis, or wounds).\n* Pregnant or breastfeeding women.\n* Women of childbearing potential not using an effective contraceptive method.\n* Positive urine pregnancy test for women whose menopausal status cannot be confirmed.\n* Participation in another clinical research study.\n* Individuals under legal protection or deprived of liberty.\n* Refusal to participate."
+    },
+    "identificationModule": {
+      "briefTitle": "Osteoporotic Fracture and Lidocaine Plaster 5% for Neuropathic Pain preventioN",
+      "nctId": "NCT07691359"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

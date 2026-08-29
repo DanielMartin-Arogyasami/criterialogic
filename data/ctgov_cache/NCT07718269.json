@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* patients diagnosed with HTSs or keloids\n\nExclusion Criteria:\n\n* pregnant or lactating females, immunocompromised patients"
+    },
+    "identificationModule": {
+      "briefTitle": "Microneedling vs. 5-Fluorouracil or Steroid Injections for Hypertrophic Scars and Keloids",
+      "nctId": "NCT07718269"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

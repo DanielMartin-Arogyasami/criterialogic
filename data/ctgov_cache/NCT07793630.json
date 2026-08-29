@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Female participants aged 18 to 60 years.\n* Fitzpatrick skin phototype I, II, or III.\n* CEAP clinical class C1.\n* Bilateral relatively symmetrical presence of telangiectasias and reticular veins on the lateral thigh.\n* Presence of telangiectasias and reticular veins measuring 0.1 to 3 mm in diameter.\n* Willingness to participate in the complete study follow-up and provision of written informed consent.\n\nExclusion Criteria:\n\n* Saphenous or perforator venous reflux.\n* Varicose veins greater than 3 mm in diameter (CEAP C2-C6).\n* Fitzpatrick skin phototype IV, V, or VI.\n* Recent venous thrombosis or known thrombophilia.\n* Use of anticoagulant therapy.\n* Pregnancy or breastfeeding.\n* Known allergy to polidocanol.\n* Peripheral arterial disease with ankle-brachial index (ABI) \\< 0.8.\n* Diabetes mellitus.\n* Local dermatitis in the treatment area.\n* Previous venous treatment within the last 6 months.\n* Failure to attend the treatment session or scheduled follow-up visits."
+    },
+    "identificationModule": {
+      "briefTitle": "Foam Sclerotherapy With or Without Transdermal Laser for Reticular Veins and Telangiectasias",
+      "nctId": "NCT07793630"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

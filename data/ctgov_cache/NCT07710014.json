@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male or female aged 65 years or older at the time of consent.\n2. Mentally and physically competent to provide informed consent and willing to comply with the study protocol\n3. Meets DSM-5 criteria for ADHD combined presentation, inattentive presentation, or hyperactive/impulsive presentation based on clinical history\n4. SRS-5 score of 14 or greater at screening\n5. AISRS total score of 24 or greater at baseline\n6. Montreal Cognitive Assessment (MoCA) score of 26 or greater\n\nExclusion Criteria:\n\n1. Satisfied with current ADHD treatment\n2. History of myocardial infarction, arrhythmia, or congenital heart disease\n3. Mean systolic blood pressure greater than 160 mmHg or diastolic blood pressure greater than 100 mmHg measured in triplicate at screening despite treatment\n4. Treated hypertension not stable on medication or with dose changes in the last 30 days\n5. History of transient ischemic attack or stroke\n6. Current or lifetime DSM-5 diagnosis of bipolar I or II disorder, cyclothymic disorder, or bipolar disorder not otherwise specified\n7. Clinical history strongly suggestive of undiagnosed bipolar spectrum disorder\n8. Active suicidal ideation or behavior per C-SSRS at screening\n9. Current substance use disorder\n10. History of drug or alcohol abuse in the last 10 years as defined by DSM-5 criteria for substance use disorder (moderate or severe)\n11. True allergy to methylphenidate, history of serious adverse reactions to methylphenidate, or known non-response to methylphenidate\n12. History of seizure disorder other than a single childhood febrile seizure before age 3\n13. History of glaucoma, hyperthyroidism, thyrotoxicosis, advanced arteriosclerosis, or severe renal insufficiency (eGFR less than 30 mL/min/1.73 m²)\n14. Use of a monoamine oxidase inhibitor currently or within the past 14 days\n15. Abnormal baseline ECG including left ventricular hypertrophy or QTc greater than 450 ms (males) or greater than 470 ms (females)\n16. History of heart failure, unexplained dyspnea on exertion, or newly identified murmur\n17. MoCA score less than 26 or evidence of cognitive impairment\n18. Currently considered a suicide risk in the opinion of the investigator"
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation of Foquest in Adults 65 Years and Older With ADHD",
+      "nctId": "NCT07710014"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 to 79 years.\n* Scheduled to undergo elective nasal surgery under sevoflurane-based general anesthesia at Jeju National University Hospital.\n* Able to provide written informed consent.\n\nExclusion Criteria:\n\n* Contraindications to remimazolam.\n* History of allergy or hypersensitivity to benzodiazepines.\n* Inability to provide informed consent due to cognitive impairment.\n* Preexisting psychiatric disorders.\n* History of alcohol or substance abuse.\n* Inability to assess the Riker Sedation-Agitation Scale (SAS).\n* Body mass index (BMI) \\> 40 kg/m²."
+    },
+    "identificationModule": {
+      "briefTitle": "Low-dose Versus Standard-dose Remimazolam for Prevention of Emergence Agitation After Nasal Surgery",
+      "nctId": "NCT07740655"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

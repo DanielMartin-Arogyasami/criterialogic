@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults (age 18 years or older) referred for patch testing.\n\nExclusion Criteria:\n\n* Relative or absolute contraindication to patch testing\n* Wide spread dermatitis prior to patch placement\n* Inability to return to clinic for reading of results\n* Patient non-consenting"
+    },
+    "identificationModule": {
+      "briefTitle": "Reliability of Expired Allergens in Patch Testing: A Comparative Study With Non-Expired Series",
+      "nctId": "NCT07765563"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

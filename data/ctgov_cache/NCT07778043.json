@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients 18 years or older\n* Patients who are undergoing in-office levator muscle trigger point injection for myofascial pelvic pain\n* Able to give informed consent for the study\n\nExclusion Criteria:\n\n* Documented allergy to lidocaine or prilocaine\n* Use of lidocaine or prilocaine within last 72 hours"
+    },
+    "identificationModule": {
+      "briefTitle": "Lidocaine-prilocaine Cream as Analgesia for In-office Levator Muscle Trigger Point Injections",
+      "nctId": "NCT07778043"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 to 75 years, sex male or female, and body weight ≥ 50 kg.\n* Histopathologically confirmed gastric cancer (TNM stage I-III according to the AJCC 8th edition) and have undergone curative (R0) resection.\n* Postoperative anemia defined as a hemoglobin (Hb) level \\< 100 g/L within 24 hours after surgery (i.e., on postoperative day 1), meeting the diagnostic criteria for postoperative anemia in gastric cancer patients.\n* Evidence of iron deficiency, as indicated by:\n* serum ferritin \\< 30 μg/L, or\n* serum ferritin \\< 100 μg/L and transferrin saturation (TSAT) \\< 20%, confirming iron-deficiency anemia.\n* Eastern Cooperative Oncology Group (ECOG) performance status score of 0-2.\n* Adequate hepatic, renal, and coagulation function, defined as:\n* ALT and AST ≤ 2.5 × upper limit of normal (ULN),\n* serum creatinine ≤ 1.5 × ULN,\n* prothrombin time international normalized ratio (INR) ≤ 1.5.\n* Estimated life expectancy ≥ 3 months.\n* Voluntary written informed consent and ability to comply with the trial treatment and follow-up procedures.\n\nExclusion Criteria:\n\nNon-iron-deficiency anemia (e.g., hemolytic anemia, thalassemia, megaloblastic anemia, aplastic anemia, tumor-related non-iron-deficiency anemia, etc.) or disorders of hemoglobin synthesis.\n\n* Known hypersensitivity to ferric carboxymaltose, iron sucrose injection, or any of their excipients.\n* Evidence of iron overload (serum ferritin \\> 1000 μg/L) or a history of hemochromatosis.\n* Severe hepatic or renal impairment, defined as:\n* ALT/AST \\> 2.5 × upper limit of normal (ULN),\n* serum creatinine \\> 1.5 × ULN,\n* or coagulopathy (INR \\> 1.5);\n* or active bleeding (e.g., major postoperative anastomotic hemorrhage, intra-abdominal bleeding, etc.).\n* Receipt of oral iron, intravenous iron, or erythropoiesis-stimulating agents (ESAs) / erythropoietin (EPO) within the past 3 months prior to screening.\n* Concurrent other malignancies, severe cardiovascular disease (e.g., heart failure, history of myocardial infarction, severe arrhythmias), uncontrolled infectious disease (e.g., sepsis), or immunodeficiency disorders.\n* Pregnant or breastfeeding women, or women who plan to become pregnant during the trial period.\n* Inability to comply with the treatment and follow-up procedures (e.g., due to cognitive impairment, psychiatric disorders), or any other condition that, in the investigator's judgment, would render the participant unsuitable for inclusion in the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Ferric Carboxymaltose Versus Iron Sucrose for Iron Deficiency Anemia After Radical Gastrectomy for Gastric Cancer",
+      "nctId": "NCT07772453"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

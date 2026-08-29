@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Parkinson's disease\n* Gastric biopsies previously obtained during clinically-indicated EGD procedure\n* Taking dopamine replacement therapy currently\n\nExclusion Criteria:\n\n* No history of Parkinson's disease"
+    },
+    "identificationModule": {
+      "briefTitle": "Gastrointestinal Dopamine Decarboxylase and Levodopa Pharmacokinetics",
+      "nctId": "NCT07793461"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

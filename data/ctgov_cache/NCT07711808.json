@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients with a clinical diagnosis of overactive bladder syndrome.\n* Treatment-naïve for OAB pharmacotherapy (no prior antimuscarinic or mirabegron for OAB).\n* Able to complete the ICIQ-OAB questionnaire and a frequency-volume chart.\n* Written informed consent.\n\nExclusion Criteria:\n\n* Neurogenic bladder.\n\n  * Previous treatment with anticholinergics or mirabegron for OAB.\n  * History of pelvic radiotherapy or bladder cancer.\n  * Post-void residual volume \\> 200 mL.\n  * Clinically significant stress urinary incontinence.\n  * Chronic pelvic pain syndrome.\n  * Congenital urinary tract malformations.\n  * Prior bladder surgery; history of mid-urethral sling or prostate surgery.\n  * Contraindication to solifenacin or mirabegron.\n  * End-stage renal disease on dialysis."
+    },
+    "identificationModule": {
+      "briefTitle": "Burden and Efficacy of Anticholinergic vs Mirabegron in Overactive Bladder - A Randomized Controlled Study",
+      "nctId": "NCT07711808"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

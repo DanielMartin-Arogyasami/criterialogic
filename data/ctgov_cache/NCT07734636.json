@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥ 18 years\n* Pre-admission RASi use for Class I indication (e.g., heart failure, kidney disease)\n* RASi stopped in the setting of AKI (defined by ≥1.5x baseline SCr)\n* AKI in recovery (defined by a decrease in SCr by ≥0.3mg/dL from peak)\n\nExclusion Criteria:\n\n* RASi allergy or contraindication (i.e., angioedema, bilateral renal artery stenosis)\n* Ongoing dialysis requirement\n* Pregnant or breastfeeding\n* Prisoner\n* Palliative or hospice care involvement\n* Unable to consent\n* No enteral route of medication administration\n* Clinician judgment"
+    },
+    "identificationModule": {
+      "briefTitle": "A Prompt REstart Study of Renin-Angiotensin System Inhibitors After Acute Kidney Injury",
+      "nctId": "NCT07734636"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

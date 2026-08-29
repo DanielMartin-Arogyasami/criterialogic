@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Has a confirmed clinical diagnosis of LGS with a history of seizures and actively experiencing seizures within 6 months of screening.\n2. Is naïve to CBD-OS treatment or has been off CBD-OS treatment for at least 3 months prior to screening.\n3. Is willing to maintain any factors expected to affect seizures (eg, alcohol consumption, smoking, concomitant medication usage) stable for the duration of the study.\n4. Is currently treated with at least 1 ASM, but no more than 3 ASMs, and is on a stable regimen for at least 4 weeks prior to screening.\n5. Adequate contraceptive precautions\n6. Participant has a primary caregiver/legally authorized representative (LAR) who is willing and able, in the investigator's opinion, to participate throughout the duration of the study and to comply with all study requirements\n7. Experienced at least 4 or more countable major motor seizures (isolated seizures or seizures occurring in a cluster) during the 5-week Baseline Period preceding treatment.\n8. Caregiver completed at least 80% of seizure diary entries during the Baseline Period with no more than 3 consecutive days of missing entries.\n\nExclusion Criteria:\n\n1. Has a significant psychiatric illness\n2. Has an illness during the 4 weeks prior to screening other than epilepsy which, in the investigator's opinion, could affect study outcomes or seizure frequency.\n3. Has history of SE in the 3 months prior to screening.\n4. Has any other significant disease other than epilepsy, which, in the investigator's opinion, may either put the participant, other participants, or site staff at risk because of participation in the study, may influence the result of the study, or may affect the participant's ability to take part in the study.\n5. Has previously undergone significant surgery for epilepsy in the 6 months prior to screening or planned to undergo surgery for epilepsy during the study.\n6. Is currently using or has in the past used recreational or medicinal cannabis or synthetic cannabinoid-based medications, products, or supplements within the 3 months prior to screening and is not willing to undergo a 1-month washout period before being rescreened.\n7. Has initiated felbamate within the 12 months prior to screening.\n8. Is not willing to adjust dosage of CBD-OS if needed when using strong inducers of CYP3A4 and/or strong inducers of CYP2C19 concomitantly with CBD-OS\n9. Previously discontinued cannabidiol due to severe adverse events (SAE), hypersensitivity or lack of efficacy\n10. Has clinically significant abnormal lab values\n11. Has clinically impaired hepatic or renal function\n12. History of, current risk or presence of actual suicidal ideations\n13. Has any known or suspected hypersensitivity to cannabinoids or any of the excipients of CBD-OS, such as sesame oil.\n14. Has a known or suspected history of alcohol or substance abuse disorder\n15. Is currently consuming, and unwilling to stop consumption, or planning to consume tonic water on a regular basis throughout the study."
+    },
+    "identificationModule": {
+      "briefTitle": "A Study to Investigate the Effect of Gradual Titration to Optimize Cannabidiol Treatment in Adults With LGS",
+      "nctId": "NCT07728097"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion criteria:\n\n* Voluntary acceptance to sign the informed consent form and commitment to attend all scheduled visits, follow the treatment plan, undergo medical evaluations, and complete all procedures of the clinical trial.\n* Participants must be between 40 and 70 years of age at the time of signing the informed consent form.\n* Clinical and radiographic diagnosis of primary knee osteoarthritis, Kellgren-Lawrence grade II and III. The reference radiographic study for Kellgren-Lawrence stratification must be no more than 6 months old.\n* Presence of knee joint pain with an intensity ≥4 on a scale of 0 to 10 in question 1 of the average pain experienced during the last week of the assessment (Spanish version of the MOS Pain Severity Scale - MOS-PSS).\n* Failure of conservative non-pharmacological treatment.\n* Failure of pharmacological treatment with NSAIDs and/or failure of intra-articular corticosteroid treatment.\n* BMI ≥25 and \\<45 kg/m².\n* Commitment to comply with the activities and procedures of the clinical trial in a timely manner.\n* Maintaining the diet and any physical activity performed by the participant prior to signing the informed consent form for the clinical trial, without radical or significant changes throughout the duration of this clinical trial.\n* Women of reproductive potential must use a highly effective method of family planning.\n\nExclusion criteria:\n\n* Participants with high-impact physical activity.\n* Participants with acute arthritis of the knee.\n* Participants on anticoagulants or with any contraindication to intra-articular infiltration (skin infection); participants requiring prophylactic doses of ASA.\n* Participants treated with oral or injectable glucocorticoids within the last 90 days.\n* Participants who have undergone intra-articular infiltration with glucocorticoids or viscosupplementation within the last 90 days.\n* Participants who have undergone arthroscopy within the last 6 months.\n* Participants with secondary osteoarthritis: Acromegaly, Hemochromatosis, and Hemophilia.\n* Participants with coexisting Rheumatoid Arthritis, Axial or Peripheral Spondyloarthritis, Systemic Lupus Erythematosus, Fibromyalgia, or any other rheumatic disease that may cause secondary osteoarthritis.\n* History of allergy to hyaluronic acid derivatives or any component constituent of the study treatments.\n* Presence of varus or valgus deformity \\>15 degrees, or a flexion contracture \\>20 degrees.\n* Women undergoing estrogen replacement therapy.\n* Pregnant or breastfeeding women.\n* Presence of any disease that, in the investigator's judgment, predisposes the patient to an additional risk by participating in this clinical trial (poorly controlled disease, psychiatric disorders, cancer, etc.).\n* Immediate relatives (parents, spouses, siblings, children) of the research team, or any member of the research team (Conflict of interest)."
+    },
+    "identificationModule": {
+      "briefTitle": "Collagen-PVP vs Hylan G-F 20 in the Treatment of Knee Osteoarthritis",
+      "nctId": "NCT07692009"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-09",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

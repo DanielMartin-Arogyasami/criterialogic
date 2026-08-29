@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-60 years, any sex\n* Systemically healthy\n* Mandibular premolar with clinically/radiographically diagnosed symptomatic irreversible pulpitis (prolonged, exaggerated response to cold testing; no periapical radiolucency)\n* Able to use the VAS scale and complete follow-up\n\nExclusion Criteria:\n\n* Medically compromised patients\n* Pregnant or lactating women\n* Allergy/hypersensitivity to local anesthetics or NSAIDs\n* Analgesics, anti-inflammatories, or antibiotics within 12 hours pre-treatment\n* Vertical root fracture, root resorption, or previous RCT\n* Radiographic periapical pathology\n* Non-restorable teeth\n* TMD, bruxism, or traumatic occlusion interfering with pain assessment"
+    },
+    "identificationModule": {
+      "briefTitle": "Hypertonic Saline as a Final Flush and Post-Operative Pain After Single Visit Root Canal Treatment in Mandibular Premolar.",
+      "nctId": "NCT07701551"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

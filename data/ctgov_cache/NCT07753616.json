@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* All subjects must meet all of the following inclusion criteria to participate:\n\n  1. Patients who self-identify themselves as of South Asian origin. Including Indian, Pakistani, Bangladeshi and Sri Lankan.\n  2. Adults aged ≥18 years at time of consent.\n  3. Documented diagnosis of type 1 or type 2 diabetes mellitus.\n  4. Best-corrected visual acuity (BCVA) of 20-73 ETDRS letters, corresponding approximately to 6/12 to 6/120 Snellen (metres) in the study eye.\n  5. Centre-involving diabetic macular oedema (DMO) confirmed on SD-OCT, with a central subfield thickness (CST) ≥400 µm, in line with UK NICE guidance in the treatment naïve patients (75% of the cohort). 25% of cohort is previously treated DMO where treatment commenced within 3 years of the screening visit and responded to the anti VEGF, reviewed during this period and developed any clinically significant recurrence of DMO, with vision at least 6/18 or better in the enrolled eye.\n  6. Decreased visual acuity attributable primarily to DMO.\n  7. Both eyes may be eligible; however, the eye with the higher CST will be designated as the study eye.\n  8. Male or female participants are eligible. Women of childbearing potential must agree to remain abstinent or use highly effective contraception during the study and for at least 3 months after the final dose.\n  9. Ability and willingness to provide written informed consent and comply with all study procedures and follow-up.\n\n     Exclusion Criteria:\n\n     All subjects meeting any of the following exclusion criteria at baseline will be excluded from participation:\n\n  <!-- -->\n\n  1. Untreated diabetes mellitus, or initiation of oral or injectable anti-diabetic therapy within 3 months prior to Day 1.\n  2. Uncontrolled blood pressure: systolic \\>180 mmHg or diastolic \\>100 mmHg at rest.\n  3. Pregnant or breastfeeding women, or intention to become pregnant during the study period.\n  4. Pan retinal photocoagulation (PRP) or macular laser in the study eye within 3 months prior to Day 0.\n  5. Intraocular or periocular corticosteroid therapy in the study eye within 6 months prior to Day 0.\n  6. Previous treatment with Fluocinolone acetonide (Iluvien) in the study eye.\n  7. Active proliferative diabetic retinopathy in the study eye.\n  8. Active ocular or periocular infection, or active intraocular inflammation, in the study eye.\n  9. Any ocular condition that could confound macular assessment or contribute to irreversible vision loss in the study eye, including:\n\n     * Retinal vein occlusion\n     * Significant epiretinal membrane\n     * Tractional retinal detachment involving the posterior pole\n     * Macular atrophy\n     * Foveal scarring\n  10. Previous vitrectomy in the study eye.\n  11. Cataract surgery or any other intraocular surgery in the study eye within 3 months of baseline if followed by macular oedema which can confound the DMO diagnosis. Planned cataract surgery in the study eye once treatment commenced and after the loading dose, is allowed as per clinician discretion.\n  12. Known hypersensitivity to faricimab or any of its excipients.\n  13. Any systemic condition, abnormal laboratory finding, or concomitant therapy that, in the opinion of the investigator, may compromise patient safety or the validity of study results."
+    },
+    "identificationModule": {
+      "briefTitle": "South Asian Patients With Diabetic Macular Oedema Treated With Faricimab Assessing the Efficacy, Durability, and Safety (SEAFAR Study)",
+      "nctId": "NCT07753616"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* newborn\n* birth weight less than 1500 g\n* gestational age less than 32 weeks\n* less than 48 hours of age\n* diagnosed as respiratory distress syndrome and need surfactant\n* get parental consent\n\nExclusion Criteria:\n\n\\- chromosom abnormality\n\n* critical congenital heart disease\n* congenital pulmonal disease\n* Need surgery within 1 month\n* mother with chorioamnionitis\n* received postnatal corticosteroid before"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Intrathecal Administration of Budesonide to Prevent Bronchopulmonary Dysplasia",
+      "nctId": "NCT07725575"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

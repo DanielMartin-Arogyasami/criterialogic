@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Female participants aged 18 years or older.\n* Clinical diagnosis of melasma.\n* No medical treatment for melasma during the previous 6 months.\n* Willing and able to comply with all study procedures and follow-up visits.\n* Provided written informed consent before study participation.\n\nExclusion Criteria:\n\n* Pregnant or breastfeeding women.\n* Use of hormonal contraceptives.\n* Use of medications known to affect skin pigmentation (e.g., phenytoin, amiodarone, antipsychotics, cytotoxic agents, tetracyclines, or heavy metals).\n* History of keloid formation or foreign body reaction.\n* Known allergy or hypersensitivity to any study medication.\n* Presence of systemic diseases affecting pigmentation, including hepatic, renal, thyroid, or other endocrine disorders.\n* Fitzpatrick skin types V or VI."
+    },
+    "identificationModule": {
+      "briefTitle": "Microneedling-Assisted Metformin, Tranexamic Acid, and Modified Kligman's Formula for Melasma",
+      "nctId": "NCT07696806"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

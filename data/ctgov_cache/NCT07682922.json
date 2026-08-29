@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 18 to 80 years (inclusive).\n* Time from last known normal to arrival at the first hospital is within 6 hours.\n* Clinical and imaging diagnosis of acute ischemic stroke, with a Los Angeles Motor Scale (LAMS) score ≥ 4, or occlusion of the internal carotid artery, M1/M2 segment of the middle cerebral artery, V4 segment of the vertebral artery, or basilar artery confirmed by CTA/MRA at the first or target hospital.\n* ASPECTS score ≥ 6 on non-contrast head CT at the first hospital.\n* Clinically assessed as planned for immediate transfer to a target hospital for evaluation of endovascular therapy (final decision on whether to perform EVT is made by the neuro-interventionist at the target hospital based on imaging and clinical status).\n* Written informed consent signed by the patient or their legal representative.\n\nExclusion Criteria:\n\n* Allergy to contrast agents, nickel, titanium, or their alloys.\n* Known allergy to dexborneol, edaravone, or excipients.\n* Pre-stroke modified Rankin Scale (mRS) score ≥ 2.\n* Patients receiving intravenous thrombolysis alone.\n* Severe impairment of consciousness (e.g., GCS score \\< 8) or inability to cooperate with sublingual administration.\n* Severe hepatic or renal insufficiency (e.g., ALT/AST \\> 3 times the upper limit of normal, Cr \\> 2 times the upper limit of normal).\n* Estimated inter-hospital transfer time \\> 3 hours.\n* Pregnant or lactating women.\n* Arterial tortuosity and/or other arterial diseases where the thrombectomy device is expected to be unable to reach the target vessel.\n* Brain tumors with mass effect on imaging (except small meningiomas).\n* Currently participating in other drug clinical trials.\n* History of neurological or psychiatric diseases that hinder the assessment of neurological function.\n* Any late-stage disease with an expected life expectancy \\< 6 months."
+    },
+    "identificationModule": {
+      "briefTitle": "Sublingual Edaravone Dexborneol for Inter-hospital Transfer Acute Ischemic Stroke (SLEDAIS)",
+      "nctId": "NCT07682922"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

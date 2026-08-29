@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥65 years.\n2. Euthyroid at the time of enrollment, defined as thyroid-stimulating hormone (TSH) and free thyroxine (fT4) levels within the reference range.\n3. Receiving levothyroxine treatment for subclinical hypothyroidism for at least 6 months.\n4. Receiving levothyroxine at a dose ≤50 mcg/day, or ≤25 mcg/day for participants weighing \\<50 kg.\n5. Receiving outpatient care at the participating study site for at least 12 months.\n\nSubclinical hypothyroidism is defined as a TSH level above the normal reference range but \\<10 mIU/L, with a normal fT4 level, prior to initiation of levothyroxine therapy.\n\nExclusion Criteria:\n\n1. TSH \\>10 mIU/L at any time documented in the institutional electronic health record.\n2. Levothyroxine therapy initiated less than 6 months before enrollment.\n3. Abnormal thyroid function at the time of enrollment.\n4. Current use of medications that affect thyroid hormone levels, such as antithyroid medications, amiodarone, or lithium.\n5. History of thyroid cancer or goiter with compressive symptoms.\n6. History of partial or total thyroidectomy or radioactive iodine therapy.\n7. New York Heart Association (NYHA) Class IV heart failure.\n8. Hospitalization for a major illness or elective surgery within the previous 4 weeks, including acute coronary syndrome, acute myocarditis, pancarditis, or stroke.\n9. Unstable medical condition that, in the investigator's judgment, would jeopardize participant safety or interfere with study participation.\n10. Terminal illness with a life expectancy of less than 6 months.\n11. Lack of decision-making capacity.\n12. Severe dyslipidemia, defined as LDL cholesterol \\>190 mg/dL.\n13. Untreated depression.\n14. Uncontrolled psychiatric disorder.\n15. Uncontrolled chronic fatigue syndrome.\n16. Uncontrolled pain."
+    },
+    "identificationModule": {
+      "briefTitle": "Discontinuation of Low-Dose Levothyroxine in Older Adults With Subclinical Hypothyroidism",
+      "nctId": "NCT07787585"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-26",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

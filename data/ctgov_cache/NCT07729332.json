@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18-80 years at screening\n2. History of BMI ≥30 kg/m²\n3. Current or recent (within 8 weeks) treatment with injectable semaglutide, tirzepatide, or similar GLP-1 based medication\n4. Achieved ≥10% body weight loss since initiation of injectable semaglutide, tirzepatide or similar GLP-1 based medication\n5. Willing to participate in the study after reviewing study infographic and confirming understanding of randomization and study procedures\n6. Ability to understand and the willingness to sign a written informed consent document\n7. Residence in Massachusetts\n\nExclusion Criteria:\n\n1. Current type 2 diabetes mellitus\n2. Recent or planned surgical obesity treatment (bariatric surgery \\>1 year prior to GLP-1 initiation allowed)\n3. Pregnancy, intent to become pregnant, or current breastfeeding (participants of childbearing potential must have a negative pregnancy test at baseline)\n4. History of pancreatitis\n5. History of transplanted organ (corneal transplants permitted) or awaiting organ transplant\n6. Obesity induced by endocrinologic disorders (e.g., Cushing syndrome) or diagnosed monogenic/syndromic obesity (e.g., MC4R deficiency, Prader-Willi syndrome)\n7. History of significant active or unstable major depressive disorder or other severe psychiatric disorder (e.g., schizophrenia, bipolar disorder, serious mood or anxiety disorder) within the past 2 years\n8. Any history of a suicide attempt\n9. Systemic glucocorticoid therapy \\>2 weeks within the prior 3 months, or anticipated need within the next 12 months\n10. Use of medications known to cause significant weight gain (e.g., olanzapine, lithium) within the last 3 months.\n11. Quit using nicotine-containing products less than 6 months prior to baseline visit or intention to quit use in the next year\n12. Current use strong CYP3A4 inducer medications (which may include: phenytoin, carbamazepine, phenobarbital, primidone, lumacaftor, midostaurin, and pentobarbital).\n13. Use of prescription or over-the-counter weight loss medications within the last 3 months, other than semaglutide, tirzepatide, or other injectable GLP-1 medication\n14. Chronic kidney disease stage 3b or lower (eGFR \\<45 mL/min/1.73m²)\n15. Acute hepatitis or liver failure/cirrhosis\n16. Known contraindications to phentermine:\n\n    1. History of coronary artery, cerebrovascular or peripheral arterial disease including myocardial infarction, unstable angina, revascularization, stroke/TIA, carotid intervention, claudication\n    2. Poorly-controlled blood pressure (\\>149/94) or elevated heart rate (\\>110 bpm)\n    3. History of cardiac arrhythmia\n    4. History of valvular heart disease\n    5. Congestive heart failure (any history or current)\n    6. Active / currently-treated hyperthyroidism (thyroid function screening required if pulse\\>100)\n    7. History of glaucoma or been told by an ophthalmologist that you are at high risk for glaucoma\n    8. Heavy alcohol use within the last 6 months (men: more than 4 drinks on any day or more than 14 drinks per week; women: more than 3 drinks on any day or more than 7 drinks per week)\n    9. History of substance use disorder or active use of illicit substances within the last 12 months. Tetrahydrocannabinol (THC)-containing products will not be considered an illicit substance. (e.g., uncontrolled hypertension, active/unstable cardiovascular disease, arrhythmia, hyperthyroidism \\[thyroid function screening required if pulse\\>100\\], glaucoma, history of substance use disorder\n\n16\\. Use of any stimulant medications. 17. Known contraindication to orforglipron (e.g., personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2).\n\n18\\. Any condition (e.g., drug or alcohol abuse, diagnosed eating disorder, other psychiatric disorder) that in the investigator's opinion may preclude protocol compliance"
+    },
+    "identificationModule": {
+      "briefTitle": "Switching to Oral Weight Management Pharmacotherapy to Prevent Weight Regain After GLP-1 Therapy Discontinuation",
+      "nctId": "NCT07729332"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

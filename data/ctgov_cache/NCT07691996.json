@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 years or older, admitted to the ICU\n* Expected length of stay of at least 48 hours\n* Not mechanically ventilated\n* Able to take oral medications.\n* Hemodynamically stable as determined by the treating ICU physician\n* Able to provide informed consent or have consent provided by a legally -authorized representative.\n\nExclusion Criteria:\n\n* Mechanically ventilated\n* Currently using melatonin prior to ICU admission,\n* Have neurological conditions that may significantly alter sleep architecture, such as traumatic brain injury, stroke, or severe dementia.\n* Pregnant or lactating individuals\n* Those individuals with a comfort measures-only status"
+    },
+    "identificationModule": {
+      "briefTitle": "Effects of Melatonin on Sleep Architecture of Critically Ill Patients in the ICU",
+      "nctId": "NCT07691996"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-09",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

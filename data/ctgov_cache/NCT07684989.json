@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female patients aged 65 years and above.\n* Patients scheduled for elective lower limb orthopedic surgery under spinal anesthesia.\n* American Society of Anesthesiologists (ASA) physical status I-III.\n* Patients willing to participate and provide written informed consent.\n\nExclusion Criteria:\n\n* Refusal to participate in the study.\n* Contraindications to spinal anesthesia (e.g., infection at puncture site, coagulopathy, severe hypovolemia, raised intracranial pressure).\n* Known hypersensitivity or allergy to bupivacaine.\n* Severe valvular heart disease.\n* Significant cardiac arrhythmias.\n* Uncontrolled hypertension.\n* Severe hepatic or renal impairment.\n* Pre-existing neurological disorders affecting lower limb motor or sensory function.\n* Severe spinal deformity or previous lumbar spine surgery interfering with spinal anesthesia.\n* Cognitive impairment or inability to provide informed consent.\n* Emergency orthopedic procedures."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of Low-Dose Versus Standard-Dose Hyperbaric Bupivacaine in Spinal Anesthesia",
+      "nctId": "NCT07684989"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

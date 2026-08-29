@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Female\n* Aged 18-35\n* Reporting condomless vaginal sex with men AND least one of the following:\n\n  1. diagnosis of CT, gonorrhea, syphilis, or trichomonas in the past year\n  2. reporting 2 or more sexual partners in the past 6 months\n* Plan to continue to be sexually active over the next year\n* Have smartphone and be willing to engage with an app\n* If HIV+: Viral load\\<200 copies/ml and CD4 count \\>200 cells/mm3\n\nExclusion Criteria:\n\n* Pregnant, nursing, or intending to become pregnant\n* Reported allergy to tetracyclines\n* Liver disease or end-stage renal disease\n* Non-English Speaking\n* Taking concomitant medications which may impact doxycycline metabolism (e.g., systemic retinoids, antacids, barbiturates, carbamazepine, phenytoin, iron, warfarin, rifampin)\n* Not willing to take doxy PEP or comply with study procedures\n* Unable to provide informed consent"
+    },
+    "identificationModule": {
+      "briefTitle": "A Randomized Controlled Trial of Doxycycline Post Exposure Prophylaxis to Prevent Incident Bacterial STIs Among Women in the United States",
+      "nctId": "NCT07704957"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Previously treated failed single rooted teeth with chronic apical periodontitis.\n* No use of antibiotic three months before treatment.\n* Patients are free of any systemic disease.\n* Positive patient acceptance for participation\n\nExclusion Criteria:\n\n* Teeth that are badly broken down with difficult isolation.\n* Signs of acute infection, root fracture, root surface caries, swellings or ankylosis\n* Periodontally affected teeth with pockets deeper than 4mm.\n* Pregnant or lactating woman.\n* Patients who needs any prophylactic antibiotic.\n* Patients with allergy to pollen."
+    },
+    "identificationModule": {
+      "briefTitle": "Adjunctive Oral Probiotics in Endodontic Retreatment: Effects on Postoperative Pain and RANKL/OPG Levels",
+      "nctId": "NCT07683520"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

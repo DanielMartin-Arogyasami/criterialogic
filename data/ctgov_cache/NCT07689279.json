@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "A potential participant is deemed eligible for trial participation if the following criteria are met:\n\n1. TAVI as decided by local multidisciplinary heart team\n2. CT-derived annular perimeters fall within the following ranges:\n\n   * 55.5 - 57.5 mm\n   * 61.0 - 64.5 mm\n   * 70.5 - 74.0 mm\n   * 79.5 - 84.0 mm\n   * 92.0 - 96.0 mm\n3. Written informed consent\n\nExclusion Criteria:\n\nA potential participant will be excluded from trial participation in case of inability to provide informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Selection of Transcatheter Heart vaLve With Intermediate Sizing in Patients With Severe Aortic Stenosis Treated With Transcatheter Aortic Valve Replacement",
+      "nctId": "NCT07689279"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

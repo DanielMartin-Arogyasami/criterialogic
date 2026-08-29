@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Study A\n\nInclusion Criteria\n\n1. Willing and able to provide informed consent/assent; if under the age of 18, guardian(s) is (are) willing and able to provide consent.\n2. Patients who are expected to receive pz-cel manufactured as intended for commercial treatment; however, the final manufactured product was non-conforming and therefore did not meet commercial release criteria.\n3. All women of childbearing potential should discuss reproductive and breastfeeding plans and precautions with the treating physician in accordance with the considerations for special populations in the United States Prescribing Information (USPI).\n\nExclusion Criteria\n\n1. Inability to adequately follow the protocol and ensure the protection of cellular sheet sites, as determined by the Investigator.\n2. Hypersensitivity to vancomycin or amikacin.\n3. The presence of medical illness expected to complicate participation and/or compromise the safety of this technique, such as, but not limited to, active infection with human immunodeficiency virus (HIV), hepatitis B, or hepatitis C.\n4. Evidence of systemic infection.\n5. Current evidence of squamous cell carcinoma (SCC) in the area that will undergo pz-cel application.\n6. Grade 3 clinical event or laboratory abnormality prior to pz-cel treatment, with the exception of abnormalities such as esophageal strictures, anemia, low albumin, and pain/itch, which are expected in patients with severe DEB.\n7. Any other circumstance where the Investigator believes that it is not appropriate for the patient to participate in the study.\n\nStudy B\n\nInclusion Criteria\n\n1. Willing and able to provide informed consent/assent; if under the age of 18, guardian(s) is (are) willing and able to provide consent.\n2. Patients who are expected to receive treatment with pz-cel and are receiving a biopsy prior to pz-cel application in the post-marketing setting.\n\nExclusion Criteria\n\n1\\. Any circumstance where the Investigator believes that the patient may not be appropriate for participation in the study.\n\nStudy C\n\nInclusion Criteria:\n\n1. Willing and able to provide informed consent/assent; if under the age of 18, guardian(s) is (are) willing and able to provide consent.\n2. Patients who were prescribed pz-cel for commercial treatment but require special access defined in the protocol for treatment to occur.\n3. All women of childbearing potential must have a negative urine pregnancy test and agree to use a reliable birth control method throughout the duration of the study.\n\nExclusion Criteria:\n\n1. Inability to properly follow protocol assessments and protect cellular sheet sites as determined by the Investigator.\n2. Currently enrolled in an interventional clinical trial involving an investigational medicinal product to treat DEB or receipt of the investigational therapy within the 3 months prior to pz-cel application.\n3. Breastfeeding.\n4. The presence of medical illness expected to complicate participation and/or compromise the safety of this technique, such as, but not limited to, active infection with human immunodeficiency virus (HIV), hepatitis B, or hepatitis C.\n5. Evidence of systemic infection.\n6. Current evidence or a history of SCC in the area that will undergo pz-cel application.\n7. Active drug or alcohol addiction.\n8. Hypersensitivity to vancomycin or amikacin.\n9. Grade 3 clinical event or laboratory abnormality prior to pz-cel treatment, with the exception of abnormalities such as esophageal strictures, anemia, low albumin, and pain/itch, which are expected in patients with severe DEB.\n10. Any other circumstance where the Investigator believes that it is not appropriate for the patient to participate in the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Phase 4 Master Protocol for Patients Prescribed Prademagene Zamikeracel for the Treatment of Wounds",
+      "nctId": "NCT07717736"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

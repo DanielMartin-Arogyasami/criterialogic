@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥65 years at the time of vaccination\n2. Self-reported ability to understand written and spoken English or Danish (Denmark only) or Spanish or Galician (Spain only)\n3. Informed consent form has been signed and dated\n\nExclusion Criteria:\n\n* There are no specific exclusion criteria for this study"
+    },
+    "identificationModule": {
+      "briefTitle": "Effectiveness of An Influenza/COVID-19 Vaccine (mCombriax [mRNA-1083]) in Adults ≥ 65 Years",
+      "nctId": "NCT07790523"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

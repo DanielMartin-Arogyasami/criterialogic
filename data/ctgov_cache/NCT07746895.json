@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Have received or plan to receive pegcetacoplan for the treatment of C3G or primary IC-MPGN.\n* Provided signed and dated informed consent. For participants under the legal age signed and dated informed consent is provided by the participant's legally authorised representative. Assent will also be obtained from paediatric participants as required by local regulations.\n\nExclusion Criteria:\n\n* Receiving an investigational treatment for C3G or primary IC-MPGN at the time of pegcetacoplan initiation.\n* Initiated treatment with pegcetacoplan in an interventional study."
+    },
+    "identificationModule": {
+      "briefTitle": "Real-World Effectiveness and Safety of Pegcetacoplan in Patients With C3G or IC-MPG: A Multi-Country Study",
+      "nctId": "NCT07746895"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-05",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

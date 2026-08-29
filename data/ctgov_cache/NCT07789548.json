@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients aged between 18 and 65 years.\n* Patients scheduled for elective thyroidectomy under general anesthesia.\n* American Society of Anesthesiologists (ASA) physical status I-II.\n* Both sexes will be included.\n* Patients able to understand the study protocol and provide written informed consent.\n\nExclusion Criteria:\n\n* Patient refusal.\n* Other endocrine diseases (as uncontrolled diabetes mellitus, adrenal disorders, pituitary disorders)\n* Known allergy or hypersensitivity to local anesthetics.\n* Coagulopathy or ongoing anticoagulant therapy contraindicating regional anesthesia.\n* Local infection at the site of needle insertion.\n* Preexisting diaphragmatic dysfunction or phrenic nerve palsy.\n* Significant chronic respiratory disease affecting pulmonary function (e.g., severe COPD, restrictive lung disease, uncontrolled asthma).\n* Morbid obesity (BMI ≥ 35 kg/m²).\n* Psychiatric or neurological diseases affecting respiratory muscles.\n* Previous neck surgery or anatomical deformity interfering with cervical plexus --block performance or diaphragmatic ultrasound assessment.\n* Pregnancy.."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison Low-volume Versus Standard-volume Ultrasound-guided Bilateral Intermediate Cervical Plexus Block",
+      "nctId": "NCT07789548"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

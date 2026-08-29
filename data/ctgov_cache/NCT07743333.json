@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* All patients were assigned for FOB for diagnostic causes as part of their usual care.\n* All patients were assigned for FOB for therapeutic causes as part of their usual care.\n\nExclusion Criteria:\n\n* unstable angina or recent myocardial infarction,\n* hypoxemia that is not corrected by oxygen therapy,\n* increased intracranial pressure or recent cerebrovascular stroke,\n* uncontrolled uraemia,\n* uncontrolled hypertension,\n* current viral infections or colds,\n* history of allergy to lidocaine or ketamine,\n* altered mental status, or\n* non-corrected coagulopathy"
+    },
+    "identificationModule": {
+      "briefTitle": "Nebulized Lidocaine And Ketamine Before Fiberoptic Bronchoscopy",
+      "nctId": "NCT07743333"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-03",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged 18 years or older, regardless of gender;\n2. Diagnosed with Short Bowel Syndrome (SBS);\n3. Total bilirubin ≤ 1.5 times the upper limit of normal (ULN); alanine transaminase (ALT) and aspartate transaminase (AST) ≤ 3 times the ULN; serum creatinine for renal function ≤ 1.5 times the ULN;\n4. All female participants who are not postmenopausal (last menstrual period ≥ 12 months prior to the screening visit) and have not undergone hysterectomy (or bilateral salpingectomy) must agree to use one recognized highly effective contraceptive method from the date of signing the informed consent form until 1 month after the last Saizeng® treatment;\n5. Male participants must use contraception, or their female partners shall satisfy any of the conditions specified in Item 5 above;\n6. Able to voluntarily sign the informed consent form and willing to complete the trial in full compliance with the study protocol.\n\nExclusion Criteria:\n\n1. Subjects with a history of allergic reactions to the study drug or its analogues; subjects unsuitable for subcutaneous injection, including those receiving anticoagulant therapy, presenting with thrombocytopenia, known hemorrhagic diseases, or idiopathic thrombocytopenic purpura (ITP).\n2. Subjects with positive hepatitis B surface antigen (HBsAg) or hepatitis B core antibody (HBcAb) and HBV DNA ≥ 1000 IU/mL within 6 months prior to screening; subjects with positive anti-HCV antibody and HCV RNA level exceeding the upper limit of normal (ULN) set by the study center.\n3. Subjects with a prior diagnosis of malignant tumors before screening.\n4. Subjects with consciousness disturbance, a history of psychiatric illness, or severe neurological dysfunction.\n5. Subjects with glycated hemoglobin (HbA1c) ≥ 7% at screening.\n6. Subjects with any of the following clinically significant cardiovascular disorders:\n\n   * History of chronic congestive heart failure with New York Heart Association (NYHA) functional class ≥ II at screening;\n   * Subjects who experienced myocardial infarction, acute coronary syndrome, viral myocarditis or pulmonary embolism within 6 months before screening, or underwent coronary revascularization within the preceding 6 months;\n   * Severe arrhythmias requiring treatment with Class Ia or Class III antiarrhythmic agents;\n   * Sick sinus syndrome, second-degree type II or third-degree atrioventricular block without an implanted pacemaker;\n   * QTc interval ≥ 470 ms for male subjects or ≥ 480 ms for female subjects at screening (calculated via the Fridericia correction formula: QTc = QT/RR⁰·³³), or a medical history of prolonged QTc interval.\n7. Subjects with uncontrolled hypertension: those receiving 1 to 2 oral antihypertensive drugs whose arterial blood pressure remains ≥ 160/100 mmHg on any two measurements taken within one day at screening.\n8. Subjects suffering from diseases requiring daily systemic glucocorticoid therapy (prednisone ≥ 10 mg/day or equivalent doses of other glucocorticoids) or immunosuppressant therapy (e.g., active inflammatory bowel disease, autoimmune disorders, radiation enteritis), and continuous treatment is expected throughout the trial period; subjects who received systemic glucocorticoids cumulatively for ≥28 days or consecutively for ≥14 days within 3 months prior to screening.\n9. Subjects who have received stem cell therapy, any form of bone marrow transplantation, or solid organ transplantation.\n10. Subjects whose abdominal radiotherapy was completed less than 2 years before screening.\n11. Subjects with positive serum human chorionic gonadotropin (HCG) at screening; breastfeeding women.\n12. Subjects who have taken investigational medicinal products or participated in other clinical trials within 1 month prior to screening.\n13. Participants judged by the investigator to be unsuitable for enrollment in this clinical trial based on their medical history."
+    },
+    "identificationModule": {
+      "briefTitle": "Phase IV Study of rhGH Injection in Adult Short Bowel Syndrome",
+      "nctId": "NCT07691125"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

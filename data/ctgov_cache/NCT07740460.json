@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* ASA I or ASA II\n* euthyroid status\n* signed informed consent\n\nExclusion Criteria:\n\n* patients who refuse to sign the informed consent form\n* infection at the block injection site\n* hypersensitivity or contraindications to the medication used in the study\n* hypo/hyperthyroidism at the time of surgery\n* presence of substernal goiter\n* additional surgical interventions during the procedure\n* history of previous neck surgery or radiation\n* coagulopathy\n* uncontroled respiratory disease\n* diabetes mellitus\n* autoimune disease\n* chronic corticosteroid therapy\n* smokers\n* pregnant women"
+    },
+    "identificationModule": {
+      "briefTitle": "The Effect of Bilateral Intermediate Cervical Plexus Block on the Surgical Stress Response Following Total Thyroidectomy",
+      "nctId": "NCT07740460"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

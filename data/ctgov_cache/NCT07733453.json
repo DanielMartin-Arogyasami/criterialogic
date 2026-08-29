@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥ 18 years of age\n2. Glaucoma that is inadequately controlled on tolerated medical therapy with intraocular pressure greater than or equal to 16 mm Hg.\n3. An aqueous shunt implant as planned surgical procedure\n4. A diagnosis of ocular hypertension, primary open angle glaucoma, primary angle closure glaucoma, or secondary glaucoma.\n\nExclusion Criteria:\n\n1. Unwilling or unable to give consent, unwilling to accept randomization, or unable to return for scheduled protocol visits.\n2. Pregnant or nursing women.\n3. No light perception vision.\n4. Uveitis secondary to Juvenile Idiopathic Arthritis\n5. Previous cyclodestructive procedure or previous aqueous shunt device implanted in the same eye\n6. Supero-temporal buckling or other external impediment to supero-temporal aqueous shunt implantation\n7. Silicone oil-filled eyes or sufficient residual intraocular silicone oil to preclude supero-temporal aqueous shunt implantation\n8. Vitreous present in the anterior chamber, sufficient to require a vitrectomy at the time of surgery\n9. Condition with high episcleral pressure, such as Sturge-Weber or nanophthalmos\n10. Acute trauma (within 3 months)\n11. Need for glaucoma surgery combined with other ocular procedures (i.e. cataract surgery, penetrating keratoplasty, or retinal surgery) or anticipated need for additional ocular surgery."
+    },
+    "identificationModule": {
+      "briefTitle": "Baerveldt Versus Paul Study",
+      "nctId": "NCT07733453"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

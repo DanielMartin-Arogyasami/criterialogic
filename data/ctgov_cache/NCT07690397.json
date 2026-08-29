@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria: Age 18 years or older.\n\n* Diagnosis of primary open-angle glaucoma or ocular hypertension, confirmed by the treating ophthalmologist.\n* Continuous and stable treatment with a topical fixed-dose combination of dorzolamide, timolol, and brimonidine in a preservative formulation, for a minimum of 3 months and a maximum of 12 months prior to study enrollment.\n* No prior use of preservative-free formulations of dorzolamide, timolol, and brimonidine.\n* Exclusive use of the fixed-dose combination of dorzolamide, timolol, and brimonidine, without other concomitant ocular hypotensive agents.\n* Ability to attend all study visits and procedures.\n* Signed written informed consent.\n\nExclusion Criteria: Patients with any of the following conditions will be excluded:\n\n* History of glaucoma, retinal, or cataract surgery.\n* History of corneal refractive surgery (LASIK, PRK, SMILE).\n* Diagnosis of secondary glaucoma (neovascular, inflammatory, traumatic, or other secondary causes).\n* History of previous iridotomy, iridoplasty, or trabeculoplasty procedures.\n* Presence of concomitant ocular diseases that may interfere with the evaluation of the ocular surface (e.g., Sjögren's syndrome, active infectious keratitis, or severe ocular allergy).\n* Decompensated systemic conditions that contraindicate the use of topical beta-blockers (uncontrolled asthma, bradycardia, second- or third-degree AV block).\n* Pregnancy or breastfeeding.\n* Any medical or ophthalmological condition that, in the investigator's judgment, compromises the participant's safety or the validity of the data."
+    },
+    "identificationModule": {
+      "briefTitle": "Dorzolamide/Brimonidine/Timolol Impact on Ocular Surface, Glaucoma Progression & Chatbot Follow-up: GLAUCO-TECH",
+      "nctId": "NCT07690397"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

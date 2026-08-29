@@ -41,7 +41,9 @@ class Source(str, Enum):
     """Provenance — drives licensing / redistribution handling downstream."""
     CHIA = "chia"
     N2C2_2018 = "n2c2_2018"
-    CTGOV_SYNTHETIC = "ctgov_synthetic"  # Task D compositional stress-test set
+    CTGOV = "ctgov"  # atoms extracted from verbatim ClinicalTrials.gov eligibility text
+    N2C2_DERIVED = "n2c2_derived"  # atoms derived from the public n2c2 criterion definitions
+    SYNTHETIC_EXAMPLE = "synthetic_example"  # hand-written illustrations; not from any corpus
 class EntityType(str, Enum):
     """Coarse clinical concept type; superset covering Chia + n2c2."""
     CONDITION = "condition"
@@ -264,8 +266,8 @@ def example_simple_inclusion() -> LogicalForm:
     'Age 18 years or older.'  (maps cleanly from an n2c2-style demographic rule)
     """
     return LogicalForm(
-        criterion_id="ctgov:demo:age-18",
-        source=Source.CTGOV_SYNTHETIC,
+        criterion_id="example:age-18",
+        source=Source.SYNTHETIC_EXAMPLE,
         polarity=Polarity.INCLUSION,
         text="Age 18 years or older.",
         expression=Atom(
@@ -280,8 +282,8 @@ def example_nested_compound() -> LogicalForm:
      diabetic ketoacidosis within the past year.'
     """
     return LogicalForm(
-        criterion_id="ctgov:demo:t2dm-composite",
-        source=Source.CTGOV_SYNTHETIC,
+        criterion_id="example:t2dm-composite",
+        source=Source.SYNTHETIC_EXAMPLE,
         polarity=Polarity.INCLUSION,
         text=(
             "Type 2 diabetes mellitus with HbA1c between 6.5% and 9.5%, and either "

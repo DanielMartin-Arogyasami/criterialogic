@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Healthy adults aged 18 to 65 years\n* Non-smokers (no smoking or vaping within the past 6 months)\n* No chronic lung disease or significant chronic medical conditions\n* No current or recent (within 1 month) upper or lower respiratory infection\n* Able and willing to provide informed consent\n* Have not received the current seasonal influenza vaccine\n* Able to comply with study procedures and follow-up visits\n\nExclusion Criteria:\n\n* Age under 18 or over 65 years\n* Pregnancy or breastfeeding\n* Prisoners\n* Non-English speaking individuals\n* Immunocompromised individuals (including HIV/AIDS, immunosuppressive therapy, chemotherapy, or primary immunodeficiency)\n* Chronic medical conditions including asthma, chronic lung, liver, kidney, neurologic, hematologic, metabolic, or significant cardiovascular disease (except isolated hypertension)\n* History of chronic sinusitis or significant nasal allergies requiring frequent or daily treatment\n* Acute moderate or severe illness at time of enrollment, with or without fever\n* Receipt of influenza vaccine during the current season or within the past 2 weeks\n* Receipt of another live vaccine within 4 weeks prior to enrollment or planned during study period\n* Use of influenza antiviral medications (e.g., oseltamivir, zanamivir) within 48 hours prior to vaccination or planned use within 14 days after vaccination\n* History of severe allergic reaction to influenza vaccine or any component of FluMist (including egg allergy if applicable)\n* History of Guillain-Barré syndrome following influenza vaccination\n* Any condition that, in the opinion of the investigator, would interfere with study participation or interpretation of results"
+    },
+    "identificationModule": {
+      "briefTitle": "How Healthy Adults Respond to the Nasal Flu Vaccine",
+      "nctId": "NCT07726862"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

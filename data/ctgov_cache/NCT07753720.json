@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria\n\n* Age: 18 to 70 years.\n* Diagnosis: Erectile dysfunction for at least 6 months.\n* PDE5 inhibitor resistance: History of on-demand PDE5 inhibitor use for at least 3 months with inadequate response, defined as:\n* International Index of Erectile Function-Erectile Function score less than 26 despite optimal dosing.\n* Self-reported inability to achieve or maintain an erection sufficient for satisfactory sexual intercourse in at least 50% of attempts.\n* Confirmed proper medication use with at least 4 to 8 attempts with adequate sexual stimulation.\n* Stable relationship: Sexually active with a female partner for at least 6 months.\n* Informed consent: Willing and able to provide written informed consent.\n\nExclusion Criteria\n\n* Current use of nitrates.\n* Unstable cardiovascular disease, including recent myocardial infarction within 6 months, unstable angina, or severe heart failure.\n* Uncontrolled hypertension greater than 180 over 110 mmHg or severe hypotension less than 90 over 50 mmHg.\n* Severe hepatic impairment, Child-Pugh class C, or renal impairment with estimated glomerular filtration rate less than 30 mL per minute per 1.73 m².\n* Untreated hypogonadism, total testosterone less than 250 ng/dL.\n* Severe penile anatomic deformity or prior penile prosthesis.\n* History of priapism.\n* Severe untreated depression.\n* Pelvic surgery or radiation within 6 months."
+    },
+    "identificationModule": {
+      "briefTitle": "Daily Tadalafil as Adjunctive Therapy Versus Monotherapy for PDE5 Inhibitor-Resistant Erectile Dysfunction",
+      "nctId": "NCT07753720"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

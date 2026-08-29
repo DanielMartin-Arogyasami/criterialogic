@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:-\n\n* Adults aged 18 years or older.\n* Diagnosis of idiopathic epiretinal membrane requiring pars plana vitrectomy.\n* Best-corrected visual acuity impairment and/or metamorphopsia attributed to epiretinal membrane.\n* Ability to provide written informed consent.\n* Willingness to complete the scheduled follow-up examinations for 6 months.\n\nExclusion Criteria:\n\n* \\- Previous vitreoretinal surgery in the study eye.\n* Other retinal diseases that could affect visual or anatomical outcomes (e.g., diabetic retinopathy, retinal vein occlusion, age-related macular degeneration).\n* Significant ocular trauma.\n* Active ocular inflammation or infection.\n* Advanced glaucoma or optic neuropathy affecting visual function.\n* Media opacity preventing adequate retinal imaging."
+    },
+    "identificationModule": {
+      "briefTitle": "Perioperative Topical Nepafenac After Epiretinal Membrane Surgery",
+      "nctId": "NCT07736690"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

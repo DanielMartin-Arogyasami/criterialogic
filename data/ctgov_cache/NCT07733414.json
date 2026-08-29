@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male or female, aged ≥18 and ≤70 years.\n2. Meet DSM-5 diagnostic criteria for insomnia disorder: dissatisfaction with nighttime sleep despite adequate sleep opportunity, manifested as difficulty initiating sleep, difficulty maintaining sleep (frequent awakenings or difficulty returning to sleep after awakening), or early-morning awakening with inability to resume sleep, accompanied by subjective experience of daytime dysfunction. Symptoms occur ≥3 times per week and persist for ≥3 months.\n3. Received stable BZRA monotherapy for at least 3 nights per week during the 1 month prior to enrollment.\n4. Bedtime duration of no less than 7 hours per night.\n5. Unsatisfactory response or intolerance to current therapy, with clinical need to adjust insomnia medication regimen.\n6. Hamilton Anxiety Rating Scale (HAMA-14) score \\<14.\n7. Hamilton Depression Rating Scale (HAMD-17) score \\<17.\n8. Willing and able to comply with the study protocol and provide written informed consent.\n\nExclusion Criteria:\n\n1. History of chronic insomnia \\>5 years.\n2. Other sleep disorders such as narcolepsy-related symptoms, restless legs syndrome, circadian rhythm sleep disorder, REM sleep behavior disorder, etc.\n3. Daytime napping ≥1 hour/day and ≥3 days/week.\n4. Daily BZRA dose exceeding the maximum recommended dose for insomnia treatment per package insert.\n5. BZRA use \\>5 nights per week.\n6. History of BZRA treatment ≥3 years.\n7. Concurrent use of two or more BZRAs within the past 3 months.\n8. Use of central nervous system depressants within the past 3 months.\n9. Use of long-acting sedative-hypnotics (e.g., clonazepam) within the past 3 months.\n10. Use of anxiolytics or antidepressants for off-label insomnia treatment within the past 3 months.\n11. Initiation of cognitive behavioral therapy for insomnia (CBT-I) within 1 month prior to Visit 1.\n12. Prior non-response to orexin receptor antagonists (daridorexant, lemborexant, suvorexant, etc.).\n13. Clinically significant disease (e.g., cardiac, respiratory, gastrointestinal, renal) that may affect participant safety or interfere with study assessments, as judged by the investigator. Participants for whom sedative medications are contraindicated due to occupational or safety reasons are also excluded.\n14. Severe psychiatric disorder within the past 6 months, or severe alcohol/substance abuse/dependence within the past 2 years.\n15. Active suicidal ideation or behavior within the past 6 months.\n16. Pregnancy, lactation, or planned pregnancy within 90 days.\n17. Unable to avoid excessive alcohol consumption during the study.\n18. History of hypersensitivity to any component of daridorexant tablets.\n19. Severe hepatic impairment (Child-Pugh score ≥10).\n20. Unable to discontinue strong CYP3A4 inhibitors and strong or moderate CYP3A4 inducers during the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluating the Efficacy and Safety of Daridorexant Transition From BZRAs in Insomnia Patients（EASY-TIP）",
+      "nctId": "NCT07733414"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

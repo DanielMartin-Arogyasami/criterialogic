@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged 18 to 70 years, no restriction on gender\n2. Current Helicobacter pylori infection (positive result of either ¹³C or ¹⁴C urea breath test)\n3. No prior history of Helicobacter pylori eradication therapy\n\nExclusion Criteria:\n\n1. Severe underlying diseases, including hepatic insufficiency, renal insufficiency, malignant tumors, etc.\n2. Active gastrointestinal bleeding\n3. History of upper gastrointestinal surgery\n4. History of allergy to study medications\n5. Use of bismuth agents or antibiotics within 4 weeks prior to enrollment; use of acid-suppressive agents within 2 weeks prior to enrollment\n6. Pregnant or breastfeeding women, and subjects who refuse to take contraceptive measures during the trial\n7. Behaviors that may increase disease risks, such as chronic alcohol abuse and drug addiction\n8. Subjects who are unable or unwilling to sign the informed consent form"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy Comparison of 10-Day High-Dose Versus 14-Day Standard-Dose Vonoprazan Plus Amoxicillin in Helicobacter Pylori Eradication: A Multicenter Non-Inferiority Randomized Controlled Trial",
+      "nctId": "NCT07720037"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

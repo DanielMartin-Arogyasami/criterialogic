@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Men ≥ 50 years old with a definitive diagnosis of BPH by a urologist colleague.\n* Patients with moderate symptoms based on the International Prostate Symptom Score (IPSS): score 8 to 19\n* No prior use of alpha-blockers (tamsulosin, silodosin, doxazosin, etc.)\n* Satisfactory vision for imaging and acceptable scan quality according to device criteria.\n* Consent to participate in the study\n\nExclusion Criteria:\n\n* Insufficient image quality in assessments\n* History of intraocular surgery\n* Uncontrolled hypertension\n* Iris trauma\n* Patient unwillingness to continue participation in the study\n* Occurrence of unwanted systemic complications during the study\n* Incorrect medication adherence during the study\n* Diabetes\n* Hypertension"
+    },
+    "identificationModule": {
+      "briefTitle": "Iris Structural Changes With Tamsulosin vs. Silodosin in Benign Prostatic Hyperplasia Patients",
+      "nctId": "NCT07743034"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-03",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

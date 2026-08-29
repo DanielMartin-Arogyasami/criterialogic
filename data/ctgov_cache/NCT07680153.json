@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Provision of signed and dated informed consent form.\n2. Adults of all genders aged 18-70 at the time of screening.\n3. Diagnosis of Bipolar Disorder (by DSM-V criteria)\n4. Depressive symptoms of at least moderate severity (GRID HDRS-17 score \\>= 14 or as determined by expert clinician).\n5. Not currently taking medications for BD OR on a stable dose of medication for at least 1 month prior to screening and plans to remain off medications OR on this stable dose for the duration of participation.\n6. Access to psychiatric care before, during, and after completion of the study.\n7. For females of reproductive potential: use of highly effective contraception for at least 1 month prior to screening and agreement to use such a method during study participation.\n8. Proficiency in English sufficient to complete assessments and follow study procedure instructions.\n9. Stated willingness to comply with all study procedures and availability for the duration of the study.\n\nExclusion Criteria:\n\n1. Imminent risk of suicide.\n2. Presence of a primary DSM-5 diagnosis other than bipolar disorder (BD-I or BD-II), or a current comorbid psychiatric disorder that, in the opinion of the investigators, would confound outcome assessment or interfere with safe participation.\n3. History of seizures or any condition / concurrent medication that could notably lower seizure threshold.\n4. Met criteria for any significant substance use disorder (by DSM-V criteria) in the 6 months prior to screening.\n5. History or presence of significant neurological disorder (e.g., traumatic brain injury, stroke, Parkinson's disease or other movement disorder, epilepsy).\n6. History or presence of significant heart condition (e.g., recent myocardial infarction, congestive heart failure \\> stage 2, angina pectoris, bradycardia or tachycardia at the baseline assessment, uncontrolled hypertension).\n7. MRI contraindication, including presence of foreign metal bodies or implants, implanted or conductive objects in or near the head (e.g., stents, deep brain stimulators, vagus nerve stimulators, aneurysm coils, ocular implants, cochlear implants), permanent make-up.\n8. Individuals who are nursing, pregnant, or contemplating pregnancy within the length of study participation.\n9. Abnormal bloodwork for electrolytes, thyroid, or liver function.\n10. History or presence of any disorder or medical condition that, in the opinion of the study team, may compromise, interfere, or limit the individual's ability to complete the intervention or study procedures."
+    },
+    "identificationModule": {
+      "briefTitle": "Neuromodulation of Mood Switch Circuitry in Bipolar Disorder",
+      "nctId": "NCT07680153"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-02",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

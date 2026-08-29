@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Term neonates aged 24 hours to 14 days with gestational age 37-42 weeks.\n* Birth weight ≥2500 g.\n* Physiological, non-haemolytic indirect hyperbilirubinemia with total serum bilirubin 15-20 mg/dL, requiring phototherapy according to age-specific guidelines.\n* Written informed consent from parents or legal guardian.\n\nExclusion Criteria:\n\n* Preterm or low-birth-weight neonates.\n* Jaundice appearing within the first 24 hours of life.\n* ABO or Rh incompatibility, positive direct Coombs test, or any evidence of haemolysis.\n* Neonates with sepsis, birth asphyxia, shock, congenital anomalies, cholestasis, liver or renal disease.\n* Neonates with electrolyte, acid-base, coagulation, or intrauterine infection-related disorders.\n* Previous neonatal use of fenofibrate or phenobarbitone, or maternal phenobarbitone use during pregnancy."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison Of Fenofibrate Vs Phenobarbitone As Adjunct To Phototherapy In Reducing Total Serum Bilirubin In Indirect Hyperbilirubinemia In Neonates",
+      "nctId": "NCT07774741"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

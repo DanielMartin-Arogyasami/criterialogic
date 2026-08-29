@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥18 years\n* Diagnosis of pulmonary arterial hypertension (PAH, Group 1) confirmed according to accepted clinical and hemodynamic criteria\n* Stable treatment with an endothelin receptor antagonist in combination with sildenafil prior to randomization\n* Classified as intermediate-low, intermediate-high, or high risk according to the COMPERA 2.0 four-stratum model\n* Clinical indication for therapeutic escalation\n* Availability for follow-up assessment between 3 and 6 months after randomization\n* Ability to provide written informed consent\n\nExclusion Criteria:\n\n* Participation in another interventional clinical trial that mandates treatment modification\n* Known contraindication to prostacyclin pathway agents (including iloprost or selexipag)\n* Known contraindication to sildenafil dose escalation\n* Pregnancy or breastfeeding\n* Women of childbearing potential not using effective contraception\n* Any clinical condition that, in the investigator's judgment, would interfere with study participation or outcome assessment"
+    },
+    "identificationModule": {
+      "briefTitle": "Randomized Study of Triple Therapy vs Sildenafil Dose Optimization in Pulmonary Arterial Hypertension",
+      "nctId": "NCT07713914"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

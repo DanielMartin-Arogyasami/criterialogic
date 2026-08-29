@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult male or non-pregnant female volunteers (Age 18-79)\n* Not currently taking more than two home oral antidiabetic agents, with or without a diagnosis of type 2 diabetes\n* Able and willing to stop home oral antidiabetic medications for 5 days prior to the start of the study, with approval from healthcare providers\n* Able and willing to give informed consent\n\nExclusion Criteria:\n\n* Known contraindication for orforglipron (e.g., Personal or family history of medullary thyroid cancer (MTC) or multiple endocrine neoplasia type 2 (MEN 2), allergies to any component)\n* Personal history of pancreatitis, gallbladder disease, intestinal malabsorption, severe gastroparesis, gastric outlet obstruction, or other clinically significant gastrointestinal motility disorder\n* History of liver disease or aspartate aminotransferase (AST) or alanine aminotransferase (ALT) \\>3 x upper limit of normal\n* Estimated glomerular filtration rate (eGFR) \\< 45 mg/min/1.73m2 per the Modification of Diet in Renal Disease equation\n* Active gallbladder disease or cholecystectomy within the past 6 months\n* Current use of a strong CYP3A4 inducer (e.g., rifampin, carbamazepine, phenytoin, phenobarbital, rifabutin, or St. John's wort) or ritonavir, cobicistat, cyclosporine, or another strong CYP3A4 inhibitor that also inhibits OATP1B\n* Current simvastatin dose \\>20 mg daily\n* Measured most recent HbA1c level greater than 7.5% in the last 6 months\n* Average glucose by fingerstick or continuous glucose monitor exceeding 180 mg/dL in the last 3 months\n* Current uses of any oral or injectable GLP-1 receptor agonists, insulin, or the use of two or more antidiabetic agents\n* Currently taking or planning to start other medication known to affect glycemic parameters, such as glucocorticoids, growth hormone, or fluoroquinolones during the study\n* Planned to change any prescribed medication during the study\n* Planned surgeries or procedures requiring general anesthesia during or within 10 days after completing the study\n* Participating in any other interventional study simultaneously\n* Dietary restrictions that prevent the consumption of the standardized liquid mixed meal\n* Pregnant, nursing, or postpartum in the last 6 months\n* Current suicidal ideation or suicide attempt within the past 5 years\n* Psychiatric illness, substance use disorder, or eating disorder that, in the opinion of the investigator, would compromise participant safety or study compliance"
+    },
+    "identificationModule": {
+      "briefTitle": "PATHS-T2D: A Recall-by-Genotype Study of Physiologic and Pharmacologic Responses",
+      "nctId": "NCT07739537"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

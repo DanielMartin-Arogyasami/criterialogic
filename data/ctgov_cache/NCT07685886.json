@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Diabetes type 2\n* Urine albumin to creatinine ratio 30-5000 mg/g\n* CKD stage 2-3 (eGFR 30-89 ml/min/1.73m2)\n* Blood pressure \\< 140/90 mmHg prior to randomization\n* BMI \\< or = to 40 kg/m2\n* Use of ACEi or ARB with stable dose for 4 weeks\n* if on SGLT2i or GLP-1RA, stable dose for 3 months prior to baseline\n* Able to provide consent\n\nExclusion Criteria:\n\n* Type 1 diabetes\n* Uncontrolled hypertension\n* Hemoglobin A1C \\>10%\n* Pregnancy or planning to become pregnant or currently breastfeeding\n* Allergy to aspirin\n* History of major psychiatric disorder\n* Use of inhaled or systemic corticosteroids or long-acting beta agonists\n* Proliferative retinopathy requiring current treatment"
+    },
+    "identificationModule": {
+      "briefTitle": "MIRACLE-T2D Montelukast Intervention for Renal, Cardiovascular and Eye Health in Type 2 Diabetes",
+      "nctId": "NCT07685886"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 1\\. Must have an established, objectively confirmed diagnosis of an acute coronary syndrome, classified as STEMI, NSTEMI, or high-risk Unstable Angina.\n\n  2\\. Underwent successful PCI with deployment of contemporary drug-eluting stents (DES) and TIMI 3 flow.\n\n  3\\. Achieved documented complete revascularization of all angiographically significant lesions during the index procedure.\n\n  4\\. Maintained absolute adherence to standard, uncomplicated combination DAPT for exactly 30 ± 7 days following the index PCI, remaining completely free of any ischemic or bleeding events during this initial month.\n\n  5\\. Patient is fully coherent, cooperative, able to comply with the mandated multi-month follow-up schedule, and has provided independent, written, personally signed informed consent prior to randomization.\n\nExclusion Criteria:\n\nLeft Main (LM) Coronary Artery Disease \\& bifurcation lesions with 2 stents : Any angiographically documented significant stenosis (\\>50% diameter stenosis) involving the unprotected left main coronary artery trunk, regardless of whether it was treated with a stent during the index procedure or left untreated.\n\n2\\. Incomplete Revascularization / Residual Target Lesions: Presence of any remaining untreated coronary lesion with \\>50% diameter stenosis in any major epicardial vessel or branch with a reference vessel diameter ≥2.0 mm that requires, or is planned to require, any future surgical or percutaneous revascularization within the next 12 months. This 'other lesion' exclusion ensures a fully revascularized cohort.\n\n3\\. Any prior historical or documented acute, subacute, or late definitive stent thrombosis.\n\n4\\. High baseline ischemic features including end-stage chronic kidney disease (eGFR \\< 30 mL/min/1.73m²), severe left ventricular dysfunction (LVEF \\< 30%), or an un-revascularized multi-vessel burden with high residual SYNTAX score (\\>22).\n\n5\\. Definitive clinical indication for continuous, long-term oral anticoagulation therapy (e.g., atrial fibrillation, mechanical valves, deep vein thrombosis, or pulmonary embolism).\n\n6\\. Active major pathological bleeding, history of any spontaneous or traumatic intracranial hemorrhage, vascular malformations of the central nervous system, or an established bleeding diathesis.\n\n7\\. Active system-wide infections, or documented chronic systemic inflammatory or autoimmune disorders (such as severe active rheumatoid arthritis, systemic lupus erythematosus, polymyalgia rheumatica, active inflammatory bowel disease), or active malignancies, which confound baseline leukocyte values.\n\n8\\. Known severe hypersensitivity, documented allergy, or major medical intolerance to acetylsalicylic acid (Aspirin) or clopidogrel (Plavix).\n\n\\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Aspirin-Free Strategy After 3-6 Month Dual Antiplatelet Therapy in Acute Coronary Syndrome",
+      "nctId": "NCT07736196"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

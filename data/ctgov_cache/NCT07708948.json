@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 18 to 75 years at the time of informed consent acquisition, regardless of gender;\n* Meet the 2016 fibromyalgia classification criteria established by the American College of Rheumatology;\n* Score ≥4 on the Visual Analogue Scale for Pain (Pain VAS) at screening;\n* Agree to receive 8 weeks of treatment and related examinations, and sign the informed consent form;\n* No medication for fibromyalgia, or the types and dosages of medications for fibromyalgia have remained stable for at least 2 weeks.\n\nExclusion Criteria:\n\n* Have a medical history or confirmed diagnosis of any of the following conditions during screening: severe cardiovascular and cerebrovascular diseases; combined diabetes, malignant tumors, hematological diseases, inflammatory arthritis or other severe progressive systemic diseases; other psychiatric disorders leading to inability or unwillingness to cooperate with the trial;\n* Any laboratory test result before screening meets the following criteria: liver and renal function tests show ALT or AST \\> 2 times the upper limit of normal (ULN), or creatinine (Cr) \\> 1.2 times ULN (refer to the normal reference range of the laboratory at each study center); other clinically significant abnormal laboratory parameters judged by investigators to disqualify subjects from enrollment;\n* Allergic constitution, or hypersensitivity to the investigational product Tongluo Kaibi Tablets, pregabalin capsules, excipients or similar ingredients; Suspected or confirmed history of alcohol or substance abuse;\n* Pregnant or lactating women, women planning pregnancy in the near future, or those unwilling to adopt contraceptive measures;\n* Receiving Tongluo Kaibi Tablets at enrollment;\n* Participation in any other clinical trial within 3 months prior to enrollment;\n* Any other conditions judged by investigators to render the subject unsuitable for this clinical trial."
+    },
+    "identificationModule": {
+      "briefTitle": "Study on the Efficacy and Safety of Tongluo Kaibi Tablets in the Treatment of Fibromyalgia Syndrome",
+      "nctId": "NCT07708948"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-16",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

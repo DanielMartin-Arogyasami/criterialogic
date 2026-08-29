@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. AGE: \\>18 years\\>65years\n2. All ASA I and II patients\n3. Undergoing elective orthopaedic surgeries\n4. No contraindications for spinal anesthesia\n\nExclusion Criteria:\n\n1. pregnancy,\n2. obesity,\n3. ASA III and IV,\n4. emergency surgeries."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of Efficacy of 0.5% Hyperbaric Bupivacaine and 0.75%Isobaric Ropivacaine for Spinal Anaeshesia",
+      "nctId": "NCT07777055"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

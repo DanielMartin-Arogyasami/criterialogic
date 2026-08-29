@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged at least 18 years old\n2. Patient is suitable to be implanted with a Symvess for extremity vascular trauma, in accordance with the approved indication of the USPI\n\n   1. Symvess implant is to be used to re-establish blood flow to one of the major extremity arteries (see Section 4.1 for examples of size appropriate vessels)\n   2. Although the proximal anastomosis may originate in the upper or lower torso region, the distal anastomosis must terminate in the extremity (e.g., below the inguinal crease for lower extremity, in the axillary or more distal in the upper extremity)\n3. Patient or legal representative is able, willing, and competent to give informed consent.\n4. Patient's life expectancy is at least 1 year based on the judgement of the Investigator\n5. Patient must have a home or place of residence whereby he/she may be contacted and a support system which would make them suitable for this study of one year follow-up duration\n6. Patient must have confirmed health insurance\n\nExclusion Criteria:\n\n1. Limb at a high risk of amputation due to nature of the initial injury in the judgement of the Investigator, despite adequate revascularization\n2. Patients lacking enough healthy muscle and/or soft tissue for adequate coverage of Symvess\n3. Known drug or alcohol abuse that in the opinion of the Investigator would preclude the patient from being suitable for long-term follow-up\n\n   a. Positive screen for illicit drugs (THC use is not exclusionary)\n4. Patient with known coagulopathies or hypercoagulable states (bleeding or clotting disorders)\n5. Known socioeconomic reasons (such as being homeless) that preclude the patient from being suitable for long-term follow-up\n6. Employee of the Sponsor or patient who is an employee or relative of the Investigator"
+    },
+    "identificationModule": {
+      "briefTitle": "Multicenter Study to Evaluate the Safety and Efficacy of SYMVESS™ in a Real World Setting in Patients With Extremity Arterial Injury Requiring Urgent Repair",
+      "nctId": "NCT07762794"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

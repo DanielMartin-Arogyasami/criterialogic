@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* • Adult patients of both sexes aged ≥ 18 years.\n\n  * Documented clinical and radiological diagnosis of Chronic Rhinosinusitis with Nasal Polyps (CRSWNP).\n  * Patients with high baseline disease severity scores based on:\n* CT Paranasal Sinuses Staging: High Lund-Mackay CT Score.\n* Symptom Burden Assessment: High SNOT-22 Questionnaire Score. • Patients who comply with scheduled follow-up visits and appointments.\n\nExclusion Criteria:\n\n* • Patients aged under 18 years (\\< 18 years).\n\n  * Presence of unilateral nasal polyps, antrochoanal polyps, granuloma / granulomatous lesions, fungal\n  * rhinosinusitis, or suspected benign or malignant sinonasal neoplasms.\n  * Development of significant drug-related adverse effects, adverse reactions, or clinical complications during the\n  * treatment course.\n  * Known hypersensitivity or previous severe allergic reactions to macrolide antibiotics.\n  * Baseline prolonged QTc interval, active cardiac arrhythmias, or significant cardiovascular disease.\n  * Pre-existing significant impairment of hepatic or renal functions.\n  * Pregnant and lactating female patients.\n  * Patients who fail to adhere to follow-up visits or refuse to sign the informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Post Operative Low Dose Oral Azithromycin in Chronic Rhinosinusitis Patients With Nasal Polyps",
+      "nctId": "NCT07780292"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

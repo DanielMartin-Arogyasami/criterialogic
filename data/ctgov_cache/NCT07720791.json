@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Written informed consent\n* Age ≥ 18 years\n* ASA physical status I, II, or III\n* Scheduled for elective non-cardiac abdominal surgery with expected surgery duration ≥ 2 h-hours\n* General anesthesia\n* Planned hospital stay of at least 48 hours\n\nExclusion Criteria:\n\n* Pregnant or nursing (breastfeeding) women\n* Neurologic deficit or chronic pain disease\n* Planned use of regional anesthesia techniques for postoperative pain\n* Emergency surgery"
+    },
+    "identificationModule": {
+      "briefTitle": "Acetaminophen vs Placebo for Postoperative Analgesia After Abdominal Surgery",
+      "nctId": "NCT07720791"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

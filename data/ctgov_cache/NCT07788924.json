@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged 19-40 years old at the inclusion of the study, both female and male subjects.\n2. Either a male or a non-pregnant, non-lactating female, at least 6 weeks postpartum prior to the Baseline Visit.\n3. Willing to maintain their current lifestyle during the study.\n4. Able to swallow a 25mm length and 9mm width sized capsule.\n5. At least a four-week washout period between the completion of a previous research study that required ingestion of any study food or drug and their start in the current study.- Page 3 of 5 \\[DRAFT\\]\n6. Signed Informed Consent, and willing to follow the study procedures, including consumption of study product per the protocol and completing any forms/questionnaires needed throughout the study.\n\nExclusion Criteria:\n\n1. Use of any prescription medication within 14 days prior to the start of the study, which in the investigator's opinion, may interfere with the study results or pose a risk to the participant (excluding oral contraceptives).\n2. Any current acute or chronic medical condition, which in the investigator's opinion, may interfere with the study results or pose a risk to the participant.\n3. Known or suspected history of any gastrointestinal disease including, but not limited to, irritable bowel syndrome, celiac disease (treated or untreated), inflammatory bowel disease, persistent diarrhea, chronic constipation, gastrointestinal malignancy, or any condition known to affect gastrointestinal motility or absorption.\n4. Less than 3 bowel movements a week\n5. If using Proton Pump Inhibitors (PPIs), unable to stop for PPIs 24hrs prior to SIMBA capsule ingestion and 4 hours after\n6. Prior gastrointestinal surgery, or radiation treatment which, in the Investigator's opinion, may lead to intestinal stricturing or obstruction with a risk of capsule non-excretion, including, e.g., untreated achalasia, eosinophilic esophagitis, cancer diagnosis (depending on timing, location, and treatment) or previous esophageal, gastric, small intestinal, or colonic surgery. Appendectomy or cholecystectomy more than 3 months before the screening visit is acceptable.\n7. History of known structural gastrointestinal abnormalities such as strictures or fistulas leading to mechanical obstruction.\n8. Organic motility disorder (e.g., gastroparesis, intestinal pseudo#obstruction, systemic sclerosis, Ogilvie's syndrome) with a history of swallowing difficulty or oropharyngeal dysphagia.\n9. Use of metformin within 3 months prior to the start of the study\n10. Use of any oral or intravenous antibiotics within 3 months prior to the baseline study timepoint (topical antibiotics are acceptable).\n11. Use of probiotics, prebiotics, fibre (Metamucil, FibreOne, etc.) or any other supplements known to affect the gastrointestinal microbiota within 14 days prior to the baseline study timepoint.\n12. Known or suspected allergy or intolerance to the IP or its components.\n13. Pregnant or breastfeeding women.\n14. Excessive alcohol consumption or drug abuse."
+    },
+    "identificationModule": {
+      "briefTitle": "Assessing Changes in the Gut Microbiome of Non-Gastrointestinal Disordered Subjects Before and After Oral Prebiotic Supplementation Using the SIMBA Capsule",
+      "nctId": "NCT07788924"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

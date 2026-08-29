@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Meet at least two of the three characteristic criteria for AP:① Acute onset of persistent upper abdominal pain;② Serum amylase and/or lipase activity at least three times above the upper limit of normal;③ Imaging findings on CT, MRI, or abdominal ultrasonography.\n2. Meet the diagnostic criteria for hypertriglyceridemia-associated acute pancreatitis (HTG-AP): fulfill the AP diagnostic criteria and concurrent hypertriglyceridemia (serum triglycerides ≥11.3 mmol/L or 5.65-11.3 mmol/L with lactescent serum), with exclusion of other common causes of AP such as cholelithiasis and alcoholism.\n3. Admission within 72 hours of symptom onset.\n4. Disease severity assessed as mild acute pancreatitis (MAP) within 48 hours of admission, defined by absence of organ dysfunction and absence of local or systemic complications.\n5. Age between 18 and 65 years.\n6. No history of allergy to microbiological agents.\n7. Signed informed consent obtained.\n\nExclusion Criteria:\n\n1. Concurrent biliary, alcoholic, or other etiologies of acute pancreatitis;\n2. Acute exacerbation of chronic pancreatitis or pancreatic tumor;\n3. Severe hypertriglyceridemia-associated acute pancreatitis, defined as: ① patients classified as moderately severe or severe AP according to the Expert Consensus on the Diagnosis and Treatment of Hypertriglyceridemic Acute Pancreatitis; ② within 48 hours, meeting any one of the following criteria: modified Marshall score ≥2, MCTSI score ≥4, APACHE II score ≥15, BISAP score ≥3, or Ranson score ≥3; patients meeting any of these criteria are excluded;\n4. Severe hepatic or renal dysfunction (serum creatinine \\>177 μmol/L or ALT \\>150 U/L);\n5. Active infection, malignancy, immunodeficiency, or requiring long-term use of immunosuppressants;\n6. Diagnosed diabetes mellitus;\n7. Pregnancy or breastfeeding;\n8. History of lactose intolerance;\n9. Use within 4 weeks prior to enrollment of antibiotics, probiotics, prebiotics, synbiotics, or other microbiological agents, as well as gastrointestinal motility drugs (e.g., domperidone, mosapride) or other medications that may significantly affect gut microbiota or gastrointestinal function."
+    },
+    "identificationModule": {
+      "briefTitle": "Bacillus Subtilis and Enterococcus Faecium Probiotic Plus Lipid-Lowering Therapy for Hypertriglyceridemic Acute Pancreatitis: A Prospective RCT",
+      "nctId": "NCT07720232"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

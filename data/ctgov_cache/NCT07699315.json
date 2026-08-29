@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Patients with pain VAS \\>/= 6\n2. Carious exposed mandibular molar with symptomatic irreversible pulpitis\n3. Patients between ages 18-60 years\n4. American Society of Anesthesiologists class I or II medical histories -\n\nExclusion Criteria:\n\n1\\. Patients with contraindications to local anesthesia solution or dexamethasone 2.Pregnant or breast-feeding females 4.Tooth having fused/extra roots, full coverage crowns, or poor periodontal status 5. Patients taking drugs which could affect the pain perception\n\n\\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Preoperative Dexamethasone Injection to Improve Local Anesthesia Success in Endodontic Treatment",
+      "nctId": "NCT07699315"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

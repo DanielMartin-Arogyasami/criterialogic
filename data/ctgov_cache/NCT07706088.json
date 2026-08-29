@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nEligible participants (≥ 18 years) with diabetes duration of \\< 10 years, baseline HbA1c between 7% and 10% Signs and symptoms of DSPN based on a Michigan Neuropathy Screening Instrument (MNSI) history composite score of \\>= 7 OR MNSI examination SCORE \\>= 2.5 will be enrolled.\n\nBMI \\>= 27 KG/metre 2.\n\nExclusion Criteria:\n\n1. participants with untreated hypothyroidism\n2. history of leprosy\n3. peripheral vascular disease defined by ankle-brachial index (ABI) \\&lt; 0.9\n4. serum B12 levels \\< 200 pg./mL/ if low will be supplemented\n5. history of alcohol excess (\\>=2 and \\>= 1 standard drink per day for male and female respectively)\n6. any condition affecting corneal nerves (severe dry eyes, severe corneal dystrophies, ocular trauma or surgery in the preceding 6 months or Sjogren\\&#39;s or sicca syndrome\n7. use of oral contraceptives."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Tirzepatide on Diabetic Peripheral Sensorimotor Neuropathy",
+      "nctId": "NCT07706088"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

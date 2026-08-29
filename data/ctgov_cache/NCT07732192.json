@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria: Patients aged 18 to 50 years of either gender with clinically diagnosed epidermal or mixed melasma of at least six months duration and baseline MASI score above the predefined threshold will be included. Patients willing to comply with treatment and follow-up schedule will be enrolled.\n\n\\-\n\nExclusion Criteria: Patients with dermal melasma, pregnancy, lactation, history of thromboembolic disease, coagulation disorders, current hormonal therapy use, recent treatment for melasma, hypersensitivity to study medications, or significant hepatic or renal disease will be excluded.\n\n\\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Oral Tranexamic Acid Plus Triple Combination vs Triple Combination Alone in Melasma",
+      "nctId": "NCT07732192"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patient with prostate cancer\n* Age ≥ 70 years (HAS 2023)\n* Life expectancy \\> 5 years\n* Clinical stage Clinical stage T1c - T2a PSA \\< 20 ng/ml Biopsy :ISUP 2 unilateral on a maximum of 2 contiguous sextants with or without ipsilateral or contralateral focus ISUP1 single focus or multiple foci if only one ISUP 2 focus on targeted biopsy\n* Imaging Single lesion PIRADS 3 or 4 or 5 Volume of prostate gland \\< 150 ml\n* Enrolled in a social security scheme\n* Signature of consent\n\nExclusion Criteria:\n\n* Evidence of extra-prostatic extension or invasion of the seminal vesicles.\n* Any condition that, in the judgement of the investigators, would interfere with the subject's ability to\n* provide informed consent, comply with study instructions, expose the subject to increased risk, or interfere with the interpretation of study results.\n* Patients deprived of their liberty or under legal protection (curatorship and guardianship, safeguard of justice)\n* Hypersensitivity to the active substances or to any of the excipients\n* Conditions contraindicating magnetic resonance imaging (MRI), such as the presence of internal metallic devices.\n* Chronic kidney disease with an eGFR ≤ 60 mL/min\n* Liver failure"
+    },
+    "identificationModule": {
+      "briefTitle": "Analysis of the Performance of PSMA Emission Tomography in Patients With Prostate Cancer Treated With HIFU",
+      "nctId": "NCT07766122"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

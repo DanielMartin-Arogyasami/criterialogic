@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* American Society of Anesthesiologists (ASA) physical status I or II\n* Aged 1 to 12 years\n* Scheduled for elective surgery requiring general anesthesia with laryngeal mask airway (LMA) insertion (e.g., ophthalmic surgery, skin lesion excision, minor abdominal or urological procedures, with expected surgical duration ≤ 2 hours)\n* Written informed consent obtained from parents or legal guardians\n\nExclusion Criteria:\n\n* Known allergy or hypersensitivity to ciprofol, fentanyl, or any study-related drugs\n* Intellectual disability, cognitive-affective disorders, psychiatric or neurological diseases\n* Inability to cooperate with peripheral intravenous cannulation\n* History of reactive airway disease or suspected difficult airway\n* Body mass index (BMI) ≥ 30 kg/m² or ≤ 15 kg/m²\n* History of sedative medication use\n* Inability to understand the study protocol or participation in another clinical trial within the past 30 days"
+    },
+    "identificationModule": {
+      "briefTitle": "The ED95 of Ciprofol for Laryngeal Mask Airway Insertion With Fentanyl in Children: A Biased-Coin Dose-Finding Trial",
+      "nctId": "NCT07697404"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

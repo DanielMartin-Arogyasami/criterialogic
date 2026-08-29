@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion criteria\n\n* Adults aged ≥18 years\n* Stable psoriasis\n* Confirmed cases of palmoplantar psoriasis (with or without psoriasis elsewhere) dermoscopically(Hand \\_held dermoscopy) and histopathologically if required.\n* Willingness to comply with treatment and follow-up\n* Written informed consent obtained\n\nExclusion criteria:\n\n* Other palmoplantar dermatoses (eczema, tinea, keratoderma)\n* Generlized Pustular psoriasis\n* Erythrodermic psoriasis\n* Use of:\n\n  * Systemic antipsoriatic therapy within 3 months\n  * Biologic therapy within 12 weeks\n  * Topical treatment on palms/soles within 2 weeks\n* Pregnancy or lactation\n* History of photosensitivity disorders"
+    },
+    "identificationModule": {
+      "briefTitle": "Combined Fractional CO₂ Laser and Topical Corticosteroid Versus Topical Corticosteroid Only in the Treatment of Palmoplantar Psoriasis",
+      "nctId": "NCT07713212"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

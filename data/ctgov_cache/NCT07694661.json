@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Both genders.\n* Systemically healthy patients.\n* Good oral hygiene.\n* Available for follow-up appointments.\n* Asymptomatic permanent molars with deep occlusal caries ICDAS 5 or 6 carious lesions and healthy periodontium, in normal occlusion with no previous restorations related to the teeth and vital with a positive response to cold testing.\n\nExclusion Criteria:\n\n* Vulnerable populations.\n* Tobacco users.\n* Medically compromised patients, such as those with diabetes or medications affecting salivary flow were excluded.\n* Teeth with prior endodontic treatment, periodontal pockets over 3 mm, or any dental/periodontal therapy within the past 12 months."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Different Resin Composite Packing Techniques on Pulp Condition (Randomized Clinical Trial)",
+      "nctId": "NCT07694661"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

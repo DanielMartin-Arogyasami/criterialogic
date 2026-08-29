@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n\\- Age ≥18 years, male or female;\n\nPathologically confirmed biliary malignancy (intrahepatic cholangiocarcinoma, hilar cholangiocarcinoma, gallbladder cancer, and distal cholangiocarcinoma), and had undergone curative surgery with negative surgical margins;\n\nNo history of other tumors, and no antitumor therapy received before or after surgery (including but not limited to chemotherapy, immunotherapy, radiotherapy, targeted therapy, etc.);\n\nECOG: 0-1;\n\nBaseline blood count tests and blood biochemistry must meet the following criteria: hemoglobin ≥80 g/L; absolute neutrophil count ≥1.5×10\\^9/L; platelet count ≥60×10\\^9/L; alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3 times the upper limit of normal (ULN); total bilirubin ≤2 times ULN; serum creatinine ≤1.5 times ULN; albumin ≥30 g/L; INR \\<1.7 or PT prolongation not exceeding 4 seconds; serum creatinine less than 1.5 times the upper limit of normal;\n\nWomen of childbearing potential must agree to use contraception during the study and for 6 months after the study ends (e.g., intrauterine device, contraceptive pills, or condoms); a serum or urine pregnancy test must be negative within 7 days before enrollment, and they must not be breastfeeding; male participants must agree to use contraception during the study and for 6 months after the study ends;\n\nPatients with active hepatitis B virus (HBV) infection must begin anti-HBV treatment during the screening phase and be willing to receive antiviral treatment throughout the study; patients who are hepatitis C virus (HCV) RNA positive must receive antiviral treatment according to standard treatment guidelines and have liver function elevations no higher than CTCAE grade 1.\n\nSubjects voluntarily join this study, sign the informed consent form, have good compliance, and are willing to cooperate with follow-up.\n\nExclusion Criteria:\n\n* Pregnancy or lactation;\n\nReceipt of antitumor drug therapy for cholangiocarcinoma before or after surgery;\n\nCardiac, pulmonary, or renal insufficiency, or severe hepatic insufficiency (Child-Pugh class C): severe cardiovascular and cerebrovascular disease (such as myocardial infarction within the past 6 months, unstable angina within the past 1 month, NYHA class III-IV heart failure, uncontrolled arrhythmia, or onset/worsening of congestive heart failure within the past 30 days). Severe respiratory disease (e.g., FEV1 1.8 mg/dL (or \\>160 μmol/L). Renal disease: chronic renal failure, MDRD ≥ stage III: GFR1.8 mg/dL (or \\>160 μmol/L) Uncontrolled active infection (e.g., severe suppurative cholangitis, sepsis), requiring intravenous antibiotics and hemodynamic instability. ⑤ ASA score \\>3; ⑥ BMI ≥35.;\n\nActive gastrointestinal bleeding, ulcer, or refractory ascites;\n\nDrug-uncontrolled hypertension, coagulation dysfunction, or severe portal hypertension;\n\nTumor recurrence within 1 month after surgery;\n\nHistory of other malignant tumors;\n\nReceipt of other clinical trial drugs within 28 days;\n\nThose deemed unsuitable for inclusion by the investigator.\n\nAllergy and contraindications: severe allergy to iodinated contrast media that cannot be relieved by premedication, or presence of contraindications to angiography.\n\nPostoperative pathology confirms non-biliary tract carcinoma."
+    },
+    "identificationModule": {
+      "briefTitle": "A Prospective, Open-Label, Randomized Controlled Clinical Study Comparing Hepatic Arterial Infusion Chemotherapy (HAIC) With Capecitabine as Adjuvant Therapy After Radical Surgery for Malignant Biliary Tract Tumors",
+      "nctId": "NCT07790445"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

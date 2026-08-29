@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥18 years.\n* Acute kidney injury (AKI), defined as ≥1.5-fold increase in serum creatinine compared to baseline. Baseline is defined as the closest serum creatinine value prior to immune checkpoint inhibitor initiation (ICI).\n* Receipt of ICI in the 180 days preceding AKI onset.\n* AKI due to ICI-AIN, based on either a kidney biopsy or clinical adjudication by the treating team.\n* Ability of the patient to understand the study and willingness to sign the written informed consent form.\n\nExclusion Criteria:\n\n* Any condition requiring high dose glucocorticoids (GCs) (\\>10 mg/day prednisone equivalents) or other immunosuppressants, such as infliximab, tocilizumab, mycophenolate mofetil, B cell depletion, or calcineurin inhibitors, within 14 days preceding screening\n* Evidence of any uncontrolled infection, including Tuberculosis (must have no evidence of active or latent TB determined by clinical history and negative interferon gamma release assay within the last 12 months or at screening); Hepatitis B (based on AntiSAg and HBV DNA negative within the last 12 months or at screening. Patients with Isolated Anti-HBcore positivity must agree to antiviral prophylaxis with entecavir for 6 months after receiving infliximab); Hepatitis C (must have no uncontrolled active infection evidenced by negative HCV antibody or HCV RNA within the last 12 months or at screening, and reflex testing must be performed for any patient with HCV antibody positivity); Patients with known HIV must be on stable disease antiretroviral therapy ≥12 weeks with a negative viral load \\[\\<50 copies/mL\\] at screening and CD4 count ≥ 350 cells/uL) measured within the last 12 months.\n* History of hypersensitivity to infliximab or murine proteins.\n* Moderate-severe (New York Heart Association class III/IV) heart failure or recent decompensation.\n* Any active or uncontrolled hepatitis (immune-mediated, viral, or drug-induced) defined as AST or ALT \\> 3 × ULN or Total bilirubin \\> 1.5 × ULN in the 14 days preceding screening. (Participants with Gilbert syndrome can be enrolled with elevated total bilirubin if their direct bilirubin is not \\> ULN)\n* History of demyelinating disease (e.g., multiple sclerosis) or optic neuritis.\n* Uncontrolled or recurrent serious infections (e.g., untreated abscess, active sepsis), requirement for oral or intravenous antibiotics, at screening.\n* Receipt of any live vaccine in the 28 days preceding screening\n* Kidney biopsy showing primary lesion other than acute interstitial nephritis\n* Life expectancy \\<12 weeks in the opinion of the investigator\n* Unable to tolerate study procedures, including IV insertion.\n* Contraindication to GCs, including but not limited to, uncontrolled diabetes mellitus with inability to safely manage expected steroid-induced hyperglycemia, severe and active psychiatric disease requiring ongoing titration of psychiatric medications, active peptic ulcer disease, severe osteoporosis or high fracture risk, or other investigator-determined conditions where systemic GC or infliximab would pose unacceptable risk in the judgment of the investigator.\n* Vulnerable populations including children, prisoners, neonates and pregnant or breastfeeding patients"
+    },
+    "identificationModule": {
+      "briefTitle": "Infliximab for Immune Checkpoint Inhibitor Associated AKI",
+      "nctId": "NCT07683975"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

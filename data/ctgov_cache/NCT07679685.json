@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18-70 years (inclusive), male or female;\n2. Subject reports dry eye symptoms for at least 6 months;\n3. Diagnosis of mild to moderate dry eye according to the Chinese Dry Eye Expert Consensus (2020) criteria:\n\n   * Mild dry eye: fluorescein tear film break-up time (FBUT) ≥2 seconds, no significant ocular surface damage signs, corneal fluorescein staining score \\<5;\n   * Moderate dry eye: FBUT ≥2 seconds AND corneal fluorescein staining dots \\<30 or not exceeding 2 quadrants;\n4. Normal tear secretion: Schirmer I test ≥10 mm/5 min;\n5. Daily electronic screen usage \\>6 hours;\n6. Electronic screen use for at least 5 days/week, for more than 1 year;\n7. Understands and provides written informed consent.\n\nExclusion Criteria:\n\n1. Allergy or hypersensitivity to any component of the study drugs;\n2. Requires the use of artificial tears (other than study drug), secretagogues, ocular surface repair agents, anti-inflammatory/antibiotic eye drops, or other dry eye-related drugs (e.g., muscarinic receptor blockers for visual fatigue) during the study period;\n3. Presence of any of the following ocular or systemic conditions:\n\n   * Active ocular infection, ocular inflammation, or active ocular allergy;\n   * Conjunctivochalasis, nasolacrimal duct obstruction;\n   * Glaucoma or elevated intraocular pressure;\n   * Retinal disease or ocular tumor;\n   * Requirement to wear contact lenses during the study;\n   * Obstructive sleep apnea syndrome or sleep disorders;\n   * Planned or ongoing physical therapy (intense pulsed light, meibomian gland massage, warm compress, thermopulsation) within 2 weeks before enrollment through the end of study;\n4. Ocular surgery within 3 months prior to enrollment, incomplete recovery from previous ocular surgery, or planned ophthalmic surgery during the study period;\n5. Current smoker;\n6. Pregnant or breastfeeding women, or women planning to become pregnant during the study period;\n7. Uncontrolled systemic disease, or use of systemic medications (e.g., beta-blockers, benzodiazepines, corticosteroids, antihistamines, or other medications that may interfere with tear production);\n8. History of anxiety or depression;\n9. Any other condition that, in the judgment of the investigator, would make the subject unsuitable for participation."
+    },
+    "identificationModule": {
+      "briefTitle": "Perfluorohexyloctane Eye Drops vs. Sodium Hyaluronate for Video Display Terminal-Associated Dry Eye",
+      "nctId": "NCT07679685"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

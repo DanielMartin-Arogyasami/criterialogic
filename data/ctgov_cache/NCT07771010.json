@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male sex\n* Age 18-75 years\n* Newly diagnosed type 2 diabetes mellitus, confirmed no more than 2 years prior to enrollment\n* Body mass index (BMI) 25-35 kg/m²\n* Currently managed at a diabetes outpatient clinic\n* No known chronic diabetes-related complications\n* No prior antidiabetic pharmacological treatment, with the exception of sulfonylureas\n\nExclusion Criteria:\n\n* Other forms of diabetes mellitus (i.e., not type 2)\n* Type 2 diabetes mellitus known for more than 2 years\n* Comorbidities known to independently affect skeletal muscle oxidative capacity, including: spinal cord injury, multiple sclerosis, amyotrophic lateral sclerosis, cystic fibrosis, local joint immobility, or hemiplegia\n* Known mitochondrial disease\n* Heart failure, NYHA class II or higher\n* Chronic kidney disease, stage 3 or higher\n* Poorly controlled chronic medical conditions (e.g., arterial hypertension, hypothyroidism)\n* Recurrent urinary tract infections\n* Active malignancy currently undergoing oncologic treatment\n* Life expectancy less than 3 months\n* Symptomatic hyperglycemia with fasting plasma glucose above 18 mmol/L, HbA1c ≥ 10%\n* Unwillingness to provide informed consent"
+    },
+    "identificationModule": {
+      "briefTitle": "The Effect of Empagliflozin and Metformin on Oxidative Capacity and Microvascular Reactivity of Skeletal Muscle in Patients With Type 2 Diabetes Mellitus",
+      "nctId": "NCT07771010"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

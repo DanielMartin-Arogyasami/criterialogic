@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥6 years and \\<18 years, with body weight ≥20 kg\n* Meets the 2019 European League Against Rheumatism (EULAR) and American College of Rheumatology (ACR) classification criteria for Systemic Lupus Erythematosus (SLE)\n* Renal biopsy confirming Lupus Nephritis class III, IV, III+V, or IV+V according to the International Society of Nephrology / Renal Pathology Society (ISN/RPS) classification\n* At screening: 24-hour urinary protein ≥1.0 g (or ≥25 mg/kg), or urine protein-to-creatinine ratio (UPCR) ≥1.0 g/g\n* White blood cell count ≥3.0 × 10⁹/L and lymphocyte count ≥1.0 × 10⁹/L\n* No prior intravenous methylprednisolone pulse therapy before enrollment, and glucocorticoid exposure ≤2 weeks before enrollment, with a maximum prednisone-equivalent dose ≤30 mg/day (or ≤1 mg/kg/day)\n* Written informed consent obtained and good treatment compliance expected\n\nExclusion Criteria:\n\n* Uncertain diagnosis of SLE, genetically confirmed monogenic lupus, or a history of immunodeficiency\n* Severe infection, including hepatitis C, active hepatitis B, HIV infection, tuberculosis infection, severe fungal infection, etc.\n* Severe neuropsychiatric lupus\n* Peripheral blood hemoglobin \\<60 g/L, platelet count \\<10 × 10⁹/L, or concomitant aplastic anemia\n* Severe cardiac insufficiency (NYHA functional class ≥ II)\n* Severe pulmonary involvement, including pulmonary hemorrhage, respiratory failure, pulmonary embolism, or other conditions requiring respiratory support\n* Estimated glomerular filtration rate (eGFR) \\<60 mL/min/1.73 m²\n* Severe gastrointestinal bleeding, pancreatitis, or hepatic lesions\n* Patients deemed by the investigator to be unsuitable for participation in this trial"
+    },
+    "identificationModule": {
+      "briefTitle": "Childhood-onset Lupus Nephritis Initial Glucocorticoid-dose Harmonization Trial (LIGHT Trial)",
+      "nctId": "NCT07719140"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

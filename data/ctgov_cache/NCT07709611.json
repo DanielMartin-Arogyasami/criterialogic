@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age≥ 18 years old, no gender restriction;\n* Meet the criteria for high-risk groups for PEI;\n* AGI≤ Class II, hemodynamically stable, meeting EN initiation criteria;\n* Estimated duration of enteral nutrition support therapy: ≥7 days;\n* The subject or their legally authorized family member must sign the informed consent form\n\nExclusion Criteria:\n\n* Patients who have been clearly diagnosed with PEI or chronic persistent PEI;\n* Patients who have contraindications to enteral nutrition therapy;\n* Patients with severely impaired liver or kidney function;\n* Patients who suffer from amino acid metabolism disorders, severe malnutrition, or cachexia;\n* Patients who have received pancreatic enzyme replacement therapy or taken any medications that may affect protein absorption within 7 days prior to enrollment;\n* Patients for whom the expected length of ICU stay is less than 7 days;\n* Pregnant or lactating women, as well as patients with mental illnesses;\n* Patients who are allergic to any component of the study medication."
+    },
+    "identificationModule": {
+      "briefTitle": "A Multicenter Clinical Study on Protein Absorption Efficiency in Patients With Pancreatic Exocrine Insufficiency in the ICU",
+      "nctId": "NCT07709611"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-16",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

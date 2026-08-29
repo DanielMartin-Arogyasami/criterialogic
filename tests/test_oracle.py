@@ -44,5 +44,5 @@ def test_negation_and_or():
     assert evaluate(BooleanGroup(operator=BoolOp.AND, operands=[a, b]), facts) is False
 def _form(expr):
     from criterialogic.schema.logical_form import LogicalForm, Polarity, Source
-    return LogicalForm(criterion_id="t:1", source=Source.CTGOV_SYNTHETIC,
+    return LogicalForm(criterion_id="t:1", source=Source.SYNTHETIC_EXAMPLE,
                        polarity=Polarity.INCLUSION, text="t", expression=expr)

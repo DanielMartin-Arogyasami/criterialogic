@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Informed consent will be obtained before any study-related procedures\n* Age \\> 18 and \\<80 years\n* Patients with an IPAA and bowel frequency \\> 8 bowel movements in 24 hours on at least 4 of 7 days/week (and/or an average of \\>8 bowel movements in the 7 days preceding enrollment)\n\n  * Patients must have demonstrated high bowel frequency despite adequate therapy for high bowel frequency with loperamide 2 mg orally every 6 hours as needed (at least 3 doses daily) and/or diphenoxylate/atropine 2 mg orally every 6 hours as needed (at least 3 doses daily) or proven intolerance to these anti-diarrheal medications.\n  * Among patients with inflammatory conditions of the pouch, high bowel frequency must be demonstrated despite adequate therapy for intermittent pouchitis, chronic pouchitis, or Crohn's like disease of the pouch. Adequate therapy is required to ensure significant pouch inflammation is not a driver of high bowel frequency (described in Exclusion Criteria).\n* Participants with a proven history of ulcerative colitis and history of 1,2, modified -2 or 3 stage IPAA and ileostomy takedown\n* Ability to access internet for electronic database entry\n\nExclusion Criteria:\n\n* Prior exposure to tirzepatide or other GLP-1RA\n* BMI \\<20 at the time of study screening\n* Personal or family history of medullary thyroid carcinoma or in patients with Multiple Endocrine Neoplasia syndrome type 2\n* Known hypersensitivity to tirzepatide or its metabolites\n* Significant pouch inflammation defined as an endoscopic pouch disease activity index (PDAI ) ≥ 4\n* Known stricture of the ileo-anal anastomosis or afferent limb stricture\n* New onset of high bowel frequency in the setting of acute pouchitis\n* Final stage of IPAA surgery \\< 6 months prior to enrollment\n* Current infection with Clostridioides difficile\n* Known HIV or active Hepatitis B/C\n* Clinically significant liver disease (Primary Sclerosing Cholangitis with LFT's \\<1.5 upper limit of normal can be included)\n* Severe hepatic impairment, defined as Child-Pugh Class C\n* Known clinically significant chronic nausea and/or vomiting in the past\n* Known diagnosis of type 1 or type 2 diabetes\n* Known decreased kidney function with a glomerular filtration rate \\<30 ml/min/1.732\n* History of malignancy, except for basal cell carcinoma, non-metastatic squamous cell carcinoma of the skin, or prior malignancy with curative therapy completed at least 5 years prior to screening and no recurrence.\n* New York Heart Association class 3 or greater heart failure or recent (within 6 months) cardiovascular event\n* Prior history of pancreatitis\n* Clinically significant laboratory results at screening or baseline, as judged by the Investigator from local testing.\n* Female who is pregnant, breast-feeding or intends to become pregnant or is of child-bearing potential and not using a highly effective contraceptive method.\n* Participation in any clinical trial of an approved or non-approved investigational medicinal product within 30 days before screening.\n* Any disorder, which in the investigator's opinion might jeopardize participant's safety or compliance with the protocol."
+    },
+    "identificationModule": {
+      "briefTitle": "Tirzepatide for Ileal Pouch-anal Anastomosis (IPAA) and Chronic High Bowel Frequency (I8F-NS-X008)",
+      "nctId": "NCT07756359"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

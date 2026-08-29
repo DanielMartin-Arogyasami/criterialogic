@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* (1) Age ≥ 60 years old, female; (2) Patients with newly diagnosed unilateral primary invasive breast cancer confirmed by histopathological examination; (3) HER-2 positive (defined as immunohistochemical result of 3+ or immunohistochemical result of 2+ and in situ hybridization result positive); (4) Patients with TNM stage of II - IIIA (cT2N0M0, cT1N1M0, cT2N1M0, cT3N0M0, cT1N2M0, cT2N2M0, cT3N1M0, cT3N2M0); (5) According to the Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1, having at least one evaluable target lesion; (6) ECOG performance status score of 0 - 1; (7) Having adequate organ function, which meets the following criteria:\n\n  * Blood routine examination: (within 7 days without using hematopoietic growth factors and blood transfusion)\n\n    1. White blood cells ≥ 3.0×109/L, neutrophils ≥ 1.5×109/L;\n    2. Platelets ≥ 100×109/L;\n    3. Hemoglobin ≥ 90g/L;\n\n       ② Biochemical examination:\n    4. Total bilirubin ≤ 1.5×ULN;\n    5. Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.0×ULN;\n    6. Serum creatinine ≤ 1.5×ULN or creatinine clearance rate ≥ 50 mL/min (calculated according to the Cockcroft-Gault formula);\n\n       ③ Cardiac function examination:\n    7. Left ventricular ejection fraction (LVEF) ≥ 50%; (8) Voluntarily joining this study, signing informed consent, having good compliance and willing to cooperate with follow-up.\n\nExclusion Criteria:\n\n* (1) Concealed breast cancer, inflammatory breast cancer and eczematous carcinoma; (2) Patients known to be allergic to the active ingredients or other components of the study drug; (3) Those with severe heart diseases or discomfort, and expected to be unable to tolerate chemotherapy, including but not limited to: ① Fatal arrhythmia or higher-level atrioventricular block (second-degree type 2 atrioventricular block or third-degree atrioventricular block). ② Unstable angina pectoris. ③ Clinically significant valvular heart disease. ④ Echocardiogram showing transmural myocardial infarction; (4) Severe or uncontrolled infections that may affect the study treatment or the evaluation of study results, including but not limited to active hepatitis virus infection, positive human immunodeficiency virus (HIV) antibody, pulmonary infection, etc.; (5) History of other malignant tumors within the past 5 years (excluding cured cervical carcinoma in situ or skin basal cell carcinoma, etc.); (6) Participated in other clinical trials within 4 weeks before the study; (7) The investigator believes that the patient has any other conditions that are not suitable for participating in the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Olaparib+Trastuzumab+Pertuzumab Neoadjuvant for Elderly HER2+ Breast Cancer",
+      "nctId": "NCT07695259"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

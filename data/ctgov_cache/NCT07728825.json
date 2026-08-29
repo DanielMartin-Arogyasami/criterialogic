@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age older than one year\n* Clinically and radiologically confirmed low-flow vascular malformation of the head and neck\n* No prior bleomycin therapy\n* Medically fit for outpatient intervention\n\nExclusion Criteria:\n\n* High-flow vascular malformation\n* Pregnancy or lactation\n* Documented hypersensitivity to bleomycin\n* Pre-existing pulmonary or hepatic disease\n* Bleeding disorder or current anticoagulant use\n* Renal impairment (serum creatinine \\> 1.5 mg/dL or estimated glomerular filtration rate \\< 60 mL/min/1.73 m²)\n* Active infection at or near the treatment site"
+    },
+    "identificationModule": {
+      "briefTitle": "Intralesional Bleomycin Sclerotherapy for Low-Flow Vascular Malformations of the Head and Neck",
+      "nctId": "NCT07728825"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

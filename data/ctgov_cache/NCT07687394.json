@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients aged 20 to 80 years diagnosed with gastric cancer by endoscopic biopsy who are scheduled for minimally invasive radical gastrectomy (laparoscopic or robotic)\n* Patients scheduled for distal, proximal, or total gastrectomy among minimally invasive procedures (wedge resection, pylorus-preserving gastrectomy, and segmental gastrectomy are not eligible)\n* Patients with an ECOG performance status of 0 or 1 and an ASA classification of I-III\n* Patients who have voluntarily agreed to participate after receiving a full explanation of the study's purpose and content, and who have signed the written informed consent form approved by the Institutional Review Board\n* Patients residing in Korea who are able to complete follow-up for 3 months after surgery\n\nExclusion Criteria:\n\n* Patients with a reported history of hypersensitivity, allergy, or adverse reaction to NSAIDs, opioids, or acetaminophen\n* Patients currently taking medications that may affect the study results, such as opioid or non-opioid analgesics, aspirin, warfarin or other anticoagulants, steroids, or high-dose hepatotoxic drugs\n* Pregnant or breastfeeding patients\n* Patients with a contraindication to NSAIDs or acetaminophen identified from medical history or preoperative evaluation-for example, active liver disease, heart failure, chronic kidney disease, thrombocytopenia, or a history of asthma (peptic ulcer disease is not an exclusion criterion)\n* Patients unable to read or understand the informed consent form\n* Patients weighing less than 45 kg\n* Patients scheduled for transfer to the intensive care unit instead of a general ward after surgery (ICU preparation)\n* Patients scheduled for emergency surgery"
+    },
+    "identificationModule": {
+      "briefTitle": "A Phase IV Randomized Trial of Maxigesic® Versus Standard Analgesia After Radical Gastrectomy",
+      "nctId": "NCT07687394"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

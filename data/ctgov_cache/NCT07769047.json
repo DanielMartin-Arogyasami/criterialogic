@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Breast cancer diagnosed after menopause (menopause defined as the natural/spontaneous cessation of menses for at least 12 months)\n* Breast cancer (BC) diagnosed within the past five years\n* BC stage 1, 2, or 3\n* Aged 46-55 years\n* Body mass index (BMI) ≥ 30 kg/m\\^²\n* Current use of an aromatase inhibitor\n* Ability to participate in all portions of the study, including willingness to self-inject\n\nExclusion Criteria:\n\n* \\> 5% change in weight during the 3 months prior to screening and/or weight fluctuation of ≥ 20 pounds within the past 6 months (self-report)\n* Early menopause (menopause occurring before age 46)\n* History of established cardiovascular disease, including coronary atherosclerosis, ischemic heart disease, peripheral vascular disease, or stroke\n* Statin use\n* 10-year Atherosclerotic Cardiovascular Disease (ASCVD) risk \\> 7.5%\n* History of smoking\n* History of type 1 or type 2 diabetes\n* Family history of premature cardiovascular disease in a first-degree relative (before 45 years old in male relatives and before 55 years old in female relatives)\n* Use of chemotherapy, radiation therapy, or immunotherapy for breast cancer treatment\n* Impaired renal function \\[glomerular filtration rate (GFR) ≤ 30 ml/min/1.73 m\\^²\\]\n* Thyroid-stimulating hormone (TSH) ≥ 7 with low free thyroxine (T4)\n* Hemoglobin \\< 11 mg/dL\n* Active inflammatory, autoimmune, infectious, hepatic, gastrointestinal, malignancy, or uncontrolled psychiatric disease\n* Other anti-obesity medication used within the past 3 months\n* Prior or planned surgical treatment for obesity (excluding liposuction or abdominoplasty performed \\> 1 year before screening)\n* Past or intended endoscopic and/or device-based therapy or removal within the last six months\n* Current or recent (within 3 months) use of medications that may cause weight gain, including tricyclic antidepressants, atypical antipsychotics, and mood stabilizers\n* Current or recent use (within 3 months) of systemic glucocorticoid therapy for over 2 weeks\n* Contraindications to glucagon-like peptide 1 (GLP-1) receptor agonist therapy\n* Currently enrolled in another clinical study involving an investigational product or participated in one and received treatment (active or placebo) in the last 30 days"
+    },
+    "identificationModule": {
+      "briefTitle": "Semaglutide and Structured Lifestyle Support to Improve Heart and Blood Vessel Health in Postmenopausal Obese Breast Cancer Survivors Taking Aromatase Inhibitors",
+      "nctId": "NCT07769047"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

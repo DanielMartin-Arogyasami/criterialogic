@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥ 18 years at screening.\n2. Meet at least one metabolic abnormality:\n\n   1. Body mass index ≥ 23 kg/m²;\n   2. Waist circumference ≥ 80 cm (female) or ≥ 90 cm (male);\n   3. Fasting glucose 100-124 mg/dL (5.6-6.9 mmol/L) or glycated hemoglobin (HbA1c) 5.7-6.4%;\n   4. Serum triglycerides ≥ 3.51 mmol/L;\n   5. Documented hypertension, metabolic syndrome, or diabetes mellitus.\n3. Meet at least one diagnostic criterion for chronic kidney disease:\n\n   1. eGFR ≥15 and \\<60 mL/min/1.73 m² (Chronic Kidney Disease Epidemiology Collaboration \\[CKD-EPI\\] creatinine equation);\n   2. UACR ≥ 200 mg/g with eGFR ≥ 60 mL/min/1.73 m² and documented albuminuria.\n4. Have documented atherosclerotic cardiovascular disease (at least one):\n\n   1. Coronary heart disease: history of myocardial infarction, prior coronary revascularization, or ≥50% major epicardial coronary artery stenosis confirmed by cardiac catheterization or coronary coronary computed tomography angiography (CTA);\n   2. Cerebrovascular disease: prior atherosclerotic stroke, prior carotid revascularization, or ≥50% carotid artery stenosis confirmed by imaging;\n   3. Symptomatic peripheral artery disease.\n5. Able and willing to provide written informed consent.\n\nExclusion Criteria:\n\n1. Clinical evidence or suspected active infection judged by investigators.\n2. History of myocardial infarction, stroke, transient ischemic attack, or hospitalization for unstable angina within 60 days prior to randomization.\n3. Planned coronary, carotid, or peripheral artery revascularization at randomization.\n4. Major cardiac surgery, non-cardiac major surgery, or major endoscopy within 60 days before randomization, or planned major surgery during the study period.\n5. Current use of systemic immunosuppressive agents (glucocorticoids, small-molecule immunosuppressants, biologic DMARDs, anti-tumor drugs).\n6. Long-term intermittent hemodialysis or peritoneal dialysis.\n7. History or confirmed evidence of active tuberculosis.\n8. History of inflammatory bowel disease.\n9. Active malignancy or carcinoma in situ within the past 5 years.\n10. Uncontrolled hypertension (systolic blood pressure \\>180 mmHg or diastolic blood pressure \\>110 mmHg).\n11. Chronic heart failure classified as New York Heart Association (NYHA) Class IV.\n12. History of bone marrow or solid organ transplantation, or planned organ transplantation during the study.\n13. Known or suspected allergy to secukinumab or related excipients.\n14. Pregnant, lactating females, or females of childbearing potential without adequate effective contraception.\n15. Absolute neutrophil count \\<2 ×10⁹/L or platelet count \\<120 ×10⁹/L, or alanine aminotransferase (ALT) / aspartate aminotransferase (AST) \\>2.5 × upper limit of normal.\n16. HbA1c ≥10% (≥86 mmol/mol).\n17. Any disease condition that may endanger subject safety or impair protocol compliance per investigator judgment.\n18. Subjects with inadequate standard therapy judged by investigators."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Secukinumab on Cardiorenal Outcomes in Patients With Cardiorenal Metabolic Syndrome and Atherosclerotic Cardiovascular Disease",
+      "nctId": "NCT07704190"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

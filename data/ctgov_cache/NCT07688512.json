@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Undergoing elective cesarean section under spinal anesthesia or combined spinal anesthesia (CSE)\n* Patients must be able to provide written informed consent in either English or Spanish\n* Parturient classified as high risk for postpartum hemorrhage as defined by the adapted California Maternal Quality Care Obstetric Hemorrhage Risk Screen\n\nExclusion Criteria:\n\n* Parturient in labor or ruptured membranes\n* Patient does not possess the physical and mental capacity to provide informed consent\n* Urgent or emergent cesarean sections\n* Patients with a known major coagulopathy\n* Patients with significant thrombocytopenia limiting neuraxial anesthesia (\\<70k)\n* Patients on therapeutic anticoagulation at time of procedure\n* Patients on the placenta accreta spectrum\n* Patients with severe cardiac disease contraindicating oxytocin\n* Patients with an allergy to oxytocin"
+    },
+    "identificationModule": {
+      "briefTitle": "Oxytocin Bolus Versus Infusion in High-Risk Patients Undergoing Elective Cesarean Section (INBOX-HR)",
+      "nctId": "NCT07688512"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 years old\n* Able to read, write and understand English\n* Undergoing hand, wrist, or elbow surgery\n\nExclusion Criteria:\n\n* Inpatient surgery\n* Patients with a history of illicit substance use/abuse, patients that were prescribed codeine, fentanyl, hydrocodone, hydromorphone, methadone, morphine, or oxymorphone.\n* Allergy or intolerance of NSAIDS, acetaminophen, gabapentin, or narcotics."
+    },
+    "identificationModule": {
+      "briefTitle": "Reducing Opioid Use After Upper Extremity Surgery: Testing Lower Prescriptions and Pill Quantity",
+      "nctId": "NCT07750639"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* • Age between 18 and 65 years, either sex.\n\n  * Diagnosis of chronic migraine according to the International Classification of Headache Disorders, 3rd edition (ICHD-3) criteria (headache occurring on ≥15 days/month for \\>3 months, with migrainous features on ≥8 days/month).\n  * Inadequate response, intolerance, or contraindication to at least one standard oral preventive medication (e.g., amitriptyline, propranolol, topiramate, flunarizine, valproate).\n  * Stable dose of any concurrent prophylactic medication for at least 4 weeks prior to enrolment, with no planned change during the study period.\n  * Willingness and ability to complete headache diaries and follow-up visits.\n\nExclusion Criteria:\n\n* • Other primary headache disorders (tension-type headache, cluster headache, hemicrania continua) as the predominant headache type.\n\n  * Secondary headache due to an identifiable structural, infectious, vascular, or neoplastic cause (confirmed or suspected by history/imaging).\n  * Prior botulinum toxin injection or radiofrequency procedure for headache within the last 6 months.\n  * Known hypersensitivity or allergy to botulinum toxin or to local anesthetics.\n  * Pregnancy or lactation.\n  * Neuromuscular junction disorders (e.g., myasthenia gravis, Lambert-Eaton syndrome).\n  * Medication overuse headache not resolved prior to enrolment."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of the Effectiveness of Greater Occipital Nerve and Supratrochlear Nerve Pulsed Radiofrequency Versus Botulinum Toxin Type A Injection in Chronic Migraine",
+      "nctId": "NCT07780136"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

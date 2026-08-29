@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Pregnant women aged 18 to 45 years\n* Gestational age between 22 and 28 weeks\n* Body mass index (BMI) between 19.0\\~28.0 kg/m2\n* Willingness to comply with the study protocol and provision of informed consent\n\nExclusion Criteria:\n\n* Known hypersensitivity or allergy to any active components or excipients of the study medications\n* Multifetal gestation\n* History of chronic constipation or functional defecation disorders prior to or during early pregnancy\n* Current clinical hypercalcemia, hyperuricemia, familial hyperlipidemia, or intestinal malabsorption disorders\n* History of prolonged extreme low-calcium diets or severe diagnosed nutritional deficiencies\n* History of illicit substance abuse, chronic alcoholism, heavy smoking, or excessive caffeine intake"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Safety of Low-dose Calcium Supplementation in Pregnancy",
+      "nctId": "NCT07784218"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-25",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

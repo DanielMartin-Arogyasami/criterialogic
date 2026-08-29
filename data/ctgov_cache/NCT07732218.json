@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nAdults aged 18 years or older. Established diagnosis of type 2 diabetes mellitus for at least 6 months. Glycated hemoglobin (HbA1c) between 7.5% and 10.0%. Body mass index (BMI) of at least 30 kg/m². Inadequate glycemic control despite ongoing standard diabetes therapy. Willing and able to provide written informed consent.\n\nExclusion Criteria:\n\nType 1 diabetes mellitus. Gestational diabetes mellitus. Severe renal impairment, defined as an estimated glomerular filtration rate of 30 mL/min/1.73 m² or less.\n\nPrevious or current treatment with any glucagon-like peptide-1 receptor agonist.\n\nHistory of chronic pancreatitis. History of pancreatic malignancy. Diabetic retinopathy requiring active treatment. Other significant ocular complications. Pregnancy or lactation. Known thyroid disorders. History or presence of thyroid neoplasms."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Once Weekly Semaglutide in Patients With Type 2 Diabetes: a Non Randomized Clinical Trial",
+      "nctId": "NCT07732218"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

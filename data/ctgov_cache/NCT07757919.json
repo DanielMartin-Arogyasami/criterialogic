@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 18-65 years, male or female.\n* Helicobacter pylori-infected patients with positive ¹³C/¹⁴C urea breath test, and at least one positive result among the following three tests: Rapid Urease Test; Histopathological examination of gastric mucosal biopsy specimens; Stool Hp antigen test.\n* No prior history of Helicobacter pylori eradication therapy.\n\nExclusion Criteria:\n\n* Severe underlying diseases, such as hepatic insufficiency, renal insufficiency, malignant tumors, etc.\n* Active gastrointestinal bleeding.\n* History of upper gastrointestinal surgery.\n* History of allergy to study medications.\n* Use of antibiotics or bismuth agents within 1 month, or acid-suppressive agents within 2 weeks.\n* Pregnant or lactating women.\n* Presence of other behaviors that may increase disease risks, such as heavy alcohol consumption, drug abuse, etc.\n* Participation in other clinical trials within 3 months.\n* Subjects unable or unwilling to provide written informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Safety of 14-Day Vonoprazan-Minocycline Dual Therapy for Helicobacter Pylori Eradication",
+      "nctId": "NCT07757919"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-11",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

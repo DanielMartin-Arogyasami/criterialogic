@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria: - Patients ages 18-75 years with HCV-related liver cirrhosis with SVR and thrombocytopenia.\n\nThe diagnosis of liver cirrhosis was based on a combination of clinical findings (e.g., splenomegaly, ascites, and/or oesophageal varices), laboratory investigations, and imaging studies, including abdominal ultrasonography, computed tomography, or magnetic resonance imaging. Histological confirmation by liver biopsy was available in selected cases.\n\nExclusion Criteria:\n\n* 1\\) Evidence of bacterial infections in the body by:-\n* Clinical history\n* Physical examination\n* Laboratory investigations:\n\n  * WBCs (total and differential count)\n  * CRP.\n  * Urine analysis.\n  * Chest X-ray.\n  * Ascitic fluid analysis (WBCs \\& culture and sensitivity) 2) History of variceal bleeding within the 2 weeks preceding this study. 3) Treatment with an antibiotic (including rifaximin) or agents which could have modified the inflammatory process or cytokines (pentoxifylline, steroidal or non-steroidal anti-inflammatory or immunosuppressive drugs) during the last 8 weeks before inclusion.\n\n    4\\) Evidence of neoplasia, including hepatocellular carcinoma (HCC). 5) History of red cell or plasma transfusion in the month prior to inclusion in this study.\n\n    6\\) History of significant cardiac, pulmonary, renal, or metabolic comorbidities.\n\n    7\\) overt hepatic encephalopathy. 8) Active alcohol consumption within the preceding six months. 9) Rifaximin hypersensitivity, 10) Active viral hepatitis requiring direct-acting antiviral therapy 11) Pregnancy or breastfeeding and HIV infection."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Rifaximin on Thrombocytopenia in Patients With HCV-Related Liver Cirrhosis",
+      "nctId": "NCT07791940"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

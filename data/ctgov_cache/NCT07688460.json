@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Diagnosis of mild cognitive impairment (MCI) due to Alzheimer's disease or mild Alzheimer's dementia.\n2. Age between 50 and 90 years (inclusive).\n3. Confirmed presence of amyloid pathology (positive amyloid PET scan or CSF biomarkers).\n4. Mini-Mental State Examination (MMSE) score between 22 and 30.\n5. Clinical Dementia Rating (CDR) global score of 0.5 or 1.\n6. Stable dose of allowed concomitant medications for at least 4 weeks prior to screening.\n7. Willing and able to comply with the study procedures, including blood draws for ECL monitoring.\n8. Signed informed consent form.\n\nExclusion Criteria:\n\n1. Significant neurological disorders other than Alzheimer's disease (e.g., stroke, Parkinson's disease).\n2. History of brain hemorrhage, microbleeds, or superficial siderosis on MRI.\n3. Use of anticoagulants that cannot be safely interrupted.\n4. Severe systemic diseases (e.g., severe heart failure, uncontrolled diabetes) that may interfere with the study.\n5. Known hypersensitivity to Lecanemab or any excipients.\n6. Pregnant or breastfeeding women.\n7. Participation in another interventional clinical trial within the last 30 days."
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation System for Lecanemab Efficacy Using Gold Electrode ECL to Monitor Alzheimer's Biomarkers",
+      "nctId": "NCT07688460"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

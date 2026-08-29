@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 2 years to \\<12 years.\n* Clinical diagnosis of AS.\n\nExclusion Criteria:\n\n* Known allergy or other contraindication to oral amoxicillin or clavulanate\n* Prior use of systemic antibiotics in the last 7 days\n* History of renal impairment\n* History of hepatic impairment\n* Phenylketonuria or allergy to aspartame\n* History of craniofacial abnormalities\n* Concurrent bacterial infection requiring systemic antibiotic therapy (e.g., pneumonia, streptococcal pharyngitis)\n* Ill appearance, systemic toxicity, or immunodeficiency\n* Incomplete pneumococcal vaccination, defined as receipt of fewer than three doses of a pneumococcal conjugate vaccine\n* Parent or caregiver unable to complete study surveys in English or Spanish\n* Previous randomization into either MEASURE trial within the last 6 months\n* Periorbital redness and/or swelling, proptosis, or swelling of the forehead\n* Individuals who qualify for both the AS and AOM trials (to avoid dual enrollment) will be excluded from the AS trial."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparative Effectiveness of Available Treatments for Sinus and Ear Infections in Children (Acute Sinusitis)",
+      "nctId": "NCT07732699"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

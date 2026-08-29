@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* CT-confirmed naso-orbito-ethmoidal (NOE) fracture (unilateral or bilateral) requiring operative fixation (ORIF).\n* Acute fractures with injury-to-definitive surgery ≤ 14 days.\n* Skeletally mature patients (above 18 years).\n* Medically fit for general anesthesia and craniofacial surgery (ASA1).\n* Ability to attend for follow-up.\n\nExclusion Criteria:\n\n* Active Infection or Heavily Contaminated Open Fractures.\n* Old Fractures.\n* Patients unsuitable or unable to tolerate surgery."
+    },
+    "identificationModule": {
+      "briefTitle": "REDUCTION ACCURACY IN NASO-ORBITO-ETHMOIDAL FRACTURES AFTER VIRTUAL REDUCTION AND FIXATION USING PRE-ADAPTED MINIPLATES",
+      "nctId": "NCT07791095"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

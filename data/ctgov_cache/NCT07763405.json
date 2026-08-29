@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-80 years;\n* Acute ischemic stroke confirmed by CT or MRI;\n* Baseline NIHSS score 4-20 at enrollment;\n* Good prestroke functional status (mRS ≤1);\n* Randomization within 24 hours of last known well;\n* Written informed consent provided by the participant or legal representative.\n\nExclusion Criteria:\n\n* Received or planned intravenous thrombolysis or endovascular treatment after stroke onset;\n* Cardioembolic stroke (atrial fibrillation, heart valve replacement, atrial myxoma, endocarditis, etc.);\n* Other causative etiologies of stroke (aortic dissection, cervico-cerebral arterial dissection, vasculitis, vascular malformation, moyamoya disease/syndrome, fibromuscular dysplasia, etc.);\n* Non-vascular neurological diseases (intracranial tumor, multiple sclerosis, etc.);\n* Accompanying hemorrhagic transformation of infarction;\n* Concomitant use of other fibrinolytic therapy (e.g., urokinase, batroxobin, snake-venom preparations) or anticoagulant therapy (e.g., argatroban, rivaroxaban, dabigatran);\n* Severe hepatic insufficiency (ALT or AST \\>2 × upper limit of normal) or renal insufficiency (creatinine \\>1.5 × ULN or eGFR \\<40 mL/min/1.73 m²), or coagulopathy, or systemic bleeding, or thrombocytopenia (\\<100×10⁹/L);\n* History of intracranial hemorrhage (e.g., intracerebral hemorrhage or subarachnoid hemorrhage);\n* Bleeding diathesis or major surgery within 90 days (gastrointestinal bleeding, hemoptysis, etc.);\n* Hypersensitivity to lumbrokinase or aspirin;\n* Planned surgery or vascular reconstruction within 90 days that may require study-drug interruption;\n* History of malignancy or aneurysm (including intracranial or peripheral aneurysm);\n* Received lumbrokinase or other fibrinolytic therapy within 14 days prior to randomization;\n* Pregnancy or lactation;\n* Participation in another clinical trial;\n* Prior neurological or psychiatric disease that would interfere with neurological assessment;\n* Expected survival less than 90 days;\n* Expected inability to complete follow-up."
+    },
+    "identificationModule": {
+      "briefTitle": "Lumbrokinase vs Placebo in Moderate-to-Severe Ischemic Stroke",
+      "nctId": "NCT07763405"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

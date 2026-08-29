@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Al newly diagnosed cases with typical tinea lesion involving at least 5% body surface area (BSA) with no nail/scalp/palm/sole involvement and no history of intake of any oral antifungal in the preceding 4 weeks or of a topical antifungal/steroid in the preceding 2 weeks. Presenting to the outpatient department or the emergency department of PEMH or CMH will be included in the study.\n\nExclusion Criteria:\n\n* 1\\. Patients with chronic liver and renal diseases. 2. Patients with ischaemic heart diseases. 3. Patients with hyperlipidemia. 4. 5. Those on chronic immunosuppressive therapy. Pregnant and lactating women and females of reproductive age. 6. Elderly patients above 75 years 7. Patient who had taken oral antifungal in the preceding 4 weeks or of a topical antifungal/steroid in the preceding 2 weeks"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of Itraconazole With Itraconazole and Isotretinoin in the Treatment Duration, Safety a n d Cure Rate in Adult Patients of Tinea Corporis/ Cruris-A Randomised Controlled Trail",
+      "nctId": "NCT07675239"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-06-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

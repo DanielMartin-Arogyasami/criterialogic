@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nHousehold: Households with at least one child aged 2 to 17 years, living in Burlington, Ontario Individual: 1) Residence in an eligible household 2) Age 2 years to 59 years\n\nExclusion Criteria:\n\nHousehold: Households where all members have received influenza vaccine in 2 years prior to the study.\n\nIndividual:\n\n1. Pregnancy\n2. Breast feeding\n3. Past serious allergic reaction to study vaccine components (including gentamicin, gelatin, or arginine) or to previous influenza vaccination\n4. Severe asthma or active wheezing\n5. History of Guillain-Barre syndrome within 6 weeks of receiving a previous influenza vaccine\n6. Children 2 to 17 receiving aspirin or salicylate -containing medications. Children who are not receiving aspirin should not receive aspirin for at least 4 weeks after receiving Flumist unless medically indicated.\n7. Severely immunocompromised person\n8. People who will provide care to severely immunocompromised persons for at least 2 weeks following vaccination or who share a household with an immunocompromised person."
+    },
+    "identificationModule": {
+      "briefTitle": "SAFE (Self-Administration of Flumist to ImprovE Uptake: A Household-Based Cluster Randomized Trial)",
+      "nctId": "NCT07739719"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

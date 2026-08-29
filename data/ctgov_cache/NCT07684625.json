@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients diagnosed with Type 2 Diabetes Mellitus currently on therapy.\n* Patients receiving Lumbricus Rubellus extract therapy during outpatient care at the Endocrinology Clinic.\n* Adults aged \\>18 years, both male and female.\n* Willing to undergo monthly evaluations during the 1-month study period\n\nExclusion Criteria:\n\n* Patients with diabetic foot ulcer grade 1-2.\n* Patients with Diabetic Kidney Disease (DKD) Stage 5.\n* Patients with chronic liver disease.\n* Post-operative patients.\n* Patients with malignancy.\n* Patients with autoimmune disease or active infection.\n* Non-compliant or uncooperative patients during the monitoring period."
+    },
+    "identificationModule": {
+      "briefTitle": "THE EFFECT OF LUMBRICUS RUBELLUS DLBS1033 EXTRACT IN PATIENTS WITH TYPE 2 DIABETES MELLITUS",
+      "nctId": "NCT07684625"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

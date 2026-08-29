@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 to 40 years.\n* Clinically diagnosed moderate hidradenitis suppurativa (International\n* Hidradenitis Suppurativa Severity Score System \\[IHS4\\] score 4-10) or severe hidradenitis suppurativa (IHS4 score ≥11).\n* Able and willing to provide written informed consent.\n* Willing to comply with study visits and treatment for 12 weeks.\n\nExclusion Criteria:\n\n* Pregnancy.\n* Previous severe hypersensitivity or adverse reaction to apremilast or acitretin.\n* Refusal or inability to provide written informed consent.\n* Diabetes mellitus.\n* Severe depression.\n* Dyslipidemia.\n* Severe hepatic impairment.\n* Severe renal impairment."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparative Efficacy of Apremilast and Acitretin in Moderate-to-Severe Hidradenitis Suppurativa",
+      "nctId": "NCT07708480"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-16",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

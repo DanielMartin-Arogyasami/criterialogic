@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female 18 to 80 years of age\n* Documented findings on right heart catheterization consistent with a diagnosis of WHO Group 1 pulmonary arterial hypertension of one of the following subtypes: idiopathic PAH; heritable PAH; drug- or toxin-induced PAH; PAH associated with connective tissue disease; or PAH associated with simple congenital systemic-to-pulmonary shunts repaired at least 1 year previously\n* Receiving selexipag at any dose between 200 and 1600 mcg twice daily for at least 90 days, and willing and able to transition from selexipag to LIQ861 due to unsatisfactory clinical response or tolerability issues\n* May be receiving up to 2 additional approved non-prostacyclin oral PAH therapies at a stable dose and regimen, planned to continue unchanged for the duration of the study\n* New York Heart Association Functional Class II or III\n* Able to demonstrate correct use of the dry powder inhaler\n\nExclusion Criteria:\n\n* Pulmonary hypertension in WHO Group 2, 3, 4, or 5, or a WHO Group 1 subtype not listed in the inclusion criteria\n* Clinically significant left-sided heart disease by echocardiography, including left ventricular ejection fraction ≤ 45%, left atrial volume index \\> 48 mL/m², or hemodynamically significant valvular disease\n* Symptomatic coronary artery disease within the previous 6 months\n* Prior atrial septostomy"
+    },
+    "identificationModule": {
+      "briefTitle": "A Study of Inhaled Treprostinil (LIQ861) in Adults With Pulmonary Arterial Hypertension Transitioning From Oral Selexipag",
+      "nctId": "NCT07759804"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

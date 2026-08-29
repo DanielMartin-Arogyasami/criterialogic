@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients scheduled to undergo cardiac surgery with cardiopulmonary bypass\n* patients treated with SGLT-2 inhibitors, including combined treatment with metformin, for at least 4 weeks\n* heart failure patients with a left ventricular ejection fraction strictly below 50%\n* patients enrolled in a social security scheme or equivalent\n* patients who have signed the informed consent form\n\nExclusion Criteria:\n\n* Treatment with SGLT-2 inhibitors initiated less than 4 weeks ago and other than empagliflozine or dapagliflozine\n* patients with a contraindication to SGLT-2 inhibitors: hypersensitivity, type 1 diabetes mellitus, and renal impairment with an estimated glomerular filtration rate below 25 mL/min/1.73 m²\n* acute conditions likely to call into question the continuation of SGLT2 inhibitor therapy (alone or in combination) at the time of inclusion, including in particular: shock state or acute tissue hypoxia (episode of hyperlactatemia \\> 3 mmol/L within 7 days prior to inclusion); acute kidney injury within the previous 7 days (KDIGO stage ≥2); severe hepatocellular failure (factor V level \\< 50%); acute alcohol intoxication within the previous 7 days or active alcohol use disorder without withdrawal\n* surgery scheduled within less than 3 days\n* surgery for active endocarditis within the last 3 months\n* patients on preoperative mechanical circulatory support\n* heart transplant surgery or implantation of an LVAD (left ventricular assist device)\n* chronic kidney disease patients with a glomerular filtration rate below 25 mL/min/1.73m²\n* heart failure patients with a preserved ejection fraction, equal to or greater than 50\n* pregnant or breastfeeding women\n* minors or adults under legal protection (guardianship or conservatorship)\n* patients participating in another interventional study patients who do not understand or speak French."
+    },
+    "identificationModule": {
+      "briefTitle": "Discontinuation or Continuation of SGLT-2 Inhibitors Before Cardiac Surgery",
+      "nctId": "NCT07766109"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

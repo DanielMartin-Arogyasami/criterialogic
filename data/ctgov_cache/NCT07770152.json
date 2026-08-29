@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria (Semaglutide Group):\n\n* 12-18 years of age\n* Epic-confirmed diagnosis of ASD\n* Obesity defined as BMI ≥95th percentile for age and sex\n* Have Medicaid or other insurance that will cover semaglutide or the parent is willing to pay for semaglutide out of pocket\n* Have a parent who is willing to provide informed consent\n* Can attend in-person, e-visits, or telehealth visits for 12 months\n* English speaking\n\nExclusion Criteria (Semaglutide Group):\n\n* Healthworks patient who has lost \\>5% body weight over the past 3 months\n* Are on a weight loss-promoting medication such as Metformin or Topamax with a dose change in the past 3 months\n* Have Type 1 or Type 2 diabetes\n* Have a personal or first-degree family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia 2\n* Have been on GLP-1 RAs in the past 12 months\n* Have significant GI conditions (e.g., pancreatitis),\n* Are pregnant or breastfeeding\n* Have catatonia or a condition that may affect compliance and safety\n\nInclusion Criteria (Historical Control Group):\n\n* Healthworks patients treated between January 1, 2021-December 31, 2025\n* 12-18 years of age\n* Confirmed diagnosis of ASD\n* Have obesity defined as BMI ≥95th percentile for age and sex\n* Have BMI and SMM outcomes assessed at M0, M6, or M12\n* Age groups 12-14 years old and 15-18 years old and sex matched to youth in the semaglutide group"
+    },
+    "identificationModule": {
+      "briefTitle": "Semaglutide in Youth With Autism Spectrum Disorder",
+      "nctId": "NCT07770152"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* The potential subject must be at least 18 years of age or older.\n* The potential subject must have undergone Mohs micrographic surgery for a cutaneous malignancy (e.g., basal cell carcinoma, or squamous cell carcinoma).\n* The potential subject must have a post-Mohs surgical defect that is suitable for treatment with a CAMP product or healing by secondary intention.\n* The surgical site has received standard Mohs excision and hemostasis with no requirement for immediate flap or graft reconstruction as determined by the treating surgeon.\n* If the surgical defect is on the lower extremity, the limb must have adequate perfusion confirmed by vascular assessment. Any of the following methods performed within 3 months of the first screening visit are acceptable:\n\n  1. Ankle-Brachial Index (ABI) between 0.7 and ≤ 1.3;\n  2. Toe-Brachial Index (TBI) ≥ 0.6;\n  3. Transcutaneous Oxygen Measurement (TCOM) ≥ 40 mmHg;\n  4. Pulse Volume Recording (PVR): biphasic.\n* If the subject has multiple Mohs defects, they must be separated by at least 2 cm. The largest defect satisfying the inclusion and exclusion criteria will be designated as the target wound.\n* The potential subject must agree to attend the weekly study visits required by the protocol.\n* The potential subject must be willing and able to participate in the informed consent process.\n\nExclusion Criteria:\n\n* The potential subject is known to have a life expectancy of \\< 6 months.\n* The potential subject's target wound is not secondary to a Mohs excision. -\n\n  -. The target wound is infected or there is cellulitis in the surrounding skin.\n* The target wound:\n\n  1. Exposes tendon, bone, or joint space, and/or\\[MM6.1\\]\\[RB6.2\\]\n  2. Requires immediate complex flap or graft reconstruction in the judgment of the surgeon.\n* The potential subject has participated in a clinical trial involving treatment with an investigational product within the previous 30 days.\n* The potential subject has glycated hemoglobin (HbA1c) greater than 10% within 3 months of the initial screening visit.\n* The potential subject, in the opinion of the investigator, has a medical or psychological condition that may interfere with study assessments."
+    },
+    "identificationModule": {
+      "briefTitle": "A Multicenter, Prospective, Randomized Controlled Clinical Trial Assessing the Efficacy of a Novel Cellular, Acellular, Matrix-like Product (CAMP) Plus Standard of Care Versus Standard of Care Alone in the Management of Post-Mohs Micrographic Surgery Defects.",
+      "nctId": "NCT07695389"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

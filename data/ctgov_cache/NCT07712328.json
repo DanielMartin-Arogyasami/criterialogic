@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* (1) Demographic information: Age 18 to 75 years, any gender, any race. (2) Target disease: Preoperative pituitary MRI-confirmed diagnosis of sellar region lesions requiring surgical intervention, including craniopharyngioma, pituitary adenoma, and other sellar region lesions. The patient must meet at least two of the following high-risk criteria:\n\n  1. Preoperatively confirmed central diabetes insipidus (CDI);\n  2. Maximum tumor diameter \\> 3 cm with imaging evidence of suprasellar extension;\n  3. Imaging evidence of close anatomical relationship with the pituitary stalk, posterior pituitary, or hypothalamus, including compression, encasement, or invasion;\n  4. Estimated surgical duration \\> 4 hours. (3) Health status: Adequate organ function to tolerate surgery, and no contraindications to desmopressin (dDAVP) administration. American Society of Anesthesiologists (ASA) Physical Status classification I, II, or III, with comorbid conditions being stably controlled prior to surgery.\n\n     (4) Concomitant medication: Patients must have discontinued medications that may significantly affect intraoperative water-electrolyte balance (e.g., thiazide diuretics, antipsychotics such as chlorpromazine, olanzapine, clozapine, carbamazepine, etc.) prior to surgery, until the investigator assesses the risk as acceptable\n\n     Exclusion Criteria:\n* (1) Patients with pre-existing comorbidities affecting water and salt metabolism, including but not limited to:\n\n  1. Renal insufficiency (dDAVP is predominantly excreted unchanged by the kidneys; renal impairment may significantly prolong its half-life and increase the risk of hyponatremia);\n  2. Cardiac insufficiency (dDAVP-induced water and sodium retention may increase circulating blood volume and potentially precipitate heart failure);\n  3. Untreated adrenal insufficiency (cortisol deficiency impairs free water excretion);\n  4. Uncorrected hyponatremia prior to surgery. (2) Patients requiring concomitant use of medications that may induce hyponatremia and cannot be temporarily discontinued, including but not limited to chlorpromazine, olanzapine, clozapine, carbamazepine, thiazide diuretics, etc.\n\n     (3) Pregnant or breastfeeding patients. (4) Patients with known hypersensitivity to dDAVP or any of its excipients. (5) Patients currently participating in any other clinical trial. If the patient has previously participated in a drug clinical trial, the time from the last dose of the investigational drug must exceed 4 weeks.\n\n     (6) Any other conditions deemed unsuitable for participation in this study by the investigator's judgment."
+    },
+    "identificationModule": {
+      "briefTitle": "Randomized Controlled Clinical Study on the Prophylactic Intraoperative Use of Desmopressin in Complex Sellar Region Tumors",
+      "nctId": "NCT07712328"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

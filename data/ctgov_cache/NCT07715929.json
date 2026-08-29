@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥18 years and ≤75 years at the time of screening\n* Documented symptomatic paroxysmal AF or persistent AF, confirmed by 12-lead ECG, Holter monitoring, or cardiac monitoring device, with documented AF episode duration ≥7 days (for persistent AF) and total AF history duration ≤5 years\n* Body weight criteria (aligned with NMPA-approved tirzepatide indication) meeting at least one of the following:\n\nBMI ≥28.0 kg/m² (obesity threshold per Chinese criteria), OR BMI ≥24.0 kg/m² and \\<28.0 kg/m² (overweight per Chinese criteria) with at least one weight-related comorbidity: hypertension, dyslipidemia, type 2 diabetes mellitus (T2DM), obstructive sleep apnea syndrome (OSAS), or atherosclerotic cardiovascular disease (ASCVD)\n\n* Failed response to or intolerance of at least one antiarrhythmic drug (AAD), or explicit patient preference for a rhythm control strategy\n* Undergoing catheter ablation for AF at a participating center, with confirmed successful restoration of sinus rhythm at the end of the procedure (as determined by the operator)\n* Willing and able to understand the study procedures, provide written informed consent, and comply with all protocol requirements including 12-month follow-up visits\n* Capable of performing basic physical activity (no absolute contraindication to moderate-intensity aerobic exercise)\n\nExclusion Criteria:\n\nCardiovascular Exclusion Criteria\n\n* Long-standing persistent AF: continuous AF duration ≥5 years prior to enrollment\n* Prior catheter ablation for AF or atrial flutter at any time\n* Left atrial anteroposterior diameter \\>55 mm (by transthoracic echocardiography at screening)\n* Left ventricular ejection fraction (LVEF) \\<35% at screening\n* NYHA functional class III or IV heart failure\n* Significant structural heart disease: hypertrophic cardiomyopathy, valvular heart disease requiring intervention, congenital heart disease, myocarditis, or cardiac sarcoidosis\n* Acute coronary syndrome (ACS), ischemic stroke/TIA, or major cardiac surgery within 6 months prior to screening\n\nTirzepatide-Specific Exclusion Criteria (per NMPA Prescribing Information)\n\n* Prior use of any GLP-1 receptor agonist (liraglutide, semaglutide, dulaglutide, exenatide, etc.) or GIP receptor agonist, or known hypersensitivity to tirzepatide or any excipient in the formulation\n* Personal or family (first-degree relative) history of multiple endocrine neoplasia type 2 (MEN2) or medullary thyroid carcinoma (MTC)\n* History of acute pancreatitis or chronic pancreatitis, or current symptomatic cholelithiasis or cholecystitis\n* Type 1 DM\n* Severe gastrointestinal disease including severe gastroparesis, inflammatory bowel disease, or any condition that would substantially impair gastrointestinal motility or absorption\n\nGeneral Exclusion Criteria\n\n* Use of any weight-loss medication (orlistat, phentermine, naltrexone/bupropion, or other anti-obesity agents) or participation in any weight-loss pharmacotherapy clinical trial within 3 months prior to screening\n* Severe hepatic insufficiency (Child-Pugh class C) or severe renal insufficiency (eGFR \\<15 mL/min/1.73 m²)\n* Active malignancy (receiving systemic anti-cancer treatment or with life expectancy \\<2 years due to malignancy)\n* Pregnancy, breastfeeding, or women of childbearing potential who are unwilling to use highly effective contraception throughout the study and for ≥1 month after the last dose of tirzepatide\n* Severe psychiatric disorder (schizophrenia, bipolar disorder, severe major depressive disorder) that would impair ability to comply with study procedures\n* Known allergy or sensitivity to adhesive patch materials (relevant to ECG monitoring patch components)\n* Any other condition that, in the opinion of the investigator, would make participation inadvisable or compromise the safety of the participant or the integrity of the study"
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Tirzepatide on Recurrence of Atrial Fibrillation After Catheter Ablation in Obese Patients",
+      "nctId": "NCT07715929"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

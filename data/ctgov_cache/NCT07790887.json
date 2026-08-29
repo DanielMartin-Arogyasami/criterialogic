@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adults aged ≥40 years with bilateral visually significant cataracts electing to undergo cataract surgery\n2. Calculated IOL power within the available PureSee power range\n3. Both eyes targeted for plano (first minus recommended) in both eyes\n4. Preoperative corneal astigmatism ≤0.75 D for non-toric PureSee, or within the treatment range of the PureSee Toric platform\n5. Potential postoperative best-corrected distance visual acuity of 20/25 or better in each eye\n6. Willing and able to comply with the scheduled visits and study procedures\n\nExclusion Criteria:\n\n1. Prior intraocular or corneal refractive surgery in the operative eye(s)\n2. Irregular corneal astigmatism, keratoconus, pellucid marginal degeneration, or other ectatic disease\n3. Clinically significant macular pathology, advanced glaucoma with field loss, amblyopia, or any concurrent ocular condition that would limit BCVA at the discretion of the investigator\n4. Pupil abnormalities, zonular instability, pseudoexfoliation, or any condition predisposing to intraoperative or postoperative IOL instability\n5. History of ocular trauma or uveitis\n6. Uncontrolled systemic disease that in the opinion of the investigator would interfere with study participation or healing"
+    },
+    "identificationModule": {
+      "briefTitle": "A Prospective, Single-Arm Clinical Evaluation of Visual, Refractive, and Patient-Reported Outcomes Following Bilateral Implantation of the TECNIS PureSee™ Extended Depth of Focus Intraocular Lens",
+      "nctId": "NCT07790887"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

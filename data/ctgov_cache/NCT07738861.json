@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 to 60 years.\n* Male and female participants\n* Patients requiring surgical extraction of a mandibular molar.\n* American Society of Anesthesiologists (ASA) Physical Status I or II\n* Able and willing to provide written informed consent and comply with study follow-up\n\nExclusion Criteria:\n\n* Pregnant or lactating women.\n* Patients with systemic conditions that contraindicate oral surgery (e.g., uncontrolled diabetes mellitus or immunosuppressive disorders).\n* Current use of antibiotics or medications that may interfere with wound healing (e.g., anticoagulants or bisphosphonates).\n* Known allergy or hypersensitivity to tetracycline or related antibiotics.\n* Requirement for simultaneous extraction of adjacent teeth.\n* Presence of active oral infection, including pericoronitis, at the surgical site.\n* Severely compromised oral hygiene that may affect postoperative healing.\n* Individuals who are unable to cooperate with the study procedures or attend follow-up visits because of physical or cognitive impairment."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Intraoperative Tetracycline on Postoperative Pain After Mandibular Molar Extraction",
+      "nctId": "NCT07738861"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

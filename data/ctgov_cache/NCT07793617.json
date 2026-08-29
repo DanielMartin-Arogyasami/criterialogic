@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Children aged 2 to 13 years admitted for tonsillectomy/tonsillotomy with or without adenoidectomy;\n* Patients classified as Physical Status I and II according to the American Society of Anesthesiologists (ASA);\n* Otolaryngologists responsible for the patient according to the study and willing to report the data necessary for this study.\n\nExclusion Criteria:\n\n* Children with hypersensitivity or allergy to the drugs used in the study protocol for AG and/or BGEP;\n* Use of concomitant medications for anesthesia or pain control that are not in the study protocol in the pre or intraoperative period;\n* Children with a history of chronic orofacial pain;\n* Failure to provide written Informed Consent Form (ICF) or Informed Assent form (IAF) to participate in the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Sphenopalatine Ganglion Block for Pain Relief After Pediatric Adenotonsillectomy",
+      "nctId": "NCT07793617"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

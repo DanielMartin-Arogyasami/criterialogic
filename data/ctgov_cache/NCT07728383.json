@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Body Mass Index 30 to 45\n\nExclusion Criteria:\n\n* Type 2 Diabetes Mellitus\n* Multiple Endocrine Neoplasia Type 2\n* Medullary thyroid cancer"
+    },
+    "identificationModule": {
+      "briefTitle": "A Proof-of-Concept Study to Evaluate Topical-Lingual Semaglutide in Adults With Obesity",
+      "nctId": "NCT07728383"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

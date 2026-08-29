@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged 16 years or older.\n* An IBD diagnosis as defined through SNOMED codes in primary care databases \\[Appendix 5\\]\n* Taking a PPI regularly for \\>6 months prior to enrolment\n* Patient-confirmed compliance with PPI therapy (\\>75% of prescribed doses)\n* Able to give full, independent valid Informed consent\n* Stable disease as defined by no change in medication or IBD-related surgery for the last 3 months.\n\nExclusion Criteria:\n\n* Unable to participate fully in all aspects of the clinical trial.\n* Barrett's oesophagus\n* Peptic disease at a recent upper GI endoscopy\n* Zollinger-Ellison Syndrome\n* Eosinophilic oesophagitis\n* Chronic NSAID usage\n* Pulmonary fibrosis.\n* Declined consent to data sharing\n* History of dementia\n* Terminal illness\n* Present malignancy\n* Active history of mental illness\n* In a care home\n* Alcohol misuse\n* Illicit drug misuse"
+    },
+    "identificationModule": {
+      "briefTitle": "Stopping PPI Therapy in Inactive IBD",
+      "nctId": "NCT07691138"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

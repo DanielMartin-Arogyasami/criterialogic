@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged ≥18 years.\n* Diagnosis of chronic migraine according to ICHD-3 criteria (1).\n* Patients free from major neurological or psychiatric disorders that may interfere with headache assessment or study participation (3,4).\n* Ability to provide written informed consent and comply with study procedures.\n\nExclusion Criteria:\n\n* Age \\<18 years.\n* Medication-overuse headache according to ICHD-3 criteria .\n* Acute migraine medication use within 24 hours before intervention .\n* Previous trauma or surgery involving the occipital region .\n* Known hypersensitivity to local anesthetic agents.\n* Local skin infection, dermatological disease, or impaired occipital sensation at the injection site.\n* Bleeding diathesis, anticoagulan؛t therapy, or skull defect contraindicating peripheral nerve block ."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Ultrasound-Guided Combined Greater Occipital Nerve Block and Greater Auricular Nerve Block Versus Greater Occipital Nerve Block Alone in the Management of Chronic Migraine",
+      "nctId": "NCT07763678"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

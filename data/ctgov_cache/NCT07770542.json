@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* ASA status I and II\n* Orthopedic leg operations under spinal anesthesia\n\nExclusion Criteria:\n\n* Spinal deformity\n* Coagulopathy (INR \\>1.5)\n* Allergic reaction to local anesthetic\n* Recent heart attack (≤3-months)\n* With neurological diseases\n* Pulmonary diseases\n* Major liver or kidney disorders and infection of skin at the block site"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of Pain Relief Duration With Dexmedetomidine Versus Fentanyl Added to Spinal Anesthesia in Patients Undergoing Lower Limb Orthopedic Surgery",
+      "nctId": "NCT07770542"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

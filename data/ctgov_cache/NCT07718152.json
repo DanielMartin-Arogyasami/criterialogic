@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18 to 75 years.\n2. Scheduled to undergo elective spine surgery.\n3. Planned intraoperative monitoring with MEP and SEP/SSEP.\n4. Expected surgical duration sufficient to complete two study drug periods and intraoperative monitoring windows, preferably at least 3.5 to 4 hours.\n5. American Society of Anesthesiologists physical status I to III.\n6. Able to provide written informed consent, or consent provided by a legally authorized representative where applicable.\n\nExclusion Criteria:\n\n1. Known allergy or contraindication to ciprofol, remimazolam, benzodiazepines, propofol-related formulations, opioids, or relevant excipients.\n2. Severe preoperative motor or sensory deficit preventing interpretable target MEP or SEP baseline recordings.\n3. Implanted cardiac pacemaker, skull defect, or other condition considered unsuitable for transcranial electrical stimulation.\n4. Severe neuromuscular disease, poorly controlled epilepsy, severe cognitive impairment, or inability to complete postoperative neurological assessment.\n5. Severe hepatic or renal dysfunction, severe hemodynamic instability, shock, or requirement for high-dose vasoactive medications before enrollment.\n6. Long-term benzodiazepine, sedative-hypnotic, antiepileptic drug use, or drug/alcohol dependence that may substantially alter anesthetic response.\n7. Expected need for continuous deep neuromuscular blockade during surgery, preventing valid MEP monitoring.\n8. Any other condition judged by the investigators to make participation unsuitable or unsafe."
+    },
+    "identificationModule": {
+      "briefTitle": "Ciprofol and Remimazolam for Intraoperative Neurophysiological Monitoring During Spine Surgery",
+      "nctId": "NCT07718152"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

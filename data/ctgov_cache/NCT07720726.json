@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults at least 18 years of age with a post-mohs micrographic surgery nasal defect requiring PMFF reconstruction in the operating room or clinic at our institution\n* No other facial plastic surgery procedure or skin cancer reconstruction performed simultaneously\n* Lack all the below Exclusion Criteria\n\nExclusion Criteria:\n\n* Documented allergy to Abobotulinumtoxin-A\n* Previous hypersensitivity to Abobotulinumtoxin-A\n* Hypersensitivity to any botulinum toxin product or excipients\n* Previous adverse reaction to any botulinum toxin product or excipients\n* Allergy to cow's milk protein\n* Infection at proposed injection site\n* Previous scar or surgery at proposed injection site\n* Inability to follow-up in clinic\n* Inability to provide informed consent\n* Patient currently on aminoglycoside or other agent interfering with neuromuscular transmission\n* Patient on anticholinergic medication\n* Pregnancy"
+    },
+    "identificationModule": {
+      "briefTitle": "Impact of Dysport on PMFF Donor Scar",
+      "nctId": "NCT07720726"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

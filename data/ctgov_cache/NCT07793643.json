@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 22-65 years old, presenting to the Emergency Department (ED) who are undergoing antibody testing as part of universal screening\n* Patients to be discharged from the ED or ED Observational units\n\nExclusion Criteria:\n\n* Capacity to Consent\n* Emergency Severity Index (ESI) Level one (high acuity patients)\n* Known noninvasive serologic tests above proprietary cutoffs indicating cirrhosis (example - FibroSure, Enhanced Liver Fibrosis Test, etc.)\n* Known clinical evidence of cirrhosis (egliver nodularity and/or splenomegaly on imaging, platelet count \\<150,000/m3, etc.)\n* Known prior liver biopsy showing cirrhosis\n\n  •Pregnancy\n* Known or suspected Hepatocellular carcinoma\n* Followed by hospice or transplant, have a life expectancy \\< 1 year\n* Chronic Kidney Disease (CKD) or on dialysis\n* Allergy to study medications\n* Patients admitted to the hospital"
+    },
+    "identificationModule": {
+      "briefTitle": "AI-Powered Hepatitis C Single-Encounter Test-and-Treat",
+      "nctId": "NCT07793643"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

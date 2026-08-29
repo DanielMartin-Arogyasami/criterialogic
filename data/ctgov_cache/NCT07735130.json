@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female aged 40 years or older\n* Symptomatic severe aortic stenosis (AS) with left ventricular hypertrophy (LVH) who successfully underwent transcatheter aortic valve replacement (TAVR) within the prior 30 days, including native-valve or valve-in-valve TAVR\n\n  \\* Severe AS defined by at least one of the following: aortic valve area ≤1.0 cm²; aortic valve area index ≤0.6 cm²/m²; mean pressure gradient ≥40 mmHg; or maximal aortic valve velocity ≥4.0 m/sec\n\n  \\* LVH defined as left ventricular mass index \\>115 g/m² in men or \\>95 g/m² in women\n* Successful TAVR (technical success) meeting all VARC-3 criteria: survival; successful access, delivery, and retrieval of the device; correct positioning of a single prosthetic valve in the proper anatomic location; no additional surgery or procedure related to the device (excluding permanent pacemaker implantation) or to major vascular, access-site, or cardiac structural complications; and intended prosthetic valve performance (mean gradient \\<20 mmHg, peak velocity \\<3 m/s, Doppler velocity index ≥0.25, and less than moderate aortic regurgitation)\n* Left ventricular ejection fraction (LVEF) \\>40% before TAVR\n* Provided written informed consent to participate, either voluntarily or through a legal representative\n\nExclusion Criteria:\n\n* Hypotension (systolic blood pressure \\<90 mmHg) or hemodynamic instability defined as a need for continuous intravenous vasopressor support at screening\n* Hyperkalemia (serum potassium \\>5.5 mmol/L)\n* Bilateral renal artery stenosis without stent placement\n* Allergy, hypersensitivity, or prior intolerance to angiotensin receptor blockers\n* Pregnancy, breastfeeding, or planning to become pregnant\n* Estimated life expectancy of less than 2 years\n* Acute coronary syndrome diagnosed within the past 1 year\n* Estimated glomerular filtration rate (eGFR) \\<30 mL/min/1.73 m\\^2 by the CKD-EPI equation, or currently undergoing renal replacement therapy\n* Any other medical condition that, in the investigator's judgment, makes participation in the trial inappropriate"
+    },
+    "identificationModule": {
+      "briefTitle": "Angiotensin Receptor Blocker After TAVR in Severe Aortic Stenosis With Left Ventricular Hypertrophy (ARBITAR)",
+      "nctId": "NCT07735130"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

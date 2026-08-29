@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age: Adults ≥ 18 years.\n* Diagnosis: Clinical diagnosis of mild to moderate dry eye disease in at least one eye with OSDI ≥ 13 to ≤ 32 at screening.\n* OSDI ≥ 13 to ≤ 32 at screening.\n* Objective evidence: NITBUT ≤ 10 seconds in the study eye(s) at screening.\n* Ocular surface status: CFS ≤ grade 3 (Oxford or NEI scale) in the study eye(s).\n* Stable medications: Systemic medications that may affect tear film must be stable ≥ 30 days prior to screening and expected to remain stable during the study.\n* Ability to participate: Able and willing to comply with procedures, attend visits, and provide written informed consent.\n* Contraception: Women of childbearing potential must agree to use an acceptable method of contraception for the study duration and have a negative pregnancy test at screening.\n\nExclusion Criteria:\n\n* Active ocular infection or inflammation unrelated to DED (e.g., bacterial/viral conjunctivitis, active uveitis).\n* Severe ocular surface disease beyond typical DED (e.g., severe keratitis, Stevens-Johnson syndrome, ocular cicatricial pemphigoid).\n* Excessive corneal staining: CFS \\> grade 3 in the study eye(s).\n* Recent ocular surgery or procedure: ocular surgery, laser, or punctal occlusion within 6 months prior to screening.\n* Current or prior use within 6 months before screening of either study drop (Systane PRO PF or Blink Triple Care PF)\n* Contact lens wear: soft or rigid contact lens use within 7 days prior to baseline, or unwillingness to discontinue lenses for the study; consider extending to 14 days if desired.\n* Use of topical ophthalmic medications that cannot be discontinued (e.g., topical antibiotics, corticosteroids).\n* Recent investigational product use: participation in another interventional trial or investigational product use within 30 days prior to screening.\n* Known hypersensitivity: allergy to any component of Systane PRO PF or Blink Triple Care PF.\n* Confounding systemic conditions: systemic diseases or medications that, in the investigator's judgment, could significantly affect tear production or ocular surface health (e.g., uncontrolled autoimmune disease, recent initiation/change of systemic medications known to affect tear production within 30 days).\n* Severe visual impairment in the study eye(s) not attributable to DED that would interfere with assessments.\n* Pregnancy or breastfeeding.\n* Investigator discretion: any medical, psychiatric, or social condition that would preclude safe participation or reliable completion of study procedures."
+    },
+    "identificationModule": {
+      "briefTitle": "The Effectiveness of Systane PRO Preservative Free Verses Blink Triple Care Preservative Free",
+      "nctId": "NCT07745062"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-04",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

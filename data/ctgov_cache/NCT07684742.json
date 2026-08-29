@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age \\>=18 years\n2. Diagnosis of acute coronary syndrome, including ST-segment elevation myocardial infarction (STEMI), non-ST-segment elevation myocardial infarction (NSTEMI), or unstable angina (UA)\n3. Successful IVUS-guided PCI with drug-eluting stent implantation\n4. Randomization within 96 hours after PCI\n5. Written informed consent\n\nExclusion Criteria:\n\n1. Planned staged PCI or CABG\n2. PCI failure, including no-reflow, major dissection, or thrombosis\n3. Need for oral anticoagulation\n4. Major bleeding within 30 days\n5. History of hemorrhagic stroke or ischemic stroke within 6 months\n6. Platelet count \\<100,000/mm3 or WBC count \\<3,000/mm3\n7. Contraindication to aspirin, ticagrelor, or prasugrel\n8. Life expectancy \\<1 year\n9. Current or potential pregnancy\n10. Investigator deems participation inappropriate"
+    },
+    "identificationModule": {
+      "briefTitle": "Early Single Antiplatelet Therapy After IVUS-Guided PCI in Acute Coronary Syndrome",
+      "nctId": "NCT07684742"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

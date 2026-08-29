@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Pregnant women\n* Singleton pregnancy (on USG)\n* Gestational age ≥ 24-weeks (on LMP method) and\n* Past medical history of pre-eclampsia (on medical record)\n\nExclusion Criteria:\n\n* Pre-existing chronic hypertension\n* Cardiac diseases (congenital or acquired)\n* Renal disease\n* Thyrotoxicosis (on history and medical record) and\n* Intra-uterine death of the fetus."
+    },
+    "identificationModule": {
+      "briefTitle": "Vitamin D Therapy to Prevent Recurrent Preeclampsia in High-Risk Pregnancies",
+      "nctId": "NCT07717931"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

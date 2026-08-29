@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* both gender -\n* age range of (18-60 years ) -medical free patients with lower molars with symptomatic irreversible pulpitis and indicated for single visit root canal treatment with pain score 4 or more on VAS- Patients that commit for the entire period of the trial and agreed to sign the informed consent .\n\nExclusion Criteria:\n\n* vulnerable group -teeth with open apex or calcified canals-curved canals-\n* patients on analgesics or antibiotics\n* periodontaly affected tooth"
+    },
+    "identificationModule": {
+      "briefTitle": "Impact of Intracanal Cryotherapy and Corticosteroids on Post Endodontic Pain",
+      "nctId": "NCT07676396"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-06-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

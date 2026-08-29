@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Outpatients scheduled for elective painless gastroscopy\n* Age ≥ 18 years old\n* American Society of Anesthesiologists (ASA) physical status I-III\n* Body mass index (BMI) between 18.5 and 29.9 kg/m²\n\nExclusion Criteria:\n\n* Resting SBP ≥ 160 mmHg, DBP ≥ 110 mmHg, or heart rate ≥ 110 beats/min on admission to endoscopy room\n* Continuous opioid medication use for more than 2 weeks within 6 months before the procedure\n* Known hypersensitivity or allergic reaction to tegileridine, propofol or any excipients of the two drugs\n* Diagnosed psychiatric disorders or inability to communicate and cooperate with study assessment"
+    },
+    "identificationModule": {
+      "briefTitle": "ED90 of Tegileridine Combined With Propofol For Painless Gastroscopy",
+      "nctId": "NCT07678411"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

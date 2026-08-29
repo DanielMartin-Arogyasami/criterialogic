@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Individuals of any sex and at least 18 years of age\n2. Subjects who have inadequate eyelashes due to natural causes (Idiopathic eyelash hypotrichosis)\n3. Eyelash prominence assessment of minimal or moderate\n\n   \\- A score of 1 or 2 on the clinician-graded Global Eyelash Assessment (GEA)\n4. Willing to complete all required study visits, procedures, and evaluations including photography.\n\nExclusion Criteria:\n\n1. Subjects with unequal right and left eyelashes or no visible eyelashes\n2. Damage to eyelid area (scarring) that may prevent growth of eyelashes\n3. Any uncontrolled systemic disease\n4. Any disease, infection, or abnormality of the eye or in the area around the eye and the current use of ophthalmic medication (glaucoma, uveitis, eye infections, chronic blepharitis or severe dry eye)\n5. Any ocular (eye or eyelid) surgery within 3 months or anticipated need for ocular surgery during the study (including laser, refractive, intraocular filtering surgery, blepharoplasty)\n6. Any permanent eyeliner or implants of any kind, or anticipated use of false eyelashes\n7. Any semi-permanent eyelash tint, dye, curl, or eyelash extension application within 3 months\n8. Use of any over-the-counter or prescription eyelash growth product within 3 months\n9. Use of treatments which may affect hair growth (eg, minoxidil, chemotherapy) within 6 months\n10. Unable or unwilling to keep contact lenses out during product application and for 30 minutes after application\n11. Severe hyperpigmentation around the eye\n12. Allergy to any component of the investigational product\n13. Females who are pregnant, nursing, or planning a pregnancy during the study, or who are of childbearing potential and not using a reliable method of contraception\n14. Current enrollment in an investigational product or device or participation in such a study within 30 days"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Safety of Dallixa® Eyelash Serum in Idiopathic Eyelash Hypotrichosis",
+      "nctId": "NCT07776028"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

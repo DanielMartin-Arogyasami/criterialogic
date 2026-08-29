@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patient diagnosed with irreversible pulpitis\n* Patient have Tooth pain before Root canal treatment\n\nExclusion Criteria:\n\n* Patient already treated with root canal\n* Necrotic Tooth"
+    },
+    "identificationModule": {
+      "briefTitle": "ORAL AND INTRA - LIGAMENTARY PIROXICAM for Post Endodontic Pain Management",
+      "nctId": "NCT07712991"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

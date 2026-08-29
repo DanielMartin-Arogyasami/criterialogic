@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nAdults aged 18 years or older Undergoing great saphenous vein endovenous laser ablation for symptomatic reflux Concurrent below-knee foam sclerotherapy\n\nExclusion Criteria:\n\nKnown thrombophilia Current oestrogen or hormone-replacement therapy Family history of venous thromboembolism or thrombophilia Active malignancy Prior ipsilateral ablation Deep venous reflux or obstruction"
+    },
+    "identificationModule": {
+      "briefTitle": "Apixaban vs Rivaroxaban vs No Anticoagulant to Prevent EHIT After Great Saphenous Vein Laser Ablation",
+      "nctId": "NCT07699796"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

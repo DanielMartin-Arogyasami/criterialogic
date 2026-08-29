@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* ARDS (as defined by the Berlin definition) with an FiO₂ of 0.5 or higher\n* On invasive mechanical ventilation\n* Duration of intubation less than three days\n\nExclusion Criteria:\n\n* Age less than 18 years\n* Required to receive steroids or considered ineligible for steroids by the primary care team\n* Receiving systemic steroid therapy\n* Uncontrolled gastrointestinal bleeding\n* Uncontrolled infeciotn"
+    },
+    "identificationModule": {
+      "briefTitle": "Identifying an Optimal Corticosteroid Dosage Regimen for Acute Respiratory Distress Syndrome",
+      "nctId": "NCT07711964"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

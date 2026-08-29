@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adult cataract patients aged ≥22 years scheduled for cataract surgery in both eyes due to visually significant cataracts.\n2. Ability to understand and sign an IRB/ethics committee-approved informed consent form.\n3. Willingness and ability to attend all scheduled study visits as required by the protocol and complete all study testing procedures.\n4. Postoperative potential visual acuity of 20/25 or better in each eye, as determined by the investigator.\n5. Preoperative corneal astigmatism that can be corrected with a T3-T5 toric IOL, or with a spherical IOL plus LRIs/Aks, with either resulting in a predicted postoperative astigmatism \\<0.50 D.\n6. IOL power and, if toric, cylinder availability within labeled ranges for the assigned IOL family.\n7. Ability to understand and complete study questionnaires.\n\nExclusion Criteria:\n\n1. Women who are pregnant, planning to become pregnant during the study period, or breastfeeding (by verbal confirmation).\n2. Ocular conditions that could confound study results, including moderate-to-severe corneal pathology, irregular astigmatism, moderate-to-severe dry eye/ocular surface disease not optimized, preexisting retinal degenerative disease (e.g., age-related macular degeneration), diabetic retinopathy, or other clinically significant retinal pathology.\n3. Any form of confirmed glaucomatous optic neuropathy or other optic nerve disease expected to affect visual function outcomes.\n4. History of amblyopia, monofixation syndrome, or other binocular vision disorder with poor stereopsis that could confound binocular testing.\n5. Prior ocular surgery (including corneal refractive surgery) in either eye.\n6. Zonular laxity/dehiscence, pseudoexfoliation with clinically significant zonulopathy, nystagmus, or strabismus that could compromise uncomplicated surgery or reliable visual testing.\n7. Participation in another clinical study (interventional) that could interfere with study results.\n8. Planned monovision/mini-monovision or desire for monovision targeting.\n9. Systemic conditions that may affect healing or visual outcomes (e.g., uncontrolled diabetes mellitus, certain autoimmune disorders) per investigator judgment.\n10. Psychiatric or cognitive disorders that may impair the ability to comply with study procedures or provide reliable self-assessments.\n11. Any active ocular infection or inflammation."
+    },
+    "identificationModule": {
+      "briefTitle": "A Prospective, Randomized, Subject- and Examiner-Masked, Multicenter Study Comparing Bilateral Clareon TruPlus and Bilateral Clareon Monofocal Intraocular Lens Implantation (Spherical and Toric) in Cataract Subjects",
+      "nctId": "NCT07693205"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-09",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

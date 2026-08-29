@@ -85,7 +85,7 @@ def main() -> None:
         "task_d_large_gold_met_rate": round(sum(i.gold for i in big_items) / len(big_items), 4),
         "task_d_large_depth_distribution": dict(sorted(Counter(i.depth for i in big_items).items())),
         "atom_pool_size": len(pool),
-        "atom_pool_source": "leaf predicates of the 13 n2c2 criteria (see DISCREPANCIES)",
+        "atom_pool_source": "atoms extracted from verbatim ClinicalTrials.gov eligibility text",
         "seeds": {"matching": 13, "compositional": 29, "large_compositional": 29},
     }
 
@@ -195,12 +195,15 @@ def main() -> None:
     data["discrepancies"] = [
         {
             "location": "Paper Sec. 3.4 vs criterialogic/tasks/compositional.py::_atom_pool",
+            "status": "resolved-in-code; Sec. 3.4 wording still needs an author decision",
             "paper_says": "Task D atoms are 'extracted from real ClinicalTrials.gov criteria'.",
-            "code_does": "The atom pool is built from the leaf predicates of the 13 n2c2 criteria; "
-                         "no ClinicalTrials.gov text is fetched. Source enum is CTGOV_SYNTHETIC, "
-                         "which reinforces the misleading impression.",
-            "action": "Either change the paper wording to 'atoms drawn from the public n2c2 criterion "
-                      "definitions' or implement a ctgov-derived pool before submission.",
+            "code_does": "Atoms are now extracted from verbatim ClinicalTrials.gov v2 eligibility "
+                         "text into data/ctgov_atom_pool.json, each carrying its source NCT ID, "
+                         "source sentence, and the trial's first-posted date. The generator raises "
+                         "if the pool is absent instead of falling back to the n2c2 leaves.",
+            "action": "See results/DISCREPANCIES.md entry 1 for the four qualifications the Sec. 3.4 "
+                      "wording must respect (synthetic nesting, conservative extraction yield, "
+                      "polarity-free predicates, dated contamination claim).",
         },
         {
             "location": "Paper Sec. 7.2 hypothesis",

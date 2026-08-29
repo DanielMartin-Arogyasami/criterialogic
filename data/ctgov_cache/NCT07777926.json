@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 22-55\n* Patients interested in chin profile enhancement.\n* Participants must sign the informed consent form.\n\nExclusion Criteria:\n\n* Prior filler for facial contouring\n* Filler injection within the past 12 months or during duration of study\n* Prior facial cosmetic surgery (i.e.. facelift)\n* Prior facial trauma (i.e.. orbital fracture)\n* Pregnant or breastfeeding at the time of injection (initial visit)\n* Planned dental work within next 2 weeks\n* The following contraindications: patients with known hypersensitivity or severe allergies manifested by a history of anaphylaxis or history or presence of multiple severe allergies, gram-positive bacterial protein allergies, lidocaine allergies or other local anesthetics of the amide type\n* Patients with known bleeding disorders"
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation of Filler Injection for Chin Profile Enhancement",
+      "nctId": "NCT07777926"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

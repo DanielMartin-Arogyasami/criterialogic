@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Anyone receiving bilateral same day intravitreal injections as standard care\n\nExclusion Criteria:\n\n* Inability to complete post-injection survey\n* History of receiving Iheezo"
+    },
+    "identificationModule": {
+      "briefTitle": "Patient Comfort Following Intravitreal Injections Using Iheezo Versus Standard Anesthesia",
+      "nctId": "NCT07779356"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

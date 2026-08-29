@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥18 years.\n2. Under the care of a primary care clinician in Ontario.\n3. Standardized office systolic blood pressure ≥130 mmHg or diastolic blood pressure ≥80 mmHg.\n4. Mean daytime baseline ABPM systolic blood pressure ≥130 mmHg or diastolic blood pressure ≥80 mmHg.\n5. Treating primary care clinician has independently determined that initiation of antihypertensive pharmacotherapy is clinically indicated.\n6. Either:\n\n   * Not currently receiving antihypertensive therapy, OR\n   * Receiving a single antihypertensive medication (ACE inhibitor, ARB, thiazide/thiazide-like diuretic, or calcium channel blocker) which the treating primary care clinician considers safe to discontinue for a 2-week washout period.\n7. Suppressed renin defined as direct renin concentration \\<6 ng/L (\\<10 mU/L) measured under routine outpatient conditions. Suppressed renin was selected as the primary biologic enrichment criterion because it is the physiologic hallmark of sodium-retaining, aldosterone-mediated hypertension and is more pragmatically scalable in primary care than complex biochemical primary aldosteronism (PA) definitions.\n8. In the opinion of the treating primary care clinician, outpatient participation in the study is appropriate.\n\nExclusion Criteria:\n\n1. Standardized office systolic blood pressure \\>170 mmHg if untreated OR \\>150 mmHg if receiving one antihypertensive medication.\n2. Known diagnosis of PA requiring specialist-directed management.\n3. Known secondary hypertension requiring disease-specific therapy.\n4. Current use of MR antagonists.\n5. Known intolerance or contraindication to spironolactone, candesartan, hydrochlorothiazide, or amlodipine.\n6. eGFR \\<30 mL/min/1.73 m2.\n7. Serum potassium ≥5.0 mmol/L.\n8. Serum sodium \\<135 mmol/L.\n9. Pregnancy, breastfeeding, or intention to become pregnant during the study period. Women of childbearing potential must have a negative pregnancy test prior to randomization.\n10. Participation in another interventional study likely to affect blood pressure.\n11. Inability to provide consent"
+    },
+    "identificationModule": {
+      "briefTitle": "SPIRO-First: A Pragmatic Primary Care-Embedded Pilot Trial of Renin-Guided First-Line Antihypertensive Therapy",
+      "nctId": "NCT07687160"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

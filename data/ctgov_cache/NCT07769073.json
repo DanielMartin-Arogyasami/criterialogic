@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients with chronic kidney disease-associated pruritus (CKD-aP) undergoing maintenance hemodialysis twice weekly for more than 6 months and in a hemodynamically stable condition.\n* Aged 18 to 65 years old and willing to participate in the study.\n* Received standard therapy for at least 2 weeks and met the moderate to severe pruritus criteria based on Visual Analog Scale (VAS) score and 5-D Pruritus Scale.\n* Able to understand and comply with the study instructions/protocol.\n\nExclusion Criteria:\n\n* Patients with active malignancy or active infection.\n* Patients with primary skin diseases, such as allergic dermatitis, irritant contact dermatitis, neurodermatitis, or psoriasis.\n* Patients with chronic liver disease or cholestatic disease.\n* Received phototherapy or acupuncture therapy within the last 1 week prior to study enrollment."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Nalfurafine for Chronic Kidney Disease-Associated Pruritus in Twice-Weekly Hemodialysis Patients: A Randomized Controlled Trial",
+      "nctId": "NCT07769073"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥18 years.\n2. Presentation with an Acute Coronary Syndrome.\n3. Suspected SCAD on coronary angiography (determined by the local investigator).\n4. Planned conservative treatment of SCAD.\n5. Intensive as well as moderate treatment of SCAD is possible.\n6. Ability to understand the patient information and to personally sign and date the informed consent to participate in the study, before completing any study-related procedures.\n7. The patient is cooperative and available for the entire study.\n8. Written and informed consent.\n9. For women of childbearing potential: Patient is willing to use adequate contraceptive precautions during the study (until 12 Month FU)\n\nExclusion Criteria:\n\n1. Hypersensitivity to the study medication.\n2. Any indication for oral anticoagulation.\n3. Any indication for APT (including thienopyridines, non-thienopyridines, ASA and other anti-thrombotic agents) other than SCAD.\n4. Cardiogenic shock at the time of screening.\n5. Coronary artery disease (CAD) requiring secondary preventive therapy with APT.\n6. Life threatening bleeding (BARC type ≥3) at the time of screening.\n7. Active bleeding, such as peptic ulcer, tumor bleeding or intracranial hemor-rhage at the time of screening.\n8. History of major bleeding, BARC class ≥3 within 3 months before study in-clusion.\n9. Known bleeding diathesis.\n10. Known coagulopathy or refusal of blood transfusion.\n11. Planned surgery or intervention at high bleeding risk during the study period.\n12. Co-administration of contraindicated medications as follows: other P2Y12 inhibitors (prasugrel or ticagrelor); anticoagulants (warfarin, new oral antico-agulants, or chronic therapy with subcutaneous anticoagulants); cytochrome P450 2C19 inhibitors (fluoxetine, moclobemid or voriconazole); probenecid; high dose of methotrexate (≥15 mg/week); lithium.\n13. Known pregnancy or lactation.\n14. Current participation in another clinical trial with drugs or medicinal products."
+    },
+    "identificationModule": {
+      "briefTitle": "Spontaneous Coronary Artery Dissection - AntipLatelet Therapy Intensity in Guided coNservative Management (SCAD-ALIGN) Trial",
+      "nctId": "NCT07683923"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Female patients aged 18 to 39 years.\n2. Diagnosed with deep infiltrating endometriosis by ultrasound at the study center.\n3. Undergoing the first frozen-thawed embryo transfer cycle with hormone replacement therapy for endometrial preparation.\n4. Having at least one good-quality frozen embryo.\n5. Willing to participate in this randomized controlled study of GnRH-a pretreatment for deep infiltrating endometriosis and able to personally sign the written informed consent form.\n\nExclusion Criteria:\n\n1. Abnormal chromosomal karyotype.\n2. Other uterine diseases or conditions that may affect uterine cavity morphology or pregnancy outcomes, including intrauterine adhesions affecting the uterine cavity, intramural uterine fibroids, moderate to severe adenomyosis, congenital uterine malformation, endometrial tuberculosis, or endometrial thickness less than 8 mm on the transformation day.\n3. Recurrent implantation failure.\n4. Contraindications to hormone replacement therapy or long-acting GnRH-a treatment.\n5. Osteoporosis or depressed mood.\n6. Currently participating in another clinical study.\n7. Unable to adhere to study visits and follow-up, or planning to receive other treatment during the follow-up period."
+    },
+    "identificationModule": {
+      "briefTitle": "Ultra-Long GnRH-a Pretreatment for FET Outcomes in Patients With Deep Infiltrating Endometriosis",
+      "nctId": "NCT07696351"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

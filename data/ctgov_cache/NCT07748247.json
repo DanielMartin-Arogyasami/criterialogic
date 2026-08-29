@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 years or older.\n* Scheduled for elective laparoscopic gastric bypass surgery.\n* Body mass index between 30 and 50 kg/m².\n* American Society of Anesthesiologists physical status II or III.\n* Able and willing to provide written informed consent.\n\nExclusion Criteria:\n\n* Surgical procedure lasting less than 2 hours.\n* Body mass index greater than 50 kg/m².\n* Significant cardiac disease.\n* Moderate or severe obstructive respiratory disease, including uncontrolled asthma or chronic obstructive pulmonary disease.\n* Pregnancy or breastfeeding.\n* Known allergy or contraindication to medications used during the intraoperative period.\n* Personal or family history of malignant hyperthermia.\n* Active illicit drug use or substance dependence.\n* Advanced chronic kidney disease, defined as an estimated glomerular filtration rate below 60 mL/min.\n* Myasthenia gravis or another neuromuscular junction disorder.\n* Severe cognitive or psychiatric disorder.\n* Refusal to participate or withdrawal of informed consent at any time."
+    },
+    "identificationModule": {
+      "briefTitle": "Swap Anesthetic Versus Continuous Desflurane in Adults Undergoing Bariatric Surgery",
+      "nctId": "NCT07748247"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-05",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

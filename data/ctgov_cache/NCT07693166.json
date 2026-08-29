@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Pregnant women/people aged ≥19 years\n2. Confirmed diagnosis of HIV\n3. Gestational age between 28 and 34 weeks at enrollment (to allow scheduling of vaccination at 32-36 weeks)\n4. Able to provide informed consent\n\nExclusion Criteria:\n\n1. Contraindications to RSVpreF vaccine per product monograph\n2. History of severe allergic reaction to any vaccine component\n3. Planned delivery outside of British Columbia\n4. Received RSVpreF in current or previous pregnancy\n5. Received immunoglobulins (except Rh (D) immuneglobulin) within 1 year of enrollment\n6. Unable to complete in-person follow-up for infant at the Oak Tree Clinic"
+    },
+    "identificationModule": {
+      "briefTitle": "Study of HIV-Exposed Pregnancies and Transplacental Antibody Delivery Following RSVpreF",
+      "nctId": "NCT07693166"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-09",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

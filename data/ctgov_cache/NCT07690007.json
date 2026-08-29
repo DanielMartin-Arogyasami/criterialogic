@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 20-45 years at delivery\n* Singleton pregnancy\n* Primiparous\n* Cephalic presentation\n* Cervical Bishop score ≤ 5\n* No history of stillbirth\n\nExclusion Criteria:\n\n* Multiple pregnancy\n* Contraindications to vaginal delivery\n* Mental disorders (depression or anxiety)\n* Preterm labor (\\< 37 weeks)\n* Intrauterine fetal death\n* Previous uterine surgery\n* Premature rupture of membranes\n* Abnormal fetal heart rate tracing"
+    },
+    "identificationModule": {
+      "briefTitle": "Combined Misoprostol and Cervical Balloon vs Misoprostol Alone for Induction on the First Day in Primiparas",
+      "nctId": "NCT07690007"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients aged 19 to 79 years scheduled for elective shoulder surgery under brachial plexus block and monitored anesthesia care (MAC)\n\nExclusion Criteria:\n\n* Pre-existing neurological deficit of the brachial plexus\n* Emergency surgery\n* American Society of Anesthesiologists (ASA) physical status classification IV or higher\n* Contraindication or history of hypersensitivity to local anesthetics or dexamethasone\n* Severe pulmonary disease (e.g., chronic obstructive pulmonary disease)\n* Body mass index (BMI) ≥ 35 kg/m²\n* Long-term use of steroids\n* Long-term use of analgesics\n* Inability to cooperate or communicate\n* Pregnancy"
+    },
+    "identificationModule": {
+      "briefTitle": "Intravenous Dexamethasone With Single-Shot Versus Continuous Brachial Plexus Block for Rebound Pain After Shoulder Surgery",
+      "nctId": "NCT07699744"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Be receiving tucatinib as a study intervention and deriving clinical benefit without evidence of disease progression (as determined by the investigator) in a tucatinib Parent Study.\n2. Agree to follow the reproductive criteria.\n3. Be willing and able to comply with all scheduled visits, treatment plan, and other study procedures as outlined in this protocol.\n4. Be capable of giving signed informed consent.\n\nExclusion Criteria:\n\n1. Any medical reason that, in the opinion of the investigator or sponsor, precludes the participant from inclusion in the study.\n2. Current use of any prohibited concomitant medications(s) or unwillingness or inability to use a required concomitant medication(s).\n3. Participants not previously enrolled or who have discontinued study intervention or who were randomized in the control arm in a Parent Study."
+    },
+    "identificationModule": {
+      "briefTitle": "Tucatinib Continuation Study",
+      "nctId": "NCT07768358"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

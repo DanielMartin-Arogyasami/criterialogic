@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female participants aged 18 to 75 years.\n* Ability to understand the study and provide written informed consent before enrollment.\n* Receiving a stable lipid-lowering regimen before enrollment, with the type and dose of statin therapy remaining unchanged for at least 4 weeks.\n* Fasting triglyceride level below 5.6 mmol/L.\n* Presence of at least one of the following high-risk plaque features on coronary computed tomography angiography (CCTA):Pericoronary fat attenuation index greater than -70.1 Hounsfield units;\n* Low-attenuation plaque below 30 Hounsfield units;\n* Positive remodeling index greater than 1.1;\n* Spotty calcification;\n* or Napkin-ring sign, defined as a low-attenuation plaque core surrounded by a rim of higher attenuation.\n\nExclusion Criteria:\n\n* Current participation in another investigational drug, device, or procedure study, or receipt of an investigational drug or device within 4 weeks before enrollment.\n* Treatment with icosapent ethyl within 12 months before enrollment.\n* Known intolerance or hypersensitivity to icosapent ethyl or fish oil.\n* A previous diagnosis of homozygous familial hypercholesterolemia or hyperlipidemia requiring hemodialysis.\n* Myocardial infarction, unstable angina, percutaneous coronary intervention, coronary artery bypass grafting, or stroke within 3 months before enrollment;\n* Planned cardiac surgery, percutaneous coronary intervention, or carotid artery stenting, or planned major noncardiac surgery during the study.\n* A known contraindication or limitation to PET/CT, including exceeding scanner weight limits or having a device, carotid or aortic stent, or vascular graft that may cause imaging artifacts.\n* Autoimmune disease, vasculitis, or active inflammatory disease.\n* Serious infection within 1 month before enrollment or a current infection requiring intravenous antibiotic treatment.\n* Use within 6 weeks before enrollment or current use of medications that may significantly affect plaque inflammation, including oral, rectal, or injectable corticosteroids or immunosuppressive agents, such as cyclosporine, methotrexate, tacrolimus, azathioprine, antithymocyte globulin, sirolimus, anti-tumor necrosis factor agents such as infliximab, anti-interleukin-6 therapy such as tocilizumab, or anti-interleukin-1 therapy.\n* Use within 6 weeks before enrollment or current use of aspirin at a dose greater than 325 mg/day or nonsteroidal anti-inflammatory drugs at a dose greater than 1,000 mg/day.\n* Treatment within 12 months before enrollment with a cholesteryl ester transfer protein inhibitor, including anacetrapib, dalcetrapib, or evacetrapib, or with mipomersen or lomitapide.\n* Known clinically significant systemic disease, including hepatic, renal, hematologic, or malignant disease, or any other clinically significant comorbidity that may interfere with study participation or study assessments.\n* History of malignancy within the previous 5 years, except nonmelanoma skin cancer, cervical carcinoma in situ, ductal carcinoma in situ of the breast, or stage I prostate cancer.\n* Inability or anticipated inability to complete all protocol-required visits or procedures, or any condition that may make the participant unreliable for study participation, including alcohol or other substance abuse within the previous year or a psychiatric disorder.\n* Pregnancy or breastfeeding, or plans to become pregnant or breastfeed during study treatment or within 15 weeks after the last dose of study treatment."
+    },
+    "identificationModule": {
+      "briefTitle": "Icosapent Ethyl for High-Risk Coronary Plaques Assessed by 18F-NaF PET/CT",
+      "nctId": "NCT07762755"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

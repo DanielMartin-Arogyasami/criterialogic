@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients must be at least 19 years of age\n* Patients with AF requiring oral anticoagulation therapy (CHA2DS2-VaSc 2 or more)\n* Documented coronary artery disease, defined as at least one of the following: history of percutaneous coronary intervention (PCI), history of coronary artery bypass grafting (CABG), major epicardial coronary artery stenosis ≥50% on coronary computed tomography angiography (CCTA) or invasive coronary angiography\n* Patients who can understand risks, benefits and treatment alternatives and sign informed consent voluntarily.\n\nExclusion Criteria:\n\n* Known hypersensitivity or contraindications to study medications (apixaban or edoxaban)\n* Severe renal impairment (creatinine clearance \\<15 mL/min) or dialysis\n* Active major bleeding\n* Indication requiring alternative anticoagulation (e.g., mechanical valve surgery or moderate / severe mitral stenosis)\n* Non-cardiac co-morbid conditions are present with life expectancy \\<1 year or that may result in protocol non-compliance (per site investigator's medical judgment)\n* Pregnant or lactating women"
+    },
+    "identificationModule": {
+      "briefTitle": "Net Clinical Benefit of Edoxaban Versus Apixaban in Patients With Atrial Fibrillation and Coronary Artery Disease",
+      "nctId": "NCT07753200"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

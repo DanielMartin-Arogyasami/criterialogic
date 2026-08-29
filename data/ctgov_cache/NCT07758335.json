@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18-65 years.\n2. Patients diagnosed with mild to moderate UC (according to Mayo Score (36) for Ulcerative Colitis).\n3. Patients are on standard of care (biological therapy e.g., infliximab ).\n\nExclusion Criteria:\n\n1. Patients with neurological problems including Alzheimer disease and other dementias, multiple sclerosis, Parkinson's disease, history of large stroke, severe psychiatric disease as it may affect their ability to adhere to their medication and the clinical trial rules and their ability to perform the tests and questionnaires involved in the study (37).\n2. Patients with communication problems, that can affect their ability to fully understand the purpose of the trial, difficulty in communicating by phone or ability to come in scheduled visits (38).\n3. Patients with autoimmune diseases.\n4. Patients with colorectal cancer.\n5. Patients previously received probiotics or trace elements in the previous month before recruitment.\n6. Liver cirrhosis.\n7. Chronic kidney disease (CKD) which is defined as an estimated glomerular filtration rate (eGFR) less than 60 ml/min per 1.73 m2, persisting for 3 months or more (39).\n8. Pregnancy or Lactation (40)\n9. Patients on conventional therapy (5-amino salicylic acid treatment)."
+    },
+    "identificationModule": {
+      "briefTitle": "The Efficacy of Lactobacillous Probiotic and Trace Elements in the Management of Ulcerative Colitis Patients the Patients Will be Recruited From Outpatient Clinic of Inflammatory Bowel Disease (IBD) of the National Hepatology and Tropical Medicine Research Institute NHTMRI, Cairo, Egypt",
+      "nctId": "NCT07758335"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-11",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

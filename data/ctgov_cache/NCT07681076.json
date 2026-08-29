@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Participants must be healthy male and female participants as determined by no clinically significant deviation from normal in medical history, physical examination, 12-lead ECG, VS, and clinical laboratory determinations.\n* Participants must be willing and able to be confined to an inpatient setting for a 3-week duration, follow instructions, and comply with the protocol requirements.\n* Participants must have BMI ≥ 18 and ≤ 40 kg/m2.\n* Individuals of childbearing potential (IOCBP) must be willing and able to adhere to the contraception guidelines.\n\nExclusion Criteria:\n\n* Participants must not have history or presence of clinically significant cardiovascular (eg, untreated or unstable hypertension, clinically significant tachycardia), pulmonary, renal, hematologic, gastrointestinal (\\[GI\\] eg, obstructive disorders \\[including conditions that may decrease GI motility, such as ulcerative colitis, intestinal atony, and myasthenia gravis\\], active biliary disease \\[including symptomatic gallstones\\]), endocrine, immunologic, dermatologic, neurologic, or oncologic disease or any other condition that, in the opinion of the investigator, would jeopardize the safety of the participant or the validity of the study results.\n* Participants must not have history of moderate to severe alcohol use disorder or a substance (other than nicotine or caffeine) use disorder within the past 12 months or a positive urine drug screen (UDS) for a substance other than cannabis at screening or baseline.\n* Participants must not have history or high risk of urinary retention, gastric retention, or narrow-angle glaucoma.\n* Participants must not have active biliary disease (eg, symptomatic gallstones). Participants with other biliary histories are eligible and should be discussed with the medical monitor.\n* Other protocol-defined Inclusion/Exclusion criteria apply."
+    },
+    "identificationModule": {
+      "briefTitle": "Study to Assess Safety and Tolerability of KarXT With Administration of Antiemetics in Healthy Volunteers",
+      "nctId": "NCT07681076"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-02",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

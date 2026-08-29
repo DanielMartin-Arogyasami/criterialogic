@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged 18 to 65 years.\n2. Meets DSM-V criteria for Bipolar I Disorder -Depressed without psychosis as confirmed by a semi-structured clinical interview that includes the Mini International Neuropsychiatric Interview.\n3. Current episode at least 4 weeks in duration but not longer than 12 months.\n4. Depression score \\> 20 on the Montgomery Asberg Depression Rating Scale (MADRS).\n5. BMI \\> 30\n6. Capable of providing informed consent.\n\nExclusion Criteria:\n\n1. Meets DSM-V criteria for Schizophrenia, Schizoaffective disorder, or has significant mood-incongruent psychotic symptoms.\n2. Young Mania Rating Scale score \\>12.\n3. Meets DSM-V criteria for rapid cycling.\n4. Co-Morbid psychiatric illness, other than generalized anxiety and specific phobias, that in the opinion of the investigator is severe enough that it would likely interfere with the interpretation of changes in the subject's mood state.\n5. Meets DSM-V criteria for an active substance use disorder within the past month.\n6. Active medical condition that in the opinion of the investigator would contribute to the subject's depressed mood (e.g. hypothyroidism).\n7. Significant risk of suicide or self -harm as assessed by clinical interview and the Columbia Suicide Severity Rating Scale (C-SSRS).\n8. Significant risk of harm to others as assessed by clinical interview.\n9. Pregnancy, or, in women of child-bearing potential, an unwillingness to use an accepted method of birth control for the duration of the study.\n10. Current or prior treatment with lumateperone.\n11. Moderate or severe hepatic impairment.\n12. Current treatment with strong or moderate CYP3A4 inhibitors or CYP3A4 inducers.\n13. History of seizure disorder.\n14. Significant cardiovascular or cerebrovascular disease that, in the opinion of the investigator, would increase study risk.\n15. Dementia-related psychosis.\n16. Known hypersensitivity or allergy to lumateperone or any of its components."
+    },
+    "identificationModule": {
+      "briefTitle": "The Effects of Lumateperone on Obesity and Physiologic Aging and Their Association With Antidepressant Response in Bipolar Depression",
+      "nctId": "NCT07699445"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

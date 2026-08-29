@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 1.Patients voluntarily participate in the study and sign the informed consent form.\n\n  2.Male and female subjects aged 12 to 70 years (inclusive). 3.Patients with autoimmune uveitis who have been on long-term treatment with corticosteroids combined with immunosuppressants, with or without adalimumab, but have shown no remission or have had recurrent episodes.\n\n  4.Subjects (and their partners) agree to have no pregnancy plans during the entire trial period and within 1 month after the end of the study, and voluntarily take contraceptive measures.\n\nExclusion Criteria:\n\n* 1.History or symptoms suggestive of demyelinating disease (including myelitis and optic neuritis) on neurological examination, including but not limited to optic neuritis.\n\n  2.Significant media opacities that interfere with visual acuity testing, anterior segment evaluation, or fundus examination, or inability to dilate the pupil adequately.\n\n  3.Monocular patients judged by the investigator to be unsuitable for enrollment.\n\n  4.Intravitreal antiVEGF (vascular endothelial growth factor) therapy (e.g., ranibizumab, aflibercept, or conbercept) within 90 days prior to baseline.\n\n  5.Ozurdex (dexamethasone implant) insertion within 6 months prior to baseline. 6.Intravitreal methotrexate injection within 90 days prior to baseline. 7.Subjects meeting any of the following criteria related to latent or active tuberculosis (TB) infection:\n  1. History of active TB within ≤ 3 years before screening (however, if \\> 3 years and with documented evidence of adequate treatment, enrollment may be permitted);\n  2. Signs or symptoms suggestive of active TB during history taking and/or physical examination at screening;\n  3. Recent close contact with a person with active TB;\n  4. Positive T cell test for TB infection at screening. If the initial test result is indeterminate, the subject will be excluded from the study. For subjects who have already completed appropriate standard treatment for latent TB prior to screening and have no additional risk factors, imaging findings, or specific evidence supporting latent or active TB, exceptions to positive or indeterminate results may be considered, provided that the investigator consults with a qualified infectious disease specialist to assess the risk of TB (including extrapulmonary TB) and discusses with the sponsor.\n\n     8.Positive for hepatitis C antibody, or HIV antibody, or Treponema pallidum antibody at screening.\n\n     9.Presence of severe, progressive, or uncontrolled symptoms of renal, hepatic, hematologic, gastrointestinal, pulmonary, cardiovascular, neurological, or cerebral disease. Subjects with malignancies, or any condition that, in the investigator's opinion, would place the patient at undue risk by participating in the study.\n\n     10.History of severe allergic or anaphylactic reactions to upadacitinib or any of its components"
+    },
+    "identificationModule": {
+      "briefTitle": "An Interventional Study of Upadacitinib Extended-Release Tablets in Patients With Refractory Uveitis",
+      "nctId": "NCT07773623"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

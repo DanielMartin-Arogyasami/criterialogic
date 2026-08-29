@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Provide informed consent\n* Be 18-75 years old\n* Have non-cirrhotic MASH with fibrosis stage F2-F3 (VCTE 8-20 kPa and CAP =280 dB/m)\n* Be initiating resmetirom per standard of care\n* Be able to comply with study procedures, including fasting visits\n* Reside in one of the five New York City boroughs\n\nExclusion Criteria:\n\n* Have cirrhosis or decompensated liver disease\n* Have other chronic liver diseases\n* Are pregnant or breastfeeding\n* Consume alcohol above defined thresholds or have PEth =20 ng/mL\n* Have recent major surgery or hospitalization\n* Are on glucagon-like peptide-1 agonist therapy (e.g., exenatide, liraglutide, lixisenatide, albiglutide, dulaglutide, semaglutide and albiglutide), unless the dose is stable for 12 weeks prior to the baseline evaluation and they have not experienced a \\>5% weight loss in the 6 months preceding resmetirom initiation.\n* Are undergoing bariatric surgery\n* Are living with any other end-stage organ disease (e.g., heart, lung or kidney failure requiring dialysis) or have any active malignancy in the last 5 years.\n* Have conditions preventing consumption of provided meals"
+    },
+    "identificationModule": {
+      "briefTitle": "Nutrition Intervention Combined With Resmetirom for MASH",
+      "nctId": "NCT07680478"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-02",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

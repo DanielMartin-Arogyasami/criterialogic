@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 to 85 years\n* Scheduled for elective liver resection\n* Preoperative surgical plan includes resection of at least three Couinaud liver segments\n* Planned use of low central venous pressure management, general anesthesia, invasive arterial pressure monitoring, and central venous pressure monitoring\n* American Society of Anesthesiologists physical status II or III\n* Both study anesthesia strategies are considered clinically appropriate\n* Able to understand the study information and provide written informed consent\n\nExclusion Criteria:\n\n* Emergency surgery or inability to complete written informed consent before surgery\n* Known contraindication or serious hypersensitivity to remimazolam, another benzodiazepine, propofol, or a relevant excipient\n* Preoperative shock, ongoing vasoactive drug support, or another hemodynamically unstable condition that makes either study anesthesia strategy unsafe\n* Child-Pugh class C, Model for End-Stage Liver Disease score of 20 or higher, or end-stage liver disease in the investigator's judgment\n* Massive ascites, recent variceal bleeding, clinically important hypersplenism with severe thrombocytopenia, or portal hypertension sufficient to substantially alter circulatory management\n* Regular long-term benzodiazepine use, drug dependence, or alcohol misuse expected to affect the pharmacological evaluation\n* Clinical requirement for an inhalational anesthetic or another maintenance anesthesia strategy incompatible with randomized assignment\n* Pregnant or breastfeeding\n* Concurrent participation in another interventional study that may affect the primary outcome\n* Any other condition that, in the investigator's judgment, makes participation unsafe or prevents completion of the study procedures"
+    },
+    "identificationModule": {
+      "briefTitle": "Remimazolam Versus Propofol for Maintenance of Anaesthesia During Major Hepatectomy Under Low Central Venous Pressure",
+      "nctId": "NCT07789275"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

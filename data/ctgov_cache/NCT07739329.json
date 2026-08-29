@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Ischemic stroke with a disease course of less than 2 weeks;\n* Patients with high-risk PSD;\n* The patient can accept the treatment plan described in this trial and sign the informed consent form.\n\nExclusion Criteria:\n\n* Cognitive impairment;\n* Severe aphasia or significant language impairment;\n* Disturbance of consciousness;\n* History of psychiatric disorders, including but not limited to depression, schizophrenia, and bipolar disorder;\n* Alcohol or substance dependence;\n* Use of sedatives or antipsychotic medications within 2 weeks prior to screening;\n* Severe cardiac, hepatic, or renal dysfunction;\n* Complicated with acute severe conditions or unstable vital signs;\n* Pregnancy or lactation;\n* Contraindications or intolerance to electroacupuncture;\n* Sick sinus syndrome, severe bradycardia (heart rate \\< 50 bpm), second-degree or higher atrioventricular block, permanent pacemaker implantation, severe heart failure, or ejection fraction \\< 30%;\n* Known allergy to any of the study medications;\n* Inability to complete the study procedures due to any unavoidable circumstances."
+    },
+    "identificationModule": {
+      "briefTitle": "A Study on the Preventive Effect of Electroacupuncture Combined With Dexmedetomidine in Post-stroke Depression",
+      "nctId": "NCT07739329"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-31",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

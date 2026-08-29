@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Female patients aged 18-40 years\n2. Scheduled for elective lower segment cesarean section (LSCS)\n3. Spinal anesthesia planned and suitable\n4. ASA physical status Class I or II\n5. Gestational age ≥ 37 weeks\n6. Willing to participate and able to provide written informed consent\n\nExclusion Criteria:\n\n1. Known allergy or hypersensitivity to dexamethasone or any corticosteroid\n2. Diabetes mellitus or uncontrolled hyperglycemia\n3. Current or recent (within 4 weeks) corticosteroid use\n4. Contraindication to spinal anesthesia (coagulopathy, infection at puncture site, patient refusal)\n5. Emergency cesarean section\n6. Systemic infection or sepsis\n7. Significant hepatic, renal, or cardiovascular disease\n8. Peptic ulcer disease\n9. Psychiatric illness\n10. Failure of spinal anesthesia requiring conversion to general anesthesia\n11. BMI \\> 35 kg/m²"
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Single-Dose Dexamethasone on Postoperative Pain After Cesarean Section Under Spinal Anesthesia",
+      "nctId": "NCT07718360"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

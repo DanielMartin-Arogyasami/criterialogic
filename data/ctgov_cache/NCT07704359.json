@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 years or older\n* First episode of perianal abscess requiring incision and drainage\n* Able to provide informed consent\n* English or Spanish speaking patient\n* Treating surgical team has determined that incision and drainage is clinically indicated as part of standard care\n\nExclusion Criteria:\n\n* Known fistula-in-ano at presentation\n* Prior perianal abscess within 12 months\n* History of inflammatory bowel disease, including Crohn's disease or ulcerative colitis\n* Known or suspected anorectal malignancy\n* Necrotizing soft tissue infection or Fournier's gangrene\n* Systemic infection or sepsis\n* Significant surrounding cellulitis or extensive soft-tissue infection for which antibiotics are clinically indicated\n* Immunocompromised or immunosuppressed status, including active chemotherapy or radiation therapy, history of transplant, chronic systemic steroids, biologic immunosuppressive therapy, advanced or uncontrolled HIV/AIDS, or other clinically significant immunosuppression\n* Cardiac condition requiring antibiotic prophylaxis or antibiotic therapy for procedures involving infected tissue\n* Need for non-study antibiotics at the time of enrollment for another infection or medical indication\n* Contraindication, allergy, or intolerance to all study antibiotic regimens\n* Pregnant\n* Prisoner\n* Minor\n* Adult unable to provide informed consent"
+    },
+    "identificationModule": {
+      "briefTitle": "Antibiotics After Incision and Drainage to Prevent Fistula Formation After First Episode of Perianal Abscess",
+      "nctId": "NCT07704359"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

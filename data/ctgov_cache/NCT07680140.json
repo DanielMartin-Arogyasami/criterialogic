@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Provision of signed and dated informed consent form\n2. Adults of all genders aged 18-70 at the time of screening\n3. Diagnosis of Major Depressive Disorder (by DSM-5 criteria)\n4. Depressive symptoms of at least moderate severity (GRID HDRS-17 score \\>= 14 or as determined by a study clinician)\n5. Failed at least 1 prior trial of standard first-line treatment for MDD per the modified Antidepressant Treatment History form, the Maudsley Staging Method, and APA Practice Guidelines (e.g., SSRI, SNRI, CBT) OR initiated and discontinued a trial of a first-line treatment for MDD (e.g. could not tolerate side effects, etc.)\n6. Not currently taking antidepressants OR on a stable dose of antidepressant for at least 1month prior to screening and plans to remain off antidepressants OR on this stable dose for the duration of participation\n7. Current medication regimen is compatible with safe participation in the trial in the assessment of a study clinician\n8. Access to psychiatric care before, during, and after completion of the study\n9. For females of reproductive potential: agreement to use effective contraception for at least 1 month prior to screening and agreement to use such a method during study participation\n10. Proficiency in English sufficient to complete assessments and follow study procedure instructions\n11. Stated willingness to comply with all study procedures and availability for the duration of the study\n\nExclusion Criteria:\n\n1. Imminent risk of suicide\n2. Presence of primary psychiatric diagnosis other than MDD (e.g., post-traumatic stress disorder, obsessive-compulsive disorder, MDD with psychotic features, primary psychotic illness, bipolar I or II disorder)\n3. History of epilepsy or a history of seizures that would influence the participant's risk for TMS-evoked seizures; history of any condition / concurrent medication that could notably lower seizure threshold in the estimation of a study clinician\n4. Met criteria for any clinically significant substance use disorder (by DSM-V criteria) with active substance misuse in the 6 months prior to screening\n5. Lifetime history of PCP/ketamine abuse\n6. History or presence of significant neurological disorder that may be contributing to current depressive symptoms in the judgment of a study clinician (e.g., traumatic brain injury, stroke, Parkinson's disease or other movement disorder, epilepsy)\n7. Presence of medical contraindications to ketamine, including liver function tests \\> 2.5x normal limit, recent myocardial infarction, congestive heart failure \\> stage 2, angina pectoris, clinically significant bradycardia or tachycardia at the baseline assessment, or uncontrolled hypertension\n8. MRI contraindication, including presence of ferromagnetic foreign metal bodies or implants, implanted or conductive ferromagnetic objects in or near the head (e.g., stents, deep brain stimulators, vagus nerve stimulators, aneurysm coils, ocular implants, cochlear implants), and ferromagnetic permanent make-up that may undergo heating in an MRI scanner\n9. Individuals who are nursing, pregnant, or contemplating pregnancy within the length of study participation\n10. Abnormal bloodwork that may be contributing to depressive symptoms in the estimation of a study clinician (e.g. indicators of clinically significant hypothyroidism, kidney failure, liver failure, etc.)\n11. History or presence of any disorder or medical condition that, in the opinion of the study team, may compromise, interfere, or limit the individual's ability to complete the intervention or study procedures"
+    },
+    "identificationModule": {
+      "briefTitle": "Biomarker-Guided Antidepressant Selection",
+      "nctId": "NCT07680140"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-02",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

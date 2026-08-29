@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Diagnosed as active multiple myeloma according to the diagnostic criteria outlined in the \"Guidelines for Diagnosis and Treatment of Multiple Myeloma in China (2024 Revision)\";\n2. Aged 18 or above, male or female;\n3. Initial diagnosis of multiple myeloma;\n4. The FISH test confirmed by a third-party laboratory is positive for t(11;14) or the previous FISH test report is positive for t(11;14);\n5. ECOG score of 0-2;\n6. Possessing the following organ function conditions, defined as:\n\n   HGB\\> 80g/dl Platelets \\> 50×10\\^9/L Neutrophil count \\> 1×10\\^9/L Total bilirubin ≤ 1.5 times the upper limit of normal (ULN), aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.0 times ULN; Creatinine clearance rate ≥ 30 mL/min Blood oxygen saturation is ≥90%;\n7. Expected survival period is greater than 6 months; The patient understands the purpose and procedures of this trial, voluntarily participates in it, and signs a written informed consent form.\n\nExclusion Criteria:\n\n1. Have received any experimental drug treatment within 2 weeks;\n2. Secondary plasma cell leukemia;\n3. Transmyocardial amyloidosis with heart failure and arrhythmia;\n4. Creatinine clearance rate \\< 30 ml/min;\n5. Simultaneous presence of other tumors or a history of tumor, or having undergone anti-tumor treatment (including major surgery) within the last 3 weeks, except for the following tumor diseases or those who have been tumor-free for ≥3 years to date: basal cell carcinoma of the skin, squamous cell carcinoma of the skin, carcinoma in situ of the cervix, carcinoma in situ of the breast, incidental histological finding of prostate cancer (TNM clinical stage T1a or T1b), or previously treated prostate cancer;\n6. Accompanied by mental illnesses requiring inpatient treatment in psychiatric hospitals or controlled institutions, as well as continuous and frequent outpatient treatment, or exhibiting a dependent cognitive state that cannot be controlled by caregivers (confirmed by a specialist physician);\n7. Accompanied by severe pulmonary infection, skin and soft tissue infection, or urinary tract infection;\n8. Patients experiencing unstable angina pectoris or myocardial infarction, heart failure NYHA class III or IV, uncontrolled severe coronary artery disease, uncontrolled severe ventricular arrhythmias, sick sinus syndrome, or electrocardiographic evidence of acute ischemia or third-degree conduction block within 4 months prior to enrollment, except for those with a cardiac pacemaker;\n9. Poorly controlled hypertension or hyperglycemia within 14 days prior to enrollment;\n10. Severe, uncontrolled medical disorders or active infections that may impair the subject's ability to receive the treatment specified in the protocol, including but not limited to HIV antibody-positive, syphilis antibody-positive, uncontrolled diabetes, and patients undergoing hemodialysis or peritoneal dialysis;\n11. Subjects with uncontrolled active or chronic liver diseases and medical histories (including but not limited to viral hepatitis, cirrhosis, non-alcoholic steatohepatitis) or subjects with significant abnormalities in liver function, or other liver-related diseases that, in the investigator's judgment, may affect drug metabolism or subject safety;\n12. Women who are pregnant or breastfeeding\n13. Situations where researchers determine that the participant is not suitable for enrollment."
+    },
+    "identificationModule": {
+      "briefTitle": "A Single-center, Prospective, Single-arm Clinical Study Exploring the Treatment of Newly Diagnosed Multiple Myeloma Patients With t(11;14) Suitable for Transplantation Using the SonKRd Regimen",
+      "nctId": "NCT07709884"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

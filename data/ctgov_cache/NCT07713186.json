@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Both genders, ages from 3 to 12 years old with mild to moderate atopic dermatitis\n\nExclusion Criteria:\n\n* Atopic dermatitis on active systemic treatment"
+    },
+    "identificationModule": {
+      "briefTitle": "Azithromycin in Atopic Dermatitis",
+      "nctId": "NCT07713186"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

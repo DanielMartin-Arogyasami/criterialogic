@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Lupus nephritis patients\n\nInclusion Criteria:\n\n* Patients with de novo or flaring SLE according to the EULAR/ACR criteria and a suspicion of class III or IV LN with a clinical indication to perform a kidney biopsy\n* Age 16-70 years\n* eGFR as measured by cystatin C \\>20 mL/min\n\nExclusion Criteria:\n\n* LN class I, II or pure class V upon kidney biopsy\n* eGFR as measured by cystatin C \\<20 mL/min\n* Histological chronicity score (NIH) of 8 or higher in the kidney biopsy\n* Active infection of any kind as evidenced by cultures (blood, urine or otherwise)\n* History of hepatitis B, hepatitis C, tuberculosis and/or HIV\n* Treatment with any of the following agents within one month before screening:\n\ntacrolimus, belimumab, anifrolumab - Treatment with any of the following agents within 6 months before screening: rituximab, daratumumab, eculizumab\n\n* Prolongation of QT-interval (QTc \\>470ms) and/or bradycardia (resting heart rate \\<50bpm) measured on two separate occasions\n* Hyperkalaemia (serum potassium \\>6.0 mmol/L)\n* Hypertension (blood pressure \\> 165/105 mmHg, with symptoms of hyperten sion)\\*\n* Co-administration of voclosporin with strong CYP3A4 inhibitors (e.g., ke toconazole, itraconazole, clarithromycin)\n* Pregnancy\n\n  * A single elevated blood pressure measurement will not lead to immediate exclusion from the trial. Antihypertensive therapy may be initiated as appropriate. Dose adjustments of voclosporin should be made in accordance with Section 11.3.2 of the protocol\n\nSLE patients without LN (disease control group) Inclusion criteria\n\n* Diagnosis of SLE according to EULAR/ACR guidelines\n* Age 16-70\n\nExclusion criteria\n\n* Suspicion of LN\n* Signs of active infection\n\nHealthy subjects (control group) Inclusion criteria\n\n* Blank medical history\n* Age 16-70\n* A majority (75%) of female healthy subjects will be sought\n\nExclusion criteria\n\n\\- Signs of active infection"
+    },
+    "identificationModule": {
+      "briefTitle": "Assessing Residual Inflammation and Macrophage Presence in Lupus Nephritis After 3 Months of Intensified Treatment With Prednisolone, Mycofenolate Mofetil and Voclosporin as Compared to Mycofenolate Mofetil and Prednisolone",
+      "nctId": "NCT07760480"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Participants will be at least 21 years of age\n* Report 5+ days per week of using a nicotine-containing ECIG that is a non-refillable pod-style (e.g., JUUL, Vuse Alto) or modern disposable (e.g., Elf Bar, PuffBar) for the past 6+ months.\n* Report smoking either \\<100 lifetime cigarettes, or \\>100 lifetime cigarettes but no regular smoking (some days or everyday) in the past year.\n* Current ECIG use will be confirmed via a semi-quantitative urinary cotinine value \\> 4 (NicAlert), and current non-smoking status will be confirmed via an expired air CO level \\<7ppm.\n* Must report an interest in quitting ECIGs within the next 1-6 months (Contemplation or Preparation Stage of Change; DiClemente et al 1991), but no use of pharmacotherapy (e.g., NRT, varenicline) within the past year.\n\nExclusion Criteria:\n\n* Preference for ECIG liquid containing a substance other than nicotine (e.g., THC, cannabidiol)\n* Use of THC/cannabis \\>15 days in past month, or being unwilling or unable to abstain from THC/cannabis during study conditions.\n* Use of non-cigarette tobacco (e.g., cigars, smokeless, hookah) on more than 5 days in the past month\n* Uncontrolled medical or psychiatric conditions, positive toxicology for illicit substances (e.g., cocaine, opiates, amphetamine) except THC\n* Alcohol use \\>20 days in past month\n* Breastfeeding or positive pregnancy test."
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation of Dependence and Nicotine Replacement Therapy-Supported Cessation Efforts Among Regular Electronic Cigarette Use",
+      "nctId": "NCT07786896"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-26",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

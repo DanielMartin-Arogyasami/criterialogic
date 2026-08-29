@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults (≥ 18 years) with established biopsy-proven LN of active III, IV, overlapping III/IV, or overlapping III/V classes.\n* eGFR ≥ 30 ml.min1.1.73m-2,\n* Urinary protein creatinine ratio (uPCR) \\> 1000 mg/g.\n\nExclusion Criteria:\n\n* Subjects with serious hypersensitivity (angioedema and/or anaphylaxis) to EMPA.\n* eGFR \\< 30 ml.min-1.1.73m-2.\n* uPCR \\< 1000 mg/g.\n* Type 1 or 2 diabetes.\n* Aterial fibrillation.\n* Hepatic impairment \\[defined as alanine transaminase or aspartate transaminase \\>3 times the upper limit of normal (ULN) or total bilirubin \\>2 times the ULN at the time of enrolment\\].\n* Any condition outside the renal and cardiovascular study area with a life expectancy of \\< 6 months based on care provider's clinical judgment.\n* Those who enrolled in an experimental study in the previous 6 months."
+    },
+    "identificationModule": {
+      "briefTitle": "The Efficacy of Empagliflozin on Kidney Functions in Lupus Nephritis Population",
+      "nctId": "NCT07700940"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-14",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

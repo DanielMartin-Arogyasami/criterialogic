@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18-65 years old, regardless of sex\n* BMI≥28 kg/m2\n* The American Society of Anesthesiologists (ASA) has a rating of II-III\n* Plan to undergo elective painless digestive endoscopy\n* The subjects understand the purpose and steps of this experiment, voluntarily participate in this experiment, and sign a written informed consent\n\nExclusion Criteria:\n\n* Known to be allergic to drugs used in the examination process\n* Diagnosed respiratory diseases (asthma, bronchitis, chronic obstructive pulmonary disease, pulmonary embolism, pulmonary edema, lung cancer or upper respiratory tract infection)\n* Cardiovascular diseases (heart failure, unstable angina pectoris, myocardial infarction or arrhythmia) have been diagnosed\n* Current hepatic insufficiency (Child-Pugh grade B or above) or renal insufficiency (estimated glomerular filtration rate \\< 60 ml/min/1.73 m2)\n* History of difficult airway (Mallampati Grade IV or expected difficult airway)\n* Long-term use of opioids (regular use of opioids for more than 7 days within 3 months before operation)\n* Pregnant or lactating women\n* Mental illness or cognitive dysfunction can not cooperate"
+    },
+    "identificationModule": {
+      "briefTitle": "Oliceridine-Propofol Dose for Gastroscope Insertion in Obese Patients",
+      "nctId": "NCT07759778"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

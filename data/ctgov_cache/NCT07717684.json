@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients aged 18 years or older.\n* American Society of Anesthesiologists (ASA) physical status I or II.\n* Scheduled to undergo elective laparoscopic cholecystectomy under Total Intravenous Anesthesia (TIVA).\n\nExclusion Criteria:\n\n* Patients younger than 18 years or older than 50 years\n* American Society of Anesthesiologists (ASA) physical status III to V\n* Body Mass Index (BMI) \\< 17.5 kg/m² or \\> 30 kg/m²\n* Hemodynamically unstable patients\n* Altered or impaired renal or hepatic function\n* Neuromuscular disorders\n* History of alcohol or drug dependence\n* History of allergy or hypersensitivity to any of the anesthetic medications utilized in the protocol"
+    },
+    "identificationModule": {
+      "briefTitle": "Time to Loss of Consciousness With Remimazolam Versus Propofol for Anesthetic Induction in Laparoscopic Cholecystectomy",
+      "nctId": "NCT07717684"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

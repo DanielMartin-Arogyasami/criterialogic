@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients aged 18 years and above presenting to the Emergency Department\n* Confirmed diagnosis of atrial fibrillation with rapid ventricular response (heart rate ≥110 bpm) on 12-lead ECG\n* Hemodynamically stable at the time of enrollment (systolic blood pressure ≥90 mmHg, no shock, no acute pulmonary edema)\n* Willingness to provide written informed consent\n\nExclusion Criteria:\n\n* Hemodynamic instability, cardiogenic shock, or acute decompensated heart failure\n* Known pre-excitation syndrome (e.g., Wolff-Parkinson-White syndrome) on baseline ECG\n* Severe left ventricular systolic dysfunction (ejection fraction less than 30%) as determined by echocardiography\n* Known hypersensitivity or contraindication to verapamil or metoprolol\n* Patients already taking rate control agents (beta-blockers, calcium channel blockers, or digoxin) in the last 24 hours\n* Major bradycardia (heart rate less than 50 bpm) or AV block (second or third degree) on baseline ECG\n* Active bronchospasm or severe obstruction of pulmonary disease\n* Severe hepatic impairment (Child-Pugh Class C) or acute renal failure (eGFR \\<15 mL/min/1.73 m²)\n* Pregnancy or breastfeeding\n* Inability to give informed consent"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparing Two Heart Medicines for Fast, Irregular Heartbeat (Atrial Fibrillation)",
+      "nctId": "NCT07706075"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male or Female\n2. Any Race\n3. ≥ 40 years of age\n4. History of COPD based on EMR or confirmed verbally by the patient\n5. Presenting to the ED with a primary diagnosis of ECOPD or acute respiratory failure with a secondary diagnosis of COPD\n6. Able to understand and comply with study procedures\n7. Willingness to sign and date an Informed Consent Form\n\nExclusion Criteria:\n\n1. Patients unable or unwilling to sign an informed consent or cooperate with study procedures\n2. Patients who are hypersensitive to Formoterol or Revefenacin\n3. Patients who are intubated, have tracheotomy, are receiving mechanical ventilation by mask or artificial airway\n4. Patients who have previously participated in the study\n5. Patients, in the opinion of the investigators, who are rapidly decompensating and are immediately in need, or will soon need, ventilator support based on:\n\n   i. Inability to maintain respiratory effort ii. Cyanosis iii. Hemodynamic instability iv. Deterioration in mental status\n6. Patients who, per the investigator, have unstable cardiovascular disease (e.g., uncontrolled hypertension, unstable angina, recent MI (within 12 weeks), ventricular arrhythmia, or decompensated heart failure)\n7. Patients with a current diagnosis of lung cancer requiring treatment\n8. Pulmonary diseases other than COPD, or lobar pneumonia\n9. Patients with acute psychiatric illness deemed significant by the investigator\n10. Patients with a history of glaucoma deemed significant by the investigator\n11. History of urinary retention deemed significant by the investigator\n12. Women who are pregnant or breastfeeding"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Nebulized Long-Acting Bronchodilators (Formoterol and Revefenacin) vs. Short-Acting Bronchodilators (Albuterol and Ipratropium) in Patients Presenting to the Emergency Department With Acute Exacerbation of COPD (ECOPD)",
+      "nctId": "NCT07721922"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-23",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Undergoing preimplantation genetic screening cycles\n* AMH 0.5 - 3.5 ng/ml or AFC 5-20 (results of up to one year will be valid)\n* BMI 18.5 - 30 Kg/m2\n* Normal karyotypes in both partners\n\nExclusion Criteria:\n\n* Previous poor ovarian response (≤3 oocytes with a conventional stimulation protocol), according to Bologna criteria\n* Severe male factor requiring TESE (testicular sperm extraction)\n* Administration of any other drug potentially interfering with the treatment\n* Contraindication for hormonal treatment\n* Recent history of severe disease requiring regular treatment (clinically significant concurrent medical condition that could compromise subject safety or interfere with the trial assessment)\n* Monogenic disease to be detected with PGT-M\n* Biochemical and/or ultrasonographic evidence of polycystic ovarian syndrome\n* Endocrinological and/or autoimmune disorders"
+    },
+    "identificationModule": {
+      "briefTitle": "Embryo QUAlity in Ovarian Stimulation With hMG.",
+      "nctId": "NCT07691073"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

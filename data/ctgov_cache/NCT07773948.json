@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients with UC who are planned for reconstruction with IPAA. All four Swedish units with a national license to perform restorative surgery in IBD will be recruiting patients.\n\nExclusion Criteria:\n\n* Patients with concomitant primary sclerosing cholangitis (PSC) or previous intolerance to 5-ASA will be excluded."
+    },
+    "identificationModule": {
+      "briefTitle": "ASAPP Study - Topical 5-ASA as Prophylaxis for Pouchitis in Ulcerative Colitis Patients After Pelvic Pouch Surgery",
+      "nctId": "NCT07773948"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

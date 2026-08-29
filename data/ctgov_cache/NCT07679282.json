@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Obstructive sleep apnea (AHI \\>/= 5 per hour), diagnosed in the past 6 months\n* Two or more of the following symptoms: snoring, fragmented sleep, witnessed apneas, or daytime sleepiness\n* Willingness/ability to use any of the 3 treatments for OSA (PAP, dental device, or atomoxetine-oxybutynin)\n* Health insurance of any type\n\nExclusion Criteria:\n\n* Prior treatment for OSA in past year\n* Central sleep apnea or narcolepsy\n* Contraindication for dental device (temporomandibular joint problems, severe periodontal disease, insufficient dentition)\n* Heart failure with reduced ejection fraction of \\</= 45%\n* Active coronary artery disease (angina or infarction within 3 months of enrollment)\n* Current untreated depression\n* Untreated narrow angle glaucoma\n* Untreated hypothyroidism\n* Clinically significant gastric retention\n* Clinically significant urinary retention\n* History of liver disease\n* Seizure disorder\n* Pregnant or nursing, or plans to become pregnant within the year\n* Concomitant medication use that is incompatible with atomoxetine or oxybutynin\n* Participation in another clinical study with an investigational product"
+    },
+    "identificationModule": {
+      "briefTitle": "A Comparative Effectiveness Study of Positive Airway Pressure (PAP) Therapy, Dental Device, and Atomoxetine-Oxybutynin for Treatment of Obstructive Sleep Apnea in Adults",
+      "nctId": "NCT07679282"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

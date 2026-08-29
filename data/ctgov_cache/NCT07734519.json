@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Undergoing split-thickness skin graft harvest, with a donor site sufficiently large to allow division into two comparable halves for randomized dressing application.\n* Donor site located in an area amenable to standardized photography and serial appearance assessment.\n* Ability to provide informed consent.\n* Willingness and ability to participate in scheduled follow-up visits for donor-site assessment, including standardized photography.\n* Donor-site management expected to follow the standardized study dressing protocol for the duration of the early healing period.\n\nExclusion Criteria:\n\n* Inability, or anticipated inability, to reliably report pain within 1hour (or in recovery room) after surgery\n* Known allergy or hypersensitivity to lidocaine, silver-containing dressings, or other components of the study dressings.\n* Donor sites that are too small, irregularly shaped, or anatomically unsuitable to allow division into two comparable treatment halves.\n* Pre-existing skin disease at or adjacent to the donor-site region that may affect wound healing or scar appearance\n* Clinical situations in which the treating surgeon anticipates that protocol-based donor-site care cannot be maintained, including cases requiring non-standard dressings or adjunctive local therapies.\n* Anticipated inability to complete follow-up assessments, including inability to obtain evaluable standardized photographs at key time points.\n* Severe uncontrolled systemic conditions likely to significantly impair wound healing, at the discretion of the investigator (e.g., severe immunosuppression or other conditions making reliable donor-site healing unlikely).\n* Allergy to any local anesthetic\n* Allergy or sensitivity to silver\n* Pregnancy"
+    },
+    "identificationModule": {
+      "briefTitle": "Pelashield vs Xeroform",
+      "nctId": "NCT07734519"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

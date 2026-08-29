@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients with a diagnosis of hip or knee arthritis and are a deemed candidate for THA or TKA by an orthopaedic surgeon\n* Diagnosis of BMI 35+ with an obesity-related health condition (Coronary vascular disease, previous stroke, type 2 diabetes, hypertension, dyslipidemia, obstructive sleep apnea, asthma) or BMI 40+\n* Patients must be between 18-90 years of age\n* Able to provide informed consent\n\nExclusion Criteria:\n\n* Cognitive impairment that precludes study participation and compliance\n* Patients unwilling to undergo smoking cessation prior to surgery\n* Patients currently taking biologic medications that suppress the immune system\n* Patients currently taking GLP-1 medications\n* Patients with a contraindication to GLP-1 medication"
+    },
+    "identificationModule": {
+      "briefTitle": "GLP-1s in Hip and Knee Arthroplasty",
+      "nctId": "NCT07755085"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

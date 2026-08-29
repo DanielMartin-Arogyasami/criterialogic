@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nUnilateral shoulder pain within the past 3 months\n\nPain during joint movements such as abduction or internal rotation\n\nAt least one positive result from the following tests: Painful arc, Neer test, or Hawkins test\n\nNo shoulder injections received in the past 3 months\n\nWillingness to receive injection treatment and undergo follow-up assessments\n\nAvoid use of anti-inflammatory painkillers during the study period as much as possible; if intolerable pain occurs, acetaminophen (provided by the researcher) will be used to relieve symptoms\n\nExclusion Criteria:\n\nPresence of infectious disease, inflammation, rheumatoid arthritis, or fracture\n\nHistory of malignancy\n\nPrevious shoulder surgery\n\nSensory deficits\n\nTotal tendon rupture of the rotator cuff or biceps tendon\n\nNeurological disorders causing hand weakness or affecting shoulder mobility (e.g., stroke, Parkinson's disease, brachial plexus injury, peripheral neuropathy) Cognitive impairment preventing completion of questionnaires\n\nCervical radiculopathy\n\nDiagnosed frozen shoulder (adhesive capsulitis)\n\nPsychiatric disorders\n\nBreastfeeding or pregnant women\n\nReceived shoulder injection within the past 3 months, including corticosteroids, hyaluronic acid, Platelet-rich plasma, or any prolotherapy solution"
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Different Hyaluronic Acids in the Treatment of Subdeltoid Bursitis",
+      "nctId": "NCT07729514"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

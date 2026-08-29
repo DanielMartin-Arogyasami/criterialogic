@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* \\>18 years of age;\n* Diagnosis of lumbar, cervical, or thoracic pain with various etiologies;\n* Eligibility to receive steroid injections for back pain, including epidural, facet joints, or SIJ injections, or other injections (e.g., local anesthetics);\n* Being willing and able to provide NRS pain ratings and PROMIS functionality ratings before the intervention, and the same scores plus IPR, fIPR, and PGIC at various follow-up points after the intervention;\n* Provide written informed consent.\n\nExclusion Criteria:\n\n* Diagnosis of dementia, Parkinson's disease or other cognitive impairments;\n* Congenital or acquired polyneuropathy;\n* Back surgery in the month before injection treatment or planned surgery in the subsequent 3 months;\n* Any clinically significant acute or chronic medical condition that in the judgment of Investigator may preclude injection in the epidural space or compromise patient safety, limit patient's ability to complete the study, and/or compromise the objectives of the study;\n* Participation in any other competing clinical study within 3 months prior to screening and during the study period."
+    },
+    "identificationModule": {
+      "briefTitle": "Success Rates and Safety of Steroid Injections in Managing Spinal and Sacro-Iliac Pain (CORTisone Injection Spine Study)",
+      "nctId": "NCT07762170"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

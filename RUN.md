@@ -21,6 +21,9 @@ Windows (PowerShell):
     python scripts/download_data.py --status
     python scripts/download_data.py --chia
     python scripts/download_data.py --ctgov "type 2 diabetes" --n 100
+    # Task D atom pool — already committed; rebuild only to refresh or re-date it:
+    python scripts/fetch_ctgov_atoms.py --limit 300 --first-posted-from 2026-01-01
+    python scripts/fetch_ctgov_atoms.py --offline    # rebuild from the cache, no network
     # n2c2 is DUA-gated: request at https://n2c2.dbmi.hms.harvard.edu/ , place XML in data/raw/n2c2_2018/
 ## 6. Bigger compositional set (tighter estimates)
     python scripts/build_logic_set.py --n-per-depth 100 --max-depth 4 --seed 29 --out data/processed/logic_set.json

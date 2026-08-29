@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 60 years or older.\n* Scheduled to undergo isolated anatomical lung resection, including pulmonary segmentectomy or lobectomy.\n* Sinus rhythm documented by a preoperative electrocardiogram.\n* Not receiving antiarrhythmic medication, with the exception of beta-blockers.\n* Willing and able to provide written informed consent.\n\nExclusion Criteria:\n\n* Untreated hyperthyroidism or hypothyroidism.\n* History of obstructive hepatobiliary disease, active liver disease, or other serious liver disease.\n* Preoperative serum creatinine greater than 150 μmol/L.\n* Known allergy to atorvastatin or another statin, or a history of a serious statin-related adverse reaction, including statin-associated myopathy.\n* Personal or family history of an inherited muscle disorder.\n* Continuous use within 1 month before randomization of fibrates, niacin, or medications that strongly inhibit cytochrome P450 or P-glycoprotein, including cyclosporine, oral azole antifungal agents, certain interacting antibiotics, protease inhibitors, nefazodone, or amiodarone.\n* Consumption of 1 liter or more of grapefruit juice per day within 1 month before randomization.\n* Current treatment with a high-intensity statin regimen, including atorvastatin 40 mg/day or higher or rosuvastatin 20 mg/day or higher.\n* Any other condition that, in the investigator's judgment, would make participation unsafe or interfere with the conduct or evaluation of the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Perioperative Statins to Prevent AFib After Lung Surgery",
+      "nctId": "NCT07727681"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

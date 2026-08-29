@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age \\>= 18 years.\n2. Meets the diagnostic criteria for Type 2 diabetic nephropathy, defined as:\n\n   1. Confirmed diagnosis of Type 2 diabetes mellitus; AND\n   2. At least one of the following: urinary albumin-to-creatinine ratio (UACR) \\>= 30 mg/g, or eGFR \\< 60 mL/min/1.73m\\^2, confirmed by repeat testing (interval \\>= 3 months), after excluding transient factors such as acute kidney injury, dehydration, infection, or heart failure; OR\n   3. Renal biopsy confirmed as isolated diabetic nephropathy; AND\n   4. Exclusion of other primary or secondary kidney diseases.\n3. 24-hour urinary protein excretion \\>= 0.5 g and \\< 3.5 g.\n4. Estimated glomerular filtration rate (eGFR) \\>= 45 mL/min/1.73m\\^2.\n5. On a stable dose of ACE inhibitor (ACEI) or Angiotensin II receptor blocker (ARB) therapy for at least 8 weeks prior to enrollment. If SGLT2 inhibitors, mineralocorticoid receptor antagonists (MRA), or GLP-1 receptor agonists are being used, the dose must have been stable for at least 4 weeks prior to enrollment and remain unchanged during the study period. Patients not currently using these agents must not initiate them during the study.\n6. Signed informed consent form.\n\nExclusion Criteria:\n\n1. Type 1 diabetes mellitus or other types of diabetes mellitus (e.g., secondary diabetes, maturity-onset diabetes of the young).\n2. Coexisting systemic autoimmune or immune-mediated disease where the clinical assessment suggests a non-diabetic nephropathy etiology.\n3. Decline in eGFR of \\> 30% within the past 3 months.\n4. Persistent serum potassium \\> 5.5 mmol/L.\n5. Diagnosis of hemorrhagic cardiovascular or cerebrovascular disease within the past 3 months.\n6. Known allergy or hypersensitivity to any component of Naoxintong Capsule or placebo; pregnant or lactating women.\n7. Participation in another drug or medical device clinical trial within the past 6 months.\n8. Any other condition that, in the investigator's judgment, renders the patient unsuitable for participation in the clinical trial (e.g., severe hepatic dysfunction, life expectancy \\< 1 year)."
+    },
+    "identificationModule": {
+      "briefTitle": "Naoxintong Capsule for Diabetic Nephropathy With Dampness Retention Pattern: A Multicenter, Randomized, Double-Blind, Placebo-Controlled TrialAcronymNXT-DKD",
+      "nctId": "NCT07698223"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

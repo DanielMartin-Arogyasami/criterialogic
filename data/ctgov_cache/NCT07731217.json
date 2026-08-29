@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:Aged between 2 and 18 years.\n\nHistory of receiving salbutamol ± steroid treatment for two or more previous wheezing attacks, OR physician-diagnosed asthma.\n\nPatients admitted to the Pediatric Emergency Department due to severe asthma exacerbation (Pediatric Respiratory Assessment Measure \\[PRAM\\] score ≥8).\n\n\\-\n\nExclusion Criteria: Patients with suspected or confirmed foreign body aspiration.\n\nPatients with concurrent croup.\n\nPresence of comorbidities (cardiovascular, neurological, malignancy, chronic kidney or lung disease).\n\nPatients with pneumonia.\n\nPatients with air leaks (pneumothorax, pneumomediastinum).\n\nPatients requiring immediate Intensive Care Unit (ICU) admission.\n\nSystemic steroid use within the last 8 weeks.\n\nFailure to obtain informed consent.\n\n\\-"
+    },
+    "identificationModule": {
+      "briefTitle": "IV DEXAMETHASONE VS. METHYLPREDNISOLONE IN CHILDREN WITH SEVERE ASTHMA EXACERBATION",
+      "nctId": "NCT07731217"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

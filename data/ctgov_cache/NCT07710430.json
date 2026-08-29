@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Tanner stage =\\>2\n2. Girls younger than 9 years old, boys younger than 10 years old\n3. Subjects who are diagnosed with central precocious puberty (CPP)\n\nExclusion Criteria:\n\n1. GnRH-independent precocious puberty, incomplete precocious puberty, progressive brain tumors, pituitary adenoma\n2. Hepatic impairment or abnormal liver function tests at screening\n3. Renal impairment or abnormal renal function at screening\n4. Use of following within 8 weeks prior to screening or during the study: medications affecting gonadotropin or sex hormone, systemic steroids, herbal medications\n5. Use of medications associated with seizures\n6. Requirement for treatments affecting the hypothalamic-pituitary-gonadal axis\n7. History of seizures, epilepsy, cerebrovascular disease, or central nervous system disorders/tumors\n8. Known or suspected malignancy"
+    },
+    "identificationModule": {
+      "briefTitle": "A Study of Leuprorelin 1-Month (4-Week) Formulation in Children With Central Precocious Puberty",
+      "nctId": "NCT07710430"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

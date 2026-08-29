@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Main Inclusion Criteria:\n\n* Men or women aged 19 to 75 years, inclusive\n* Subjects diagnosed with functional dyspepsia according to the Rome IV criteria\n* Subjects with at least three symptoms rated as moderate or severe on the Gastrointestinal Symptom Score(GIS)\n* Subjects who voluntarily signed a consent form\n\nMain Exclusion Criteria:\n\n* Subjects with a history of organic diseases that could cause dyspepsia\n* Subjects with hypersensitivity to investigational drugs and similar drugs\n* Pregnant or breastfeeding women"
+    },
+    "identificationModule": {
+      "briefTitle": "A Study to Evaluate the Efficacy and Safety of DA-9701 in Patients With Functional Dyspepsia",
+      "nctId": "NCT07686679"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

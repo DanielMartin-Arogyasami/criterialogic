@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Individuals with type 2 diabetes mellitus were eligible if they were aged ≥19 years\n* Individuals with subclinical atherosclerosis or metabolic syndrome, defined as at least one of the following:\n* Carotid intima-media thickness ≥ 1 mm\n* Ankle-brachial index \\< 0.9 - Pulse wave velocity ≥ 9 m/s\n* Flow-mediated vasodilatation \\< 5%\n* Coronary artery calcium score ≥ 40\n* Coronary artery stenosis ≥ 20% or ≤ 70%\n* Peripheral artery occlusive disease ≥ 20%\n* Metabolic syndrome\n* Individuals with HbA1c ≤ 9.9%\n* Individuals who voluntarily agree to participate in the study and provide written informed consent\n\nExclusion Criteria:\n\n* Patients with a history of major cardiovascular events, including myocardial infarction, stroke, or heart failure\n* Patients with heart failure (NYHA I\\~IV)\n* Patients with current active bleeding or suspected bleeding\n* Patients with suspected bleeding tendency or hematologic disorder, such as hemophilia or thrombocytopenia\n* Patients recently diagnosed with gastrointestinal ulcerative disease\n* Patients with inadequately controlled hypertension, defined as systolic blood pressure ≥ 180 mmHg or diastolic blood pressure ≥ 110 mmHg\n* Patients with severe renal dysfunction, defined as estimated glomerular filtration rate \\< 30 mL/min/1.73 m²\n* Patients with liver enzyme levels greater than 3 times the upper limit of normal or chronic liver disease\n* Individuals currently taking antiplatelet or antithrombotic agents\n* Individuals who are pregnant or breastfeeding\n* Patients with a history of hypersensitivity to any component of the study drugs\n* Patients with complications of coronary artery stenosis\n* Patients with QT prolongation\n* Patients with a sigmoid-shaped ventricular septum or risk of sigmoid-shaped ventricular septum\n* Individuals with alcohol addiction\n* Patients with asthma\n* Patients deemed unsuitable for participation in the study based on the investigator's judgment"
+    },
+    "identificationModule": {
+      "briefTitle": "Cilostazol and Aspirin for Cardiovascular Event Prevention in Patients With Type 2 Diabetes",
+      "nctId": "NCT07719894"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

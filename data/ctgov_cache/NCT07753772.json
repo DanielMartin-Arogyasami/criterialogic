@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Aged ≥ 18 years;\n2. Diagnosed with ureteral stricture and scheduled for elective laparoscopic ureteral reconstruction under general anesthesia;\n3. Requiring patient-controlled intravenous analgesia after surgery.\n\nExclusion Criteria:\n\n1. Preoperative inability to communicate due to coma, delirium, severe dementia, or language barrier;\n2. History of schizophrenia, epilepsy, Parkinson's disease, or myasthenia gravis;\n3. Presence of preexisting left ventricular ejection fraction (LVEF) \\< 30%, sick sinus syndrome, severe sinus bradycardia (heart rate \\< 50 beats/min), or atrioventricular block above grade II without pacemaker implanted;\n4. Uncontrolled hyperthyroidism or history of pheochromocytoma;\n5. Severe hepatic insufficiency (Child-Pugh Class C), severe renal insufficiency (required preoperative dialysis), or American Society of Anesthesiologists (ASA) physical status classification ≥ IV;\n6. Allergy to dexmedetomidine and/or esketamine;\n7. Other conditions deemed unsuitable for study participation by the investigators."
+    },
+    "identificationModule": {
+      "briefTitle": "Dexmedetomidine-Esketamine Combination on Depression and Anxiety After Laparoscopic Ureteral Reconstruction",
+      "nctId": "NCT07753772"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

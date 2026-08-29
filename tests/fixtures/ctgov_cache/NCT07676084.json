@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Be at least 18 years of age, male or female\n2. Able to provide written voluntary informed consent\n3. Able and willing to adhere to the protocol instructions, including participation in all study visits\n4. Subject-reported symptoms or history consistent with dry eye for at least 6 months prior to Screening/Baseline (Visit 1)\n5. Ocular Surface Disease Index (OSDI) score \\>13\n\nExclusion Criteria:\n\nNote: All ocular exclusion criteria apply to either eye.\n\n1. DED secondary to destruction of conjunctival goblet cells due to ocular trauma (eg, alkali burns) or ocular or systemic condition (eg, Stevens-Johnson syndrome, ocular cicatricial pemphigoid, Vitamin A deficiency)\n2. Any abnormal lid or corneal anatomy that would interfere with eyelid closure or create an irregular ocular tear film\n3. Any active ocular infection, inflammation, or ocular allergy\n4. Have undergone ocular surgery or laser refractive surgery within 9 months prior to Screening/Baseline (Visit 1)\n5. Use of LipiFlow® procedure, intense pulse light procedure, or any kind of other procedure affecting meibomian glands within 6 months prior to Screening/Baseline (Visit 1)\n6. Occlusion of the ocular puncta within 30 days prior to Screening/Baseline (Visit 1)\n7. Have worn contact lenses within 3 days prior to Screening/Baseline (Visit 1) or planned wear during the study\n8. Use of topical prescription products for dry eye, including topical ocular anti inflammatories (eg, cyclosporine, lifitegrast), corticosteroids, MIEBO® (perfluorohexyloctane ophthalmic solution), or TRYPTYR® (alcotremon ophthalmic solution) within 30 days prior to Screening/ Baseline (Visit 1)\n9. Use of any eye drops (prescription or OTC, such as artificial tears or Lumify®) and/or TrueTear™ device (intranasal tear neurostimulator) within 24 hours prior to Screening/ Baseline (Visit 1)\n10. Changes in any systemic medications known to impact tear production (eg, antihistamines, antidepressants, hormone replacement therapy, etc.) within 3 months prior to Screening/Baseline (Visit 1)\n11. Have a serious or uncontrolled systemic disease (eg, diabetes, rheumatoid arthritis, lupus, hypertension, malignancy) that, in the opinion of the Investigator, will interfere with the study or interpretation of study results"
+    },
+    "identificationModule": {
+      "briefTitle": "Randomized Single Center Study to Evaluate Tolerability, Symptoms, and Visual Functional Outcomes With the Use of OTC Lubricating Eye Drops in Subjects With Dry Eye Disease",
+      "nctId": "NCT07676084"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-06-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

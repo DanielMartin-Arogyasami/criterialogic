@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* adult patients \\>/= 18 years of age admitted to an intensive care unit\n* Diagnosed clinically with Society for Cardiovascular Angiography and Interventions (SCAI) Class C or D cardiogenic shock\n* Clinical or hemodynamic evidence of volume overload\n\nExclusion Criteria:\n\n* Patients whose care plan, as determined by the treating clinical team, will not include renal replacement therapy\n* Decision has already been made by the treating clinical team to initiate renal replacement therapy\n* Hyperkalemia with serum potassium \\>/= 6mmol/L at the time of screening\n* Severe metabolic acidosis with serum bicarbonate \\</= 12 mmol/L at the time of screening\n* Severe azotemia with serum urea \\>/= 40 mmol/L at the time of screening\n* Acute intoxication necessitating use of renal replacement therapy\n* Recent renal replacement therapy (within 30 days)\n* Known end-stage renal disease (defined as an estimated glomerular filtration rate \\<15 ml/min/1.73m2\n* presentation with out-of-hospital cardiac arrest"
+    },
+    "identificationModule": {
+      "briefTitle": "CAPITAL OFFLOAD-SHOCK",
+      "nctId": "NCT07756801"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-11",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Key Inclusion Criteria:\n\n* Male or female neonates/infants\n* Body weight ≥ 2 kg to \\< 5kg\n* Confirmed diagnosis of uncomplicated infections due to Plasmodium falciparum or mixed infections including P. falciparum malaria by RDT or microscopy.\n* Eligible to receive Coartem® Baby dispersible tablets as per approved label\n\nKey Exclusion Criteria:\n\nParticipants with Coartem® Baby contraindications as per approved label.\n\n* Known hypersensitivity to artemether, lumefantrine or to any of the excipients of Coartem® Baby.\n* Patients with severe malaria according to WHO definition (See Appendix 3).\n* Patients with a family history of congenital prolongation of the QTc interval or sudden death or with any other clinical condition known to prolong the QTc interval such as patients with a history of symptomatic cardiac arrhythmias, with clinically relevant bradycardia or with severe cardiac disease.\n* Patients taking drugs that are known to prolong the QTc interval\n* Any additional contraindications as per the approved label in the country"
+    },
+    "identificationModule": {
+      "briefTitle": "Study to Assess Safety and Clinical Responses With Coartem® Baby Dispersible Tablets in Paediatric Patients Weighing 2 to <5 kg With Uncomplicated Malaria",
+      "nctId": "NCT07713602"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

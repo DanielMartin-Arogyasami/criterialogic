@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adult patients age 18 and older undergoing primary total knee replacement by fellowship trained Orthopedic Surgeons in Henry Ford Health System with planned outpatient same-day discharge.\n\nExclusion Criteria:\n\n* Incomplete data in medical records\n* Non-English speakers\n* Chronic opioid use in the last 3 months\n* Ipsilateral joint surgery in the last year\n* Undergoing bilateral knee arthroplasty\n* Cannot tolerate oral medications\n* Swallowing difficulties\n* Intolerance to acetaminophen, anti-inflammatories, muscle relaxants, gabapentinoids, or opioids/tramadol\n* History of alcohol abuse\n* Drug abuse\n* Renal impairment\n* Peptic ulcer disease\n* GI bleeding\n* Illicit narcotic usage in the past 6 months\n* Chronic liver disease\n* Chronic pain syndromes"
+    },
+    "identificationModule": {
+      "briefTitle": "Novel Extended-Release Bupivacaine Polymer for Sustained Pain Relief Following Total Knee Arthroplasty",
+      "nctId": "NCT07775248"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

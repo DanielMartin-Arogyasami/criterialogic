@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults ≥18 years old.\n* Undergoing non cardiac surgery under general anesthesia.\n* Receiving propofol for induction.\n* No midazolam premedication\n* 20g IV Catheter below the antecubital fossa used for induction of anesthesia\n\nExclusion Criteria:\n\n* Emergency surgery.\n* Inability to communicate (language or cognitive impairment).\n* Pre-induction IV analgesia administration or patients under preoperatively\n* Patient with dementia, Alzheimer or other uncontrolled psychiatric diseases that would impact their ability to willingly participate"
+    },
+    "identificationModule": {
+      "briefTitle": "A Novel Two-Step Dosing Induction Strategy (The Propofol Challenge Test) to Minimize Propofol Injection Pain",
+      "nctId": "NCT07763548"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

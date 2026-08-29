@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥18 years, with a confirmed diagnosis of type 2 diabetes mellitus (T2DM).\n* Receiving a standard dose of an Angiotensin-Converting Enzyme Inhibitor (ACEI) or Angiotensin Receptor Blocker (ARB) therapy for at least 4 consecutive weeks prior to screening, with the dose expected to remain stable throughout the study period.\n* Body Mass Index (BMI) ≥ 24.0 kg/m2.\n* Mean urine albumin-to-creatinine ratio (UACR) ≥ 100 mg/g and \\< 5000 mg/g, calculated from first morning void urine samples collected over 3 consecutive days.\n* Estimated glomerular filtration rate (eGFR) based on the CKD-EPI formula ≥ 30 mL/min/1.73m2 and ≤ 90 mL/min/1.73m2.\n* Serum potassium level ≤ 4.8 mmol/L.\n* Glycated hemoglobin (HbA1c) \\< 11%.\n* Voluntarily understood and signed the written Informed Consent Form (ICF).\n\nExclusion Criteria:\n\n* Definite diagnosis of non-diabetic kidney disease (e.g., IgA nephropathy, polycystic kidney disease, lupus nephritis, etc).\n* Personal or family history of medullary thyroid carcinoma (MTC), or a diagnosis of multiple endocrine neoplasia syndrome type 2 (MEN 2).\n* History of severe acute or chronic pancreatitis.\n* History of diabetic ketoacidosis (DKA).\n* Symptomatic hypotension during the screening period, or a resting systolic blood pressure (SBP) \\< 110 mmHg.\n* Refractory hypertension, defined as a resting SBP \\> 170 mmHg despite the concurrent use of three antihypertensive medications.\n* History of severe dehydration, severe diarrhea, or acute volume depletion within 30 days prior to screening.\n* History of acute kidney injury (AKI) within 30 days prior to screening.\n* Use of traditional Chinese medicines with potential proteinuria-lowering effects (e.g., Keluoxin capsules, Huangkui capsules, or Shenyan Kangfu tablets) within 30 days prior to screening.\n* Use of potassium-sparing diuretics (e.g., triamterene or amiloride) or mineralocorticoid receptor antagonists (e.g., spironolactone, eplerenone, or finerenone) within 2 months prior to screening.\n* Use of GLP-1 receptor agonists, GLP-1/GIP dual receptor agonists, or GLP-1/glucagon (GCG) dual receptor agonists within 6 months prior to screening.\n* Current use of strong CYP3A4 inhibitors (e.g., itraconazole or clarithromycin) or CYP3A4 inducers that may significantly interfere with finerenone metabolism.\n* Myocardial infarction, unstable angina, stroke, or hospitalization due to heart failure (NYHA Class III-IV) within 3 months prior to screening.\n* Active urogenital tract infection, or a history of urogenital tract infection associated with the prior use of SGLT2 inhibitors.\n* Women who are pregnant, planning to become pregnant, or lactating.\n* Inability to complete the 6-month follow-up due to general health conditions or geographic relocation.\n* Any other condition that, in the opinion of the investigator, renders the participant unsuitable for participation in the study."
+    },
+    "identificationModule": {
+      "briefTitle": "QUARTET-DKD: Quadruple Therapy for Type 2 Diabetic Nephropathy",
+      "nctId": "NCT07775846"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

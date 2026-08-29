@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 to 45 years.\n* ASA physical status I or II.\n* Scheduled for laparoscopic appendectomy under general anesthesia.\n* Able to provide written informed consent.\n\nExclusion Criteria:\n\n* History of cardiac conduction disorders or documented arrhythmias.\n* Hepatic insufficiency.\n* Renal insufficiency.\n* Chronic or long-term opioid therapy.\n* Known or suspected hypersensitivity to amide-type local anesthetics.\n* Hemodynamic instability at the time of admission to the operating room.\n* Body mass index greater than 35 kg/m²."
+    },
+    "identificationModule": {
+      "briefTitle": "Intraoperative Intravenous Lidocaine for Pain After Laparoscopic Appendectomy",
+      "nctId": "NCT07678385"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

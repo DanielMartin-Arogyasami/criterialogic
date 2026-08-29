@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* IBD patients with clinical remission Crohn's disease: HBI \\< 5 Ulcerative colitis: Partial Mayo score 0-1 w/o bloody stool\n* Age \\> 18 years\n* PSQI score \\> 5\n* No medical adjustment for 2 months and use corticosteroids not more than Prednisolone equivalent 5 mg/day\n\nExclusion Criteria:\n\n* Current alcohol or substance abuse\n* High risk for OSA (STOP-BANG score \\> 5)\n* Psychiatric problem: PHQ-9 score \\> 20 or GAD-7 score \\> 20\n* Hypnotic drug use and unable to hold for 1week before trial\n* Shift worker"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Melatonin Treatment on Sleep Quality Improvement in Inflammatory Bowel Disease Patients With Clinical Remission",
+      "nctId": "NCT07737665"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-30",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

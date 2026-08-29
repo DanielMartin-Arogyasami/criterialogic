@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 1\\. Ages 18-70\n* 2\\. Hp infection treatment failed ≥4 times with guidelines-recommended therapies\n* 3\\. Patients with early gastric cancer, peptic ulcer, gastric MALT lymphoma, atrophic gastritis and other diseases requiring the eradication of Hp.\n\nExclusion Criteria:\n\n* 1\\. Antibiotics and bismuth were taken within 4 weeks before this treatment; Or had taken PPI, H2 receptor antagonist, P-CAB within 2 weeks prior to treatment;\n* 2\\. Pregnant or lactating women;\n* 3\\. Those who are allergic to the investigational drugs used in this test or have contraindications;\n* 4\\. Participated in other drug trials within 3 months before the treatment of this trial;\n* 5\\. There are other serious diseases that affect the evaluation of this study at the same time, or they cannot correctly express their own complaints and cannot cooperate;\n* 6\\. Subjects with dysphagia;\n* 7\\. Patients with malignant tumors, serious concomitant diseases, severe ulcer bleeding or perforation;\n* 8\\. Patients judged by the investigator to be unsuitable for clinical trials.\n* 9\\. Those who do not want to sign the informed consent for the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Study on the Effect of Fecal Microbiota Transplantation on Eradication of Refractory Helicobacter Pylori Infection",
+      "nctId": "NCT07704255"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

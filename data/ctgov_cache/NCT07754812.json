@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 70 years or older, regardless of sex.\n* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.\n* Histologically confirmed non-small cell lung cancer, clinical stage IIA-IIIB according to the 8th edition of the AJCC staging system.\n* No evidence of distant metastasis and considered suitable for radical lung cancer surgery.\n* The primary lung lesion is suitable for stereotactic body radiotherapy.\n* No sensitizing driver alterations in EGFR, ALK, ROS1, or other tested actionable genes.\n* Adequate major organ function, including all of the following:\n* Absolute neutrophil count at least 1.5 × 10\\^9/L, platelet count at least 100 × 10\\^9/L, and hemoglobin at least 9 g/dL.\n* Total bilirubin no more than 1.5 × the upper limit of normal; alanine aminotransferase and aspartate aminotransferase no more than 2.5 × the upper limit of normal.\n* Serum creatinine no more than 1.5 × the upper limit of normal or creatinine clearance at least 60 mL/min.\n* Urine protein less than 1+; if urine protein is 1+, 24-hour urine protein must be less than 500 mg.\n* Blood glucose within the normal range or stable glycemic control in participants with diabetes.\n* Baseline forced expiratory volume in 1 second (FEV1) at least 2 L; if FEV1 is less than 2 L, the predicted postoperative FEV1 must be greater than 800 mL as assessed by a thoracic surgeon.\n* No myocardial infarction within the previous year, no unstable angina, no symptomatic severe arrhythmia, and no cardiac insufficiency.\n* The participant has been fully informed and voluntarily provides written informed consent.\n\nExclusion Criteria:\n\n* Prior lobectomy, thoracic radiotherapy, or systemic antitumor therapy.\n* Another concurrent malignancy or a history of another malignancy cured less than 5 years before enrollment, except adequately treated cervical carcinoma in situ or basal cell or squamous cell carcinoma of the skin.\n* Active autoimmune disease or a history of autoimmune disease requiring systemic immunosuppressive treatment.\n* Active infection requiring systemic treatment, active tuberculosis, human immunodeficiency virus infection, active hepatitis B or hepatitis C, active syphilis, or another active transmissible infection specified by the protocol.\n* Severe cardiac, hepatic, renal, or metabolic disease that precludes surgery or study treatment.\n* History of interstitial lung disease or drug-induced pneumonitis, or imaging evidence of active interstitial lung disease.\n* Uncontrolled large pleural effusion or pericardial effusion.\n* Major surgery, severe trauma, or treatment with another investigational drug within 4 weeks before enrollment.\n* Recent receipt of an anticancer vaccine or live vaccine.\n* Any other condition that, in the investigator's opinion, makes the participant unsuitable for the study or may interfere with interpretation of the study results."
+    },
+    "identificationModule": {
+      "briefTitle": "Oral Paclitaxel Solution With Immunotherapy and Concurrent SBRT as Neoadjuvant Treatment for Older Adults With NSCLC",
+      "nctId": "NCT07754812"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

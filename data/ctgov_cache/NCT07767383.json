@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18 to 85 years.\n2. American Society of Anesthesiologists (ASA) physical status I to III.\n3. Body Mass Index (BMI) between 18 and 30 kg/m² and body weight \\> 50 kg.\n4. Scheduled for elective knee arthroscopy under general anesthesia.\n5. Complete preoperative workup, confirmed diagnosis, and indication for knee arthroscopy with complete postoperative medical records.\n6. Normal mental and cognitive status.\n7. Patient or legally authorized representative has provided written informed consent for anesthesia and study participation.\n\nExclusion Criteria:\n\n1. Refusal to participate in the study.\n2. Inability to communicate effectively.\n3. Known allergy or contraindication to any study drug (ropivacaine, dexmedetomidine, propofol, sufentanil, remifentanil, vecuronium, or sevoflurane).\n4. History of knee trauma or knee surgery; diagnosed with immune system disorders (e.g., rheumatoid arthritis, systemic lupus erythematosus); neuromuscular diseases or psychiatric disorders; restless legs syndrome (RLS); periodic limb movement disorder (PLMD).\n5. Coagulation disorders or local infection at the puncture site precluding peripheral nerve block.\n6. Severe hepatic or renal dysfunction.\n7. Severe cardiopulmonary insufficiency.\n8. Pregnancy.\n9. Diagnosis of obstructive sleep apnea (OSA) or requirement for continuous positive airway pressure (CPAP) therapy.\n10. Regular use of sedative-hypnotic drugs (benzodiazepines, non-benzodiazepine hypnotics, melatonin receptor agonists, etc.) or antidepressants/anxiolytics known to affect sleep architecture (e.g., trazodone, mirtazapine) within the past 1 month.\n11. Pittsburgh Sleep Quality Index (PSQI) score \\> 5."
+    },
+    "identificationModule": {
+      "briefTitle": "Effect of Dexmedetomidine Combined With FNB/ACB on Sleep Quality After Knee Surgery",
+      "nctId": "NCT07767383"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-17",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

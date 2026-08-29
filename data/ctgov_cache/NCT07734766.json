@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age is ≥18 years old, male or female;\n* Histologically confirmed as hepatocellular carcinoma without metastasis;\n* Tumor budding is positive\n* Life expectancy of at least 12 weeks;\n\nExclusion Criteria:\n\n* Hepatocellular carcinoma that cannot be surgically resected\n* Received radiotherapy, chemotherapy, targeted therapy, immunotherapy, etc. before surgery\n* Pregnant or lactating women\n* Subjects with other malignant tumors;\n* Subjects who are considered unsuitable to participate in this cohort study by the investigator;\n* Subjects who refuse to enroll or do not sign the informed consent form;\n* Subjects with incomplete medical record information (including gender, age, diagnostic information, imaging (and) or pathological diagnosis results, other demographic data, etc.)."
+    },
+    "identificationModule": {
+      "briefTitle": "Ebastine for Adjuvant Treatment of Tumor Budding-Positive Liver Cancer After Surgery",
+      "nctId": "NCT07734766"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

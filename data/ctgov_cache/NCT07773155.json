@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18 years or older\n2. Undergoing upper extremity surgery performed by a hand and upper extremity orthopaedic surgeon at the University of Chicago.\n3. Undergoing procedure with regional nerve block\n\nExclusion Criteria:\n\n1. Age less than 18 years\n2. Concomitant chronic opioid use\n3. Postoperative opioid use (surgery through POD 14) for condition other than repaired fracture\n4. Medical contraindication to ketorolac use, including pregnancy\n5. Undergoing multiple concurrent surgical procedures\n6. Unable to communicate numerical pain score"
+    },
+    "identificationModule": {
+      "briefTitle": "Pain Control With Ketorolac and Nerve Block After Wrist and Hand Surgery",
+      "nctId": "NCT07773155"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-19",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

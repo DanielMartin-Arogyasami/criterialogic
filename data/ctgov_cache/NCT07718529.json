@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Diagnosis of UC from at least 6 months according to clinical, endoscopic, histological and/or radiological criteria.\n2. Male or female age ≥ 18 years\n3. Currently treated by JAK inhibitor (tofacitinib, upadacitinib or filgotinib) for more than 12 months.\n4. Currently at a stable dose of tofacitinib (5mg or 10mg twice a day), upadacitinib (15mg or 30mg per day) or filgotinib (200mg per day) for 6 months.\n5. Clinical steroid free remission for at least 6 months, defined by a partial Mayo Score \\< 2, with no subscore \\> 1 and rectal bleeding (RB) subscore of 0 (annex 1).\n6. Endoscopic steroid free remission for at inclusion, defined by a Mayo endoscopic subscore = 0 (annex 1).\n7. Fecal calprotectin ≤ 150μg/g.\n8. Without known risk factors for venous thromboembolism (VTE).\n9. Without known risk factors for major adverse cardiovascular events (MACE).\n10. Without known risk factors for malignancy.\n11. For women of child-bearing potential (WOCBP), and for men with partners who are WOCBP, willingness to use appropriate and efficient contraception, as recommended when using JAK inhibitor treatment (notably upadacitinib), during all the experimental treatment and until at least 4 weeks after the end of the experimental treatment, according to SmPC and CTFG (Clinical Trials Facilitation and Coordination Group) recommendations.\n12. Patients able to understand information provide to them and to give written informed consent for study.\n13. Affiliation to a social security scheme.\n14. Good general health according to history and clinical examination.\n\nExclusion Criteria:\n\n1. Steroid use ≤ 6 months prior to enrolment.\n2. Currently treated by steroid, immunosuppressive agents or biologics.\n3. Pregnancy or planned pregnancy during the study.\n4. Breastfeeding.\n5. Non-compliant subject or inability to follow study protocol.\n6. Intolerance of JAK inhibitors (excipients included) or severe adverse event.\n7. Contraindications to using a JAK inhibitor (excipients included).\n8. Known risk factors for VTE.\n9. Known risk factors for MACE.\n10. Active neoplasia or history of malignant tumours less than 5 years old.\n11. Participation to another interventional study protocol (except for RIPH3 studies)\n12. Severe hepatic insufficiency.\n13. Severe to end-stage renal insufficiency.\n14. Active tuberculosis, serious infections such as septicemia or opportunistic infections.\n15. Absence or refusal of informed consent.\n16. People under guardianship, conservatorship, or judicial protection;\n17. People receiving psychiatric care;\n18. People who have been deprived of their liberty by judicial or administrative order\n19. People with difficulty understanding and/or cognitive disorder"
+    },
+    "identificationModule": {
+      "briefTitle": "Safety and Efficacy of a STOPping Strategy Versus Classical Maintenance Dose of JAK Inhibitors in Deep Remission Patients With Ulcerative Colitis",
+      "nctId": "NCT07718529"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-22",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

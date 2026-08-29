@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 years of age or older\n* Gestational age of 36 weeks or greater\n* American Society of Anesthesiology physical status 2\n* Induction of labor or early labor (cervical dilation \\< 6cm)\n* Singleton gestation\n* Vertex presentation\n\nExclusion Criteria:\n\n* Preeclampsia\n* Receiving magnesium sulfate\n* Having received narcotics within 4 hours\n* Multiple gestation\n* Major fetal anomalies or demise\n* Previous spine surgery\n* Known major spine pathology\n* Substance use disorder"
+    },
+    "identificationModule": {
+      "briefTitle": "Does the Volume of Medication Affect the Success of Labor Epidural Analgesia",
+      "nctId": "NCT07684365"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

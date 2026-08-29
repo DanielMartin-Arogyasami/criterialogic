@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults ≥18 years\n* Diagnosis of Crohn disease for at least 3 months\n* Active draining complex perianal fistula\n* Able to provide informed consent\n\nExclusion Criteria:\n\n* Rectovaginal fistula\n* Only low intersphincteric or submucosal fistulas\n* Severe proctitis preventing surgical closure\n* Stoma\n* Active tuberculosis\n* Active hepatitis B\n* Active serious infection\n* Pregnancy\n* Concurrent investigational drug trial\n* MRI contraindication\n* Additional laboratory exclusions as specified in the protocol"
+    },
+    "identificationModule": {
+      "briefTitle": "MIRICURE: Mirikizumab With Curettage and Repair (Closure) for Perianal Fistulizing Crohn's Disease",
+      "nctId": "NCT07782021"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

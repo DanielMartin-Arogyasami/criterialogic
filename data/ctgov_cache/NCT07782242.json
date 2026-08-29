@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female, aged 18 years or above.\n* Patients diagnosed with active ulcerative colitis at multiple centers including Sir Run Run Shaw Hospital, Zhejiang University School of Medicine (lead center), defined as having a modified Mayo Score (without physician's global assessment) ranging from 3 to 6 points. If ES = 1 point, RBS ≥ 1 point is required. Patients with proctitis are allowed to be enrolled, provided that the proctitis lesion extends more than 5 cm from the anal verge.\n* Treatment-naive patients at initial visit accounting for no more than 30% of the total sample size; Or patients who have previously received conventional pharmacological therapy (including mesalazine, corticosteroids and immunosuppressants) but have inadequate response, intolerance (excluding mesalazine), or non-standard treatment (including but not limited to insufficient dosage or duration of oral 5-ASA, corticosteroids or immunosuppressants, which shall be determined by the investigator based on individual patient conditions). The proportion of patients receiving combined glucocorticoid therapy at baseline shall not exceed 30% of the total sample size.\n* Voluntarily participate in this study and sign the informed consent form.\n\nExclusion Criteria:\n\n* Subjects with contraindications to etrolimod or mesalazine.\n* Previously treated with etrasimod or other biologics and small-molecule drugs.\n* Patients are currently receiving full-dose conventional therapy yet still have active disease, including any one of the following:\n\nTreatment with mesalazine (≥3 g/day) for ≥8 weeks; Or continuous treatment with prednisone ≥40 mg/day or equivalent dose for ≥3 days (intravenous administration); Or continuous oral treatment with prednisone \\>20 mg/day or equivalent dose for ≥2 weeks; or oral azathioprine (≥0.75 mg/kg/day), 6-mercaptopurine (≥0.5 mg/kg/day), methotrexate (≥15 mg/week) for ≥3 months.\n\n* Recent history of acute severe ulcerative colitis (ASUC), toxic megacolon, etc.\n* Patients with stomas or patients with UC scheduled for inpatient surgical intervention.\n* Pregnant and lactating women.\n* Vulnerable groups excluding the elderly and illiterate, including people with mental illnesses, individuals with cognitive impairment, critically ill patients, etc.\n* Other circumstances where researchers consider participation in this study inappropriate."
+    },
+    "identificationModule": {
+      "briefTitle": "Comaprison of Efficacy and Safety Between Etrasimod vs Mesalazine in Chinese Adults With Active UC",
+      "nctId": "NCT07782242"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

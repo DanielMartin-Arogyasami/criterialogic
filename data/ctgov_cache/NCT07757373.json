@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n\\- patients who are continued on 6-monthly subcutaneous injection of DEN in either the ROMO or DEN arms after month 48; (2) those who are willing to have a repeat DXA assessment at the end of 6 years\n\nExclusion Criteria:\n\n* patients who refuse to be maintained on denosumab after month 48\n* patients who are maintained on other anti-osteoporotic drugs after month 48\n* patients in whom prednisolone is planned to be tapered or discontinued after month 48."
+    },
+    "identificationModule": {
+      "briefTitle": "Romosozumab Versus Denosumab In Glucocorticoid-induced Osteoporosis: An Extended Observation Of a Clinical Trial at 6 Years",
+      "nctId": "NCT07757373"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-11",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

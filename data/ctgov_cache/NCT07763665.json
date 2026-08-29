@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Male and female patients aged 18 to 60 years.\n2. Sustained a closed head trauma with the study drug infusion initiated within 8 hours of the injury.\n3. TBI confirmed by history and clinical examination.\n4. Patients with moderate (GCS = 9-12) traumatic brain injury.\n5. Evidence of TBI confirmed by abnormalities consistent with trauma on CT scan upon admission (diffuse injury II-IV, evacuated and non-evacuated mass lesion, Marshall's CT Classification ).\n6. Hemodynamic stability at the time of enrollment.\n\nExclusion Criteria:\n\n1. Patient Refusal\n2. Prolonged and/or uncorrectable hypoxia (PaO₂ \\< 60 mmHg) or persistent hypotension (systolic blood pressure \\< 90 mmHg) at the time of randomization.\n3. Cardiopulmonary arrest.\n4. Concomitant spinal cord injury.\n5. Pregnant or lactating females.\n6. Penetrating head injury.\n7. Associated other extra-cranial trauma or systemic polytrauma.\n8. Undergoing surgical interventions during the study.\n9. Pre-existing severe cardiac arrhythmia, heart block, or significant myocardial damage (documented on ECG).\n10. Known history of chronic renal failure or abnormal baseline renal function.\n11. Known hypersensitivity or allergic reaction to magnesium sulfate.\n12. Patients on chronic steroid therapy.\n13. BMI\\>35 kg/m2.\n\n    \\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Anti-inflammatory Effect of MgSO₄ in Patients With Moderate Traumatic Brain Injury by Measurming Nucleotide-binding Oligomerization Domain-Like Receptor Pyrin Domain-containing 3 (NLRP3) Inflammasome-a Multiprotein Complex",
+      "nctId": "NCT07763665"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

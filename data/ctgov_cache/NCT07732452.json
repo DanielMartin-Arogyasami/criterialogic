@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Women aged ≥ 45 years.\n* Perimenopausal or postmenopausal, defined as at least one of the following:\n\n  * Perimenopause, defined as menstrual cycle irregularity (changes in cycle length, skipped cycles, or amenorrhea ≥ 60 days) accompanied by vasomotor symptoms consistent with the menopausal transition.\n  * Postmenopause, defined as at least one of:\n\n    * ≥ 12 months of spontaneous amenorrhea, or\n    * bilateral oophorectomy, or\n    * hysterectomy with FSH \\> 40 IU/L when menstrual history is unavailable.\n* Vasomotor symptoms with a negative impact on quality of life, defined as :\n\n  * Recurrent hot flashes (sudden sensations of heat, typically involving the face, neck, or chest, often associated with flushing and/or sweating), and/or\n  * Night sweats (episodes of excessive sweating during sleep), With associated interference in daily functioning, sleep, or overall quality of life, such that the participant would be an appropriate candidate for systemic menopausal hormone therapy in clinical practice.\n* Presence of at least one cardiovascular risk factor, defined as either:\n\n  * Hypertension (diagnosed hypertension, use of antihypertensive medication, or blood pressure ≥ 140/90 mmHg on screening).\n  * Dyslipidemia (diagnosed dyslipidemia, use of lipid-lowering therapy, LDL ≥ 3.0 mmol/L, or total cholesterol ≥ 5.2 mmol/L).\n  * Type 2 diabetes mellitus, defined as HbA1c ≥ 6.5%, fasting plasma glucose ≥ 7.0 mmol/L, or use of glucose-lowering medication.\n  * Obesity (body mass index ≥ 30 kg/m²).\n  * Current smoking.\n  * First-degree family history of premature cardiovascular disease, defined as myocardial infarction, stroke, or documented coronary artery disease occurring before age 55 years in a male relative or before age 65 years in a female relative.\n* Eligible for systemic MHT (i.e., no formal contraindication to MHT).\n* Able and willing to undergo research CMR and attend the 12-month follow-up assessment.\n* Able to provide written informed consent.\n* Not currently using systemic MHT at baseline, or willing to discontinue systemic MHT prior to randomization and remain off systemic MHT until allocation and baseline assessments are complete.\n\nExclusion Criteria:\n\n* Prior cardiovascular event or established cardiovascular disease, including myocardial infarction, stroke or TIA, coronary artery disease, heart failure, cardiomyopathy, or clinically significant valvular heart disease.\n* Uncontrolled hypertension or other unstable cardiovascular condition (e.g., unstable angina, decompensated heart failure, uncontrolled arrhythmia).\n* Formal contraindication to systemic menopausal hormone therapy, including estrogen-dependent cancer, unexplained vaginal bleeding, active severe liver disease, severe thrombophilia, antiphospholipid syndrome, prior or active VTE.\n* Standard contraindications to MRI (e.g., MRI-incompatible pacemakers or intracardiac devices, certain metallic implants, metallic foreign bodies in the eye, or severe claustrophobia not manageable).\n* Pregnant.\n* Active cancer on ongoing cardiotoxic chemotherapy.\n* Current use of systemic hormonal therapy outside the study strategy, including systemic menopausal hormone therapy, combined hormonal contraception, or systemic progestin-only contraception, with unwillingness or inability to discontinue prior to baseline and randomization.\n* Ten years or more since menopause, defined as ≥10 years from the final menstrual period or from bilateral oophorectomy\n* Participants currently using combined hormonal contraception or systemic progestin-only contraception who are willing to discontinue must complete a washout period of at least 4 weeks prior to the baseline visit and randomization"
+    },
+    "identificationModule": {
+      "briefTitle": "Hormone thERapy Effects on BRAin-HEART Health During the Menopausal Transition",
+      "nctId": "NCT07732452"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

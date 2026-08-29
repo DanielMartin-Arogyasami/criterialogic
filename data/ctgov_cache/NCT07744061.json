@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 35 to 65 years.\n* Body weight 45 to 80 kg.\n* American Society of Anesthesiologists physical status I or II.\n* Scheduled to undergo painless bronchoscopy.\n* No contraindications to intravenous anesthesia.\n* Willing and able to cooperate with study procedures.\n* Provided written informed consent.\n\nExclusion Criteria:\n\n* Body mass index greater than 40 kg/m².\n* Uncontrolled hypertension, defined as systolic blood pressure greater than 180 mmHg.\n* Severe cardiac arrhythmia.\n* Unstable angina.\n* Acute myocardial infarction within the previous 3 months.\n* Acute exacerbation of asthma.\n* Moderate to severe chronic obstructive pulmonary disease.\n* Known allergy or hypersensitivity to any study anesthetic medication.\n* Full-stomach status, intestinal obstruction, or gastric retention.\n* Coagulation dysfunction or a clinically significant bleeding tendency.\n* Mental illness or cognitive impairment that prevented cooperation with study procedures."
+    },
+    "identificationModule": {
+      "briefTitle": "Ciprofol Versus Propofol With Low-Dose Sufentanil for Painless Bronchoscopy",
+      "nctId": "NCT07744061"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-04",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

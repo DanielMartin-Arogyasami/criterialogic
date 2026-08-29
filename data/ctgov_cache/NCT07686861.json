@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-80, any gender\n* Meets the diagnostic criteria of the Cirrhosis Ascites Diagnosis and Treatment Guidelines (2023 edition), confirmed cirrhosis ascites SBP\n* At least one week before enrollment, no antibiotics or probiotics treatment\n* The patient has some organ function and is expected to live more than a year. Platelets ≥50×10⁹/L, hemoglobin ≥90 g/L (patients with anemia need appropriate treatment) ALT和AST\\<3×ULN Serum creatinine ≤1.5×ULN and creatinine clearance ≥50 mL/min\n* Voluntarily sign the informed consent form\n\nExclusion Criteria:\n\n* Patients with severe liver damage (total bilirubin levels more than 5 times the upper limit of normal, mainly with elevated direct bilirubin), hepatorenal syndrome, or hepatic encephalopathy\n* Patients with combined blood and other site (like lungs or urinary system) infections, or those with significant hemodynamic changes, or severe SBP infections\n* Patients with both intrahepatic and extrahepatic malignant tumors, or those with a history of malignant solid tumors or blood cancers\n* Patients with gastrointestinal bleeding or intestinal obstruction who need emergency treatment\n* People who have had serious cardiovascular disease in the past 6 months or currently（ Researchers consider clinically significant myocardial ischemia, myocardial infarction, or unstable angina.Severe arrhythmias that researchers consider clinically significant.Heart failure at NYHA class III-IV.Other acute serious complications that are life-threatening）\n* People with poorly controlled high blood pressure (defined as having a systolic pressure over 160mmHg or a diastolic pressure over 100mmHg despite treatment)\n* Poorly controlled diabetes (defined as blood sugar over 16.8 mmol/L during the screening period despite treatment) or hypoglycemia (blood sugar below 2.8 mmol/L during screening)\n* Select patients who have had esophageal or gastric variceal bleeding within the past 6 months, or those whom the investigator deems at risk of bleeding (if an endoscopy was done within the past 6 months, the results should be collected).\n* People with a history of immune deficiencies, including being HIV positive, having other acquired or congenital immune deficiencies, having idiopathic IgA deficiency, or who have taken systemic steroids (≥10 mg/day of prednisone equivalent) or immunosuppressive drugs within 14 days before the trial or are expected to need them during the trial.\n* Diagnosed with chronic obstructive pulmonary disease (COPD) and meets the GOLD 2026 Group E criteria\n* Patients who are currently receiving antiviral treatment for hepatitis C virus (HCV) or have received it within 12 months before screening. Patients whose antiviral treatment for hepatitis B virus (HBV) has been less than 12 months before screening.\n* Autoimmune hepatitis patients who received corticosteroid treatment in the past 6 months\n* People who underwent transjugular intrahepatic portosystemic shunt (TIPS) in the past 6 months\n* Patients with liver cirrhosis who have non-bacterial peritonitis caused by reasons other than SBP\n* Patients who are allergic to probiotic ingredients or can't take medicine orally\n* Patients with psychological or mental disorders who are unable to provide an accurate medical history or cooperate\n* Pregnant or breastfeeding women\n* Other researchers think these patients are not suitable"
+    },
+    "identificationModule": {
+      "briefTitle": "Clinical Study on the Effectiveness of Antibiotics Combined With Bifidobacterium Quadruple Live Tablets in Treating Cirrhosis With Spontaneous Bacterial Peritonitis and Preventing Recurrence",
+      "nctId": "NCT07686861"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

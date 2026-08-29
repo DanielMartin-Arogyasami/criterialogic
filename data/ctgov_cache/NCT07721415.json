@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults ≥ 18 years\n* Written informed consent\n* Elective primary total shoulder arthroplasty\n* Male patients\n\nExclusion Criteria:\n\n* Prior surgery on the operative shoulder\n* Iodine allergy\n* Participation in other clinical trials\n* Active infection"
+    },
+    "identificationModule": {
+      "briefTitle": "Iodine Drapes Used in TSA",
+      "nctId": "NCT07721415"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-23",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Both genders, aged ranged from 25 to 60 years.\n* Clinically proven painful symptomatic forms of OLP confirmed by the presence of red or erythematous changes, or shallow ulcerations with fine lacy lines at the periphery of the lesion accentuated by stretching and not eliminated by rubbing (Wickham's striae)\n* Histopathological proven symptomatic OLP\n\nExclusion Criteria:\n\n* History of drug induced lichenoid lesion.\n* Presence of systemic conditions as; serious active or recurrent infections, malignancy, diabetes mellitus, hypertension, or significant heart, liver, or renal diseases. Assessed using medical questionnaire guided by Cornell Medical Index.\n* Smoking\n* Known hypersensitivity or severe adverse effects to the treatment drugs or to any ingredient of their preparation as mentioned in history\n* Pregnancy or breast-feeding.\n* History of previous treatments potentially effective on OLP such as antimalarial agents, retinoid, corticosteroids, or immunosuppressive drugs from less than 2 weeks for topical medications, and 4 weeks for systemic medications prior to starting the study.\n* Loss of pliability or flexibility in the tissues involved by the lesions of OLP.\n* Histological signs of epithelial dysplasia or lichenoid lesions within the biopsied sites.\n* Patients with extensive skin lesions and indicated for systemic corticosteroids.\n* Vulnerable groups (Handicapped, orphans or prisoners)"
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Aloe Vera Compared to Corticosteroid in Topical Treatment of Oral Lichen Planus and on Salivary Levels of Tumor Necrosis Factor Alpha",
+      "nctId": "NCT07792512"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

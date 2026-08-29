@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Men and women aged 50 to 69.\n2. Have participated in the early detection program for colorectal cancer.\n3. Positive result in the fecal occult blood test (≥20 μg Hb/g feces).\n4. Scheduled screening colonoscopy at Hospital Clínic de Barcelona.\n5. Signed informed consent form.\n\nExclusion Criteria:\n\n1. Severe renal failure (grade IV or V) (Annex 6, Stages of Renal Impairment) and/or congestive heart failure (New York Heart Association Scale Class III and IV) (Annex 7, NYHA Scale).\n2. Colonoscopy within the last year.\n3. Barthel Index of \\<20 (Annex 5, Barthel Index) and who also meet the Rome IV Criteria for the diagnosis of functional constipation (Annex 8, Rome IV Criteria).\n4. Mental disability or severe mental disorder (schizophrenia and other psychotic disorders, recurrent severe major depressive disorders, severe obsessive-compulsive disorder, severe personality disorders, and bipolar disorders).\n5. Do not understand spoken or written Catalan or Spanish.\n6. Partial or total colon resection.\n7. Personal history of CRC or colorectal pathology that requires specific follow-up (ulcerative colitis, Crohn's disease, or colorectal adenomas).\n8. Terminal illness or serious illness/disability that contraindicates subsequent colon study.\n9. Gastrointestinal disorders that contraindicate the use of study products (gastric emptying disorders, gastrointestinal perforation or obstruction, ileus, toxic megacolon).\n10. Hypermagnesemia.\n11. Rhabdomyolysis.\n12. Phenylketonuria.\n13. Glucose-6-phosphate dehydrogenase deficiency.\n14. Hypersensitivity to the active ingredients of excipients.\n15. Pregnancy or breastfeeding."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy and Tolerability of a Simethicone-containing Evacuating Solution for Colorectal Cancer Screening Colonoscopy",
+      "nctId": "NCT07696793"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

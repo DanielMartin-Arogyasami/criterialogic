@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 6 to 12 years, both sexes;\n2. American Society of Anesthesiologists (ASA) physical status I or II;\n3. Scheduled for elective gastroscopy or esophagogastroduodenoscopy (EGD) under anesthesia;\n4. Preoperative oxygen saturation of 100% while breathing room air;\n5. Weight within the normal range for age and gender according to the following reference values (inclusive of endpoints)\n\nExclusion Criteria:\n\n1. Contraindications to sedation or anesthesia, or a history of adverse events related to sedation/anesthesia；\n2. Known or suspected allergy to the study drug, benzodiazepines, or their reversal agents；\n3. History of respiratory disease within the past 2 weeks, or known difficult airway (modified Mallampati score III or IV)；\n4. History of cardiac, hepatic, renal dysfunction, or metabolic diseases；\n5. Patients with congenital diseases or other conditions that may interfere with the evaluation of efficacy outcomes."
+    },
+    "identificationModule": {
+      "briefTitle": "Comparing Esketamine and Remazolam With Propofol for Breathing Safety in Pediatric Gastroscopy",
+      "nctId": "NCT07748884"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

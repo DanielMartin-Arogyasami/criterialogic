@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥21 years at the time of enrollment\n* Confirmed diagnosis of ulcerative colitis (UC) or Crohn's disease (CD)\n* Eligible for treatment with biologic therapy for IBD, defined as failure of prior conventional therapy and/or prior biologic therapy (excluding IL-23p19 antagonists)\n* No prior exposure to mirikizumab and no contraindications to mirikizumab\n* Ability to provide informed consent\n* Willingness to comply with study procedures and follow-up requirements\n\nExclusion Criteria:\n\n* Prior exposure to IL-23p19 antagonists (e.g., mirikizumab, risankizumab, guselkumab)\n* Prior exposure to small molecule targeted therapies for IBD (e.g., JAK inhibitors or S1P receptor modulators)\n* Participation in an interventional clinical trial within 90 days prior to enrollment\n* History of extensive colorectal resection, including:\n* Total proctocolectomy (for UC), or\n* Surgical removal of two or more intestinal segments (for CD)\n* Any condition that, in the investigator's judgment, may compromise patient safety, data integrity, or ability to participate in the study"
+    },
+    "identificationModule": {
+      "briefTitle": "INSIGHT-IBD Pragmatic Study",
+      "nctId": "NCT07686757"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

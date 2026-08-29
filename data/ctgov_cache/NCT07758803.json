@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-80 years, either sex American Society of Anesthesiologists (ASA) physical status classification I-III Scheduled for elective laparoscopic cholecystectomy under general anesthesia Able to understand the study protocol and provide written informed consent Not concurrently enrolled in other clinical studies\n\nExclusion Criteria:\n\n* Known hypersensitivity to any anesthetic agent used in the study Severe cardiac, pulmonary, hepatic, or renal dysfunction Active systemic infectious disease Psychiatric disorder or use of sedative agents within the preceding two weeks Refusal to participate"
+    },
+    "identificationModule": {
+      "briefTitle": "A Randomized Controlled Trial Comparing the Effects of Different Anesthetic Sedatives on PONV in Laparoscopic Cholecystectomy",
+      "nctId": "NCT07758803"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-11",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

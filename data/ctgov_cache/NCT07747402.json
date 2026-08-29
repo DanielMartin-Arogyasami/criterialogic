@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 years or older\n* Diagnosis of type 2 diabetes mellitus for at least 180 days\n* No insulin treatment of any kind within the past 3 months\n* Currently treated with at least one non-insulin glucose-lowering agent (oral agent or GLP-1 receptor agonist) with inadequate glycemic control, and a clinical indication to start basal insulin\n* HbA1c of 7.0% to 11.0% at screening\n* Body mass index of 35.0 kg/m2 or lower\n* Able and willing to wear a continuous glucose monitor per protocol, to undergo day-4 fasting blood glucose assessment, and to attend all scheduled visits\n* Provides written informed consent\n\nExclusion Criteria:\n\n* Type 1 diabetes, specific types of diabetes, or recent acute complications such as diabetic ketoacidosis or hyperosmolar hyperglycemic state\n* Level 2 or level 3 hypoglycemia within the past 3 months, or hypoglycemia unawareness\n* Current use, or use within the past 3 months, of systemic glucocorticoids (excluding inhaled or topical preparations) or other agents that markedly affect blood glucose\n* Moderate to severe renal impairment (eGFR below 45 mL/min/1.73 m2 by the CKD-EPI 2021 creatinine equation) or need for dialysis\n* Active liver disease, abnormal liver function (ALT or AST above 3 times the upper limit of normal), or decompensated cirrhosis\n* Marked edema, large-volume ascites, amputation, or other conditions that may impair accurate body weight measurement or distort weight-based dosing\n* Known allergy to insulin icodec or its excipients\n* Extensive skin lesions, allergy to continuous glucose monitor adhesive, or anticipated frequent magnetic resonance imaging that may interfere with monitor wear or interpretation\n* Active malignancy\n* Acute cardiovascular or cerebrovascular event (such as myocardial infarction, stroke, or unstable angina) within the past 6 months, or other major illness with short expected survival or poor compliance\n* Pregnancy or lactation, or women of childbearing potential with pregnancy plans\n* Participation in another drug or device clinical trial within the past 3 months\n* Other conditions judged by the investigator to be unsuitable for enrollment or likely to affect participant safety or data reliability"
+    },
+    "identificationModule": {
+      "briefTitle": "Insulin Icodec Initiation Strategies and Day-4 Supplemental Dosing in Type 2 Diabetes",
+      "nctId": "NCT07747402"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-05",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

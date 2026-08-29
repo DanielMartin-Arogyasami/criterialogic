@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n\\- The study included 30 patients with Bell's palsy diagnosed according to the recommendations of American Academy of Otolaryngology-Head and Neck Surgery Foundation\n\nExclusion Criteria:\n\n* Patients were excluded if they were previously submitted to injection therapy or surgical intervention for management of Bell's palsy. They were also excluded if they had associated mental illness or advanced systemic conditions (e.g. uncontrolled diabetes, uncontrolled hypertension, malignant disease, immunocompromised conditions)."
+    },
+    "identificationModule": {
+      "briefTitle": "Ultrasound-guided Combined Perineural and Intramuscular Dextrose Injection for Management of Refractory Bell's Palsy",
+      "nctId": "NCT07728331"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

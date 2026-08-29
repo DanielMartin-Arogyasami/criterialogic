@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients aged 18 years or older presenting in primary care. Clinical diagnosis of subacromial impingement syndrome (shoulder pain from tendon compression) or carpal tunnel syndrome (wrist nerve compression). Moderate to severe pain intensity, defined as a score of greater than or equal to 3 on the Visual Analog Scale (VAS \\>= 3) at baseline. Patient must understand the study procedures and provide written informed consent.\n\nExclusion Criteria:\n\n* Previous corticosteroid infiltration in the target joint/structure within the last 6 months. History of major trauma, active infection, or previous surgery in the affected shoulder or wrist. Underlying systemic inflammatory diseases (for example, rheumatoid arthritis, polymyalgia rheumatica). Known hypersensitivity or contraindications to corticosteroids (Betamethasone) or local anesthetics (Mepivacaine). Pregnancy or breastfeeding. Red flags suggesting tumor, fracture, or severe neurological deficit."
+    },
+    "identificationModule": {
+      "briefTitle": "Clinical and Economic Evaluation of Point-of-care Ultrasound-guided Infiltration for Subacromial and Carpal Tunnel Syndromes in Primary Care: a Cluster-randomized Study Protocol.",
+      "nctId": "NCT07692516"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-09",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

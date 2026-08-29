@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults who are at moderate risk for CMV after transplant (CMV IGG+, including D+/R+ or D-/R+)\n* Adults who received a kidney transplant, liver transplant, or any combination thereof\n\nExclusion Criteria:\n\n* Known contraindication to letermovir or its excipients\n* Current participation in another CMV related study\n* Unwilling or unable to participate in the study protocol"
+    },
+    "identificationModule": {
+      "briefTitle": "Letermovir for R+ Study",
+      "nctId": "NCT07706166"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-15",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

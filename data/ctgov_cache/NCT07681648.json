@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\nAdults aged 18-65 years. Either sex. American Society of Anesthesiologists (ASA) physical status I-II. Scheduled for elective lumbar spine surgery under general anesthesia. Diagnosis of lumbar disc herniation, lumbar spinal stenosis, or degenerative disc disease requiring surgical intervention.\n\nAbility to understand the study procedures and provide written informed consent.\n\nExclusion Criteria:\n\nChronic opioid use or opioid dependence. Known hypersensitivity or allergy to amide local anesthetics (e.g., bupivacaine).\n\nPrevious lumbar spine surgery at the intended operative level. Pre-existing major neurological deficits. Active infection at the planned needle insertion site. Coagulopathy or ongoing anticoagulant therapy contraindicating regional anesthesia.\n\nPregnancy or lactation. Severe hepatic, renal, or uncontrolled systemic disease. Body mass index (BMI) \\>35 kg/m² or anatomical conditions preventing ultrasound-guided block placement.\n\nRefusal or inability to provide written informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Compined Lumber Longissimus Plane Block and Multifidus Longissimus Plane Block Versus Infiltration Field Block in Lumber Spine Surgery",
+      "nctId": "NCT07681648"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-02",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

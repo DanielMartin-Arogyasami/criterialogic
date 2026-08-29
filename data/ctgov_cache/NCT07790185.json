@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Subjects ages 18 to 45 years old.\n2. Stable refraction (within ± 0.50 D) as determined by manifest refraction spherical equivalent for a minimum of 12 months prior to surgery or stability as determined by the investigator.\n3. Myopia with or without astigmatism and MRSE within the range of indications for wavelight plus (myopia up to -8.00D, astigmatism up to -3.00D, S.E. more than -1.00 and up to -9.00D)\n4. Best corrected distance visual acuity (BCDVA) of 20/20 or better (≥83 letters) in each eye.\n5. Subjects who have elected to undergo bilateral LASIK targeted for emmetropia.\n6. Subjects must be able and willing to return for scheduled follow-up examinations after surgery.\n7. Subjects must be able to read, understand and provide written informed consent on the Institutional Review Board (IRB) approved Informed Consent Form (ICF) and provide authorization as appropriate for local privacy regulations.\n8. Mesopic pupil size ≥4.5mm\n9. Less than 0.75D spherical equivalent differences between Sightmap measured refraction SE and the subjective manifest refraction (MRSE)\n10. Subjects who regularly drive at night and expect to continue night driving throughout the duration of the study, as determined by investigator assessment\n\nExclusion Criteria:\n\n1. Pregnant or nursing women, or those who plan to become pregnant over the course of this clinical study or have another condition with associated fluctuation of hormones that could lead to refractive changes.\n2. Dry eye syndrome that is unable to be controlled with ocular lubricant(s) or medication(s) and which may confound study outcomes in the opinion of the Investigator.\n3. Previous corneal ocular surgery\n4. History of evidence of active or inactive corneal disease or retinal vascular disease, keratoconus or glaucoma or glaucoma suspect.\n5. Serious acute, chronic, or systemic, non-ophthalmic disease or illness that would increase the operative risk, confound the outcome(s) of the study or which may preclude study completion (e.g., immunocompromised, connective tissue disease, clinically significant atopic disease, uncontrolled diabetes, etc.), in the opinion of the Investigator.\n6. Ocular condition (other than high myopia) that may predispose the subject to future complications, in the opinion of the Investigator.\n7. Subjects who, in the judgment of the Investigator, present any emotional, physiological, or anatomical condition which may preclude participation in this study or provide an inappropriate landscape for the intended study treatment.\n8. Patients with a calculated residual stromal depth \\<250 um"
+    },
+    "identificationModule": {
+      "briefTitle": "Evaluation of Mesopic Visual Acuity and Patient Satisfaction Following Ray-Tracing-Guided LASIK",
+      "nctId": "NCT07790185"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

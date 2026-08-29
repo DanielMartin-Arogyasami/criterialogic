@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age \\>18 years of any gender\n2. Chronic heart failure (New York Heart Association \\[NYHA\\] functional class II, III, or IV), a reduced left ventricular ejection fraction of less than 45% within 12 months before randomization\n3. Elevated natriuretic peptide level: (For patients in sinus rhythm, the criteria include a plasma B-type natriuretic peptide (BNP) level of at least 300 pg per milliliter or an NT-proBNP level of at least 1000 pg per milliliter. For patients in atrial fibrillation, the criteria included a BNP level of at least 500 pg per milliliter or an NT-proBNP level of at least 1600 pg per milliliter).\n4. Evidence of worsening heart failure.\n5. The percentage of enrolled patients with an estimated glomerular filtration rate of 15 to 30 ml per minute per 1.73 m2 of body-surface area was capped at 15%.\n6. Patients on guideline-based medical therapy 3 months\n7. Written and informed consent.\n\nExclusion Criteria:\n\n1. Systolic blood pressure of less than 100 mm Hg.\n2. Concurrent or anticipated use of long-acting nitrates.\n3. Use of intravenous inotropes or implantable left ventricular assist devices.\n4. Not on standard of care medical treatment for heart failure.\n5. Unwillingness to give consent"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparing the Efficacy and Safety of Vericiguat With Standard Medical Treatment in Heart Failure Patients",
+      "nctId": "NCT07697833"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

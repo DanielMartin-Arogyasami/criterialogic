@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 20 to 70 years.\n* Type 1 or Type 2 diabetes mellitus.\n* Diabetic vitreous hemorrhage secondary to proliferative diabetic retinopathy.\n* Treatment-naïve diabetic vitreous hemorrhage or recurrent/residual vitreous hemorrhage following previous panretinal photocoagulation.\n* Phakic or pseudophakic eyes.\n* Able and willing to provide written informed consent.\n\nExclusion Criteria:\n\n* Significant tractional retinal detachment or retinal traction requiring immediate surgery.\n* Previous ocular surgery other than cataract surgery.\n* Previous intravitreal pharmacologic treatment within the preceding 6 months.\n* Any type of glaucoma.\n* Active ocular infection or significant ocular surface disease.\n* No light perception vision.\n* Known hypersensitivity to ranibizumab or any component of the study medication.\n* Refusal or inability to provide informed consent."
+    },
+    "identificationModule": {
+      "briefTitle": "Outcomes of Intravitreal Ranibizumab Injection for Diabetic Vitreous Hemorrhage",
+      "nctId": "NCT07690800"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

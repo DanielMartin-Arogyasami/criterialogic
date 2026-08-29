@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* fulfill ASAS classification criteria for axSpA and/or modified New York classification criteria for AS\n* Active axSpA (ASDAS ≥ 2.1 and/or BASDAI ≥ 4)\n* Failure of or intolerance to ≥1 TNF\n* Participants of reproductive potential must agree to use any form of effective contraception during the study period, in accordance with standard clinical practice and FDA labeling for the assigned study medication\n* Ability to provide informed consent\n\nExclusion Criteria:\n\n* Previously received an IL-17i or JAKi\n* Active infection requiring antimicrobials\n* Contraindications to either treatment arm:\n\n  * Inflammatory bowel disease (IBD)- Crohn's disease or Ulcerative Colitis\n  * Active cancer or cancer remission within the past 3 years (apart from non-melanoma skin cancer (NMSC) and cervical intraepithelial neoplasia (CIN)\n  * History of stroke, heart attack, or blood clots (venous or arterial)\n  * Cirrhosis\n  * End-stage renal disease (GFR \\<15) or dialysis\n  * Human Immunodeficiency Virus (HIV) positive\n  * Pregnant or lactating\n* Concomitant use of other biologic or targeted synthetic disease-modifying anti-rheumatic drug (tsDMARD) therapy"
+    },
+    "identificationModule": {
+      "briefTitle": "A Pragmatic Trial of Interleukin-17 Inhibition Versus Janus Kinase Inhibition After Tumor Necrosis Factor-alpha Inhibitor Failure in Axial Spondyloarthritis",
+      "nctId": "NCT07770646"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

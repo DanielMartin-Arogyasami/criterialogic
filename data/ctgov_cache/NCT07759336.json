@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Knee pain for greater than 6 months.\n* Moderate-to-severe knee pain (\\>3/10) due to osteoarthritis, as defined by American College of Rheumatology and EULAR diagnostic criteria (Zhang 2010, Altman 1986) on \\>50% of days in the past month.\n* KL grade 2-4 (Kellgren and Lawrence 1957) indicating significant degenerative changes on knee X-ray. This will be determined on evaluation of weight-bearing clinical X-rays on review of medical records. In the infrequent situation that the patient does not have an X-ray on review of their medical records, then the patient will obtain weight-bearing knee X-rays as part of the Screening Visit.\n* Age: 45-80 years old\n* Gender: Males and females will be recruited.\n* Language: only English-speaking subjects will be included.\n\nExclusion Criteria:\n\n* Inflammatory arthritis (e.g. rheumatoid arthritis).\n* More intense pain due to another chronic pain syndrome (e.g. fibromyalgia, hip osteoarthritis)\n* Significant pain or weakness in the lower extremities due to a neurological condition (e.g. lumbar radiculopathy, paresis due to stroke)\n* New, ongoing acute pain\n* Recent use of duloxetine defined as any use within the last 3 months\n* Current use of antidepressants or tramadol\n* Current routine use of more than 30 mg oral morphine equivalents per day (use of \\<=30 mg OME does not exclude the participant).\n* New treatment that may help knee osteoarthritis (including medication, exercise, behavioral, or complementary and integrative treatments) started in the last month. Stable use of treatments for greater than 1 month does not exclude the participant.\n* Unwillingness to maintain current knee osteoarthritis treatments for the duration of the study. This means that eligible participants must plan for the following: medications and dietary supplements should not change substantially in frequency or dose; behavioral therapy, exercise therapy, and complementary and integrative therapies should be consistent; and there should be no interventional treatments planned for lower extremity musculoskeletal conditions (e.g. joint steroid injections, knee radiofrequency ablation, knee replacement surgery).\n* Recent knee intra-articular injection of steroid or other agent (greater than 1 month does not exclude the participant)\n* Recent knee radiofrequency ablation (greater than 3 months does not exclude the participant)\n* Recent knee arthroscopic surgery (greater than 3 months does not exclude the participant)\n* History of knee replacement or open knee surgery on the index knee, defined as the more painful knee on average over the last month.\n* Inability to walk or climb stairs without significant assistance (e.g. a one-person assist, use a wheelchair; use of a cane does not exclude the participant).\n* Inability to participate in study procedures (e.g. cognitive impairment limiting ability to understand directions, inability to understand and read English)\n* Uncontrolled or unstable medical disorder preventing participation in study procedures\n* History of brain surgery\n* Tattoos on sensory testing sites\n* Pregnancy\n* History of severe renal impairment defined by GFR \\< 30 ml/min or, if renal function testing is not available on EMR review, patient-reported history of acute or chronic kidney disease of any severity\n* History of chronic liver disease or cirrhosis\n* History of angle-closure glaucoma"
+    },
+    "identificationModule": {
+      "briefTitle": "Personalized Analgesia Through Central Nervous System Engagement to Unlock Performance",
+      "nctId": "NCT07759336"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

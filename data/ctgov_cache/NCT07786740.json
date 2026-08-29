@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-80 years\n* American Society of Anesthesiologists (ASA) physical status I-II\n* Scheduled for elective laparoscopic cholecystectomy\n* Provided written informed consent to participate\n\nExclusion Criteria:\n\n* Refusal to participate\n* Uncontrolled hypertension\n* Uncontrolled diabetes mellitus\n* History of malignancy\n* Severe cardiovascular disease, including congestive heart failure or myocardial infarction\n* Severe cerebrovascular disease, including previous stroke\n* Hepatic dysfunction\n* Renal dysfunction\n* Pregnancy or lactation\n* Intracranial space-occupying lesion or any condition predisposing to increased intracranial pressure\n* Known optic nerve pathology"
+    },
+    "identificationModule": {
+      "briefTitle": "VIMA vs TIVA and ONSD in Laparoscopic Cholecystectomy",
+      "nctId": "NCT07786740"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-26",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

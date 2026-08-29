@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1\\. Unilateral invasive benign or malignant tumors of the maxilla that requires orbital floor resection.\n\n3\\. Brown class III maxillectomy defects patients 2. Patients with immediate orbital floor reconstruction will be enrolled in this study.\n\nExclusion Criteria:\n\n1. Medically compromised patients contradicting operation.\n2. Delayed orbital floor reconstruction cases will be excluded.\n3. Bilateral cases will be excluded."
+    },
+    "identificationModule": {
+      "briefTitle": "Patient-specific PEEK Implants for Post-maxillectomy Orbital Floor Reconstruction",
+      "nctId": "NCT07789392"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

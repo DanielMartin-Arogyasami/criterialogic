@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n\\- Presenting for singleton elective cesarean delivery at term gestation.\n\nExclusion Criteria:\n\n* allergy to buprenorphine or morphine\n* will not have neuraxial anesthesia\n* chronic pain conditions\n* opiate based medications"
+    },
+    "identificationModule": {
+      "briefTitle": "BUprenorphine Versus Morphine for Postcesarean Analgesia (BUMP)",
+      "nctId": "NCT07786012"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-25",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Virologically suppressed men living with HIV, transitioning from a DRV/c (800 mg/150 mg) + TDF/FTC (300 mg/200 mg) regimen for at least 48 weeks prior to the study\n* Viral suppression for 48 weeks prior to the study\n* Agree to participate in the study by signing a written informed consent form\n* Age ≥18 years\n* Glomerular filtration rate (GFR) by CDK-EPI ≥60 mL/min\n* Beneficiaries of the Mexican Social Security Institute (IMSS) treated at the Infectious Diseases Hospital of the \"La Raza\" National Medical Center\n\nExclusion Criteria:\n\n* Withdrawal of informed consent\n* Loss of coverage\n* Failure to attend sample collection within the required timeframe"
+    },
+    "identificationModule": {
+      "briefTitle": "Effectiveness and Safety of Darunavir/Cobicistat Plus Lamivudine Compared With Darunavir/Cobicistat Plus Tenofovir Alafenamide/Emtricitabine in Virologically Suppressed People Living With HIV at 24 and 48 Weeks of Follow-up",
+      "nctId": "NCT07678268"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

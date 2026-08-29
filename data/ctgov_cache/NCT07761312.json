@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:(1) Age between 18 and 65 years, with no gender restriction; (2) BMI ≥ 18 kg/m²; (3) ASA classification I-III; (4) Elective surgeries that are not related to the chest or brain, with an anticipated duration of 60-240 minutes; (5) Anticipated blood loss \\< 500 mL; (6) Voluntary consent to sign the Informed Consent Form.\n\nExclusion Criteria:(1) Abuse or long-term use of opioid medications; (2) Severe hepatic and renal dysfunction (ALT/AST \\> 2×ULN, Cr \\> 176 μmol/L); (3) Serious cardiovascular diseases, including but not limited to: Severe cardiac arrhythmias or conduction abnormalities, such as ventricular arrhythmias requiring clinical intervention, second- or third-degree atrioventricular block, or uncontrolled atrial fibrillation; a history of acute myocardial infarction, unstable angina pectoris within the past 6 months, or having undergone coronary stenting or coronary artery bypass surgery.\n\nCongestive heart failure classified as NYHA Class II or above, or left ventricular ejection fraction (LVEF) \\< 50%.\n\n(4) A history of cerebrovascular accidents (including ischemic and hemorrhagic strokes) or transient ischemic attacks within the past 6 months; (5) Uncontrolled severe hypertension: resting systolic blood pressure ≥ 160 mmHg and/or diastolic blood pressure ≥ 100 mmHg (confirmed by repeated measurements); (6) Symptomatic aortic dissection, or lower limb arterial occlusion requiring treatment.(4) Severe blood system disorders, including but not limited to severe anemia, aplastic anemia, acute leukemia, thrombotic thrombocytopenic purpura, etc.\n\n(5) Difficulty in predicting airway management; (6) Pregnancy or lactation; (7) Allergy to opioids/propropofol/eggs/soybeans; (8) Participation in other clinical trials within the past 3 months.\n\n\\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Afentanil and Remifentanil for Anesthesia Quality and Recovery",
+      "nctId": "NCT07761312"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

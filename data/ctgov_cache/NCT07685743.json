@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age ≥18 years\n* Undergoing primary total knee arthroplasty (TKA) or total hip arthroplasty (THA) for osteoarthritis\n* Ability to provide written informed consent\n* Willingness to comply with study protocol\n\nExclusion Criteria:\n\n* History of venous thromboembolism (DVT or PE)\n* Active malignancy\n* Allergy or contraindication to tranexamic acid (TXA)\n* Post-operative anticoagulation therapy other than aspirin\n* History of color blindness or retinal disease"
+    },
+    "identificationModule": {
+      "briefTitle": "Extended Post-operative Oral TXA in Primary THA",
+      "nctId": "NCT07685743"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

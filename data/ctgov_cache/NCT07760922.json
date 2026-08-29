@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18-80 years;\n2. Acute ischemic stroke; time from last known well to randomization ≤ 24 hours;\n3. Pre-randomization NIHSS score 4-10, with at least one of item 5 (upper limb) or item 6 (lower limb) ≥ 1;\n4. Pre-stroke modified Rankin Scale (mRS) ≤ 1;\n5. Written informed consent provided by the patient or a legally authorized representative.\n\nExclusion Criteria:\n\n1. Intracranial hemorrhage confirmed by CT or MRI;\n2. Has received or is planned to receive reperfusion therapy (thrombolysis or endovascular treatment);\n3. Any definite cardioembolic source: chronic/paroxysmal atrial fibrillation, sick sinus syndrome, mitral stenosis, mechanical heart valve, endocarditis, intracardiac thrombus or vegetation, myocardial infarction within 3 months, dilated cardiomyopathy, left atrial spontaneous echo contrast, ejection fraction \\< 30%;\n4. Definite indication for anticoagulation (atrial fibrillation, mechanical heart valve, deep vein thrombosis, pulmonary embolism);\n5. Severe systemic disease (e.g., severe infection, severe hepatic or renal dysfunction);\n6. Allergy to tirofiban and/or aspirin;\n7. History of intracranial hemorrhage;\n8. Planned use of NSAIDs affecting platelet function;\n9. Gastrointestinal bleeding or major surgery within the past 3 months;\n10. Planned or likely revascularization (any angioplasty or vascular surgery) within the next 3 months;\n11. Planned surgery or intervention requiring discontinuation of antiplatelet therapy;\n12. Stroke caused by angiography or surgery;\n13. Prior non-atherosclerotic arterial disease, including moyamoya disease, arterial dissection, fibromuscular dysplasia;\n14. Other structural brain disease (vascular malformation, tumor, abscess, multiple sclerosis, etc.) confirmed by CT/MRI;\n15. Pregnancy or lactation;\n16. Prior neurologic or psychiatric disease that would interfere with neurologic assessment;\n17. Participation in another clinical trial;\n18. Advanced disease with expected survival \\< 6 months;\n19. Expected inability to complete follow-up."
+    },
+    "identificationModule": {
+      "briefTitle": "Tirofiban Combined With Aspirin in Moderate Ischemic Stroke",
+      "nctId": "NCT07760922"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

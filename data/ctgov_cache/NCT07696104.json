@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Adults scheduled for elective uncomplicated phacoemulsification cataract surgery.\n2. Ability and willingness to provide written informed consent.\n3. No abnormalities detected on preoperative anterior segment examination.\n4. No abnormalities detected on preoperative posterior segment examination.\n5. Willingness and ability to attend follow-up visits at 6 and 12 weeks after cataract surgery.\n\nExclusion Criteria:\n\nThe exclusion criteria for the study were:\n\n1. Systemic diseases that could affect the macula (e.g. diabetes).\n2. Topical or systemic medications that could affect the macula, e.g. chloroquine.\n3. Intraoperative complications.\n4. Coexisting ocular diseases.\n5. Previous ocular surgery.\n6. Patients who. for various reasons. declared unwillingness to attend follow-up visits 6 and 12 weeks after cataract surgery."
+    },
+    "identificationModule": {
+      "briefTitle": "Efficacy of Nonsteroidal Anti-Inflammatory Drugs for the Prevention of Cystoid Macular Edema Following Cataract Phacoemulsification",
+      "nctId": "NCT07696104"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

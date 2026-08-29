@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age: 18-45\n* Good physical health\n* Willing and able to give informed consent to participate in the study\n* Sufficient knowledge of English language to understand and complete the study tasks\n\nExclusion Criteria:\n\n* Current DSM-5 axis-I diagnosis (based on SCID results at screening) or history of a severe psychological disorder such as psychotic disorder, bipolar disorder, alcohol or substance abuse, or post-traumatic stress disorder\n* Previous or current extended period of persistent thoughts about ending one's life (longer than 5 days) or previous suicide attempt\n* Clinical diagnosis of attention deficit hyperactivity disorder (ADHD) or on the waiting list for assessment\n* Any intake of CNS-medication in the last 6 weeks (including as part of another study)\n* Any current intake of blood pressure or other heart medication, including beta blockers\n* Any current or previous medical condition or medication intake (last month) of any medication that, in the opinion of the study medic, may interfere with the safety of the participant or the scientific integrity of the study.\n* Severely underweight (BMI \\<17) or very obese (BMI \\>40), OR otherwise deemed unsuitable for the study due to weight-related concerns at the discretion of the study medic\n* History of cardiovascular, cerebrovascular disease\n* Breathing or lung-related illnesses, significant liver or kidney problems, or severe gastrointestinal conditions.\n* High blood pressure (defined as repeated measurements of blood pressure where either the systolic or the diastolic blood pressure, or both, are at or above 140/90 mmHg (https://doi.org/10.1093/eurheartj/ehy339)\n* History of recurrent rashes or history of allergic reactions to relevant substances (atomoxetine, placebo treatment)\n* Significant physical (including visual and auditory) or language impairment that would make complying with the study protocol challenging.\n* History of palpitations with sudden onset and offset,\n* History of fainting on exertion or in response to fright or loud noise\n* Family history of sudden death in a first-degree relative under 40 years of age\n* Women: pregnancy (as determined by a urine test), breast-feeding\n* Significant consumption of caffeine (more than about 6 cups of strong coffee per day), nicotine (more than 5 cigarettes per day, or equivalent amount), alcohol (more than two pints of beer a day or equivalent)\n* Participation in a study that involves the use of medication in the past 3 months\n* Participation in another study using similar tasks in the past 6 months"
+    },
+    "identificationModule": {
+      "briefTitle": "Study of the Effects of Atomoxetine on Motivation",
+      "nctId": "NCT07771595"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-18",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

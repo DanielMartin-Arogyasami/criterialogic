@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Children aged 2 - 15 years,\n* Undergoing general anaesthesia for minor ambulatory surgery or procedures with a maximum of 1 overnight stay postoperatively\n* ASA I or III\n\nExclusion Criteria:\n\n* Currently taking regular dexamethasone or ondansetron\n* Currently taking regular steroids, including inhaled corticosteroids\n* Anaesthetic plan to give dual PONV prophylaxis\n* Known hypersensitivity to the active substance or to any of the excipients listed\n* Language barriers impeding data collection\n* Department for Child Protection and Family Support is involved in their care\n* Planned admissions to the Paediatric Intensive Care Unit (PICU)\n* Oncology patients\n* Severe developmental delay\n* ASA III or above\n* Significant cardiorespiratory conditions"
+    },
+    "identificationModule": {
+      "briefTitle": "Sleep Quality - Comparing the Effect of Ondansetron or Dexamethasone Given as Routine Prophylaxis Intraoperatively to Prevent Post Operative Nausea and Vomiting (SCORPION)",
+      "nctId": "NCT07777276"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-20",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

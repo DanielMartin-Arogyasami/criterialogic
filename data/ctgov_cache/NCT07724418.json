@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female ≥ 18 years of age\n* Normal skin sensation at both nasal ala and volar forearms assessed by pinprick\n* Ability to provide informed consent\n\nExclusion Criteria:\n\n* Previous adverse reaction to local anesthetic or any components of the local anesthetics being evaluated\n* Pregnant or breastfeeding volunteers (assessed by self-report)\n* Patients taking monoamineoxidase inhibitors (MAOI) or antidepressants of the triptyline or imipramine types"
+    },
+    "identificationModule": {
+      "briefTitle": "Split Face Study of the Duration of Local Anesthetics - Fifth Arm",
+      "nctId": "NCT07724418"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-24",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

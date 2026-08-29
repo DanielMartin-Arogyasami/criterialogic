@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥18 years.\n2. Confirmed newly diagnosed primary ITP with a platelet count \\<30 × 10\\^9/L.\n3. No prior ITP-related treatment before enrollment, except for standard-dose corticosteroids and/or IVIG for ≤5 days.\n4. Able to understand the study and provide signed informed consent.-\n\nExclusion Criteria:\n\n1. Use of corticosteroids or immunosuppressants for a non-ITP condition within 3 months.\n2. Contraindication to corticosteroid therapy.\n3. Arterial or venous thromboembolic event within 3 months.\n4. Pregnant or breastfeeding women.\n5. Current treatment with another investigational drug.\n6. Any other medical history or condition that, in the investigator's judgment, makes the participant unsuitable for the study.\n\n   \\-"
+    },
+    "identificationModule": {
+      "briefTitle": "Multi-target Drugs Sequential Combination Therapy in Adults Patients With Newly Diagnosed Primary Immune Thrombocytopenia",
+      "nctId": "NCT07788456"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-26",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

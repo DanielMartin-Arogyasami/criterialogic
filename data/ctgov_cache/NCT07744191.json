@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. One of the following:\n\n   1. A history of psoriasis as confirmed by a board-certified dermatologist OR\n   2. A history of psoriatic arthritis as confirmed by a board-certified rheumatologist\n2. Age ≥ 18 \\& \\< 90 years\n3. Able and willing to provide written informed consent for the study\n4. English-speaking unless a translated informed consent form is approved\n5. No previous antiplatelet or anticoagulant use for 14 days prior to enrollment\n\nExclusion Criteria:\n\n1. A prior history of a myocardial infarction, stroke/TIA, or occlusive peripheral arterial disease\n2. Chronic antiplatelet/anticoagulant use that is not able to be stopped at least 14 days prior to study enrollment\n3. Uncontrolled hypertension resting systolic blood pressure \\> 180 mm Hg or diabetes HbA1c \\> 10%\n4. Known active cancer receiving treatment\n5. Pregnancy\n6. Anemia (hemoglobin \\< 9 mg/dl) or thrombocytopenia (Platelet count \\<75), or thrombocytosis (Platelet count \\>600)\n7. A history of severe bleeding or bleeding disorders\n8. Active gastrointestinal ulcer\n9. Active pathological bleeding.\n10. Chronic kidney disease (CrCl \\< 30ml/min)\n11. Congestive heart failure\n12. Known hypersensitivity to or allergy to aspirin, clopidogrel, or any of the components of the study capsules\n13. History of aspirin-exacerbated respiratory disease or asthma induced by salicylates or NSAIDs\n14. Currently breastfeeding\n15. Persons of childbearing potential unwilling to use acceptable contraception during the study"
+    },
+    "identificationModule": {
+      "briefTitle": "A Clinical Trial of Antiplatelets in Psoriasis",
+      "nctId": "NCT07744191"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-04",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

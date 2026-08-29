@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 years or older of either sex.\n* Diagnosis of septic shock according to Sepsis-3 criteria, defined as sepsis with persistent hypotension requiring vasopressor therapy to maintain a mean arterial pressure of at least 65 mmHg and a serum lactate level greater than 2 mmol/L despite adequate fluid resuscitation.\n* Admission to the intensive care unit at Benha University Hospitals.\n\nExclusion Criteria:\n\n* Known allergy or contraindication to hydrocortisone.\n* Known adrenal insufficiency.\n* Chronic systemic corticosteroid therapy for more than 1 month before enrollment.\n* Pregnancy or lactation.\n* Active gastrointestinal bleeding.\n* Immunosuppression.\n* Expected survival of less than 24 hours or imminent death from a non-infectious cause.\n* Psychiatric disorder that could interfere with study participation.\n* Coagulation disorder."
+    },
+    "identificationModule": {
+      "briefTitle": "Continuous Infusion Versus Intermittent Bolus Hydrocortisone in Septic Shock",
+      "nctId": "NCT07695337"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

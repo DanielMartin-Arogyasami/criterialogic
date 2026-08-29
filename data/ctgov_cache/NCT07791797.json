@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Part A:\n\nInclusion Criteria:\n\n* Adults 18 years and older\n* Generally healthy\n* BMI 18.5-29.9 kg/m2\n* Able to provide informed consent\n* Agree to not participate in another clinical trial while enrolled in this trial\n* Agree not to change current diet and/or exercise frequency or intensity during entire study period\n* Participant's ability to participate fully and comply with demands of the study including attendance at all scheduled blood collection time points\n\nExclusion Criteria:\n\n* Have a serious illness e.g. mood disorders such as depression, anxiety or bipolar disorder, neurological disorders such as MS, kidney disease, liver disease or heart conditions\n* Have an unstable illness e.g. diabetes and thyroid gland dysfunction\n* Current malignancy (excluding Basal Cell Carcinoma) or chemotherapy or radiotherapy treatment for malignancy within the previous 2 years\n* Significant change in diet in the past 1-month (e.g., removal of a food group or calorie restriction)\n* Active smokers, nicotine use or drug (prescription or illegal substances) abuse\n* Chronic past and/or current alcohol use (\\>21 alcoholic drinks week)\n* Pregnant or lactating women\n* Allergic to any of the ingredients in enhanced or standard formula\n* Participants who are currently participating in any other clinical trial or who have participated in any other clinical trial during the past 1 month (excluding RDC Clinical trials)\n* Any condition which in the opinion of the investigator makes the participant unsuitable for inclusion\n* Regular use within the past 4 weeks of supplements containing the trial product\n\nPart B:\n\nThe above criteria apply, plus baseline serum 25(OH)D \\<20.0 ng/mL (\\<50.0 nm/L)"
+    },
+    "identificationModule": {
+      "briefTitle": "Supplementation Absorption Comparison",
+      "nctId": "NCT07791797"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

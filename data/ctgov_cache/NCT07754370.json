@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Neonates diagnosed with primary congenital hypothyroidism.\n* Full-term infants.\n* Newly diagnosed.\n* Treatment initiated during the neonatal period.\n* Written informed parental consent.\n\nExclusion Criteria:\n\n* Central congenital hypothyroidism.\n* Prematurity.\n* Major congenital malformations.\n* Serious systemic illness affecting thyroid function.\n* Previously thyroid hormone therapy."
+    },
+    "identificationModule": {
+      "briefTitle": "Levothyroxine Dosing in Neonatal Congenital Hypothyroidism",
+      "nctId": "NCT07754370"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

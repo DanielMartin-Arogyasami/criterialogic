@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥18 years.\n2. Functioning living or deceased donor allograft after ≥180 days post-transplantation.\n3. eGFR ≥20 ml/min/1.73 m2 (CKD-EPI formula).\n4. HLA class I and/or II antigen-specific antibodies (preformed and/or de novo DSA).\n5. Biopsy-confirmed chronic active antibody-mediated rejection (cAMR) according to the Banff 2019 criteria.\n6. Voluntarily signed informed consent, with willingness and ability to adhere to regular follow-up and complete collection of all study-related information.\n\nExclusion Criteria:\n\n1. Patients actively participating in another clinical trial.\n2. Age \\<18 years.\n3. Pregnancy, lactation, or planned pregnancy during the study period.\n4. Multi-organ recipients, e.g., patients with concurrent or prior bone marrow transplantation or other organ transplantation.\n5. Kidney transplantation biopsy combined with one of the following results: A. T-cell-mediated rejection classified Banff grade ≥I. B. De novo or recurrent severe thrombotic microangiopathy. C. Polyoma virus nephropathy, De novo or recurrent glomerulonephritis.\n6. Previous treatment with any BCMA-targeted agent, including monoclonal antibodies (e.g., ADCs, bispecifics) or CAR-T cell therapy.\n7. Previous treatment with other immunomodulatory monoclonal/polyclonal antibodies (e.g. CD20 Ab rituximab, IL-6/IL-6R Ab) ≤3 months before study treatment.\n8. Total bilirubin \\>2×the upper limit of normal \\[ULN\\], alanine transaminase and aspartate aminotransferase \\>2.5×ULN\n9. Haemoglobin \\<8 g/dL\n10. Thrombocytopenia: Platelets \\<100 G/L\n11. Leukopenia: Leukocytes \\<3 G/L\n12. Neutropenia: Neutrophils \\< 1.5 G/L\n13. Hypogammaglobulinemia: Serum IgG \\<400 mg/dL\n14. Active viral, bacterial, or fungal infection precluding intensified immunosuppression.\n15. Active malignant disease precluding intensified immunosuppressive therapy.\n16. Latent or active tuberculosis.\n17. Administration of a live vaccine within 6 weeks of screening.\n18. Central nervous system (CNS) disorders, including epilepsy, psychosis, organic brain syndrome, cerebrovascular accident, encephalitis or CNS vasculitis, visual disturbances, cranial neuropathy requiring intervention, etc.\n19. History of alcohol or illicit substance abuse\n20. Serious medical or psychiatric illness likely to interfere with participation in the study.\n21. Presence of any other clinically significant medical history or current disease that, in the judgment of the investigator, would compromise subject safety, impede completion of the study protocol, or compromise the assessment of safety and efficacy.\n\n    ."
+    },
+    "identificationModule": {
+      "briefTitle": "Safety and Efficacy of the Bispecific T-Cell Engager (BiTE) in Kidney Transplant Recipients With Chronic Active Antibody-Mediated Rejection",
+      "nctId": "NCT07689578"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-08",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

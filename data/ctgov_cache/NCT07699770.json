@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "\\*\\*Inclusion Criteria:\\*\\*\n\nSubjects who meet all of the following criteria will be enrolled in this study:\n\n1. Able to understand and voluntarily sign the written informed consent form;\n2. Male or female aged between 18 years (inclusive) and 75 years;\n3. Diagnosed with aquaporin-4 (AQP4) antibody-positive neuromyelitis optica spectrum disorder (NMOSD) according to the International Panel for NMO Diagnosis (IPND, 2015) criteria;\n4. Patients with comorbid neuropathic pain, DN4 ≥ 4; no change in medication dosage within the past month;\n5. Numeric Rating Scale (NRS) for pain score ≥ 4 at screening;\n6. First-time use of Crisugabalin Capsules.\n\n\\*\\*Exclusion Criteria:\\*\\*\n\nSubjects who meet any of the following criteria will not be enrolled in this study:\n\n1. Presence of peripheral neuropathy or pain unrelated to NMOSD that, in the investigator's judgment, may confound the assessment;\n2. Known history of allergy to the investigational drug components, or to other drugs with similar chemical structures, or to any excipients;\n3. Prior use of pregabalin ≥ 300 mg/day, gabapentin ≥ 1200 mg/day, or mirogabalin ≥ 30 mg/day with lack of clinical efficacy as judged by the investigator;\n4. Severe liver or kidney function abnormalities, meeting any of the following clinical laboratory findings:\n\n1\\) Liver function: alanine aminotransferase (ALT) or aspartate aminotransferase (AST) \\> 3 × upper limit of normal (ULN); 2) Estimated glomerular filtration rate (eGFR) \\< 60 mL/min/1.73 m² (calculated using the simplified MDRD formula); 5. Women who are pregnant, planning to become pregnant during the study period, or currently breastfeeding; subjects who are unwilling to use reliable contraceptive measures (including condoms, spermicides, intrauterine devices, etc.) from the time of signing the ICF until 28 days after the last dose of the investigational drug; 6. Current use of IL-6 receptor blockers (e.g., tocilizumab, satralizumab); 7. History of suicidal behavior or suicidal ideation; 8. Participation in any other clinical study within 30 days prior to screening; 9. The investigator determines that there are other situations in which participation in the study is inappropriate."
+    },
+    "identificationModule": {
+      "briefTitle": "Crisugabalin in NMOSD Neuropathic Pain: A Randomized, Double-Blind, Placebo-Controlled Exploratory Trial",
+      "nctId": "NCT07699770"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

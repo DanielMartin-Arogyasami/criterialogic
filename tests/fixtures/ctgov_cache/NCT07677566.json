@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Patients must be ≥ 18 and ≤75 years of age\n2. All patients must have a histologically or cytologically diagnosis of prostate cancer，without distant metastasis, and suitable for radical prostatectomy\n3. All patients meet at least one of the following criteria： multi-parameter MRI or PSMA PET / CT shows clinical staging of primary tumor ≥ T2c； Gleason score of primary tumor ≥ 8； prostate specific antigen (PSA) ≥20 ng/ml； Radiographic assessment of regional lymph node metastases (N1)\n4. Eastern Cooperative Oncology Group (ECOG) physical condition score 0- 1\n5. Primary lesion SUVmax ≥ 20.0 as assessed by PSMA-PET examination.\n6. Adequate organ function: Complete Blood Count: White blood cell count (WBC) ≥ 3.0 × 10\\^9/L, platelet count ≥ 100 × 10\\^9/L, hemoglobin ≥ 9 g/dL. Renal Function: Serum creatinine ≤ 2 × ULN. Liver Function: Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 2.5 × ULN, total bilirubin (TBIL) ≤ 1.5 × ULN. Coagulation Function: International normalized ratio (INR) \\< 1.5.\n7. Voluntary Participation: Participants must voluntarily agree to participate and sign the informed consent form (ICF), indicating their understanding of the purpose of the study and the required procedures, as well as their willingness to participate in the research. Participants must be willing to comply with the prohibitions and restrictions outlined in the study protocol.\n8. Patients of childbearing potential must be willing to take high-efficiency contraceptive measures during the study period and within 120 days after the last dose of treatment\n\nExclusion Criteria:\n\n1. Patients with prostate having neuroendocrine, small cell, or sarcoma-like features are not eligible\n2. Patients with low-risk and medium-risk, localized prostate cancer (the following conditions are met at the same time) are not eligible: prostate specific antigen (PSA) \\<20 ng/mL multiparameter MRI or PSMA PET / CT shows clinical staging of primary tumor \\< T3, Gleason score of primary tumor \\< 8\n3. Patients with clinical or radiological evidence of regional or extra-regional lymph node metastases or bone metastases or visceral metastases (any M1）\n4. Primary lesion SUVmax \\< 20.0 as assessed by PSMA-PET examination.\n5. Patients who have previously received androgen deprivation therapy (medical or surgical) more than 3 months or focal treatment of prostate cancer or prostate cancer radiotherapy or prostate cancer chemotherapy\n6. Patients with severe or uncontrolled concurrent infections\n7. Patients must not have New York Heart Association Class III or IV congestive heart failure at the time of screening. Patients must not have any thromboembolic event, unstable angina pectoris, myocardial infarction within 6 months prior to registration\n8. Uncontrolled severe hypertension, persistently uncontrolled diabetes, oxygen-dependent lung disease, chronic liver disease, or HIV infection\n9. Patients with a history of other malignancies within the past 5 years, except for prostate cancer, are not eligible; however, cured basal cell carcinoma or squamous cell carcinoma of the skin may be eligible\n10. Patients with mental illness, mental disability, or inability to provide informed consent"
+    },
+    "identificationModule": {
+      "briefTitle": "177Lu-PSMA-617 Combined With Darolutamide in Neoadjuvant Treatment of High-risk Localized Prostate Cancer: a Prospective, Single-arm, Multi-center Clinical Trial",
+      "nctId": "NCT07677566"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-01",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

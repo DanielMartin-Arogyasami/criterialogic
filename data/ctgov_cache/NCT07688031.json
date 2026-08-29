@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18 years or older\n* Scheduled for elective hemorrhoidectomy\n* Recruited consecutively on the day of surgery\n* Able to provide written informed consent\n\nExclusion Criteria:\n\n* Inflammatory bowel disease\n* Immunosuppression\n* Pregnancy\n* Chronic pain requiring ongoing analgesic treatment\n* Known hypersensitivity to any of the study medications\n* Significant cardiovascular disease\n* Peripheral vascular disease\n* Cerebrovascular disease\n* Hepatic disease\n* Seizure disorders"
+    },
+    "identificationModule": {
+      "briefTitle": "Topical Lidocaine 23%/Tetracaine 7% Ointment for Post-Hemorrhoidectomy Analgesia: A Randomized Controlled Trial",
+      "nctId": "NCT07688031"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

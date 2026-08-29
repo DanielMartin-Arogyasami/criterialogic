@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion We will include the group most impacted by PJI\n\n* Adult males\n* Age between 18 and 65 Exclusion\n* History of cryptorchidism, hypospadias, or other congenital abnormality of male reproductive tract\n* Female sex\n* Age younger than 18 or older than 65\n* Current use of Finasteride or other 5-alpha reductase inhibitors\n* Current use of hormone replacement medications such as testosterone\n* Recent antibiotic use within 3 months\n* Have had a negative reaction to oral Finasteride before\n* Recent use of acne treatment within 3 months\n* Self-report very sensitive skin\n* Allergic to chlorhexidine or isopropyl alcohol\n* Have open wounds on both shoulders"
+    },
+    "identificationModule": {
+      "briefTitle": "Finasteride and Cutibacterium",
+      "nctId": "NCT07731802"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-28",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

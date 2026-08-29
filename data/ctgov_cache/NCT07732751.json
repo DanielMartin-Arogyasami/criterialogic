@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged 18 years or older.\n* Clinical diagnosis of sleep bruxism.\n* Presence of jaw muscle pain.\n* Ability to provide written informed consent.\n\nExclusion Criteria:\n\n* Pregnancy or breastfeeding.\n* Previous botulinum toxin treatment within 6 months.\n* Neuromuscular disorders.\n* Allergy to botulinum toxin or ibuprofen.\n* Use of medications affecting neuromuscular function."
+    },
+    "identificationModule": {
+      "briefTitle": "Botulinum Toxin Type A Versus Oral Ibuprofen for Bruxism",
+      "nctId": "NCT07732751"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-29",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion criteria\n\n* Age ≥18 years.\n* Diagnosis of structural heart disease (ischemic or non-ischemic cardiomyopathy).\n* Documented sustained monomorphic VT (clinical or inducible), or recurrent ICD therapies for VT.\n* Scheduled for catheter ablation of VT according to current international guidelines.\n* Ability to provide written informed consent.\n* Ability to remain upright or seated to allow a video for 3D torso reconstruction for ECGi acquisition.\n\nExclusion criteria\n\n* Age \\<18 years.\n* Pregnant or breastfeeding women.\n* Inability to provide informed consent due to physical or mental condition.\n* Contraindication to computed tomography or cardiac magnetic resonance (magnetic resonance imaging-incompatible devices, claustrophobia).\n* Contraindication to contrast agents (gadolinium allergy or severe renal dysfunction with estimated glomerular filtration rate \\<30 mL/min/1.73 m²).\n* Inability to remain upright for torso 3D reconstruction required for ECGi.\n* Life expectancy \\<1 year due to non-cardiac comorbidity."
+    },
+    "identificationModule": {
+      "briefTitle": "Treatment Based on High Precision Cardiac Mapping",
+      "nctId": "NCT07746336"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-05",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Study will include adult patient (male, female).\n* Patient age from 18 to 70 years.\n* Patient will be admitted to intensive care unit in study period (six months), who will receive intravenous colistin and meropenem or amikacin and meropenem as antimicrobial drug for treatment their MDR gram negative infection\n\nExclusion Criteria:\n\n* Patients are admitted to intensive care unit younger than 18 years or older than 70 years.\n* Patients are chronic kidney disease (CKD on hemodialysis or baseline creatinine clearance (crcl) \\< 10 ml/min (estimated by Cockcroft Gault equation).\n* Patients received renal replacement therapy before or during admission.\n* Patients are on any other nephrotoxic drug (vancomycin, NSAIDs, cyclosporine, amphotericin B, etc.)).\n* Pregnant and lactating women.\n* Patients refused the consent of the study."
+    },
+    "identificationModule": {
+      "briefTitle": "Colistin and Meropenem Versus Amikacin and Meropenem for MDR Gram Negative Bacteria Regarding Efficacy and Safety.",
+      "nctId": "NCT07694700"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

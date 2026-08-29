@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Patient is aged 18 years or older at time of consent.\n2. Diagnostic nodule biopsy(s) indicated per multidisciplinary team (or equivalent).\n3. Target pulmonary nodule ≤2 cm in largest diameter.\n4. Patient is willing and able to give written informed consent for clinical study participation.\n\nExclusion Criteria:\n\n1. Patient has previously undergone a biopsy procedure of the target nodule by any approach.\n2. Patient was previously randomized in this study but did not undergo biopsy.\n3. Patient is participating in an interventional research study or research study with investigational agents with an unknown safety profile that would interfere with participation in this study or study results.\n4. Patient is pregnant or breastfeeding as determined by standard site practices.\n5. Patient lacks the capacity to provide informed consent for themselves, or is a vulnerable patient whose ability to protect their own interests or to consent freely may be diminished, including but not limited to, patients who may be unduly influenced through dependency on the sponsor, the hospital, or the study doctor.\n6. Patient is not willing to comply with study participation requirements."
+    },
+    "identificationModule": {
+      "briefTitle": "A Randomized Controlled Trial Comparing Percutaneous CT-Guided Biopsy and Shape-Sensing Robotic-Assisted Bronchoscopy",
+      "nctId": "NCT07761351"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-12",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Gestational age 11-14 weeks\n* High risk of preeclampsia\n\nExclusion Criteria:\n\n* Active gastritis\n* Abnormal coagulation profile (INR \\> 1.5)\n* Renal disease\n* Platelet count \\< 150,000/mm\\^3\n* Fetal malformations\n* Vaginal bleeding"
+    },
+    "identificationModule": {
+      "briefTitle": "Comparison of High- Versus Low-Dose Aspirin for Pregnancy Outcomes in Women at High Risk of Preeclampsia",
+      "nctId": "NCT07779057"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-21",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

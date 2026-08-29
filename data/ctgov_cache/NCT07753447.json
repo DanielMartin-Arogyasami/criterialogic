@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Adults aged ≥19 and \\<60 years\n* Confirmed diagnosis of type 2 diabetes\n* Diagnosed with diabetes within the past 6 years\n* Most recent BMI within the past 3 months ≥27 kg/m²\n* Most recent HbA1c within the past 3 months \\<11%\n* No insulin therapy within the past 3 months\n\nExclusion Criteria:\n\n* Pregnant women or those who may become pregnant during the study period\n* Individuals with organ failure, such as heart failure, hepatic failure, renal failure, or chronic obstructive pulmonary disease\n* History of cardiovascular disease or cancer treatment within the past 6 months\n* Acute illness requiring hospitalization (e.g., infection or surgery) within the past 3 months\n* Presence of endocrine disorders that may affect body weight, such as Cushing's syndrome\n* Use of medications (other than glucose-lowering agents for diabetes) known to affect blood glucose levels within the past 6 months\n* Individuals with known food allergies to specific ingredients in the study meals\n* Individuals with uncontrolled hypertension\n* Individuals with acute alcohol or drug withdrawal symptoms\n* History of seizure disorders such as epilepsy\n* Individuals with genetic disorders such as galactose intolerance, lactase deficiency, or glucose-galactose malabsorption"
+    },
+    "identificationModule": {
+      "briefTitle": "Calorie Restricted Dietary Intervention in Type 2 Diabetes Patients With Obesity for Remission",
+      "nctId": "NCT07753447"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-07",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Meet the Western medicine diagnostic criteria: Patients who need lithotripsy surgery and have a double J stent (4.7F, 28 cm) placed after surgery; plain film of kidney and upper bladder indicates normal position of ureteral stent and no need for stage II surgery.\n2. Meet the Traditional Chinese Medicine (TCM) diagnostic criteria.\n3. Aged between 18 and 80 years old (inclusive).\n4. Voluntary participation with signed informed consent.\n\nExclusion Criteria:\n\n1. Patients with renal insufficiency stage 4 or 5, or acute renal failure.\n2. Secondary factors confirmed by examination, such as systemic lupus erythematosus or drug-induced kidney damage.\n3. Does not meet the diagnosis of upper urinary tract stones.\n4. Cases not within the scope of drug action.\n5. Long-term use of other relevant therapeutic drugs, or inability to stop medication immediately.\n6. Late-stage deformity, disability, or loss of labor ability.\n7. Complicated with severe primary diseases of heart, brain, liver, hematopoietic system, endocrine system, etc., or mental illness.\n8. Pregnant or lactating women.\n9. Patients in critical condition.\n10. Other conditions deemed unsuitable for enrollment by the researchers."
+    },
+    "identificationModule": {
+      "briefTitle": "The Clinical Research of Traditional Chinese Medicine Formula",
+      "nctId": "NCT07746219"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-04",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

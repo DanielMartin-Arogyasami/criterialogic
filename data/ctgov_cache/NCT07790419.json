@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age 18-80 years, male or female;\n2. Pathologically confirmed hepatocellular carcinoma, with complete resection of all tumor nodules and negative surgical margins;\n3. Microvascular invasion (MVI) grade ≥ 1\n4. No other history of tumors and no preoperative anticancer treatment.\n5. ECOG: 0-1;\n6. Baseline blood count tests and blood biochemistry must meet the following criteria:\n\n   Hemoglobin ≥80 g/L;\n\n   Absolute neutrophil count ≥1.5×109/L;\n\n   Platelet count ≥50×109/L;\n\n   Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤5 times the upper limit of normal (ULN);\n\n   Total bilirubin ≤3 times ULN;\n\n   Serum creatinine ≤1.5 times ULN;\n\n   Albumin ≥28 g/L; prothrombin time (PT) ≤19.5 s;\n\n   International normalized ratio (INR) ≤2.3\n7. Women of childbearing potential must agree to use contraception during the study and for 6 months after the study ends (e.g., intrauterine device, oral contraceptives, or condoms); serum or urine pregnancy test must be negative within 7 days before enrollment, and they must not be breastfeeding; men must agree to use contraception during the study and for 6 months after the study ends;\n8. Subjects voluntarily participate in this study, sign the informed consent form, are compliant, and cooperate with follow-up.\n\nExclusion Criteria:\n\n* 1\\. Patients with any active autoimmune disease or a history of autoimmune disease (including, but not limited to: autoimmune hepatitis, interstitial pneumonia, uveitis, enteritis, hepatitis, hypophysitis, vasculitis, nephritis, hyperthyroidism; patients with vitiligo; patients whose childhood asthma has completely resolved and who require no intervention as adults may be included; asthma requiring bronchodilator intervention for medical management cannot be included);\n\n  2\\. Pregnancy or lactation;\n\n  3\\. Over 80 years old;\n\n  4\\. Prior systemic chemotherapy or radiotherapy;\n\n  5\\. Concomitant malignant pleural effusion or ascites;\n\n  6\\. History of organ transplantation (including autologous bone marrow transplantation and peripheral stem cell transplantation);\n\n  7\\. Concomitant infection requiring anti-infective treatment;\n\n  8\\. Concomitant peripheral nervous system disease or a history of significant psychiatric disease and central nervous system disease;\n\n  9\\. Diagnosis of other types of malignant tumors within 5 years, excluding non-melanoma skin cancer and carcinoma in situ of the cervix;\n\n  10\\. Uncorrectable coagulation disorders;\n\n  11\\. Significant ECG abnormalities or obvious clinical symptoms of heart disease, such as congestive heart failure (CHF), clinically significant coronary heart disease, difficult-to-control arrhythmias, and hypertension;\n\n  12\\. History of myocardial infarction within 12 months, or cardiac function class III or IV;\n\n  13\\. Severe liver disease (e.g., cirrhosis), kidney disease, respiratory disease, uncontrolled diabetes, or other systemic diseases;\n\n  14\\. Individuals deemed unsuitable for inclusion by the investigator."
+    },
+    "identificationModule": {
+      "briefTitle": "A Prospective, Single-Arm, Open-Label Clinical Study of the Efficacy and Safety of Hepatic Arterial Infusion Chemotherapy Combined With Targeted Therapy and a PD-1 Inhibitor in Patients With Postoperative Hepatocellular Carcinoma and Microvascular Invasion",
+      "nctId": "NCT07790419"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-27",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

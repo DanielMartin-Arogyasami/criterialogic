@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 years of age or older.\n* Histologically proven (from either the primary lesion or regional lymph nodes) squamous cell carcinoma of the oropharynx or oral cavity.\n* Plan to receive at least 60 Gy dose of radiotherapy to be delivered daily Monday to Friday for 6 to 7 weeks.\n\nExclusion Criteria:\n\n* Patient is unable (i.e. insufficiently fluent) or unwilling to complete the weekly questionnaires which are written in English.\n* Inability to provide informed consent.\n* ECOG performance score 2 or better.\n* Plan to receive a concurrent chemotherapy agent other than cisplatin.\n* Investigational agent of any kind within 30 days prior to enrollment.\n* Concurrent administration of any other experimental intervention given for the purpose of preventing RIOM (see section 7.5).\n* History of allergies or hypersensitivity reactions to any of the components in Gelclair."
+    },
+    "identificationModule": {
+      "briefTitle": "Oral Mucositis Management in Patients Receiving Radiation for Head and Neck Cancer: An Evaluation of a Barrier Based Treatment",
+      "nctId": "NCT07697287"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-13",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

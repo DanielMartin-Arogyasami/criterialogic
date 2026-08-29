@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Confirmed Sickle Cell Disease (any genotype), Presenting to the Emergency Department with Vaso-occlusive crisis/pain crisis, Consent obtained\n\nExclusion Criteria:\n\n* Ketamine allergy, Severe agitation/psychosis, Pregnancy, Hemodynamic instability (as judged by physician), Increased intracranial pressure, Severe hepatic impairment, Ketamine use within the previous 24 hours, Presentation for non-VOC-related pain (i.e. fever, acute chest syndrome, stroke, traumatic injuries etc)."
+    },
+    "identificationModule": {
+      "briefTitle": "Low Dose Bolus Ketamine For Use In Sickle Cell Pain Crisis",
+      "nctId": "NCT07682662"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-06",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Both genders\n* Older than age of (18 to 60) years\n* Participants willing to commit for the entire period of the trial and agreed to sign the written consent after full explanation of the study\n* Having a mandibular molar tooth with vital pulp\n* These patients were also suffering from symptomatic irreversible pulpitis ,intermittent or continuous sharp pain that lasts longer after removal of the stimulus\n* Patients with moderate to severe symptoms VAS≥4\n\nExclusion Criteria:\n\n* Vulnerable group; pregnant females, mentally ill and diseased patientsetc.…\n* Patients irritable to local anesthesia\n* Patients who are supposed to take plain anesthesia\n* Use of analgesic or antibiotic within 6 hours before the visit\n* Absence of bleeding in the pulp chamber during cavity preparation\n* Severe periodontal disease b- Patients' randomization, allocation and blinding:"
+    },
+    "identificationModule": {
+      "briefTitle": "Postoperative Pain After Dexamethasone Injection by Two Techniques in Irreversible Pulpitis",
+      "nctId": "NCT07755306"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-08-10",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}

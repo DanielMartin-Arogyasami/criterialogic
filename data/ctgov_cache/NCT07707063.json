@@ -1,0 +1,23 @@
+{
+  "protocolSection": {
+    "designModule": {
+      "phases": [
+        "PHASE4"
+      ],
+      "studyType": "INTERVENTIONAL"
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion: Patients with Stage II-IV Periodontitis; at least one bleeding pocket \\> 4 mm minimum in every quadrant.\n\nExclusion: patients who:\n\n* Pregnant /Lactating\n* History of radiotherapy or chemotherapy in the head/neck region.\n* Known hypersensitivity to Iodine or Methylene blue solution\n* Systematic antibiotic use within the last 30 days\n* Long-term use of immunosuppressants or corticosteroids (daily use)\n* type 1 / 2 diabetes"
+    },
+    "identificationModule": {
+      "briefTitle": "This a Clinical Trial to Evaluate the Efficacy of I-PRF, Povidone-Iodine and Laser as Adjuncts to Non-surgical Periodontal Treatment in Smokers and Non-Smokers Periodontitis Patients",
+      "nctId": "NCT07707063"
+    },
+    "statusModule": {
+      "studyFirstPostDateStruct": {
+        "date": "2026-07-16",
+        "type": "ACTUAL"
+      }
+    }
+  }
+}
