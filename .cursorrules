@@ -1,0 +1,28 @@
+CriteriaLogic — public benchmark for LLM reasoning over clinical-trial eligibility criteria.
+RUN
+- Install: pip install -e .            (Python >=3.10; only runtime dep is pydantic v2)
+- Demo (no external data): python scripts/run_eval.py        (or: criterialogic-eval)
+- Tests: pytest -q   (23 tests)        Lint: ruff check .
+LAYOUT
+- criterialogic/schema/logical_form.py  harmonized logical form (pydantic v2) + canonicalize()
+- criterialogic/oracle.py               three-valued (Kleene) evaluator = ground truth + rule-based engine
+- criterialogic/data/                   n2c2_criteria.py (13 public criteria), synthetic.py (seeded patients),
+                                         loaders/{chia,n2c2,ctgov}.py, harmonize.py, splits.py, download.py
+- criterialogic/tasks/                  base.py (Item, Prediction, expression_depth) + A–D + calibration
+- criterialogic/models/                 base.py (Model interface) + rule_based, naive(negation_blind); encoder/llm_* are stubs
+- criterialogic/metrics/                classification, matching, logic, calibration, extraction (all from scratch)
+- criterialogic/taxonomy/               7 failure categories + heuristic labeler
+- criterialogic/eval/ runner+report     criterialogic/leaderboard/ submit+score     criterialogic/cli.py
+HARD CONSTRAINTS
+- Public/synthetic data ONLY. NEVER commit data/raw/ (n2c2 2018 is DUA-gated).
+- Metrics implemented from scratch — do NOT add sklearn/numpy/pandas. Core stays stdlib + pydantic.
+- New models subclass Model and return Prediction(label: bool, confidence in 0..1). New metrics are pure functions.
+- Integrity: synthetic/oracle numbers are pipeline checks, NOT empirical findings.
+WORKING STYLE (to save tokens)
+- Be concise: no preamble/postamble, do not restate the request, prefer prose over bullets.
+- Make minimal targeted edits; show only changed lines — never reprint whole unchanged files.
+- Reuse existing patterns; don't re-derive run/test commands or re-summarize files already seen in the session.
+TURNKEY RUN
+- Setup + offline demo + tests: bash setup_and_run.sh
+- OpenAI model: pip install -e ".[llm]" && export OPENAI_API_KEY=... && python scripts/run_eval.py --task compositional --model openai
+- Full command list: RUN.md. Prefer running scripts over editing code.

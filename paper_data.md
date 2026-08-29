@@ -1,0 +1,150 @@
+# CriteriaLogic — collected data for the paper
+
+Generated 2026-08-29T19:32:51+00:00 · package v0.1.0 · schema v0.1.0 · Python 3.12.10
+
+> **INTEGRITY BANNER — read before using any number below.**
+> Task C here uses the *real, public* n2c2 criterion definitions paired with **synthetic patients**, not the DUA-gated n2c2 records. Task D is **synthetic by construction**. The `rule_based` baseline evaluates an already-structured logical form and is therefore *the oracle itself*: its perfect scores are a software-validation artifact (paper §7.6), **not** an empirical finding. Only the `openai` rows are genuine model measurements, and even those are measured against synthetic patients.
+
+## §3 Dataset composition (verified from code, not placeholders)
+
+- n2c2 criteria encoded as LogicalForms: **13** (all 13 official tags)
+- Task C items: **104** (13 criteria × 8 synthetic patients, seed 13); gold met-rate 0.6154
+- Task D demo set: **36** items, depths {1: 12, 2: 12, 3: 12}, seed 29; gold met-rate 0.4167
+- Task D large set: **400** items, depths {1: 100, 2: 100, 3: 100, 4: 100}; gold met-rate 0.475
+- Atom pool for Task D: **21** distinct atoms — leaf predicates of the 13 n2c2 criteria (see DISCREPANCIES)
+
+### Per-criterion structural profile (feeds §3.2 and S2)
+
+| Tag | Polarity | Nesting depth | Atoms | Temporal | Numeric |
+|---|---|---|---|---|---|
+| ABDOMINAL | inclusion | 1 | 3 | no | no |
+| ADVANCED-CAD | inclusion | 2 | 12 | yes | yes |
+| ALCOHOL-ABUSE | inclusion | 0 | 1 | yes | no |
+| ASP-FOR-MI | inclusion | 0 | 1 | yes | no |
+| CREATININE | inclusion | 0 | 1 | no | yes |
+| DIETSUPP-2MOS | inclusion | 0 | 1 | yes | no |
+| DRUG-ABUSE | inclusion | 0 | 1 | yes | no |
+| ENGLISH | inclusion | 0 | 1 | no | no |
+| HBA1C | inclusion | 0 | 1 | no | yes |
+| KETO-1YR | inclusion | 0 | 1 | yes | no |
+| MAJOR-DIABETES | inclusion | 1 | 4 | no | no |
+| MAKES-DECISIONS | inclusion | 0 | 1 | no | no |
+| MI-6MOS | inclusion | 0 | 1 | yes | no |
+
+## §7.1 Main leaderboard (rows that can be filled today)
+
+| Task | System | Headline metric | Value | ECE | n |
+|---|---|---|---|---|---|
+| C matching | rule_based (= oracle) | micro-F1 | **1.000** (macro 1.000) | 0.014 | 104 |
+| C matching | negation_blind (illustrative) | micro-F1 | **0.923** (macro 0.921) | 0.223 | 104 |
+| C matching | gpt-5-nano | micro-F1 | **0.952** (macro 0.948) | 0.165 | 104 |
+| D compositional | rule_based (= oracle) | accuracy | **1.000** | 0.028 | 36 |
+| D compositional | negation_blind (illustrative) | accuracy | **0.583** | 0.117 | 36 |
+| D compositional | gpt-5-nano | accuracy | **0.944** | 0.197 | 36 |
+| D compositional (400-item) | rule_based (= oracle) | accuracy | **1.000** | 0.011 | 400 |
+| D compositional (400-item) | negation_blind (illustrative) | accuracy | **0.618** | 0.082 | 400 |
+
+Tasks A and B have no rows: see *Cannot fill* below.
+
+## §7.2 Accuracy versus logical nesting depth
+
+| System | Set | d=1 | d=2 | d=3 | d=4 | Δ(shallowest→deepest) |
+|---|---|---|---|---|---|---|
+| rule_based | 36-item | 1.000 (n=12) | 1.000 (n=12) | 1.000 (n=12) | — | +0.000 |
+| negation_blind | 36-item | 0.667 (n=12) | 0.667 (n=12) | 0.417 (n=12) | — | -0.250 |
+| gpt-5-nano | 36-item | 0.917 (n=12) | 1.000 (n=12) | 0.917 (n=12) | — | +0.000 |
+| rule_based | 400-item | 1.000 (n=100) | 1.000 (n=100) | 1.000 (n=100) | 1.000 (n=100) | +0.000 |
+| negation_blind | 400-item | 0.590 (n=100) | 0.670 (n=100) | 0.630 (n=100) | 0.580 (n=100) | -0.010 |
+
+The 400-item set is the one to cite for the depth claim; the 36-item set is too small (12 per depth) to resolve a monotonic trend.
+
+## §7.3 Failure-taxonomy breakdown per system
+
+| Task | System | Total errors | Category counts |
+|---|---|---|---|
+| matching | rule_based | 0 | none |
+| matching | negation_blind | 8 | logical_composition=8 |
+| matching | openai | 5 | temporal=5 |
+| compositional | rule_based | 0 | none |
+| compositional | negation_blind | 15 | logical_composition=5, negation_polarity=10 |
+| compositional | openai | 2 | logical_composition=1, negation_polarity=1 |
+| compositional_large | rule_based | 0 | none |
+| compositional_large | negation_blind | 153 | logical_composition=81, negation_polarity=72 |
+
+### Every gpt-5-nano error, itemized (feeds §7.3 and the S2 error appendix)
+
+| Item | Task | Gold | Predicted | Conf. | Heuristic category |
+|---|---|---|---|---|---|
+| `match:ALCOHOL-ABUSE:000` | matching | not_met | met | 0.85 | temporal |
+| `match:ASP-FOR-MI:000` | matching | not_met | met | 0.90 | temporal |
+| `match:ASP-FOR-MI:001` | matching | not_met | met | 0.90 | temporal |
+| `match:ASP-FOR-MI:003` | matching | not_met | met | 0.90 | temporal |
+| `match:ASP-FOR-MI:006` | matching | not_met | met | 0.90 | temporal |
+| `comp:d1:011` | compositional | met | not_met | 0.40 | negation_polarity |
+| `comp:d3:004` | compositional | not_met | met | 0.36 | logical_composition |
+
+## §7.4 Calibration and abstention
+
+| Task | System | ECE | Mean conf. | Abstentions | acc@10% | acc@20% | acc@30% | acc@40% | acc@50% | acc@60% | acc@70% | acc@80% | acc@90% | acc@100% |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| matching | rule_based | 0.014 | 0.9856 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| matching | negation_blind | 0.223 | 0.7 | 0 | 0.727 | 0.714 | 0.812 | 0.857 | 0.885 | 0.905 | 0.918 | 0.929 | 0.915 | 0.923 |
+| matching | openai | 0.165 | 0.8272 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.984 | 0.945 | 0.941 | 0.947 | 0.952 |
+| compositional | rule_based | 0.028 | 0.9722 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| compositional | negation_blind | 0.117 | 0.7 | 0 | 0.750 | 0.625 | 0.727 | 0.667 | 0.722 | 0.636 | 0.654 | 0.655 | 0.606 | 0.583 |
+| compositional | openai | 0.197 | 0.7894 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.944 |
+
+## §7.6 Reference-implementation validation (software, not findings)
+
+- rule_based Task C micro-F1 = **1.000**, Task D accuracy = **1.000**, total errors = 0 — perfect by construction.
+- negation_blind error signature, Task C: {'logical_composition': 8}
+- negation_blind error signature, Task D: {'logical_composition': 5, 'negation_polarity': 10}
+- negation_blind depth curve (400-item): {'1': 0.59, '2': 0.67, '3': 0.63, '4': 0.58}
+- Rule-based == oracle on already-structured forms, so its perfect scores are a software-validation artifact, NOT an empirical finding.
+
+## §5 Taxonomy codebook (as implemented)
+
+| Category | Definition |
+|---|---|
+| negation_polarity | Inclusion/exclusion or NOT-scope flipped. |
+| temporal | Temporal window or tense reasoning error. |
+| numeric_threshold | Comparator or boundary value error. |
+| logical_composition | AND/OR/NOT composition resolved incorrectly. |
+| entity_conflation | Distinct clinical entities conflated. |
+| implicit_knowledge | Failed required unstated inference. |
+| fabrication | Asserted a constraint absent from the criterion. |
+| none | No attributable failure. |
+
+Annotation inputs are staged at `results/errors_openai_matching.csv` and `results/errors_openai_compositional.csv`, each with a blank `human_category` column. Cohen's κ and test–retest agreement remain uncomputed pending the human pass.
+
+## §9 Reproducibility metadata
+
+- Python 3.12.10 on Windows-11-10.0.26200-SP0
+- LLM: `gpt-5-nano`, temperature requested 0.0, effective **none (API default)** — gpt-5-nano rejects a custom temperature; on the first live call the adapter dropped it and every subsequent completion used the API default. This collection pass replayed cached responses, so it never re-triggered the fallback.
+- Cached LLM responses: 107
+- Packages: openai==3.6.0, pydantic==2.13.5, pytest==9.1.1, ruff==0.16.5
+- Tests: 33 passing · Lint: ruff check . -> All checks passed
+- Seeds: {'matching': 13, 'compositional': 29, 'large_compositional': 29}
+
+## Cannot fill — what the paper still needs
+
+- **7.1 Task A (structuring)** — Chia corpus not downloaded and no structuring model implemented (entity F1 / relation F1 / exact match unavailable).
+- **7.1 Task B (typing & polarity)** — Requires Chia-derived labels and a classification model; tasks/typing_polarity.py is a task-name contract only.
+- **7.1 Task C on REAL patients** — n2c2 2018 records are DUA-gated and absent; all Task C numbers here use synthetic patients over the real public criterion definitions.
+- **6. Encoder baselines** — models/encoder.py raises NotImplementedError; needs transformers/torch plus a fine-tuned checkpoint (BioClinicalBERT / PubMedBERT / BioBERT).
+- **6. Open-weight LLMs** — models/llm_local.py is a stub; needs an HF/vLLM runtime.
+- **6. Additional API LLMs** — The available API project grants access to gpt-5-nano only; GPT-4-class and Claude-class models returned 403 model_not_found.
+- **7.5 Ablations** — No prompt-design, few-shot-count, or retrieval ablation has been run; the toolkit ships a single fixed zero-shot prompt.
+- **5. Human-vs-automatic kappa** — Requires the domain expert to fill human_category in results/errors_openai_*.csv, then run taxonomy.reliability.
+- **5. Test-retest kappa** — Requires a second annotation pass after a washout interval.
+
+## Discrepancies between the paper draft and the implementation
+
+1. **Paper Sec. 3.4 vs criterialogic/tasks/compositional.py::_atom_pool**
+   - Paper: Task D atoms are 'extracted from real ClinicalTrials.gov criteria'.
+   - Reality: The atom pool is built from the leaf predicates of the 13 n2c2 criteria; no ClinicalTrials.gov text is fetched. Source enum is CTGOV_SYNTHETIC, which reinforces the misleading impression.
+   - Action: Either change the paper wording to 'atoms drawn from the public n2c2 criterion definitions' or implement a ctgov-derived pool before submission.
+2. **Paper Sec. 7.2 hypothesis**
+   - Paper: Accuracy declines monotonically with nesting depth.
+   - Reality: See 7.2 table: not monotonic for every system at these sample sizes.
+   - Action: State the observed pattern; do not assert monotonicity without wider n.

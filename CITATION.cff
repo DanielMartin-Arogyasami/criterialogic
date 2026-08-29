@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "CriteriaLogic: A Public Benchmark for Logical Reasoning over Clinical-Trial Eligibility Criteria"
+message: "If you use this benchmark, please cite it."
+type: software
+authors:
+  - family-names: "Arogyasami"
+    given-names: "Daniel Martin"
+version: 0.1.0
+date-released: "2026-06-10"
+license: MIT
+repository-code: "https://github.com/USERNAME/criterialogic"
+keywords:
+  - clinical trial eligibility
+  - patient-trial matching
+  - benchmark
+  - large language models
+  - logical reasoning
+  - clinical NLP

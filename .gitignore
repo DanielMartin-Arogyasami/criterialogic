@@ -1,0 +1,14 @@
+# Data-release boundary: raw data is NEVER committed (esp. DUA-gated n2c2).
+data/raw/
+data/processed/
+results/
+*.pyc
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.criterialogic_cache/
+
+# Secrets: never commit API keys.
+.env

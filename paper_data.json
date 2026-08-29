@@ -1,0 +1,864 @@
+{
+  "dataset_composition": {
+    "schema_version": "0.1.0",
+    "package_version": "0.1.0",
+    "n2c2_criteria_encoded": 13,
+    "n2c2_criteria_detail": [
+      {
+        "tag": "ABDOMINAL",
+        "polarity": "inclusion",
+        "depth": 1,
+        "n_atoms": 3,
+        "has_temporal": false,
+        "has_numeric": false
+      },
+      {
+        "tag": "ADVANCED-CAD",
+        "polarity": "inclusion",
+        "depth": 2,
+        "n_atoms": 12,
+        "has_temporal": true,
+        "has_numeric": true
+      },
+      {
+        "tag": "ALCOHOL-ABUSE",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      },
+      {
+        "tag": "ASP-FOR-MI",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      },
+      {
+        "tag": "CREATININE",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": false,
+        "has_numeric": true
+      },
+      {
+        "tag": "DIETSUPP-2MOS",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      },
+      {
+        "tag": "DRUG-ABUSE",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      },
+      {
+        "tag": "ENGLISH",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": false,
+        "has_numeric": false
+      },
+      {
+        "tag": "HBA1C",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": false,
+        "has_numeric": true
+      },
+      {
+        "tag": "KETO-1YR",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      },
+      {
+        "tag": "MAJOR-DIABETES",
+        "polarity": "inclusion",
+        "depth": 1,
+        "n_atoms": 4,
+        "has_temporal": false,
+        "has_numeric": false
+      },
+      {
+        "tag": "MAKES-DECISIONS",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": false,
+        "has_numeric": false
+      },
+      {
+        "tag": "MI-6MOS",
+        "polarity": "inclusion",
+        "depth": 0,
+        "n_atoms": 1,
+        "has_temporal": true,
+        "has_numeric": false
+      }
+    ],
+    "task_c_matching_items": 104,
+    "task_c_gold_met_rate": 0.6154,
+    "task_d_demo_items": 36,
+    "task_d_demo_gold_met_rate": 0.4167,
+    "task_d_demo_depth_distribution": {
+      "1": 12,
+      "2": 12,
+      "3": 12
+    },
+    "task_d_large_items": 400,
+    "task_d_large_gold_met_rate": 0.475,
+    "task_d_large_depth_distribution": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100
+    },
+    "atom_pool_size": 21,
+    "atom_pool_source": "leaf predicates of the 13 n2c2 criteria (see DISCREPANCIES)",
+    "seeds": {
+      "matching": 13,
+      "compositional": 29,
+      "large_compositional": 29
+    }
+  },
+  "runs": {
+    "matching::rule_based": {
+      "task": "matching",
+      "model": {
+        "name": "rule_based",
+        "type": "RuleBasedModel"
+      },
+      "n_items": 104,
+      "metrics": {
+        "overall_micro_f1": 1.0,
+        "overall_macro_f1": 1.0,
+        "n_items": 104,
+        "per_criterion": {
+          "ABDOMINAL": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ADVANCED-CAD": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ALCOHOL-ABUSE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ASP-FOR-MI": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "CREATININE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DIETSUPP-2MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DRUG-ABUSE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ENGLISH": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "HBA1C": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "KETO-1YR": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MAJOR-DIABETES": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MAKES-DECISIONS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MI-6MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          }
+        },
+        "per_label": {
+          "false": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "true": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 64
+          }
+        }
+      },
+      "failure_taxonomy": {},
+      "calibration": {
+        "ece": 0.014423076923076924,
+        "selective_accuracy_at_50pct_coverage": 1.0
+      },
+      "repro": {
+        "seed": 13,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 1.0
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.9856
+    },
+    "compositional::rule_based": {
+      "task": "compositional",
+      "model": {
+        "name": "rule_based",
+        "type": "RuleBasedModel"
+      },
+      "n_items": 36,
+      "metrics": {
+        "overall_accuracy": 1.0,
+        "by_depth": {
+          "1": {
+            "accuracy": 1.0,
+            "n": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "n": 12
+          },
+          "3": {
+            "accuracy": 1.0,
+            "n": 12
+          }
+        }
+      },
+      "failure_taxonomy": {},
+      "calibration": {
+        "ece": 0.027777777777777776,
+        "selective_accuracy_at_50pct_coverage": 1.0
+      },
+      "repro": {
+        "seed": 29,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 1.0
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.9722
+    },
+    "compositional_large::rule_based": {
+      "task": "compositional",
+      "model": {
+        "name": "rule_based",
+        "type": "RuleBasedModel"
+      },
+      "n_items": 400,
+      "metrics": {
+        "overall_accuracy": 1.0,
+        "by_depth": {
+          "1": {
+            "accuracy": 1.0,
+            "n": 100
+          },
+          "2": {
+            "accuracy": 1.0,
+            "n": 100
+          },
+          "3": {
+            "accuracy": 1.0,
+            "n": 100
+          },
+          "4": {
+            "accuracy": 1.0,
+            "n": 100
+          }
+        }
+      },
+      "failure_taxonomy": {},
+      "calibration": {
+        "ece": 0.01125,
+        "selective_accuracy_at_50pct_coverage": 1.0
+      },
+      "repro": {
+        "seed": 29,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 1.0
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.9888
+    },
+    "matching::negation_blind": {
+      "task": "matching",
+      "model": {
+        "name": "negation_blind",
+        "type": "NegationBlindModel"
+      },
+      "n_items": 104,
+      "metrics": {
+        "overall_micro_f1": 0.9230769230769231,
+        "overall_macro_f1": 0.9212121212121211,
+        "n_items": 104,
+        "per_criterion": {
+          "ABDOMINAL": {
+            "micro_f1": 0.75,
+            "n": 8
+          },
+          "ADVANCED-CAD": {
+            "micro_f1": 0.5,
+            "n": 8
+          },
+          "ALCOHOL-ABUSE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ASP-FOR-MI": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "CREATININE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DIETSUPP-2MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DRUG-ABUSE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ENGLISH": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "HBA1C": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "KETO-1YR": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MAJOR-DIABETES": {
+            "micro_f1": 0.75,
+            "n": 8
+          },
+          "MAKES-DECISIONS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MI-6MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          }
+        },
+        "per_label": {
+          "false": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 40
+          },
+          "true": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "support": 64
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "logical_composition": 8
+      },
+      "calibration": {
+        "ece": 0.22307692307692317,
+        "selective_accuracy_at_50pct_coverage": 0.8846153846153846
+      },
+      "repro": {
+        "seed": 13,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 0.7273,
+        "20%": 0.7143,
+        "30%": 0.8125,
+        "40%": 0.8571,
+        "50%": 0.8846,
+        "60%": 0.9048,
+        "70%": 0.9178,
+        "80%": 0.9286,
+        "90%": 0.9149,
+        "100%": 0.9231
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.7
+    },
+    "compositional::negation_blind": {
+      "task": "compositional",
+      "model": {
+        "name": "negation_blind",
+        "type": "NegationBlindModel"
+      },
+      "n_items": 36,
+      "metrics": {
+        "overall_accuracy": 0.5833333333333334,
+        "by_depth": {
+          "1": {
+            "accuracy": 0.6666666666666666,
+            "n": 12
+          },
+          "2": {
+            "accuracy": 0.6666666666666666,
+            "n": 12
+          },
+          "3": {
+            "accuracy": 0.4166666666666667,
+            "n": 12
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "logical_composition": 5,
+        "negation_polarity": 10
+      },
+      "calibration": {
+        "ece": 0.11666666666666659,
+        "selective_accuracy_at_50pct_coverage": 0.7222222222222222
+      },
+      "repro": {
+        "seed": 29,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 0.75,
+        "20%": 0.625,
+        "30%": 0.7273,
+        "40%": 0.6667,
+        "50%": 0.7222,
+        "60%": 0.6364,
+        "70%": 0.6538,
+        "80%": 0.6552,
+        "90%": 0.6061,
+        "100%": 0.5833
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.7
+    },
+    "compositional_large::negation_blind": {
+      "task": "compositional",
+      "model": {
+        "name": "negation_blind",
+        "type": "NegationBlindModel"
+      },
+      "n_items": 400,
+      "metrics": {
+        "overall_accuracy": 0.6175,
+        "by_depth": {
+          "1": {
+            "accuracy": 0.59,
+            "n": 100
+          },
+          "2": {
+            "accuracy": 0.67,
+            "n": 100
+          },
+          "3": {
+            "accuracy": 0.63,
+            "n": 100
+          },
+          "4": {
+            "accuracy": 0.58,
+            "n": 100
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "logical_composition": 81,
+        "negation_polarity": 72
+      },
+      "calibration": {
+        "ece": 0.0824999999999999,
+        "selective_accuracy_at_50pct_coverage": 0.63
+      },
+      "repro": {
+        "seed": 29,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:50+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 0.675,
+        "20%": 0.6,
+        "30%": 0.6,
+        "40%": 0.6375,
+        "50%": 0.63,
+        "60%": 0.6333,
+        "70%": 0.6357,
+        "80%": 0.6312,
+        "90%": 0.625,
+        "100%": 0.6175
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.7
+    },
+    "matching::openai": {
+      "task": "matching",
+      "model": {
+        "name": "openai",
+        "provider": "openai",
+        "model": "gpt-5-nano",
+        "temperature": 0.0
+      },
+      "n_items": 104,
+      "metrics": {
+        "overall_micro_f1": 0.9519230769230769,
+        "overall_macro_f1": 0.9478696741854636,
+        "n_items": 104,
+        "per_criterion": {
+          "ABDOMINAL": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ADVANCED-CAD": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ALCOHOL-ABUSE": {
+            "micro_f1": 0.875,
+            "n": 8
+          },
+          "ASP-FOR-MI": {
+            "micro_f1": 0.5,
+            "n": 8
+          },
+          "CREATININE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DIETSUPP-2MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "DRUG-ABUSE": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "ENGLISH": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "HBA1C": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "KETO-1YR": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MAJOR-DIABETES": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MAKES-DECISIONS": {
+            "micro_f1": 1.0,
+            "n": 8
+          },
+          "MI-6MOS": {
+            "micro_f1": 1.0,
+            "n": 8
+          }
+        },
+        "per_label": {
+          "false": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "support": 40
+          },
+          "true": {
+            "precision": 0.927536231884058,
+            "recall": 1.0,
+            "f1": 0.9624060150375939,
+            "support": 64
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "temporal": 5
+      },
+      "calibration": {
+        "ece": 0.16528846153846147,
+        "selective_accuracy_at_50pct_coverage": 1.0
+      },
+      "repro": {
+        "seed": 13,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:51+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 0.9841,
+        "70%": 0.9452,
+        "80%": 0.9405,
+        "90%": 0.9468,
+        "100%": 0.9519
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.8272,
+      "error_items": [
+        {
+          "item_id": "match:ALCOHOL-ABUSE:000",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.85,
+          "category": "temporal",
+          "rationale": "The criterion requires current/ongoing alcohol abuse; the patient has alcohol abuse present, indicating ongoing use over the limit."
+        },
+        {
+          "item_id": "match:ASP-FOR-MI:000",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.9,
+          "category": "temporal",
+          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+        },
+        {
+          "item_id": "match:ASP-FOR-MI:001",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.9,
+          "category": "temporal",
+          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+        },
+        {
+          "item_id": "match:ASP-FOR-MI:003",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.9,
+          "category": "temporal",
+          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+        },
+        {
+          "item_id": "match:ASP-FOR-MI:006",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.9,
+          "category": "temporal",
+          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+        }
+      ]
+    },
+    "compositional::openai": {
+      "task": "compositional",
+      "model": {
+        "name": "openai",
+        "provider": "openai",
+        "model": "gpt-5-nano",
+        "temperature": 0.0
+      },
+      "n_items": 36,
+      "metrics": {
+        "overall_accuracy": 0.9444444444444444,
+        "by_depth": {
+          "1": {
+            "accuracy": 0.9166666666666666,
+            "n": 12
+          },
+          "2": {
+            "accuracy": 1.0,
+            "n": 12
+          },
+          "3": {
+            "accuracy": 0.9166666666666666,
+            "n": 12
+          }
+        }
+      },
+      "failure_taxonomy": {
+        "negation_polarity": 1,
+        "logical_composition": 1
+      },
+      "calibration": {
+        "ece": 0.19722222222222222,
+        "selective_accuracy_at_50pct_coverage": 1.0
+      },
+      "repro": {
+        "seed": 29,
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "timestamp_utc": "2026-08-29T19:32:51+00:00"
+      },
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 0.9444
+      },
+      "n_abstain": 0,
+      "mean_confidence": 0.7894,
+      "error_items": [
+        {
+          "item_id": "comp:d1:011",
+          "gold": "met",
+          "predicted": "not_met",
+          "confidence": 0.4,
+          "category": "negation_polarity",
+          "rationale": "Angina is present, so NOT angina current/ongoing is false; MI within past 6 months is undocumented and assumed not satisfied; thus the criterion is not satisfied."
+        },
+        {
+          "item_id": "comp:d3:004",
+          "gold": "not_met",
+          "predicted": "met",
+          "confidence": 0.36,
+          "category": "logical_composition",
+          "rationale": "With the documented data, A1, A2, and B evaluate to false, so NOT(A1 OR A2 OR B) holds and the criterion is satisfied, but angina status and serum creatinine are undocumented and could make A2 or B true, yielding low confidence."
+        }
+      ]
+    }
+  },
+  "reference_implementation_validation": {
+    "rule_based_matching_micro_f1": 1.0,
+    "rule_based_compositional_accuracy": 1.0,
+    "rule_based_errors": 0,
+    "negation_blind_taxonomy_matching": {
+      "logical_composition": 8
+    },
+    "negation_blind_taxonomy_compositional": {
+      "logical_composition": 5,
+      "negation_polarity": 10
+    },
+    "negation_blind_depth_curve_large": {
+      "1": 0.59,
+      "2": 0.67,
+      "3": 0.63,
+      "4": 0.58
+    },
+    "interpretation": "Rule-based == oracle on already-structured forms, so its perfect scores are a software-validation artifact, NOT an empirical finding."
+  },
+  "taxonomy_codebook": {
+    "negation_polarity": "Inclusion/exclusion or NOT-scope flipped.",
+    "temporal": "Temporal window or tense reasoning error.",
+    "numeric_threshold": "Comparator or boundary value error.",
+    "logical_composition": "AND/OR/NOT composition resolved incorrectly.",
+    "entity_conflation": "Distinct clinical entities conflated.",
+    "implicit_knowledge": "Failed required unstated inference.",
+    "fabrication": "Asserted a constraint absent from the criterion.",
+    "none": "No attributable failure."
+  },
+  "reproducibility": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "timestamp_utc": "2026-08-29T19:32:51+00:00",
+    "llm_model_id": "gpt-5-nano",
+    "llm_temperature_requested": 0.0,
+    "llm_temperature_effective": "none (API default)",
+    "llm_temperature_note": "gpt-5-nano rejects a custom temperature; on the first live call the adapter dropped it and every subsequent completion used the API default. This collection pass replayed cached responses, so it never re-triggered the fallback.",
+    "llm_response_cache_entries": 107,
+    "packages": [
+      "openai==3.6.0",
+      "pydantic==2.13.5",
+      "pytest==9.1.1",
+      "ruff==0.16.5"
+    ],
+    "tests_passing": 33,
+    "lint": "ruff check . -> All checks passed"
+  },
+  "cannot_fill": {
+    "7.1 Task A (structuring)": "Chia corpus not downloaded and no structuring model implemented (entity F1 / relation F1 / exact match unavailable).",
+    "7.1 Task B (typing & polarity)": "Requires Chia-derived labels and a classification model; tasks/typing_polarity.py is a task-name contract only.",
+    "7.1 Task C on REAL patients": "n2c2 2018 records are DUA-gated and absent; all Task C numbers here use synthetic patients over the real public criterion definitions.",
+    "6. Encoder baselines": "models/encoder.py raises NotImplementedError; needs transformers/torch plus a fine-tuned checkpoint (BioClinicalBERT / PubMedBERT / BioBERT).",
+    "6. Open-weight LLMs": "models/llm_local.py is a stub; needs an HF/vLLM runtime.",
+    "6. Additional API LLMs": "The available API project grants access to gpt-5-nano only; GPT-4-class and Claude-class models returned 403 model_not_found.",
+    "7.5 Ablations": "No prompt-design, few-shot-count, or retrieval ablation has been run; the toolkit ships a single fixed zero-shot prompt.",
+    "5. Human-vs-automatic kappa": "Requires the domain expert to fill human_category in results/errors_openai_*.csv, then run taxonomy.reliability.",
+    "5. Test-retest kappa": "Requires a second annotation pass after a washout interval."
+  },
+  "discrepancies": [
+    {
+      "location": "Paper Sec. 3.4 vs criterialogic/tasks/compositional.py::_atom_pool",
+      "paper_says": "Task D atoms are 'extracted from real ClinicalTrials.gov criteria'.",
+      "code_does": "The atom pool is built from the leaf predicates of the 13 n2c2 criteria; no ClinicalTrials.gov text is fetched. Source enum is CTGOV_SYNTHETIC, which reinforces the misleading impression.",
+      "action": "Either change the paper wording to 'atoms drawn from the public n2c2 criterion definitions' or implement a ctgov-derived pool before submission."
+    },
+    {
+      "location": "Paper Sec. 7.2 hypothesis",
+      "paper_says": "Accuracy declines monotonically with nesting depth.",
+      "data_shows": "See 7.2 table: not monotonic for every system at these sample sizes.",
+      "action": "State the observed pattern; do not assert monotonicity without wider n."
+    }
+  ]
+}

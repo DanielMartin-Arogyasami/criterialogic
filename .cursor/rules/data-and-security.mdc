@@ -1,0 +1,7 @@
+---
+description: Data-layer release boundary and security conventions
+globs: criterialogic/data/**/*.py,scripts/download_data.py
+alwaysApply: false
+---
+Release boundary: Chia (CC-BY) and ClinicalTrials.gov are fetchable; n2c2 2018 is DUA-gated — never download or commit it; `data/raw/` is gitignored. The downloader is stdlib-only (urllib) — do not add `requests` as a hard dependency.
+Keep these security properties when editing data/download code: open only `https://` URLs (reject `file://`/`ftp://`); cap download byte size and a zip's total uncompressed size + file count before `extractall`; if using Hugging Face, pin `revision=` and avoid `trust_remote_code=True`; parse n2c2 XML with `defusedxml` (or treat strictly as trusted DUA input); `random.Random(seed)` is intentional for reproducibility (`# nosec B311`), not a weakness.

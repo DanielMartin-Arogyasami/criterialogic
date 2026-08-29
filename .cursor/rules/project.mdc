@@ -1,0 +1,10 @@
+---
+description: CriteriaLogic project map, run/test commands, and core constraints
+alwaysApply: true
+---
+CriteriaLogic — a public benchmark for LLM reasoning over clinical-trial eligibility criteria.
+Run: `pip install -e .` (Python >=3.10; only runtime dep is pydantic v2). Demo: `python scripts/run_eval.py` (or `criterialogic-eval`). Tests: `pytest -q` (23). Lint: `ruff check .`.
+Layout: `schema/logical_form.py` = harmonized logical form (pydantic v2) + `canonicalize()`; `oracle.py` = three-valued Kleene evaluator (ground truth + rule-based engine); `data/` = `n2c2_criteria.py` (13 public criteria), `synthetic.py` (seeded patients), `loaders/{chia,n2c2,ctgov}.py`, `harmonize.py`, `splits.py`, `download.py`; `tasks/` = `base.py` (Item, Prediction, expression_depth) + A–D + calibration; `models/` = `base.py` (Model interface) + `rule_based`, `naive` (negation_blind), with `encoder`/`llm_*` as import-safe stubs; `metrics/` = classification, matching, logic, calibration, extraction (all from scratch); `taxonomy/` = 7 failure categories + heuristic labeler; `eval/` = runner + report; `leaderboard/` = submit + score; `cli.py` backs the console script.
+Hard constraints: public/synthetic data ONLY — never commit `data/raw/` (n2c2 is DUA-gated); metrics stay dependency-free (no sklearn/numpy/pandas; core is stdlib + pydantic); new models subclass `Model` and return `Prediction(label: bool, confidence 0..1)`; new metrics are pure functions; synthetic/oracle numbers are pipeline checks, not findings.
+Style (save tokens): concise, no preamble/postamble, prose over bullets, minimal targeted edits, show only changed lines, reuse existing patterns, don't re-derive commands or re-summarize seen files.
+Turnkey: to set up and run, execute `bash setup_and_run.sh` (offline, no key); full commands in `RUN.md`. Prefer running provided scripts over editing code; do not refactor/explain unless asked.

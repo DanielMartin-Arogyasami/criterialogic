@@ -1,0 +1,15 @@
+---
+description: How to set up and run CriteriaLogic with minimal model effort (turnkey command-runner)
+alwaysApply: true
+---
+This project is turnkey — running it needs almost no reasoning. Prefer running the provided
+commands/scripts verbatim over reading, rewriting, or explaining code.
+Set up + offline smoke-test (no API key), one command:
+- macOS/Linux/WSL: `bash setup_and_run.sh`
+- Windows: `python -m venv .venv; .venv\Scripts\Activate.ps1; pip install -e ".[dev]"; python scripts/run_eval.py; pytest -q`
+Run a real OpenAI model (needs `OPENAI_API_KEY`):
+`pip install -e ".[llm]"` then `python scripts/run_eval.py --task compositional --model openai`
+The full command list is in `RUN.md`. Tests: `pytest -q`. Lint: `ruff check .`.
+Do NOT, unless explicitly asked: refactor, rewrite, reformat, or regenerate code; add dependencies;
+explain the codebase; or "improve" files. When asked to run something, run the matching command from
+`RUN.md` and report only its output. Keep replies to the command and its result — this keeps token use low.
