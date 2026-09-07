@@ -53,5 +53,11 @@ paper/
 CriteriaLogic_bundle.md
 
 # Added in v0.2
-annotation/    # annotation working files (may contain in-progress labels)
+# Working annotation files stay local. Finished labelled sets are released (§9 / S3).
+!annotation/
+annotation/*
+!annotation/errors_annotator1_FINAL.csv
+!annotation/errors_annotator2_FINAL.csv
+!annotation/adjudication.csv
+!annotation/report.json
 results/leaderboard/*.tmp    # partial submissions
