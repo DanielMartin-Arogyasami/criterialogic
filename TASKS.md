@@ -7,7 +7,7 @@ files it names — never the repo.** Most of the work is `make` targets that nee
 **T4 (second model) now comes before T3 (annotation)**: the error pool is 87 against an
 annotation floor of 150, and at 87 the kappa interval spans three agreement bands, so the
 labelling would cost ~10 person-hours and support no claim. Three models at n=60/depth gives
-~165 errors. The canonical sequence is in `CURSOR_START.md`.
+~165 errors. The canonical sequence is in `RUN.md`.
 
 ---
 
