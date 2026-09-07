@@ -62,6 +62,8 @@ annotation/*
 !annotation/automatic_labels_HELD_BACK.csv
 !annotation/errors_annotator1_FINAL.csv
 !annotation/errors_annotator2_FINAL.csv
+!annotation/completed_errors_annotator1.csv
+!annotation/completed_errors_annotator2.csv
 !annotation/adjudication.csv
 !annotation/report.json
 # partial submissions
