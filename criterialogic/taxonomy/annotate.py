@@ -164,7 +164,7 @@ def unanswerable_reasons(item, prompt_version: str | None = "1") -> list[str]:
     Errors on these items are excluded from the taxonomy distribution and counted
     separately. They are renderer defects being scored as reasoning failures, and in the
     v0.2 depth sweep they are the majority of the deep-item errors — see
-    results/SECTION7.md. Renderer v2 makes the rendering total and removes the defect at
+    results/paper_data.md. Renderer v2 makes the rendering total and removes the defect at
     the cost of invalidating the cached v0.2 responses.
     """
     if prompt_version != "1":

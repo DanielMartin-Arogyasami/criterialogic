@@ -69,7 +69,7 @@ def main() -> None:
     ap.add_argument("--prompt-version", default=None,
                     help="LLM prompt renderer version. Use 1 to reproduce the v0.2 "
                          "reported numbers exactly; 2 (default) fixes the currency "
-                         "rendering defect. See results/SECTION7.md.")
+                         "rendering defect. See results/paper_data.md.")
     args = ap.parse_args()
 
     tasks = [args.task] if args.task else list(TASKS)

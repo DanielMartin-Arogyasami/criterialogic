@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Collect every number the manuscript needs, and check the manuscript against them.
 
-    python scripts/collect_paper_data.py                 # collect -> results/PAPER_DATA.md
-    python scripts/collect_paper_data.py --verify         # diff the paper against the artifacts
+    python scripts/collect_paper_data.py                 # collect -> results/paper_data.md
+    python scripts/collect_paper_data.py --verify         # diff the numbers extract against the artifacts
     python scripts/collect_paper_data.py --run            # also run the offline arms first
 
 Two outputs:
@@ -10,7 +10,7 @@ Two outputs:
 ``results/paper_data.json``
     Machine-readable. Every figure, with the provenance and the integrity gates attached.
 
-``results/PAPER_DATA.md``
+``results/paper_data.md``
     Paste-ready. The tables are formatted to match the manuscript's own section headings,
     so filling Section 3 and Section 7 is a copy rather than a transcription — which is the
     step where numbers get mistyped.
@@ -60,11 +60,47 @@ def _load_stats():
 
 S = _load_stats()
 
-#: The reported depth sweep, and how each set was generated. Recorded here because the sets
-#: predate the ``depths=`` argument and are only reproducible through the legacy path.
+#: Per-depth files from the v0.2 gpt-5-nano / prompt-v1 sweep. Used only as a labelled
+#: fallback, and never mixed into a table whose current run is a different model or prompt.
 REPORTED_SWEEP = {f"compositional_d{d}::openai": {"depth": d, "n_per_depth": 60,
                                                   "seed": 101 + d} for d in range(2, 7)}
 REPORTED_MIXED = "compositional_large::openai"
+CURRENT_SWEEP_LABEL = "compositional::openai"
+CURRENT_SWEEP_MODEL = "gpt-4o-mini"
+CURRENT_SWEEP_PROMPT = "2"
+
+
+def _repo_rel(path: Path) -> str:
+    """Path relative to the repo root, so committed artifacts carry no machine path."""
+    path = Path(path).resolve()
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def _identity(run: dict) -> dict:
+    """Model, prompt version, and whether this run came from the legacy bundle."""
+    model_block = run.get("model") if isinstance(run.get("model"), dict) else {}
+    inf = run.get("inference") if isinstance(run.get("inference"), dict) else {}
+    if inf and "requested_temperature" not in inf and "model" not in inf:
+        inf = {}
+    model = model_block.get("model") or inf.get("model")
+    prompt = model_block.get("prompt_version")
+    if prompt is None:
+        prompt = inf.get("prompt_version")
+    src = str(run.get("source") or "")
+    legacy = "missing_runs" in src.replace("\\", "/")
+    if legacy and not model:
+        model = "gpt-5-nano"
+    if legacy and prompt is None:
+        prompt = "1"
+    return {
+        "model": str(model) if model else None,
+        "prompt_version": str(prompt) if prompt is not None else None,
+        "legacy": legacy,
+        "source": src,
+    }
 
 
 # --------------------------------------------------------------------------- #
@@ -79,7 +115,7 @@ def load_runs(results_dir: Path) -> dict:
         payload = json.loads(legacy.read_text(encoding="utf-8"))
         for label, run in payload.get("runs", {}).items():
             if run.get("per_item_predictions"):
-                src = str(legacy.resolve().relative_to(ROOT)) if legacy.resolve().is_relative_to(ROOT) else str(legacy)
+                src = _repo_rel(legacy)
                 runs[label] = {"source": src,
                                "inference": payload.get("inference_parameters", {}),
                                **run}
@@ -88,7 +124,7 @@ def load_runs(results_dir: Path) -> dict:
         if not data.get("per_item_predictions") or "task" not in data:
             continue
         label = f"{data['task']}::{data.get('model', {}).get('name', path.stem)}"
-        src = str(path.resolve().relative_to(ROOT)) if path.resolve().is_relative_to(ROOT) else str(path)
+        src = _repo_rel(path)
         runs[label] = {"source": src, **data}
     return runs
 
@@ -116,6 +152,7 @@ def summarise_run(label: str, run: dict) -> dict:
     raw_ece = S.expected_calibration_error(rows)
     raw_conf = (sum(c for c, _ in rows) / n) if n else None
     raw_acc = (k / n) if n else None
+    ident = _identity(run)
     return {
         "label": label,
         "source": run.get("source"),
@@ -141,6 +178,9 @@ def summarise_run(label: str, run: dict) -> dict:
         "n_unanswerable_errors": sum(1 for p in errors if p.get("unanswerable")) or None,
         "by_depth": _by_depth(pips),
         "_has_rationales": bool(rationales),
+        "legacy": ident["legacy"],
+        "eval_model": ident["model"],
+        "prompt_version": ident["prompt_version"],
     }
 
 
@@ -261,12 +301,45 @@ def _row_from_summary(depth: int, seed, s: dict) -> dict:
     }
 
 
+def _not_run_sweep(gates: list[dict] | None = None) -> dict:
+    return {"status": "not run",
+            "fill_with": ("python scripts/run_eval.py --task compositional "
+                          "--depths 2,3,4,5,6 --n-per-depth 60 --model openai"),
+            "_gates": gates or []}
+
+
+_DIAGNOSTIC_NAMES = {"rule_based", "negation_blind"}
+
+
+def _current_combined(summaries: dict, runs: dict | None) -> str | None:
+    """The current LLM sweep, never a diagnostic and never a legacy per-depth file."""
+    if not runs:
+        return None
+    if CURRENT_SWEEP_LABEL in summaries:
+        return CURRENT_SWEEP_LABEL
+    candidates: list[str] = []
+    for lbl in summaries:
+        if not lbl.startswith("compositional::"):
+            continue
+        ident = _identity(runs[lbl])
+        if ident["legacy"]:
+            continue
+        name = None
+        model = runs[lbl].get("model")
+        if isinstance(model, dict):
+            name = model.get("name")
+        if name in _DIAGNOSTIC_NAMES:
+            continue
+        candidates.append(lbl)
+    return candidates[0] if candidates else None
+
+
 def depth_sweep(summaries: dict, runs: dict | None = None) -> dict:
     # Prefer a combined compositional::<model> run (the official T2 command, prompt v2).
-    # Legacy per-depth files stay as a fallback so older artifacts still collect.
-    combined = [lbl for lbl in summaries if lbl.startswith("compositional::")]
-    if combined and runs:
-        label = "compositional::openai" if "compositional::openai" in summaries else combined[0]
+    # Legacy per-depth files are refused when they name a different model or prompt.
+    label = _current_combined(summaries, runs)
+    if label and runs:
+        ident = _identity(runs[label])
         pips = runs[label]["per_item_predictions"]
         seed = (runs[label].get("repro") or {}).get("seed")
         depths = sorted({p["depth"] for p in pips if p.get("depth") is not None})
@@ -275,33 +348,82 @@ def depth_sweep(summaries: dict, runs: dict | None = None) -> dict:
             for d in depths:
                 slice_pips = [p for p in pips if p.get("depth") == d]
                 s = summarise_run(f"{label}@d{d}", {"per_item_predictions": slice_pips,
-                                                    "source": runs[label].get("source")})
-                rows.append(_row_from_summary(d, seed, s))
-            return _sweep_from_rows(rows)
+                                                    "source": runs[label].get("source"),
+                                                    "model": runs[label].get("model")})
+                row = _row_from_summary(d, seed, s)
+                row["model"] = ident["model"]
+                row["prompt_version"] = ident["prompt_version"]
+                row["legacy"] = False
+                rows.append(row)
+            out = _sweep_from_rows(rows)
+            out["source_label"] = label
+            out["model"] = ident["model"]
+            out["prompt_version"] = ident["prompt_version"]
+            out["legacy"] = False
+            out["_gates"] = []
+            return out
 
     present = {lbl: spec for lbl, spec in REPORTED_SWEEP.items() if lbl in summaries}
-    if len(present) >= 2:
-        rows = [_row_from_summary(spec["depth"], spec["seed"], summaries[lbl])
-                for lbl, spec in sorted(present.items(), key=lambda kv: kv[1]["depth"])]
-        return _sweep_from_rows(rows)
-    return {"status": "not run",
-            "fill_with": ("python scripts/run_eval.py --task compositional "
-                          "--depths 2,3,4,5,6 --n-per-depth 60 --model openai")}
+    if len(present) >= 2 and runs:
+        ids = {lbl: _identity(runs[lbl]) for lbl in present}
+        current_id = (_identity(runs[label]) if label else {
+            "model": CURRENT_SWEEP_MODEL, "prompt_version": CURRENT_SWEEP_PROMPT,
+            "source": f"results/{CURRENT_SWEEP_LABEL.replace('::', '__')}.json",
+        })
+        mismatched = [
+            lbl for lbl, ident in ids.items()
+            if (ident["model"], ident["prompt_version"])
+            != (current_id["model"], current_id["prompt_version"])
+        ]
+        if mismatched or any(ident["legacy"] for ident in ids.values()):
+            sample = ids[mismatched[0] if mismatched else next(iter(ids))]
+            return _not_run_sweep([{
+                "level": "BLOCK",
+                "subject": "depth sweep source",
+                "finding": (
+                    f"Refused to build the depth sweep from {sorted(present)} "
+                    f"({sample['model']}, prompt {sample['prompt_version']}, "
+                    f"source {sample['source']}) because those runs do not match the "
+                    f"current run ({current_id['model']}, prompt "
+                    f"{current_id['prompt_version']}, source {current_id['source']})."
+                ),
+                "action": ("Use the current compositional:: run. Do not report the "
+                           "legacy gpt-5-nano / prompt-v1 per-depth files as the sweep."),
+            }])
+        rows = []
+        for lbl, spec in sorted(present.items(), key=lambda kv: kv[1]["depth"]):
+            row = _row_from_summary(spec["depth"], spec["seed"], summaries[lbl])
+            row["model"] = ids[lbl]["model"]
+            row["prompt_version"] = ids[lbl]["prompt_version"]
+            row["legacy"] = ids[lbl]["legacy"]
+            rows.append(row)
+        out = _sweep_from_rows(rows)
+        out["legacy"] = False
+        out["_gates"] = []
+        return out
+    return _not_run_sweep()
 
 
-def mixed_depth(summaries: dict) -> dict:
+def mixed_depth(summaries: dict, runs: dict | None = None) -> dict:
     if REPORTED_MIXED not in summaries:
         return {"status": "not run",
                 "fill_with": ("python scripts/run_eval.py --task compositional "
                               "--n-per-depth 100 --max-depth 4 --seed 29 --model openai")}
     s = summaries[REPORTED_MIXED]
+    ident = _identity(runs[REPORTED_MIXED]) if runs and REPORTED_MIXED in runs else {
+        "model": "gpt-5-nano", "prompt_version": "1", "legacy": True, "source": None,
+    }
     per_depth = {int(d): (v["n_correct"], v["n"]) for d, v in s["by_depth"].items()}
     trend = S.depth_trend(per_depth) if len(per_depth) >= 2 else None
     return {"status": "computed", "overall": {"accuracy": s["accuracy"],
                                               "wilson_95": s["wilson_95"], "n": s["n_items"]},
             "by_depth": s["by_depth"], "trend": trend,
             "ci_separated_pairs": ([p["depths"] for p in trend["pairwise"]
-                                    if not p["cis_overlap"]] if trend else [])}
+                                    if not p["cis_overlap"]] if trend else []),
+            "legacy": ident.get("legacy", True),
+            "model": ident.get("model") or "gpt-5-nano",
+            "prompt_version": ident.get("prompt_version") or "1",
+            "source": ident.get("source")}
 
 
 def exposure_stratification(runs: dict) -> dict:
@@ -406,7 +528,7 @@ def taxonomy(runs: dict, summaries: dict) -> dict:
 # Integrity gates — run as part of collection so they cannot drift from it
 # --------------------------------------------------------------------------- #
 def gates(summaries: dict, sweep: dict, mixed: dict, sec3: dict) -> list[dict]:
-    out: list[dict] = []
+    out: list[dict] = list(sweep.get("_gates") or []) + list(mixed.get("_gates") or [])
 
     def add(level, subject, finding, action):
         out.append({"level": level, "subject": subject, "finding": finding, "action": action})
@@ -540,12 +662,13 @@ def render(payload: dict) -> str:
     # --- 7.1 depth sweep ---
     L += ["## Section 7.1 — accuracy versus logical nesting depth", ""]
     if sweep["status"] == "computed":
-        L += ["| Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence |",
-              "|---|---|---|---|---|---|---|"]
+        L += ["| Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence | Model |",
+              "|---|---|---|---|---|---|---|---|"]
         for r in sweep["rows"]:
+            model = r.get("model") or sweep.get("model") or "—"
             L.append(f"| {r['depth']} | {r['seed']} | **{_pct(r['accuracy_3dp'])}** | "
                      f"{_ci(r['wilson_95'])} | {r['n_errors']} | {_pct(r['ece_3dp'])} | "
-                     f"{_pct(r['mean_confidence_3dp'])} |")
+                     f"{_pct(r['mean_confidence_3dp'])} | {model} |")
         p = sweep["pooled"]
         sp = sweep["trend"]["spearman"]
         L += ["", f"Pooled: {p['n_correct']}/{p['n']} = **{_pct(p['accuracy'])}** "
@@ -566,6 +689,10 @@ def render(payload: dict) -> str:
     # --- 7.2 mixed set ---
     L += ["## Section 7.2 — the mixed-depth set", ""]
     if mixed["status"] == "computed":
+        if mixed.get("legacy"):
+            L += [f"**Legacy artifact.** `{mixed.get('model')}`, prompt v"
+                  f"{mixed.get('prompt_version')}, source `{mixed.get('source')}`. "
+                  "Not a measurement of the current run.", ""]
         L += ["| Depth | Accuracy | 95% Wilson CI | n |", "|---|---|---|---|"]
         for d, v in mixed["by_depth"].items():
             L.append(f"| {d} | {_pct(v['accuracy'])} | {_ci(v['wilson_95'])} | {v['n']} |")
@@ -601,7 +728,8 @@ def render(payload: dict) -> str:
           "|---|---|---|---|---|---|---|---|"]
     for lbl, s in payload["runs"].items():
         sa = s["selective_accuracy"]
-        L.append(f"| {lbl} | {_pct(s['ece_3dp'])} | {_pct(s['mean_confidence_3dp'])} | "
+        tag = " *(legacy)*" if s.get("legacy") else ""
+        L.append(f"| {lbl}{tag} | {_pct(s['ece_3dp'])} | {_pct(s['mean_confidence_3dp'])} | "
                  f"{sa.get('10%')} | {sa.get('30%')} | {sa.get('50%')} | {sa.get('100%')} | "
                  f"{'yes' if s['usable_confidence_signal'] else '**no**'} |")
     L.append("")
@@ -647,7 +775,7 @@ def render(payload: dict) -> str:
 # Verification against the manuscript
 # --------------------------------------------------------------------------- #
 #: A depth row in the manuscript's 7.1 table. The seed column is optional, because the
-#: manuscript prints six columns and results/PAPER_DATA.md prints seven; verification must
+#: manuscript prints six columns and results/paper_data.md prints seven; verification must
 #: work on whichever the author pasted rather than on one house style.
 _DEPTH_ROW = re.compile(
     r"^\|\s*(\d)\s*\|(?:\s*\d+\s*\|)?\s*\*\*([\d.]+)\*\*\s*\|\s*\[([\d.]+),\s*([\d.]+)\]\s*\|"
@@ -708,11 +836,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--results", default=str(ROOT / "results"))
     ap.add_argument("--data-dir", default=None)
-    ap.add_argument("--paper", default=str(ROOT / "paper" / "CriteriaLogic.md"))
+    ap.add_argument("--paper", default=str(ROOT / "results" / "verify_extract.md"),
+                    help="File --verify diffs against. Defaults to the committed numbers extract.")
     ap.add_argument("--out-json", default=None)
     ap.add_argument("--out-md", default=None)
     ap.add_argument("--verify", action="store_true",
-                    help="Diff the manuscript against the artifacts and exit non-zero on a mismatch.")
+                    help="Diff the numbers extract against the artifacts and exit non-zero on a mismatch.")
     ap.add_argument("--run", action="store_true",
                     help="Run the offline arms first, so their rows are present.")
     args = ap.parse_args()
@@ -746,20 +875,29 @@ def main() -> int:
     summaries = {lbl: summarise_run(lbl, r) for lbl, r in runs.items()}
     sec3 = section3(data_dir)
     sweep = depth_sweep(summaries, runs)
-    mixed = mixed_depth(summaries)
+    mixed = mixed_depth(summaries, runs)
+    current = runs.get(CURRENT_SWEEP_LABEL, {})
+    current_model = current.get("model") if isinstance(current.get("model"), dict) else {}
+    if (current_model.get("effective_temperature") == 0.0
+            and not current_model.get("dropped_parameters")):
+        repro_note = (
+            "Item sets, gold labels and prompts are deterministic. For the current "
+            "gpt-4o-mini / prompt v2 run, requested temperature 0.0 was applied "
+            "(dropped_parameters empty). Completions are not redistributed; the "
+            "per-item predictions are the record of the run.")
+    else:
+        repro_note = (
+            "Item sets, gold labels and prompts are deterministic. Model completions "
+            "are not redistributed. The per-item predictions are the record of the run.")
     payload = {
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "provenance": {
-            "results_dir": str(results_dir),
-            "data_dir": str(data_dir),
+            "results_dir": _repo_rel(results_dir),
+            "data_dir": _repo_rel(data_dir),
             "runs_loaded": {lbl: r.get("source") for lbl, r in runs.items()},
             "inference_parameters": {lbl: r.get("inference") or r.get("model")
                                      for lbl, r in runs.items()},
-            "reproducibility_note": (
-                "Item sets, gold labels and prompts are deterministic. Model completions "
-                "are not: the requested temperature was rejected by the evaluated model so "
-                "the API default applied, and the response cache is not redistributed. The "
-                "per-item predictions are the record of the run."),
+            "reproducibility_note": repro_note,
         },
         "runs": summaries,
         "section3": sec3,
@@ -782,8 +920,8 @@ def main() -> int:
         print("Manuscript matches the artifacts on every checked figure.")
         return 0
 
-    out_json = Path(args.out_json or results_dir / "paper_data.v2.json")
-    out_md = Path(args.out_md or results_dir / "PAPER_DATA.md")
+    out_json = Path(args.out_json or results_dir / "paper_data.json")
+    out_md = Path(args.out_md or results_dir / "paper_data.md")
     out_json.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     out_md.write_text(render(payload) + "\n", encoding="utf-8")

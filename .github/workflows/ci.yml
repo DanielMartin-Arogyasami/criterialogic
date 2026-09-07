@@ -4,17 +4,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install -e ".[dev]"
       - run: ruff check .
       - run: pytest -q
       - run: python scripts/preflight.py   # environment + data + both arms, no network or key
-      - run: python scripts/run_eval.py --limit 40 --n-per-depth 8 --max-depth 3
-      # The manuscript's numbers must match the released artifacts. This is the gate.
+      - run: python scripts/run_eval.py --limit 40 --n-per-depth 8 --max-depth 3 --outdir /tmp/ci-smoke
+      # The committed numbers extract must match the released artifacts. This is the gate.
       - run: python scripts/collect_paper_data.py --verify

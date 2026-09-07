@@ -74,7 +74,7 @@ def regenerate_reported_depth_set(
     original path. ``seed`` defaults to ``101 + depth``, the value used in the results.
 
     New work should use ``generate_compositional_items(depths=[d], ...)``, which varies
-    only depth. See results/SECTION7.md.
+    only depth. See results/paper_data.md.
     """
     seed = 101 + depth if seed is None else seed
     items = generate_compositional_items(

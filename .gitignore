@@ -1,14 +1,24 @@
 # Data-release boundary: raw data is NEVER committed (esp. DUA-gated n2c2).
 data/raw/
-data/processed/
+!data/processed/
+data/processed/*
+!data/processed/logic_set_depth_sweep.json
+!data/processed/logic_set_mixed.json
 # Generated run artifacts are transient; only the curated collection outputs below are tracked.
 results/*
 !results/DISCREPANCIES.md
 !results/paper_data.json
 !results/paper_data.md
+!results/verify_extract.md
 !results/AUDIT.md
 !results/audit.json
 !results/selective_accuracy_corrected.json
+!results/compositional__openai.json
+!results/real_criteria__openai.json
+!results/compositional__rule_based.json
+!results/compositional__negation_blind.json
+!results/real_criteria__rule_based.json
+!results/real_criteria__negation_blind.json
 !results/missing/
 results/missing/*
 !results/missing/AUDIT_missing.md
@@ -32,6 +42,12 @@ __pycache__/
 
 # Manuscript stays local; do not publish the paper on GitHub.
 paper/
+
+# Local editor state. Tooling configuration is excluded via .git/info/exclude, which
+# is not committed, so the public tree carries no local-tooling names at all.
+.vscode/
+.idea/
+*.code-workspace
 
 # Single-file bundle used to bootstrap the repo; source of truth is the tree itself.
 CriteriaLogic_bundle.md

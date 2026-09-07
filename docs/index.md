@@ -52,7 +52,7 @@ docs/
 
 - **`docs/CODEBOOK.md`** — the annotation codebook. Read this before labelling anything.
 - **`docs/V2_SCOPE.md`** — what v0.2 cut, why, and how to restore it.
-- **`results/SECTION7.md`** — the reported results, with the provenance and caveats each
+- **`results/paper_data.md`** — the reported results, with the provenance and caveats each
   number carries.
 - **`results/DISCREPANCIES.md`** — the register of places where the manuscript and the
   code disagree, or where the code cannot support a claim the manuscript wants to make.

@@ -23,8 +23,8 @@ help:
 	@echo "  data             Arm 1 counts + Arm 2 item set   <- fills the Section 3 brackets"
 	@echo "  run-offline      both arms, diagnostic models, no key"
 	@echo "  run-llm          depth sweep + Arm 1 under prompt v2 (MODEL=, NPD=)  <- needs a key"
-	@echo "  paper            regenerate results/PAPER_DATA.md"
-	@echo "  verify           diff the manuscript against the artifacts (exits non-zero on drift)"
+	@echo "  paper            regenerate results/paper_data.md"
+	@echo "  verify           diff the numbers extract against the artifacts (exits non-zero on drift)"
 	@echo "  annotate-export  draw the sample, write the two blind annotator files"
 	@echo "  annotate-report  kappa + adjudication sheet"
 	@echo "  finish           setup -> check -> data -> run-offline -> paper -> verify"
@@ -43,7 +43,8 @@ check:
 
 data:
 	$(PY) scripts/build_real_criteria.py --stats
-	$(PY) scripts/build_logic_set.py --depths 2,3,4,5,6 --n-per-depth 60 --seed 29
+	$(PY) scripts/build_logic_set.py --depths 2,3,4,5,6 --n-per-depth 60 --seed 29 \
+		--out data/processed/logic_set_depth_sweep.json
 
 run-offline:
 	$(PY) scripts/run_eval.py --outdir $(RESULTS)
@@ -72,7 +73,7 @@ annotate-report:
 
 finish: check data run-offline paper verify
 	@echo ""
-	@echo "Deterministic work complete. Read results/PAPER_DATA.md."
+	@echo "Deterministic work complete. Read results/paper_data.md."
 	@echo "Remaining, in order:  make run-llm   ->   make paper verify   ->   annotation"
 
 # Pre-release gate. Fails loudly rather than letting a placeholder reach a preprint.

@@ -1,21 +1,21 @@
 {
-  "generated_utc": "2026-09-07T19:57:27+00:00",
+  "generated_utc": "2026-09-07T21:50:11+00:00",
   "provenance": {
     "results_dir": "results",
-    "data_dir": "C:\\Users\\danie\\Downloads\\Criterialogic\\data",
+    "data_dir": "data",
     "runs_loaded": {
-      "compositional_large::openai": "results\\missing\\missing_runs.json",
-      "compositional_d2::openai": "results\\missing\\missing_runs.json",
-      "compositional_d3::openai": "results\\missing\\missing_runs.json",
-      "compositional_d4::openai": "results\\missing\\missing_runs.json",
-      "compositional_d5::openai": "results\\missing\\missing_runs.json",
-      "compositional_d6::openai": "results\\missing\\missing_runs.json",
-      "compositional::negation_blind": "results\\compositional__negation_blind.json",
-      "compositional::openai": "results\\compositional__openai.json",
-      "compositional::rule_based": "results\\compositional__rule_based.json",
-      "real_criteria::negation_blind": "results\\real_criteria__negation_blind.json",
-      "real_criteria::openai": "results\\real_criteria__openai.json",
-      "real_criteria::rule_based": "results\\real_criteria__rule_based.json"
+      "compositional_large::openai": "results/missing/missing_runs.json",
+      "compositional_d2::openai": "results/missing/missing_runs.json",
+      "compositional_d3::openai": "results/missing/missing_runs.json",
+      "compositional_d4::openai": "results/missing/missing_runs.json",
+      "compositional_d5::openai": "results/missing/missing_runs.json",
+      "compositional_d6::openai": "results/missing/missing_runs.json",
+      "compositional::negation_blind": "results/compositional__negation_blind.json",
+      "compositional::openai": "results/compositional__openai.json",
+      "compositional::rule_based": "results/compositional__rule_based.json",
+      "real_criteria::negation_blind": "results/real_criteria__negation_blind.json",
+      "real_criteria::openai": "results/real_criteria__openai.json",
+      "real_criteria::rule_based": "results/real_criteria__rule_based.json"
     },
     "inference_parameters": {
       "compositional_large::openai": {
@@ -85,12 +85,12 @@
         "type": "RuleBasedModel"
       }
     },
-    "reproducibility_note": "Item sets, gold labels and prompts are deterministic. Model completions are not: the requested temperature was rejected by the evaluated model so the API default applied, and the response cache is not redistributed. The per-item predictions are the record of the run."
+    "reproducibility_note": "Item sets, gold labels and prompts are deterministic. For the current gpt-4o-mini / prompt v2 run, requested temperature 0.0 was applied (dropped_parameters empty). Completions are not redistributed; the per-item predictions are the record of the run."
   },
   "runs": {
     "compositional_large::openai": {
       "label": "compositional_large::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 400,
       "n_correct": 368,
       "accuracy": 0.92,
@@ -160,11 +160,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional_d2::openai": {
       "label": "compositional_d2::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 60,
       "n_correct": 57,
       "accuracy": 0.95,
@@ -207,11 +210,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional_d3::openai": {
       "label": "compositional_d3::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 60,
       "n_correct": 57,
       "accuracy": 0.95,
@@ -254,11 +260,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional_d4::openai": {
       "label": "compositional_d4::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 60,
       "n_correct": 52,
       "accuracy": 0.8667,
@@ -301,11 +310,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional_d5::openai": {
       "label": "compositional_d5::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 60,
       "n_correct": 43,
       "accuracy": 0.7167,
@@ -348,11 +360,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional_d6::openai": {
       "label": "compositional_d6::openai",
-      "source": "results\\missing\\missing_runs.json",
+      "source": "results/missing/missing_runs.json",
       "n_items": 60,
       "n_correct": 36,
       "accuracy": 0.6,
@@ -395,11 +410,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": true,
+      "eval_model": "gpt-5-nano",
+      "prompt_version": "1"
     },
     "compositional::negation_blind": {
       "label": "compositional::negation_blind",
-      "source": "results\\compositional__negation_blind.json",
+      "source": "results/compositional__negation_blind.json",
       "n_items": 240,
       "n_correct": 144,
       "accuracy": 0.6,
@@ -469,11 +487,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": false,
+      "eval_model": null,
+      "prompt_version": null
     },
     "compositional::openai": {
       "label": "compositional::openai",
-      "source": "results\\compositional__openai.json",
+      "source": "results/compositional__openai.json",
       "n_items": 300,
       "n_correct": 181,
       "accuracy": 0.6033,
@@ -552,11 +573,14 @@
           ]
         }
       },
-      "_has_rationales": true
+      "_has_rationales": true,
+      "legacy": false,
+      "eval_model": "gpt-4o-mini",
+      "prompt_version": "2"
     },
     "compositional::rule_based": {
       "label": "compositional::rule_based",
-      "source": "results\\compositional__rule_based.json",
+      "source": "results/compositional__rule_based.json",
       "n_items": 240,
       "n_correct": 240,
       "accuracy": 1.0,
@@ -626,11 +650,14 @@
           ]
         }
       },
-      "_has_rationales": true
+      "_has_rationales": true,
+      "legacy": false,
+      "eval_model": null,
+      "prompt_version": null
     },
     "real_criteria::negation_blind": {
       "label": "real_criteria::negation_blind",
-      "source": "results\\real_criteria__negation_blind.json",
+      "source": "results/real_criteria__negation_blind.json",
       "n_items": 926,
       "n_correct": 898,
       "accuracy": 0.9698,
@@ -682,11 +709,14 @@
           ]
         }
       },
-      "_has_rationales": false
+      "_has_rationales": false,
+      "legacy": false,
+      "eval_model": null,
+      "prompt_version": null
     },
     "real_criteria::openai": {
       "label": "real_criteria::openai",
-      "source": "results\\real_criteria__openai.json",
+      "source": "results/real_criteria__openai.json",
       "n_items": 926,
       "n_correct": 866,
       "accuracy": 0.9352,
@@ -738,11 +768,14 @@
           ]
         }
       },
-      "_has_rationales": true
+      "_has_rationales": true,
+      "legacy": false,
+      "eval_model": "gpt-4o-mini",
+      "prompt_version": "2"
     },
     "real_criteria::rule_based": {
       "label": "real_criteria::rule_based",
-      "source": "results\\real_criteria__rule_based.json",
+      "source": "results/real_criteria__rule_based.json",
       "n_items": 926,
       "n_correct": 926,
       "accuracy": 1.0,
@@ -794,7 +827,10 @@
           ]
         }
       },
-      "_has_rationales": true
+      "_has_rationales": true,
+      "legacy": false,
+      "eval_model": null,
+      "prompt_version": null
     }
   },
   "section3": {
@@ -871,7 +907,10 @@
           "ece": 0.075,
           "ece_3dp": 0.075,
           "mean_confidence": 0.875,
-          "mean_confidence_3dp": 0.875
+          "mean_confidence_3dp": 0.875,
+          "model": "gpt-4o-mini",
+          "prompt_version": "2",
+          "legacy": false
         },
         {
           "depth": 3,
@@ -887,7 +926,10 @@
           "ece": 0.1733,
           "ece_3dp": 0.173,
           "mean_confidence": 0.8567,
-          "mean_confidence_3dp": 0.857
+          "mean_confidence_3dp": 0.857,
+          "model": "gpt-4o-mini",
+          "prompt_version": "2",
+          "legacy": false
         },
         {
           "depth": 4,
@@ -903,7 +945,10 @@
           "ece": 0.2833,
           "ece_3dp": 0.283,
           "mean_confidence": 0.8,
-          "mean_confidence_3dp": 0.8
+          "mean_confidence_3dp": 0.8,
+          "model": "gpt-4o-mini",
+          "prompt_version": "2",
+          "legacy": false
         },
         {
           "depth": 5,
@@ -919,7 +964,10 @@
           "ece": 0.1417,
           "ece_3dp": 0.142,
           "mean_confidence": 0.7883,
-          "mean_confidence_3dp": 0.788
+          "mean_confidence_3dp": 0.788,
+          "model": "gpt-4o-mini",
+          "prompt_version": "2",
+          "legacy": false
         },
         {
           "depth": 6,
@@ -935,7 +983,10 @@
           "ece": 0.4233,
           "ece_3dp": 0.423,
           "mean_confidence": 0.79,
-          "mean_confidence_3dp": 0.79
+          "mean_confidence_3dp": 0.79,
+          "model": "gpt-4o-mini",
+          "prompt_version": "2",
+          "legacy": false
         }
       ],
       "pooled": {
@@ -1187,7 +1238,12 @@
           ],
           "n_per_depth_needed": 171
         }
-      ]
+      ],
+      "source_label": "compositional::openai",
+      "model": "gpt-4o-mini",
+      "prompt_version": "2",
+      "legacy": false,
+      "_gates": []
     },
     "mixed_depth": {
       "status": "computed",
@@ -1359,7 +1415,11 @@
           }
         ]
       },
-      "ci_separated_pairs": []
+      "ci_separated_pairs": [],
+      "legacy": true,
+      "model": "gpt-5-nano",
+      "prompt_version": "1",
+      "source": "results/missing/missing_runs.json"
     },
     "exposure": {
       "status": "computed",

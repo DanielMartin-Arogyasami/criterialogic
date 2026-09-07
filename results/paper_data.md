@@ -1,4 +1,4 @@
-# Paper data — generated 2026-09-07T19:57:27+00:00
+# Paper data — generated 2026-09-07T21:50:11+00:00
 
 > Every number here was produced by executing code against the released
 > artifacts, and every aggregate is recomputed from persisted per-item
@@ -29,13 +29,13 @@
 
 ## Section 7.1 — accuracy versus logical nesting depth
 
-| Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence |
-|---|---|---|---|---|---|---|
-| 2 | 29 | **0.800** | [0.682, 0.882] | 12 | 0.075 | 0.875 |
-| 3 | 29 | **0.683** | [0.558, 0.787] | 19 | 0.173 | 0.857 |
-| 4 | 29 | **0.517** | [0.393, 0.638] | 29 | 0.283 | 0.800 |
-| 5 | 29 | **0.650** | [0.524, 0.758] | 21 | 0.142 | 0.788 |
-| 6 | 29 | **0.367** | [0.256, 0.493] | 38 | 0.423 | 0.790 |
+| Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence | Model |
+|---|---|---|---|---|---|---|---|
+| 2 | 29 | **0.800** | [0.682, 0.882] | 12 | 0.075 | 0.875 | gpt-4o-mini |
+| 3 | 29 | **0.683** | [0.558, 0.787] | 19 | 0.173 | 0.857 | gpt-4o-mini |
+| 4 | 29 | **0.517** | [0.393, 0.638] | 29 | 0.283 | 0.800 | gpt-4o-mini |
+| 5 | 29 | **0.650** | [0.524, 0.758] | 21 | 0.142 | 0.788 | gpt-4o-mini |
+| 6 | 29 | **0.367** | [0.256, 0.493] | 38 | 0.423 | 0.790 | gpt-4o-mini |
 
 Pooled: 181/300 = **0.603** [0.547, 0.657].
 Spearman rho = **-0.9**, exact one-sided permutation p = **0.0417** over 120 orderings (floor 0.0083).
@@ -44,6 +44,8 @@ CI-separated pairs: [(2, 4), (2, 6), (3, 6), (5, 6)].
 Overlapping pairs and the per-depth n that would separate them: (2, 3) n>=220, (2, 5) n>=138, (3, 4) n>=135, (3, 5) n>=3139, (4, 5) n>=214, (4, 6) n>=171.
 
 ## Section 7.2 — the mixed-depth set
+
+**Legacy artifact.** `gpt-5-nano`, prompt v1, source `results/missing/missing_runs.json`. Not a measurement of the current run.
 
 | Depth | Accuracy | 95% Wilson CI | n |
 |---|---|---|---|
@@ -72,12 +74,12 @@ Source: persisted per-item flags.
 
 | Set | ECE | Mean conf. | @10% | @30% | @50% | @100% | Usable signal |
 |---|---|---|---|---|---|---|---|
-| compositional_large::openai | 0.139 | 0.781 | 0.9828 | 0.9833 | 0.9768 | 0.92 | yes |
-| compositional_d2::openai | 0.144 | 0.811 | 1.0 | 0.9861 | 0.9333 | 0.95 | yes |
-| compositional_d3::openai | 0.170 | 0.780 | 1.0 | 1.0 | 1.0 | 0.95 | yes |
-| compositional_d4::openai | 0.135 | 0.732 | 1.0 | 0.9778 | 0.9 | 0.8667 | yes |
-| compositional_d5::openai | 0.140 | 0.684 | 1.0 | 0.9167 | 0.7889 | 0.7167 | yes |
-| compositional_d6::openai | 0.122 | 0.659 | 0.8333 | 0.6667 | 0.6667 | 0.6 | yes |
+| compositional_large::openai *(legacy)* | 0.139 | 0.781 | 0.9828 | 0.9833 | 0.9768 | 0.92 | yes |
+| compositional_d2::openai *(legacy)* | 0.144 | 0.811 | 1.0 | 0.9861 | 0.9333 | 0.95 | yes |
+| compositional_d3::openai *(legacy)* | 0.170 | 0.780 | 1.0 | 1.0 | 1.0 | 0.95 | yes |
+| compositional_d4::openai *(legacy)* | 0.135 | 0.732 | 1.0 | 0.9778 | 0.9 | 0.8667 | yes |
+| compositional_d5::openai *(legacy)* | 0.140 | 0.684 | 1.0 | 0.9167 | 0.7889 | 0.7167 | yes |
+| compositional_d6::openai *(legacy)* | 0.122 | 0.659 | 0.8333 | 0.6667 | 0.6667 | 0.6 | yes |
 | compositional::negation_blind | 0.100 | 0.700 | 0.6 | 0.6 | 0.6 | 0.6 | **no** |
 | compositional::openai | 0.219 | 0.822 | 0.7926 | 0.7643 | 0.6747 | 0.6033 | yes |
 | compositional::rule_based | 0.019 | 0.981 | 1.0 | 1.0 | 1.0 | 1.0 | yes |
@@ -201,20 +203,20 @@ No pair of depths is separated at 95% confidence on the mixed set.
 ```json
 {
   "results_dir": "results",
-  "data_dir": "C:\\Users\\danie\\Downloads\\Criterialogic\\data",
+  "data_dir": "data",
   "runs_loaded": {
-    "compositional_large::openai": "results\\missing\\missing_runs.json",
-    "compositional_d2::openai": "results\\missing\\missing_runs.json",
-    "compositional_d3::openai": "results\\missing\\missing_runs.json",
-    "compositional_d4::openai": "results\\missing\\missing_runs.json",
-    "compositional_d5::openai": "results\\missing\\missing_runs.json",
-    "compositional_d6::openai": "results\\missing\\missing_runs.json",
-    "compositional::negation_blind": "results\\compositional__negation_blind.json",
-    "compositional::openai": "results\\compositional__openai.json",
-    "compositional::rule_based": "results\\compositional__rule_based.json",
-    "real_criteria::negation_blind": "results\\real_criteria__negation_blind.json",
-    "real_criteria::openai": "results\\real_criteria__openai.json",
-    "real_criteria::rule_based": "results\\real_criteria__rule_based.json"
+    "compositional_large::openai": "results/missing/missing_runs.json",
+    "compositional_d2::openai": "results/missing/missing_runs.json",
+    "compositional_d3::openai": "results/missing/missing_runs.json",
+    "compositional_d4::openai": "results/missing/missing_runs.json",
+    "compositional_d5::openai": "results/missing/missing_runs.json",
+    "compositional_d6::openai": "results/missing/missing_runs.json",
+    "compositional::negation_blind": "results/compositional__negation_blind.json",
+    "compositional::openai": "results/compositional__openai.json",
+    "compositional::rule_based": "results/compositional__rule_based.json",
+    "real_criteria::negation_blind": "results/real_criteria__negation_blind.json",
+    "real_criteria::openai": "results/real_criteria__openai.json",
+    "real_criteria::rule_based": "results/real_criteria__rule_based.json"
   },
   "inference_parameters": {
     "compositional_large::openai": {
@@ -284,6 +286,6 @@ No pair of depths is separated at 95% confidence on the mixed set.
       "type": "RuleBasedModel"
     }
   },
-  "reproducibility_note": "Item sets, gold labels and prompts are deterministic. Model completions are not: the requested temperature was rejected by the evaluated model so the API default applied, and the response cache is not redistributed. The per-item predictions are the record of the run."
+  "reproducibility_note": "Item sets, gold labels and prompts are deterministic. For the current gpt-4o-mini / prompt v2 run, requested temperature 0.0 was applied (dropped_parameters empty). Completions are not redistributed; the per-item predictions are the record of the run."
 }
 ```

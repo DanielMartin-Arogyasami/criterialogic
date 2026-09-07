@@ -33,7 +33,7 @@ It is not applied to the committed snapshot for one reason only — see below.
 
 The pool's SHA-256 is stamped on every generated item. A new pool means new items, which
 means every reported result has to be regenerated, which for the LLM rows means new API
-calls. Before rebuilding, read `results/SECTION7.md` and decide whether you are
+calls. Before rebuilding, read `results/paper_data.md` and decide whether you are
 replacing the reported results or forking a new version of them.
 
 ```bash

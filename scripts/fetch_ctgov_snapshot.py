@@ -15,7 +15,7 @@ after an evaluated model's training cutoff turns "probably unseen" into evidence
 
 WARNING — a rebuild invalidates published numbers. The atom pool's SHA-256 is stamped on
 every generated item, so a new pool means new items and every reported result must be
-regenerated. The committed snapshot backs the v0.2 results; see results/SECTION7.md
+regenerated. The committed snapshot backs the v0.2 results; see results/paper_data.md
 before replacing it.
 """
 from __future__ import annotations

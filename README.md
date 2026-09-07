@@ -17,21 +17,19 @@ Two arms, one snapshot, no gated data:
   depths 1–6, composed from atoms extracted from the same snapshot.
 - **Cross-cutting:** calibration and abstention (ECE, tie-aware selective accuracy).
 
-Plus a seven-category reasoning-failure taxonomy applied to every error by two
-annotators working from a published codebook.
+Plus a seven-category reasoning-failure taxonomy and a published codebook. Human
+annotation of the error set has not been run; the protocol is in `docs/CODEBOOK.md`.
 
 > **Data policy:** public-domain and synthetic only. Everything needed to reproduce both
 > arms is committed. No data-use agreement, no credentials.
 
-> **Working on this with an AI assistant?** Read `CURSOR_START.md` first (~500 tokens).
-> Short version: `make finish` does the deterministic remainder with no assistant at all,
-> and `.cursorignore` keeps ~352k tokens of data out of context. Remaining work is five
-> cards in `docs/TASKS.md`.
+> **Reproducing the results?** `RUN.md` has the turnkey commands, and `make finish` runs
+> the whole deterministic chain. Remaining work is five cards in `docs/TASKS.md`.
 
 ## Quickstart
 
 ```bash
-git clone https://github.com/darogyasami/criterialogic.git
+git clone https://github.com/DanielMartin-Arogyasami/criterialogic.git
 cd criterialogic
 python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -e .
@@ -92,7 +90,7 @@ these sample sizes adjacent rows are routinely indistinguishable.
 |---|---|---|---|---|---|---|
 | gpt-4o-mini (prompt v2) | 0.800 [0.682, 0.882] | 0.683 [0.558, 0.787] | 0.517 [0.393, 0.638] | 0.650 [0.524, 0.758] | 0.367 [0.256, 0.493] | 60 |
 
-Spearman rho = −0.9, exact one-sided permutation p = 0.0417, pooled 0.603 [0.547, 0.657]. Not monotonic. Full intervals, provenance and caveats: [`results/PAPER_DATA.md`](results/PAPER_DATA.md).
+Spearman rho = −0.9, exact one-sided permutation p = 0.0417, pooled 0.603 [0.547, 0.657]. Not monotonic. Full intervals, provenance and caveats: [`results/paper_data.md`](results/paper_data.md).
 
 ### Arm 1 — real criteria
 
@@ -134,15 +132,16 @@ submission plausible for a project this size, so friction in it is a bug.
 ## From results to the paper
 
 ```bash
-python scripts/collect_paper_data.py            # -> results/PAPER_DATA.md (paste-ready)
-python scripts/collect_paper_data.py --verify   # diff the manuscript against the artifacts
+python scripts/collect_paper_data.py            # -> results/paper_data.md (paste-ready)
+python scripts/collect_paper_data.py --verify   # diff the committed numbers extract against the artifacts
 ```
 
 The collector recomputes every figure from the persisted per-item predictions, runs the
 integrity gates (ceiling effects, degenerate confidence, rationale clustering, unanswerable
 items, depth-trend significance and the n that would resolve each unresolved pair) as part
 of collection, and prints a bracket with the command that fills it wherever an experiment
-has not been run. `--verify` runs in CI, so the paper cannot drift from the data.
+has not been run. `--verify` runs in CI and checks the five §7.1 depth rows plus Spearman
+rho and the permutation p in `results/verify_extract.md`.
 
 ## Error taxonomy and annotation
 
@@ -172,10 +171,10 @@ recomputed without a rerun.
 Both item sets are regenerable: same seed plus same depth list plus same atom pool gives a
 byte-identical set, and the prompts are regenerable too.
 
-**Model responses are not.** The requested temperature of 0.0 was rejected by the evaluated
-model, so completions used the API default, and the response cache is not redistributed.
-`--prompt-version 1` reproduces the experiment, not the numbers; the released per-item
-predictions are the record of the run.
+**Model responses are not redistributed.** For the current `gpt-4o-mini` / prompt v2 run,
+requested temperature 0.0 was applied (`effective_temperature` 0.0, `dropped_parameters`
+empty). The response cache is not redistributed; the released per-item predictions are
+the record of the run.
 
 ## Citation
 

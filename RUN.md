@@ -76,7 +76,7 @@ python scripts/run_eval.py --task compositional --depths 2,3,4,5,6 --n-per-depth
 completion used the API default, and the response cache is not redistributed. Items, gold
 labels and prompts are deterministic; completions are not. The released per-item
 predictions are the record. Renderer v2 is the default and fixes both the currency
-rendering defect and the exclusion-polarity prompt ambiguity. See `results/SECTION7.md`.
+rendering defect and the exclusion-polarity prompt ambiguity. See `results/paper_data.md`.
 
 ## 4. Collect the paper's numbers
 
@@ -84,8 +84,8 @@ rendering defect and the exclusion-polarity prompt ambiguity. See `results/SECTI
 python scripts/collect_paper_data.py
 ```
 
-Writes `results/PAPER_DATA.md` (paste-ready tables formatted to match the manuscript's own
-section headings) and `results/paper_data.v2.json` (machine-readable, with provenance). It
+Writes `results/paper_data.md` (paste-ready tables formatted to match the manuscript's own
+section headings) and `results/paper_data.json` (machine-readable, with provenance). It
 recomputes every aggregate from the persisted per-item predictions rather than copying a
 stored one, runs the integrity gates as part of collection, and prints a bracket plus the
 command that fills it wherever an experiment has not been run.
