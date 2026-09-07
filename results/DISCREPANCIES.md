@@ -359,3 +359,33 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   so the offline diagnostics (no prompt at all, `prompt_version=None`) also correctly
   report nothing unanswerable. `prompt_version_assessed` is recorded in every taxonomy
   block. The collector pins the legacy runs to `"1"`, which is what they used.
+
+---
+
+## 19. Prompt-v1 sentences left behind by the v2 update
+
+- **Status:** open — **the author decides the wording**
+- **Location:** `paper/CriteriaLogic.md` §8 (discussion, first and second paragraphs), §7.7
+  and §9; versus `results/compositional__openai.json::calibration` and
+  `results/compositional__openai.json::metrics.by_depth`
+- **Problem.** §7 was switched to the prompt-v2 `gpt-4o-mini` run, but four claims outside §7
+  still describe the prompt-v1 `gpt-5-nano` run. They are not invented values — they were
+  executed — but they are attributed to a run the paper no longer reports.
+  1. §8 asserts a "flat region" that a natural corpus would sample. Under v2 there is none:
+     depth 2 is 0.800 and depth 4 is 0.517.
+  2. §8 claims per-depth triage at depth 5 ("0.717 to 0.917"). The v2 run persists a single
+     pooled selective-accuracy curve over the depth 2–6 set and no per-depth curves, so no
+     per-depth abstention claim can be derived from it. The pooled curve runs from 0.6033 at
+     full coverage to 0.7926 at 10% coverage.
+  3. §7.7 states a "0.35 accuracy range across depths". The v2 range is
+     0.800 − 0.367 = 0.433.
+  4. §9 lists the snapshot identifier among what every result file records. The value written
+     is the placeholder `ctgov-unknown`.
+- **Also open, and not numeric.** The abstract, contribution 3 and §5 state the two-annotator
+  taxonomy in the completed tense while §7.5 reports that no human annotation exists. §6 still
+  says GPT-4-class models returned `403 model_not_found` and that the adapter drops the
+  requested temperature; both v2 runs record `effective_temperature: 0.0` and
+  `dropped_parameters: []`.
+- **What would resolve it.** Either scoring the depth sets separately, which would restore a
+  per-depth abstention claim, or a wording pass. Paste-ready replacements are in
+  `paper/DATA.md`, which is not committed.
