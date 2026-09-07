@@ -783,6 +783,33 @@ _DEPTH_ROW = re.compile(
 #: Accepts the word or the typeset symbol, and a hyphen-minus or a true minus sign.
 _RHO = re.compile(r"Spearman (?:rho|\u03c1)\s*=\s*\*\*[\u2212-]?([\d.]+)\*\*")
 _P = re.compile(r"permutation\s*\n?\s*\*?\*?p\*?\*?\s*=\s*\*\*([\d.]+)\*\*")
+#: 3.2 composition. Bold optional, and the two counts may sit either side of a line break.
+_ARM1_COMPOSITION = re.compile(
+    r"\*{0,2}(\d+)\*{0,2}\s+criteria\s+from\s+\*{0,2}(\d+)\*{0,2}\s+trials")
+#: 7.6 real-criteria arm. micro-F1 equals accuracy on this arm; either wording is accepted.
+_MICRO_F1 = re.compile(r"micro-F1\s*\*{0,2}([\d.]+)\*{0,2}")
+#: 7.7 ablations. The spread between the best and worst depth under one fixed prompt.
+#: Both orders occur in drafts: "an accuracy range of 0.433" and "a 0.433 accuracy range".
+_ACC_RANGE = re.compile(
+    r"accuracy\s+range\s+of\s*\*{0,2}([\d.]+)\*{0,2}"
+    r"|\*{0,2}([\d.]+)\*{0,2}\s+accuracy\s+range")
+
+
+def _section(text: str, number: str) -> str:
+    """Return the body of the section whose heading contains `number`.
+
+    Scoping is not cosmetic. Section 2 cites another system's micro-F1 and another
+    corpus's criteria-and-trials counts, so an unscoped search checks the paper's
+    background against this paper's artifacts and reports a mismatch that is not one.
+    Falls back to the whole text when no heading matches, so a numbers extract with no
+    headings still verifies.
+    """
+    heading = re.compile(rf"^#{{1,6}}\s.*\b{re.escape(number)}\b.*$", re.M)
+    m = heading.search(text)
+    if not m:
+        return text
+    nxt = re.compile(r"^#{1,6}\s", re.M).search(text, m.end())
+    return text[m.end():nxt.start() if nxt else len(text)]
 
 
 def verify(paper: Path, payload: dict) -> list[str]:
@@ -828,6 +855,37 @@ def verify(paper: Path, payload: dict) -> list[str]:
                         f"artifacts say {round(sp['p_one_sided'], 4)}")
     if not rho_m:
         problems.append("Could not find the Spearman rho claim in the paper to check.")
+
+    # ---- 3.2 dataset composition -------------------------------------------
+    # Absent is not an error: a numbers extract legitimately omits section 3. Present but
+    # wrong is, because these two counts are the ones the whole of Arm 1 is scaled from.
+    arm1 = payload["section3"]["arm1"]
+    comp_m = _ARM1_COMPOSITION.search(_section(text, "3.2"))
+    if comp_m and arm1.get("status") == "computed":
+        for name, got, want in (("criteria", int(comp_m.group(1)), arm1["n_criteria"]),
+                                ("trials", int(comp_m.group(2)), arm1["n_trials"])):
+            if got != want:
+                problems.append(f"3.2 {name}: paper says {got}, artifacts say {want}")
+
+    # ---- 7.6 real-criteria arm ---------------------------------------------
+    # micro-F1 == accuracy on this arm (every item carries one label), so the accuracy
+    # already recomputed from the per-item predictions is the reference.
+    arm1_run = payload["runs"].get("real_criteria::openai")
+    f1_m = _MICRO_F1.search(_section(text, "7.6"))
+    if f1_m and arm1_run:
+        got, want = float(f1_m.group(1)), arm1_run["accuracy_3dp"]
+        if abs(got - want) > 0.0006:
+            problems.append(f"7.6 micro-F1: paper says {got}, artifacts say {want}")
+
+    # ---- 7.7 accuracy range across depths -----------------------------------
+    range_m = _ACC_RANGE.search(_section(text, "7.7"))
+    if range_m:
+        accs = [r["accuracy"] for r in sweep["rows"]]
+        want = round(max(accs) - min(accs), 3)
+        got = float(range_m.group(1) or range_m.group(2))
+        if abs(got - want) > 0.0006:
+            problems.append(f"7.7 accuracy range: paper says {got}, artifacts say {want}")
+
     return problems
 
 
