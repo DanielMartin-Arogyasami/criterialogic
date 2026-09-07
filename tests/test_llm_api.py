@@ -1,7 +1,11 @@
 """OpenAI adapter: rendering + parsing + graceful failure, with the API call mocked."""
-from criterialogic.data.harmonize import harmonized_n2c2_criteria
-from criterialogic.data.synthetic import generate_matching_items
-from criterialogic.models.llm_api import OpenAILLMModel, render_expression
+from criterialogic.models.llm_api import (
+    PROMPT_VERSION,
+    OpenAILLMModel,
+    render_expression,
+    render_patient,
+)
+from criterialogic.oracle import Fact, PatientFacts
 from criterialogic.schema.logical_form import (
     Atom,
     BooleanGroup,
@@ -10,6 +14,7 @@ from criterialogic.schema.logical_form import (
     EntityType,
     Not,
 )
+from criterialogic.tasks.compositional import generate_compositional_items
 
 
 class _Fake(OpenAILLMModel):
@@ -22,7 +27,7 @@ class _Fake(OpenAILLMModel):
             raise self._canned
         return self._canned
 def _an_item():
-    return generate_matching_items(harmonized_n2c2_criteria(), n_per_criterion=1, seed=1)[0]
+    return generate_compositional_items(n_per_depth=1, max_depth=1, seed=1)[0]
 def test_parses_clean_json():
     m = _Fake('{"label": true, "confidence": 0.9, "rationale": "meets"}')
     p = m.predict(_an_item())
@@ -75,7 +80,7 @@ def test_temperature_rejection_fallback():
 
 def test_predict_batch_is_order_preserving_under_concurrency():
     """Concurrency is a latency optimization only; it must not permute or drop results."""
-    items = generate_matching_items(harmonized_n2c2_criteria(), n_per_criterion=2, seed=7)
+    items = generate_compositional_items(n_per_depth=2, max_depth=1, seed=7)
 
     class _PerItem(OpenAILLMModel):
         def __init__(self, **kw):
@@ -89,3 +94,80 @@ def test_predict_batch_is_order_preserving_under_concurrency():
     parallel = _PerItem(concurrency=8).predict_batch(items)
     assert [p.item_id for p in serial] == [i.item_id for i in items]
     assert [p.item_id for p in parallel] == [i.item_id for i in items]
+
+
+# --------------------------------------------------------------------------- #
+# Prompt renderer versioning — the currency-rendering defect and its fix
+# --------------------------------------------------------------------------- #
+def test_renderer_v1_omits_currency_and_v2_states_it():
+    facts = PatientFacts(record_id="r", facts={"aspirin": Fact(present=True, current=False)})
+    v1 = render_patient(facts, prompt_version="1")
+    v2 = render_patient(facts, prompt_version="2")
+    # v1 renders a present-but-not-current fact identically to one whose currency was
+    # never recorded, which is what made those gold labels unanswerable from the prompt.
+    assert "current" not in v1.lower()
+    assert "not currently active" in v2
+    assert PROMPT_VERSION == "2", "v2 is the default; v1 exists to reproduce v0.2 numbers"
+
+
+def test_unknown_prompt_version_is_rejected():
+    import pytest
+    with pytest.raises(ValueError):
+        render_patient(PatientFacts(record_id="r", facts={}), prompt_version="99")
+    with pytest.raises(ValueError):
+        OpenAILLMModel(cache_dir=None, prompt_version="99")
+
+
+def test_cache_key_separates_prompt_versions():
+    """Two renderer versions must never share a cache entry."""
+    a = OpenAILLMModel(cache_dir=None, prompt_version="1", client=object())
+    b = OpenAILLMModel(cache_dir=None, prompt_version="2", client=object())
+    assert a._cache_key("sys", "user") != b._cache_key("sys", "user")
+
+
+def test_dropped_parameters_are_recorded_not_silently_forgotten():
+    class _Rejects:
+        class chat:
+            class completions:
+                calls = []
+
+                @staticmethod
+                def create(**kw):
+                    _Rejects.chat.completions.calls.append(kw)
+                    if "temperature" in kw:
+                        raise RuntimeError("Unsupported value: 'temperature' is not supported")
+
+                    class R:
+                        choices = [type("C", (), {"message": type(
+                            "M", (), {"content": '{"label": true, "confidence": 0.7}'})()})()]
+                    return R()
+
+    m = OpenAILLMModel(client=_Rejects(), cache_dir=None, max_retries=0)
+    m.predict(_an_item())
+    info = m.info()
+    assert info["requested_temperature"] == 0.0
+    assert info["effective_temperature"] == "api_default"
+    assert info["dropped_parameters"] == ["temperature"], (
+        "a result file must not assert a parameter the API refused")
+
+
+def test_openrouter_and_together_reuse_the_openai_prompt():
+    """A second system is only comparable if it sees the same prompt."""
+    from criterialogic.models import LLM_MODELS, REGISTRY
+    from criterialogic.models.llm_api import (
+        OpenRouterLLMModel,
+        TogetherLLMModel,
+        system_prompt,
+    )
+
+    assert set(LLM_MODELS) <= set(REGISTRY)
+    item = _an_item()
+    openai = OpenAILLMModel(cache_dir=None, client=object())
+    for cls in (OpenRouterLLMModel, TogetherLLMModel):
+        other = cls(cache_dir=None, client=object())
+        assert other._build_prompt(item) == openai._build_prompt(item)
+        assert system_prompt(other.prompt_version) == system_prompt(openai.prompt_version)
+        info = other.info()
+        assert info["provider"] == other.provider
+        assert "effective_temperature" in info
+        assert "dropped_parameters" in info

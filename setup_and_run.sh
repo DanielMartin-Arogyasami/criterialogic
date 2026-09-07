@@ -1,18 +1,25 @@
 #!/usr/bin/env bash
-# Turnkey setup + offline smoke-test for CriteriaLogic. No API key needed.
-set -e
-echo "[1/4] Create virtual environment (.venv)"
-python3 -m venv .venv
+# Set up and smoke-test CriteriaLogic. No network, no API key.
+set -euo pipefail
+
+python -m venv .venv
 # shellcheck disable=SC1091
 source .venv/bin/activate
-echo "[2/4] Install CriteriaLogic (editable, with dev tools)"
-python -m pip install -q --upgrade pip
-pip install -q -e ".[dev]"
-echo "[3/4] Run the offline demo (real n2c2 criteria + synthetic patients, no external data)"
-python scripts/run_eval.py
-echo "[4/4] Run the test suite"
-pytest -q
+pip install --upgrade pip
+pip install -e ".[dev]"
+
 echo
-echo "OK. Results are in results/. To run a real OpenAI model:"
-echo "  source .venv/bin/activate"
-echo "  pip install -e \".[llm]\" && export OPENAI_API_KEY=sk-... && python scripts/run_eval.py --task compositional --model openai"
+echo "== Arm 1: segmentation yield from the committed snapshot =="
+python scripts/build_real_criteria.py --stats
+
+echo
+echo "== Both arms, offline diagnostics =="
+python scripts/run_eval.py --limit 40 --n-per-depth 8 --max-depth 3
+
+echo
+echo "== Tests and lint =="
+pytest -q
+ruff check .
+
+echo
+echo "Done. Real model results need an API key — see RUN.md section 3."

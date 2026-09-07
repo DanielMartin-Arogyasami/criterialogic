@@ -1,7 +1,21 @@
 ---
-description: Data-layer release boundary and security conventions
-globs: criterialogic/data/**/*.py,scripts/download_data.py
-alwaysApply: false
+description: Data handling
+alwaysApply: true
 ---
-Release boundary: Chia (CC-BY) and ClinicalTrials.gov are fetchable; n2c2 2018 is DUA-gated — never download or commit it; `data/raw/` is gitignored. The downloader is stdlib-only (urllib) — do not add `requests` as a hard dependency.
-Keep these security properties when editing data/download code: open only `https://` URLs (reject `file://`/`ftp://`); cap download byte size and a zip's total uncompressed size + file count before `extractall`; if using Hugging Face, pin `revision=` and avoid `trust_remote_code=True`; parse n2c2 XML with `defusedxml` (or treat strictly as trusted DUA input); `random.Random(seed)` is intentional for reproducibility (`# nosec B311`), not a weakness.
+
+Public-domain and synthetic data only. There is no licence-restricted component in this
+repository and no data-use agreement to honour — the v0.1 n2c2 component was removed
+(docs/V2_SCOPE.md).
+
+- `data/ctgov_cache/` and `data/ctgov_atom_pool.json` **are** committed: small, US
+  Government public domain, and checking them in is what makes both arms reproducible with
+  no network access and no credentials.
+- `data/raw/` and `data/processed/` are gitignored. Never commit anything under them.
+- Rebuilding the snapshot changes the atom pool SHA-256, which changes every generated
+  item, which invalidates every number in `results/SECTION7.md`. Treat a rebuild as a
+  version bump with a full re-run, not as a refresh.
+- The frame that produced the committed snapshot is in `data/ctgov_cache/MANIFEST.json`
+  and that file is authoritative. Do not describe the frame from memory or from prose in
+  the paper — read it.
+- No API keys, tokens or credentials in the repository, in test fixtures, or in cached
+  responses. The response cache under `.criterialogic_cache/` is gitignored.

@@ -1,8 +1,21 @@
-"""Deterministic synthetic patient-fact generation for the runnable demo.
-Real criteria (n2c2) + synthetic patients let the full pipeline run with **no
-external data**. Generation is seeded and regenerable — never a black box.
-Facts are sampled so that each criterion gets a mix of met / not-met / unknown
-cases, and the gold label is computed by the oracle (`criterialogic.oracle`).
+"""Deterministic synthetic patient-fact generation, shared by both arms.
+
+Real criteria plus synthetic patients let the whole pipeline run with no gated data and
+no credentials. Generation is seeded and regenerable — never a black box.
+
+Facts are sampled *near constraint boundaries* rather than uniformly: an item set where
+every numeric threshold is missed by a wide margin, or every temporal window is either
+trivially satisfied or trivially violated, would produce high scores that measure
+nothing. The sampler also leaves some entities absent, so three-valued (unknown)
+evaluation is exercised rather than assumed.
+
+Gold labels are computed by the oracle (:mod:`criterialogic.oracle`), never by a model.
+
+Limitation, stated here because it bounds every result in the project: these are
+structured facts, not clinical notes. Both arms measure whether a system resolves a
+criterion's logic against a *stated* record, not whether it can find the evidence in
+real longitudinal documentation. Matching against real records is the main v2 extension
+(docs/V2_SCOPE.md).
 """
 from __future__ import annotations
 

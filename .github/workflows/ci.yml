@@ -14,4 +14,7 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: ruff check .
       - run: pytest -q
-      - run: python scripts/run_eval.py   # end-to-end smoke test (no external data)
+      - run: python scripts/preflight.py   # environment + data + both arms, no network or key
+      - run: python scripts/run_eval.py --limit 40 --n-per-depth 8 --max-depth 3
+      # The manuscript's numbers must match the released artifacts. This is the gate.
+      - run: python scripts/collect_paper_data.py --verify

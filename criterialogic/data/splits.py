@@ -1,6 +1,13 @@
 """Deterministic train/test splitting with a leakage check.
-Splits are seeded (reproducible). For Chia-derived data, splitting is keyed on
-trial id so no trial straddles the train/test boundary (prevents contamination).
+
+Splitting is keyed on trial identifier, not on criterion, so no trial straddles the
+boundary. Two criteria from the same trial share vocabulary and often share structure,
+and putting one on each side of a split leaks. The check is enforced rather than
+documented: :func:`split_by_trial` verifies the partition before returning it.
+
+Nothing in v0.2 trains, so this is unused by the current arms — it is here because the
+snapshot supports it and because a structuring task (docs/V2_SCOPE.md) would need it on
+day one.
 """
 from __future__ import annotations
 

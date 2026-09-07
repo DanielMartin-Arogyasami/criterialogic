@@ -1,853 +1,1638 @@
 {
-  "dataset_composition": {
-    "schema_version": "0.1.0",
-    "package_version": "0.1.0",
-    "n2c2_criteria_encoded": 13,
-    "n2c2_criteria_detail": [
-      {
-        "tag": "ABDOMINAL",
-        "polarity": "inclusion",
-        "depth": 1,
-        "n_atoms": 3,
-        "has_temporal": false,
-        "has_numeric": false
-      },
-      {
-        "tag": "ADVANCED-CAD",
-        "polarity": "inclusion",
-        "depth": 2,
-        "n_atoms": 12,
-        "has_temporal": true,
-        "has_numeric": true
-      },
-      {
-        "tag": "ALCOHOL-ABUSE",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      },
-      {
-        "tag": "ASP-FOR-MI",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      },
-      {
-        "tag": "CREATININE",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": false,
-        "has_numeric": true
-      },
-      {
-        "tag": "DIETSUPP-2MOS",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      },
-      {
-        "tag": "DRUG-ABUSE",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      },
-      {
-        "tag": "ENGLISH",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": false,
-        "has_numeric": false
-      },
-      {
-        "tag": "HBA1C",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": false,
-        "has_numeric": true
-      },
-      {
-        "tag": "KETO-1YR",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      },
-      {
-        "tag": "MAJOR-DIABETES",
-        "polarity": "inclusion",
-        "depth": 1,
-        "n_atoms": 4,
-        "has_temporal": false,
-        "has_numeric": false
-      },
-      {
-        "tag": "MAKES-DECISIONS",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": false,
-        "has_numeric": false
-      },
-      {
-        "tag": "MI-6MOS",
-        "polarity": "inclusion",
-        "depth": 0,
-        "n_atoms": 1,
-        "has_temporal": true,
-        "has_numeric": false
-      }
-    ],
-    "task_c_matching_items": 104,
-    "task_c_gold_met_rate": 0.6154,
-    "task_d_demo_items": 36,
-    "task_d_demo_gold_met_rate": 0.5833,
-    "task_d_demo_depth_distribution": {
-      "1": 12,
-      "2": 12,
-      "3": 12
+  "generated_utc": "2026-09-07T19:57:27+00:00",
+  "provenance": {
+    "results_dir": "results",
+    "data_dir": "C:\\Users\\danie\\Downloads\\Criterialogic\\data",
+    "runs_loaded": {
+      "compositional_large::openai": "results\\missing\\missing_runs.json",
+      "compositional_d2::openai": "results\\missing\\missing_runs.json",
+      "compositional_d3::openai": "results\\missing\\missing_runs.json",
+      "compositional_d4::openai": "results\\missing\\missing_runs.json",
+      "compositional_d5::openai": "results\\missing\\missing_runs.json",
+      "compositional_d6::openai": "results\\missing\\missing_runs.json",
+      "compositional::negation_blind": "results\\compositional__negation_blind.json",
+      "compositional::openai": "results\\compositional__openai.json",
+      "compositional::rule_based": "results\\compositional__rule_based.json",
+      "real_criteria::negation_blind": "results\\real_criteria__negation_blind.json",
+      "real_criteria::openai": "results\\real_criteria__openai.json",
+      "real_criteria::rule_based": "results\\real_criteria__rule_based.json"
     },
-    "task_d_large_items": 400,
-    "task_d_large_gold_met_rate": 0.4675,
-    "task_d_large_depth_distribution": {
-      "1": 100,
-      "2": 100,
-      "3": 100,
-      "4": 100
-    },
-    "atom_pool_size": 522,
-    "atom_pool_source": "atoms extracted from verbatim ClinicalTrials.gov eligibility text",
-    "seeds": {
-      "matching": 13,
-      "compositional": 29,
-      "large_compositional": 29
-    }
-  },
-  "runs": {
-    "matching::rule_based": {
-      "task": "matching",
-      "model": {
-        "name": "rule_based",
-        "type": "RuleBasedModel"
+    "inference_parameters": {
+      "compositional_large::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "n_items": 104,
-      "metrics": {
-        "overall_micro_f1": 1.0,
-        "overall_macro_f1": 1.0,
-        "n_items": 104,
-        "per_criterion": {
-          "ABDOMINAL": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ADVANCED-CAD": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ALCOHOL-ABUSE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ASP-FOR-MI": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "CREATININE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DIETSUPP-2MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DRUG-ABUSE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ENGLISH": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "HBA1C": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "KETO-1YR": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MAJOR-DIABETES": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MAKES-DECISIONS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MI-6MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          }
-        },
-        "per_label": {
-          "false": {
-            "precision": 1.0,
-            "recall": 1.0,
-            "f1": 1.0,
-            "support": 40
-          },
-          "true": {
-            "precision": 1.0,
-            "recall": 1.0,
-            "f1": 1.0,
-            "support": 64
-          }
-        }
+      "compositional_d2::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "failure_taxonomy": {},
-      "calibration": {
-        "ece": 0.014423076923076924,
-        "selective_accuracy_at_50pct_coverage": 1.0
+      "compositional_d3::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "repro": {
-        "seed": 13,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
+      "compositional_d4::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "selective_accuracy": {
-        "10%": 1.0,
-        "20%": 1.0,
-        "30%": 1.0,
-        "40%": 1.0,
-        "50%": 1.0,
-        "60%": 1.0,
-        "70%": 1.0,
-        "80%": 1.0,
-        "90%": 1.0,
-        "100%": 1.0
+      "compositional_d5::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "n_abstain": 0,
-      "mean_confidence": 0.9856
-    },
-    "compositional::rule_based": {
-      "task": "compositional",
-      "model": {
-        "name": "rule_based",
-        "type": "RuleBasedModel"
+      "compositional_d6::openai": {
+        "requested_temperature": 0.0,
+        "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+        "warning": "Do not report requested temperature as if it were applied."
       },
-      "n_items": 36,
-      "metrics": {
-        "overall_accuracy": 1.0,
-        "by_depth": {
-          "1": {
-            "accuracy": 1.0,
-            "n": 12
-          },
-          "2": {
-            "accuracy": 1.0,
-            "n": 12
-          },
-          "3": {
-            "accuracy": 1.0,
-            "n": 12
-          }
-        }
-      },
-      "failure_taxonomy": {},
-      "calibration": {
-        "ece": 0.027777777777777776,
-        "selective_accuracy_at_50pct_coverage": 1.0
-      },
-      "repro": {
-        "seed": 29,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
-      "selective_accuracy": {
-        "10%": 1.0,
-        "20%": 1.0,
-        "30%": 1.0,
-        "40%": 1.0,
-        "50%": 1.0,
-        "60%": 1.0,
-        "70%": 1.0,
-        "80%": 1.0,
-        "90%": 1.0,
-        "100%": 1.0
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.9722
-    },
-    "compositional_large::rule_based": {
-      "task": "compositional",
-      "model": {
-        "name": "rule_based",
-        "type": "RuleBasedModel"
-      },
-      "n_items": 400,
-      "metrics": {
-        "overall_accuracy": 1.0,
-        "by_depth": {
-          "1": {
-            "accuracy": 1.0,
-            "n": 100
-          },
-          "2": {
-            "accuracy": 1.0,
-            "n": 100
-          },
-          "3": {
-            "accuracy": 1.0,
-            "n": 100
-          },
-          "4": {
-            "accuracy": 1.0,
-            "n": 100
-          }
-        }
-      },
-      "failure_taxonomy": {},
-      "calibration": {
-        "ece": 0.02,
-        "selective_accuracy_at_50pct_coverage": 1.0
-      },
-      "repro": {
-        "seed": 29,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
-      "selective_accuracy": {
-        "10%": 1.0,
-        "20%": 1.0,
-        "30%": 1.0,
-        "40%": 1.0,
-        "50%": 1.0,
-        "60%": 1.0,
-        "70%": 1.0,
-        "80%": 1.0,
-        "90%": 1.0,
-        "100%": 1.0
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.98
-    },
-    "matching::negation_blind": {
-      "task": "matching",
-      "model": {
+      "compositional::negation_blind": {
         "name": "negation_blind",
         "type": "NegationBlindModel"
       },
-      "n_items": 104,
-      "metrics": {
-        "overall_micro_f1": 0.9230769230769231,
-        "overall_macro_f1": 0.9212121212121211,
-        "n_items": 104,
-        "per_criterion": {
-          "ABDOMINAL": {
-            "micro_f1": 0.75,
-            "n": 8
-          },
-          "ADVANCED-CAD": {
-            "micro_f1": 0.5,
-            "n": 8
-          },
-          "ALCOHOL-ABUSE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ASP-FOR-MI": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "CREATININE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DIETSUPP-2MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DRUG-ABUSE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ENGLISH": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "HBA1C": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "KETO-1YR": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MAJOR-DIABETES": {
-            "micro_f1": 0.75,
-            "n": 8
-          },
-          "MAKES-DECISIONS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MI-6MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          }
-        },
-        "per_label": {
-          "false": {
-            "precision": 0.8333333333333334,
-            "recall": 1.0,
-            "f1": 0.9090909090909091,
-            "support": 40
-          },
-          "true": {
-            "precision": 1.0,
-            "recall": 0.875,
-            "f1": 0.9333333333333333,
-            "support": 64
-          }
-        }
-      },
-      "failure_taxonomy": {
-        "logical_composition": 8
-      },
-      "calibration": {
-        "ece": 0.22307692307692317,
-        "selective_accuracy_at_50pct_coverage": 0.8846153846153846
-      },
-      "repro": {
-        "seed": 13,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
-      "selective_accuracy": {
-        "10%": 0.7273,
-        "20%": 0.7143,
-        "30%": 0.8125,
-        "40%": 0.8571,
-        "50%": 0.8846,
-        "60%": 0.9048,
-        "70%": 0.9178,
-        "80%": 0.9286,
-        "90%": 0.9149,
-        "100%": 0.9231
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.7
-    },
-    "compositional::negation_blind": {
-      "task": "compositional",
-      "model": {
-        "name": "negation_blind",
-        "type": "NegationBlindModel"
-      },
-      "n_items": 36,
-      "metrics": {
-        "overall_accuracy": 0.5277777777777778,
-        "by_depth": {
-          "1": {
-            "accuracy": 0.75,
-            "n": 12
-          },
-          "2": {
-            "accuracy": 0.5833333333333334,
-            "n": 12
-          },
-          "3": {
-            "accuracy": 0.25,
-            "n": 12
-          }
-        }
-      },
-      "failure_taxonomy": {
-        "negation_polarity": 10,
-        "logical_composition": 7
-      },
-      "calibration": {
-        "ece": 0.17222222222222217,
-        "selective_accuracy_at_50pct_coverage": 0.7222222222222222
-      },
-      "repro": {
-        "seed": 29,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
-      "selective_accuracy": {
-        "10%": 1.0,
-        "20%": 0.75,
-        "30%": 0.8182,
-        "40%": 0.7333,
-        "50%": 0.7222,
-        "60%": 0.6818,
-        "70%": 0.6538,
-        "80%": 0.5862,
-        "90%": 0.5455,
-        "100%": 0.5278
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.7
-    },
-    "compositional_large::negation_blind": {
-      "task": "compositional",
-      "model": {
-        "name": "negation_blind",
-        "type": "NegationBlindModel"
-      },
-      "n_items": 400,
-      "metrics": {
-        "overall_accuracy": 0.61,
-        "by_depth": {
-          "1": {
-            "accuracy": 0.68,
-            "n": 100
-          },
-          "2": {
-            "accuracy": 0.58,
-            "n": 100
-          },
-          "3": {
-            "accuracy": 0.6,
-            "n": 100
-          },
-          "4": {
-            "accuracy": 0.58,
-            "n": 100
-          }
-        }
-      },
-      "failure_taxonomy": {
-        "negation_polarity": 76,
-        "logical_composition": 80
-      },
-      "calibration": {
-        "ece": 0.08999999999999997,
-        "selective_accuracy_at_50pct_coverage": 0.63
-      },
-      "repro": {
-        "seed": 29,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
-      "selective_accuracy": {
-        "10%": 0.675,
-        "20%": 0.675,
-        "30%": 0.6583,
-        "40%": 0.6687,
-        "50%": 0.63,
-        "60%": 0.6167,
-        "70%": 0.6214,
-        "80%": 0.6219,
-        "90%": 0.6139,
-        "100%": 0.61
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.7
-    },
-    "matching::openai": {
-      "task": "matching",
-      "model": {
+      "compositional::openai": {
         "name": "openai",
         "provider": "openai",
-        "model": "gpt-5-nano",
-        "temperature": 0.0
+        "model": "gpt-4o-mini",
+        "prompt_version": "2",
+        "api_key_env": "OPENAI_API_KEY",
+        "requested_temperature": 0.0,
+        "effective_temperature": 0.0,
+        "dropped_parameters": []
       },
-      "n_items": 104,
-      "metrics": {
-        "overall_micro_f1": 0.9519230769230769,
-        "overall_macro_f1": 0.9478696741854636,
-        "n_items": 104,
-        "per_criterion": {
-          "ABDOMINAL": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ADVANCED-CAD": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ALCOHOL-ABUSE": {
-            "micro_f1": 0.875,
-            "n": 8
-          },
-          "ASP-FOR-MI": {
-            "micro_f1": 0.5,
-            "n": 8
-          },
-          "CREATININE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DIETSUPP-2MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "DRUG-ABUSE": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "ENGLISH": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "HBA1C": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "KETO-1YR": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MAJOR-DIABETES": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MAKES-DECISIONS": {
-            "micro_f1": 1.0,
-            "n": 8
-          },
-          "MI-6MOS": {
-            "micro_f1": 1.0,
-            "n": 8
-          }
+      "compositional::rule_based": {
+        "name": "rule_based",
+        "type": "RuleBasedModel"
+      },
+      "real_criteria::negation_blind": {
+        "name": "negation_blind",
+        "type": "NegationBlindModel"
+      },
+      "real_criteria::openai": {
+        "name": "openai",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt_version": "2",
+        "api_key_env": "OPENAI_API_KEY",
+        "requested_temperature": 0.0,
+        "effective_temperature": 0.0,
+        "dropped_parameters": []
+      },
+      "real_criteria::rule_based": {
+        "name": "rule_based",
+        "type": "RuleBasedModel"
+      }
+    },
+    "reproducibility_note": "Item sets, gold labels and prompts are deterministic. Model completions are not: the requested temperature was rejected by the evaluated model so the API default applied, and the response cache is not redistributed. The per-item predictions are the record of the run."
+  },
+  "runs": {
+    "compositional_large::openai": {
+      "label": "compositional_large::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 400,
+      "n_correct": 368,
+      "accuracy": 0.92,
+      "wilson_95": [
+        0.8892,
+        0.9428
+      ],
+      "n_errors": 32,
+      "ece": 0.1389,
+      "mean_confidence": 0.7811,
+      "accuracy_3dp": 0.92,
+      "ece_3dp": 0.139,
+      "mean_confidence_3dp": 0.781,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 0.9828,
+        "20%": 0.9799,
+        "30%": 0.9833,
+        "40%": 0.982,
+        "50%": 0.9768,
+        "60%": 0.9773,
+        "70%": 0.9598,
+        "80%": 0.954,
+        "90%": 0.9413,
+        "100%": 0.92,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 32,
+      "n_errors_with_rationale": 32,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "1": {
+          "n_correct": 94,
+          "n": 100,
+          "accuracy": 0.94,
+          "wilson_95": [
+            0.8752,
+            0.9722
+          ]
         },
-        "per_label": {
-          "false": {
-            "precision": 1.0,
-            "recall": 0.875,
-            "f1": 0.9333333333333333,
-            "support": 40
-          },
-          "true": {
-            "precision": 0.927536231884058,
-            "recall": 1.0,
-            "f1": 0.9624060150375939,
-            "support": 64
-          }
+        "2": {
+          "n_correct": 91,
+          "n": 100,
+          "accuracy": 0.91,
+          "wilson_95": [
+            0.8377,
+            0.9519
+          ]
+        },
+        "3": {
+          "n_correct": 93,
+          "n": 100,
+          "accuracy": 0.93,
+          "wilson_95": [
+            0.8625,
+            0.9657
+          ]
+        },
+        "4": {
+          "n_correct": 90,
+          "n": 100,
+          "accuracy": 0.9,
+          "wilson_95": [
+            0.8256,
+            0.9448
+          ]
         }
       },
-      "failure_taxonomy": {
-        "temporal": 5
+      "_has_rationales": false
+    },
+    "compositional_d2::openai": {
+      "label": "compositional_d2::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 60,
+      "n_correct": 57,
+      "accuracy": 0.95,
+      "wilson_95": [
+        0.863,
+        0.9829
+      ],
+      "n_errors": 3,
+      "ece": 0.1438,
+      "mean_confidence": 0.8108,
+      "accuracy_3dp": 0.95,
+      "ece_3dp": 0.144,
+      "mean_confidence_3dp": 0.811,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 0.9861,
+        "40%": 0.9583,
+        "50%": 0.9333,
+        "60%": 0.9444,
+        "70%": 0.9524,
+        "80%": 0.9583,
+        "90%": 0.963,
+        "100%": 0.95,
+        "degenerate_single_bin": false
       },
-      "calibration": {
-        "ece": 0.16528846153846147,
-        "selective_accuracy_at_50pct_coverage": 1.0
+      "distinct_error_rationales": 3,
+      "n_errors_with_rationale": 3,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "2": {
+          "n_correct": 57,
+          "n": 60,
+          "accuracy": 0.95,
+          "wilson_95": [
+            0.863,
+            0.9829
+          ]
+        }
       },
-      "repro": {
-        "seed": 13,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
-      },
+      "_has_rationales": false
+    },
+    "compositional_d3::openai": {
+      "label": "compositional_d3::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 60,
+      "n_correct": 57,
+      "accuracy": 0.95,
+      "wilson_95": [
+        0.863,
+        0.9829
+      ],
+      "n_errors": 3,
+      "ece": 0.1705,
+      "mean_confidence": 0.7795,
+      "accuracy_3dp": 0.95,
+      "ece_3dp": 0.17,
+      "mean_confidence_3dp": 0.78,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
       "selective_accuracy": {
         "10%": 1.0,
         "20%": 1.0,
         "30%": 1.0,
         "40%": 1.0,
         "50%": 1.0,
-        "60%": 0.9841,
-        "70%": 0.9452,
-        "80%": 0.9405,
-        "90%": 0.9468,
-        "100%": 0.9519
+        "60%": 1.0,
+        "70%": 0.9947,
+        "80%": 0.9676,
+        "90%": 0.963,
+        "100%": 0.95,
+        "degenerate_single_bin": false
       },
+      "distinct_error_rationales": 3,
+      "n_errors_with_rationale": 3,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "3": {
+          "n_correct": 57,
+          "n": 60,
+          "accuracy": 0.95,
+          "wilson_95": [
+            0.863,
+            0.9829
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "compositional_d4::openai": {
+      "label": "compositional_d4::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 60,
+      "n_correct": 52,
+      "accuracy": 0.8667,
+      "wilson_95": [
+        0.7583,
+        0.9309
+      ],
+      "n_errors": 8,
+      "ece": 0.1345,
+      "mean_confidence": 0.7322,
+      "accuracy_3dp": 0.867,
+      "ece_3dp": 0.135,
+      "mean_confidence_3dp": 0.732,
       "n_abstain": 0,
-      "mean_confidence": 0.8272,
-      "error_items": [
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 0.9778,
+        "40%": 0.9333,
+        "50%": 0.9,
+        "60%": 0.9028,
+        "70%": 0.9048,
+        "80%": 0.875,
+        "90%": 0.8773,
+        "100%": 0.8667,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 8,
+      "n_errors_with_rationale": 8,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "4": {
+          "n_correct": 52,
+          "n": 60,
+          "accuracy": 0.8667,
+          "wilson_95": [
+            0.7583,
+            0.9309
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "compositional_d5::openai": {
+      "label": "compositional_d5::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 60,
+      "n_correct": 43,
+      "accuracy": 0.7167,
+      "wilson_95": [
+        0.5923,
+        0.8149
+      ],
+      "n_errors": 17,
+      "ece": 0.14,
+      "mean_confidence": 0.6837,
+      "accuracy_3dp": 0.717,
+      "ece_3dp": 0.14,
+      "mean_confidence_3dp": 0.684,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 0.9167,
+        "40%": 0.8194,
+        "50%": 0.7889,
+        "60%": 0.8056,
+        "70%": 0.8095,
+        "80%": 0.7865,
+        "90%": 0.7593,
+        "100%": 0.7167,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 17,
+      "n_errors_with_rationale": 17,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "5": {
+          "n_correct": 43,
+          "n": 60,
+          "accuracy": 0.7167,
+          "wilson_95": [
+            0.5923,
+            0.8149
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "compositional_d6::openai": {
+      "label": "compositional_d6::openai",
+      "source": "results\\missing\\missing_runs.json",
+      "n_items": 60,
+      "n_correct": 36,
+      "accuracy": 0.6,
+      "wilson_95": [
+        0.4737,
+        0.7143
+      ],
+      "n_errors": 24,
+      "ece": 0.1218,
+      "mean_confidence": 0.6588,
+      "accuracy_3dp": 0.6,
+      "ece_3dp": 0.122,
+      "mean_confidence_3dp": 0.659,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 0.8333,
+        "20%": 0.6667,
+        "30%": 0.6667,
+        "40%": 0.7222,
+        "50%": 0.6667,
+        "60%": 0.6556,
+        "70%": 0.631,
+        "80%": 0.5972,
+        "90%": 0.6019,
+        "100%": 0.6,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 24,
+      "n_errors_with_rationale": 24,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "6": {
+          "n_correct": 36,
+          "n": 60,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.4737,
+            0.7143
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "compositional::negation_blind": {
+      "label": "compositional::negation_blind",
+      "source": "results\\compositional__negation_blind.json",
+      "n_items": 240,
+      "n_correct": 144,
+      "accuracy": 0.6,
+      "wilson_95": [
+        0.5369,
+        0.6599
+      ],
+      "n_errors": 96,
+      "ece": 0.1,
+      "mean_confidence": 0.7,
+      "accuracy_3dp": 0.6,
+      "ece_3dp": 0.1,
+      "mean_confidence_3dp": 0.7,
+      "n_abstain": 0,
+      "usable_confidence_signal": false,
+      "selective_accuracy": {
+        "10%": 0.6,
+        "20%": 0.6,
+        "30%": 0.6,
+        "40%": 0.6,
+        "50%": 0.6,
+        "60%": 0.6,
+        "70%": 0.6,
+        "80%": 0.6,
+        "90%": 0.6,
+        "100%": 0.6,
+        "degenerate_single_bin": true
+      },
+      "distinct_error_rationales": null,
+      "n_errors_with_rationale": 0,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "1": {
+          "n_correct": 40,
+          "n": 60,
+          "accuracy": 0.6667,
+          "wilson_95": [
+            0.5406,
+            0.7727
+          ]
+        },
+        "2": {
+          "n_correct": 38,
+          "n": 60,
+          "accuracy": 0.6333,
+          "wilson_95": [
+            0.5068,
+            0.7438
+          ]
+        },
+        "3": {
+          "n_correct": 35,
+          "n": 60,
+          "accuracy": 0.5833,
+          "wilson_95": [
+            0.4573,
+            0.6994
+          ]
+        },
+        "4": {
+          "n_correct": 31,
+          "n": 60,
+          "accuracy": 0.5167,
+          "wilson_95": [
+            0.3931,
+            0.6382
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "compositional::openai": {
+      "label": "compositional::openai",
+      "source": "results\\compositional__openai.json",
+      "n_items": 300,
+      "n_correct": 181,
+      "accuracy": 0.6033,
+      "wilson_95": [
+        0.547,
+        0.657
+      ],
+      "n_errors": 119,
+      "ece": 0.2187,
+      "mean_confidence": 0.822,
+      "accuracy_3dp": 0.603,
+      "ece_3dp": 0.219,
+      "mean_confidence_3dp": 0.822,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 0.7926,
+        "20%": 0.7852,
+        "30%": 0.7643,
+        "40%": 0.7083,
+        "50%": 0.6747,
+        "60%": 0.6523,
+        "70%": 0.6363,
+        "80%": 0.6243,
+        "90%": 0.615,
+        "100%": 0.6033,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 119,
+      "n_errors_with_rationale": 119,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "2": {
+          "n_correct": 48,
+          "n": 60,
+          "accuracy": 0.8,
+          "wilson_95": [
+            0.6822,
+            0.8817
+          ]
+        },
+        "3": {
+          "n_correct": 41,
+          "n": 60,
+          "accuracy": 0.6833,
+          "wilson_95": [
+            0.5577,
+            0.7869
+          ]
+        },
+        "4": {
+          "n_correct": 31,
+          "n": 60,
+          "accuracy": 0.5167,
+          "wilson_95": [
+            0.3931,
+            0.6382
+          ]
+        },
+        "5": {
+          "n_correct": 39,
+          "n": 60,
+          "accuracy": 0.65,
+          "wilson_95": [
+            0.5236,
+            0.7583
+          ]
+        },
+        "6": {
+          "n_correct": 22,
+          "n": 60,
+          "accuracy": 0.3667,
+          "wilson_95": [
+            0.2562,
+            0.4932
+          ]
+        }
+      },
+      "_has_rationales": true
+    },
+    "compositional::rule_based": {
+      "label": "compositional::rule_based",
+      "source": "results\\compositional__rule_based.json",
+      "n_items": 240,
+      "n_correct": 240,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.9842,
+        1.0
+      ],
+      "n_errors": 0,
+      "ece": 0.0187,
+      "mean_confidence": 0.9812,
+      "accuracy_3dp": 1.0,
+      "ece_3dp": 0.019,
+      "mean_confidence_3dp": 0.981,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 1.0,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": null,
+      "n_errors_with_rationale": 0,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "1": {
+          "n_correct": 60,
+          "n": 60,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "2": {
+          "n_correct": 60,
+          "n": 60,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "3": {
+          "n_correct": 60,
+          "n": 60,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "4": {
+          "n_correct": 60,
+          "n": 60,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9398,
+            1.0
+          ]
+        }
+      },
+      "_has_rationales": true
+    },
+    "real_criteria::negation_blind": {
+      "label": "real_criteria::negation_blind",
+      "source": "results\\real_criteria__negation_blind.json",
+      "n_items": 926,
+      "n_correct": 898,
+      "accuracy": 0.9698,
+      "wilson_95": [
+        0.9566,
+        0.979
+      ],
+      "n_errors": 28,
+      "ece": 0.2698,
+      "mean_confidence": 0.7,
+      "accuracy_3dp": 0.97,
+      "ece_3dp": 0.27,
+      "mean_confidence_3dp": 0.7,
+      "n_abstain": 0,
+      "usable_confidence_signal": false,
+      "selective_accuracy": {
+        "10%": 0.9698,
+        "20%": 0.9698,
+        "30%": 0.9698,
+        "40%": 0.9698,
+        "50%": 0.9698,
+        "60%": 0.9698,
+        "70%": 0.9698,
+        "80%": 0.9698,
+        "90%": 0.9698,
+        "100%": 0.9698,
+        "degenerate_single_bin": true
+      },
+      "distinct_error_rationales": null,
+      "n_errors_with_rationale": 0,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "0": {
+          "n_correct": 878,
+          "n": 898,
+          "accuracy": 0.9777,
+          "wilson_95": [
+            0.9658,
+            0.9855
+          ]
+        },
+        "1": {
+          "n_correct": 20,
+          "n": 28,
+          "accuracy": 0.7143,
+          "wilson_95": [
+            0.5294,
+            0.8475
+          ]
+        }
+      },
+      "_has_rationales": false
+    },
+    "real_criteria::openai": {
+      "label": "real_criteria::openai",
+      "source": "results\\real_criteria__openai.json",
+      "n_items": 926,
+      "n_correct": 866,
+      "accuracy": 0.9352,
+      "wilson_95": [
+        0.9175,
+        0.9493
+      ],
+      "n_errors": 60,
+      "ece": 0.0481,
+      "mean_confidence": 0.8893,
+      "accuracy_3dp": 0.935,
+      "ece_3dp": 0.048,
+      "mean_confidence_3dp": 0.889,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 0.995,
+        "20%": 0.995,
+        "30%": 0.9781,
+        "40%": 0.9674,
+        "50%": 0.9608,
+        "60%": 0.9565,
+        "70%": 0.9534,
+        "80%": 0.9506,
+        "90%": 0.9388,
+        "100%": 0.9352,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": 51,
+      "n_errors_with_rationale": 60,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "0": {
+          "n_correct": 844,
+          "n": 898,
+          "accuracy": 0.9399,
+          "wilson_95": [
+            0.9224,
+            0.9536
+          ]
+        },
+        "1": {
+          "n_correct": 22,
+          "n": 28,
+          "accuracy": 0.7857,
+          "wilson_95": [
+            0.6046,
+            0.8979
+          ]
+        }
+      },
+      "_has_rationales": true
+    },
+    "real_criteria::rule_based": {
+      "label": "real_criteria::rule_based",
+      "source": "results\\real_criteria__rule_based.json",
+      "n_items": 926,
+      "n_correct": 926,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.9959,
+        1.0
+      ],
+      "n_errors": 0,
+      "ece": 0.0292,
+      "mean_confidence": 0.9708,
+      "accuracy_3dp": 1.0,
+      "ece_3dp": 0.029,
+      "mean_confidence_3dp": 0.971,
+      "n_abstain": 0,
+      "usable_confidence_signal": true,
+      "selective_accuracy": {
+        "10%": 1.0,
+        "20%": 1.0,
+        "30%": 1.0,
+        "40%": 1.0,
+        "50%": 1.0,
+        "60%": 1.0,
+        "70%": 1.0,
+        "80%": 1.0,
+        "90%": 1.0,
+        "100%": 1.0,
+        "degenerate_single_bin": false
+      },
+      "distinct_error_rationales": null,
+      "n_errors_with_rationale": 0,
+      "n_unanswerable_errors": null,
+      "by_depth": {
+        "0": {
+          "n_correct": 898,
+          "n": 898,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9957,
+            1.0
+          ]
+        },
+        "1": {
+          "n_correct": 28,
+          "n": 28,
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.8794,
+            1.0
+          ]
+        }
+      },
+      "_has_rationales": true
+    }
+  },
+  "section3": {
+    "snapshot": {
+      "snapshot_id": "unrecorded",
+      "frame": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
+      "advanced_expression": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
+      "n_studies": 300,
+      "fetched_utc": "2026-08-29T20:28:40+00:00",
+      "first_posted_from": "2026-01-01"
+    },
+    "atom_pool": {
+      "n_atoms": 522,
+      "n_source_trials": 222,
+      "sentences_considered": 4869,
+      "sentences_matched": 675,
+      "match_rate": 0.1386,
+      "by_section": {
+        "inclusion": 204,
+        "exclusion": 318
+      },
+      "first_posted_range": [
+        "2026-06-30",
+        "2026-08-28"
+      ],
+      "sha256": null
+    },
+    "arm1": {
+      "status": "computed",
+      "n_criteria": 463,
+      "n_trials": 219,
+      "segmentation": {
+        "studies": 300,
+        "sentences_considered": 4445,
+        "criteria_mapped": 463,
+        "criteria_mapped_single_atom": 449,
+        "criteria_mapped_coordinated": 14,
+        "criteria_negated": 10,
+        "mapping_rate": 0.1042,
+        "sentences_skipped": 3982,
+        "skipped_by_reason": {
+          "boilerplate_phrase": 440,
+          "duplicate_of_earlier_trial": 127,
+          "length_out_of_range": 598,
+          "no_faithful_mapping": 2817
+        }
+      },
+      "polarity": {
+        "inclusion": 186,
+        "exclusion": 277
+      },
+      "depth_histogram": {
+        "0": 449,
+        "1": 14
+      },
+      "coordinated_criteria": 14
+    }
+  },
+  "section7": {
+    "depth_sweep": {
+      "status": "computed",
+      "rows": [
         {
-          "item_id": "match:ALCOHOL-ABUSE:000",
-          "gold": "not_met",
-          "predicted": "met",
-          "confidence": 0.85,
-          "category": "temporal",
-          "rationale": "The criterion requires current/ongoing alcohol abuse; the patient has alcohol abuse present, indicating ongoing use over the limit."
+          "depth": 2,
+          "seed": 29,
+          "accuracy": 0.8,
+          "accuracy_3dp": 0.8,
+          "wilson_95": [
+            0.6822,
+            0.8817
+          ],
+          "n": 60,
+          "n_errors": 12,
+          "ece": 0.075,
+          "ece_3dp": 0.075,
+          "mean_confidence": 0.875,
+          "mean_confidence_3dp": 0.875
         },
         {
-          "item_id": "match:ASP-FOR-MI:000",
-          "gold": "not_met",
-          "predicted": "met",
-          "confidence": 0.9,
-          "category": "temporal",
-          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+          "depth": 3,
+          "seed": 29,
+          "accuracy": 0.6833,
+          "accuracy_3dp": 0.683,
+          "wilson_95": [
+            0.5577,
+            0.7869
+          ],
+          "n": 60,
+          "n_errors": 19,
+          "ece": 0.1733,
+          "ece_3dp": 0.173,
+          "mean_confidence": 0.8567,
+          "mean_confidence_3dp": 0.857
         },
         {
-          "item_id": "match:ASP-FOR-MI:001",
-          "gold": "not_met",
-          "predicted": "met",
-          "confidence": 0.9,
-          "category": "temporal",
-          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+          "depth": 4,
+          "seed": 29,
+          "accuracy": 0.5167,
+          "accuracy_3dp": 0.517,
+          "wilson_95": [
+            0.3931,
+            0.6382
+          ],
+          "n": 60,
+          "n_errors": 29,
+          "ece": 0.2833,
+          "ece_3dp": 0.283,
+          "mean_confidence": 0.8,
+          "mean_confidence_3dp": 0.8
         },
         {
-          "item_id": "match:ASP-FOR-MI:003",
-          "gold": "not_met",
-          "predicted": "met",
-          "confidence": 0.9,
-          "category": "temporal",
-          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+          "depth": 5,
+          "seed": 29,
+          "accuracy": 0.65,
+          "accuracy_3dp": 0.65,
+          "wilson_95": [
+            0.5236,
+            0.7583
+          ],
+          "n": 60,
+          "n_errors": 21,
+          "ece": 0.1417,
+          "ece_3dp": 0.142,
+          "mean_confidence": 0.7883,
+          "mean_confidence_3dp": 0.788
         },
         {
-          "item_id": "match:ASP-FOR-MI:006",
-          "gold": "not_met",
-          "predicted": "met",
-          "confidence": 0.9,
-          "category": "temporal",
-          "rationale": "Aspirin for myocardial infarction prophylaxis is present, indicating current/ongoing use and satisfying the criterion."
+          "depth": 6,
+          "seed": 29,
+          "accuracy": 0.3667,
+          "accuracy_3dp": 0.367,
+          "wilson_95": [
+            0.2562,
+            0.4932
+          ],
+          "n": 60,
+          "n_errors": 38,
+          "ece": 0.4233,
+          "ece_3dp": 0.423,
+          "mean_confidence": 0.79,
+          "mean_confidence_3dp": 0.79
+        }
+      ],
+      "pooled": {
+        "n_correct": 181,
+        "n": 300,
+        "accuracy": 0.6033,
+        "wilson_95": [
+          0.547,
+          0.657
+        ]
+      },
+      "trend": {
+        "per_depth": [
+          {
+            "depth": 2,
+            "n": 60,
+            "accuracy": 0.8,
+            "wilson_95": [
+              0.6822,
+              0.8817
+            ]
+          },
+          {
+            "depth": 3,
+            "n": 60,
+            "accuracy": 0.6833333333333333,
+            "wilson_95": [
+              0.5577,
+              0.7869
+            ]
+          },
+          {
+            "depth": 4,
+            "n": 60,
+            "accuracy": 0.5166666666666667,
+            "wilson_95": [
+              0.3931,
+              0.6382
+            ]
+          },
+          {
+            "depth": 5,
+            "n": 60,
+            "accuracy": 0.65,
+            "wilson_95": [
+              0.5236,
+              0.7583
+            ]
+          },
+          {
+            "depth": 6,
+            "n": 60,
+            "accuracy": 0.36666666666666664,
+            "wilson_95": [
+              0.2562,
+              0.4932
+            ]
+          }
+        ],
+        "spearman": {
+          "rho": -0.9,
+          "p_one_sided": 0.0417,
+          "mode": "exact",
+          "n_permutations": 120,
+          "min_attainable_p": 0.0083
+        },
+        "monotonic_non_increasing": false,
+        "pairwise": [
+          {
+            "depths": [
+              2,
+              3
+            ],
+            "accuracies": [
+              0.8,
+              0.6833
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 220
+          },
+          {
+            "depths": [
+              2,
+              4
+            ],
+            "accuracies": [
+              0.8,
+              0.5167
+            ],
+            "cis_overlap": false,
+            "n_per_depth_needed": 0
+          },
+          {
+            "depths": [
+              2,
+              5
+            ],
+            "accuracies": [
+              0.8,
+              0.65
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 138
+          },
+          {
+            "depths": [
+              2,
+              6
+            ],
+            "accuracies": [
+              0.8,
+              0.3667
+            ],
+            "cis_overlap": false,
+            "n_per_depth_needed": 0
+          },
+          {
+            "depths": [
+              3,
+              4
+            ],
+            "accuracies": [
+              0.6833,
+              0.5167
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 135
+          },
+          {
+            "depths": [
+              3,
+              5
+            ],
+            "accuracies": [
+              0.6833,
+              0.65
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 3139
+          },
+          {
+            "depths": [
+              3,
+              6
+            ],
+            "accuracies": [
+              0.6833,
+              0.3667
+            ],
+            "cis_overlap": false,
+            "n_per_depth_needed": 0
+          },
+          {
+            "depths": [
+              4,
+              5
+            ],
+            "accuracies": [
+              0.5167,
+              0.65
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 214
+          },
+          {
+            "depths": [
+              4,
+              6
+            ],
+            "accuracies": [
+              0.5167,
+              0.3667
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 171
+          },
+          {
+            "depths": [
+              5,
+              6
+            ],
+            "accuracies": [
+              0.65,
+              0.3667
+            ],
+            "cis_overlap": false,
+            "n_per_depth_needed": 0
+          }
+        ]
+      },
+      "ci_separated_pairs": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "unresolved_pairs": [
+        {
+          "depths": [
+            2,
+            3
+          ],
+          "n_per_depth_needed": 220
+        },
+        {
+          "depths": [
+            2,
+            5
+          ],
+          "n_per_depth_needed": 138
+        },
+        {
+          "depths": [
+            3,
+            4
+          ],
+          "n_per_depth_needed": 135
+        },
+        {
+          "depths": [
+            3,
+            5
+          ],
+          "n_per_depth_needed": 3139
+        },
+        {
+          "depths": [
+            4,
+            5
+          ],
+          "n_per_depth_needed": 214
+        },
+        {
+          "depths": [
+            4,
+            6
+          ],
+          "n_per_depth_needed": 171
         }
       ]
     },
-    "compositional::openai": {
-      "task": "compositional",
-      "model": {
-        "name": "openai",
-        "provider": "openai",
-        "model": "gpt-5-nano",
-        "temperature": 0.0
+    "mixed_depth": {
+      "status": "computed",
+      "overall": {
+        "accuracy": 0.92,
+        "wilson_95": [
+          0.8892,
+          0.9428
+        ],
+        "n": 400
       },
-      "n_items": 36,
-      "metrics": {
-        "overall_accuracy": 1.0,
-        "by_depth": {
-          "1": {
-            "accuracy": 1.0,
-            "n": 12
-          },
-          "2": {
-            "accuracy": 1.0,
-            "n": 12
-          },
-          "3": {
-            "accuracy": 1.0,
-            "n": 12
-          }
+      "by_depth": {
+        "1": {
+          "n_correct": 94,
+          "n": 100,
+          "accuracy": 0.94,
+          "wilson_95": [
+            0.8752,
+            0.9722
+          ]
+        },
+        "2": {
+          "n_correct": 91,
+          "n": 100,
+          "accuracy": 0.91,
+          "wilson_95": [
+            0.8377,
+            0.9519
+          ]
+        },
+        "3": {
+          "n_correct": 93,
+          "n": 100,
+          "accuracy": 0.93,
+          "wilson_95": [
+            0.8625,
+            0.9657
+          ]
+        },
+        "4": {
+          "n_correct": 90,
+          "n": 100,
+          "accuracy": 0.9,
+          "wilson_95": [
+            0.8256,
+            0.9448
+          ]
         }
       },
-      "failure_taxonomy": {},
-      "calibration": {
-        "ece": 0.19888888888888887,
-        "selective_accuracy_at_50pct_coverage": 1.0
+      "trend": {
+        "per_depth": [
+          {
+            "depth": 1,
+            "n": 100,
+            "accuracy": 0.94,
+            "wilson_95": [
+              0.8752,
+              0.9722
+            ]
+          },
+          {
+            "depth": 2,
+            "n": 100,
+            "accuracy": 0.91,
+            "wilson_95": [
+              0.8377,
+              0.9519
+            ]
+          },
+          {
+            "depth": 3,
+            "n": 100,
+            "accuracy": 0.93,
+            "wilson_95": [
+              0.8625,
+              0.9657
+            ]
+          },
+          {
+            "depth": 4,
+            "n": 100,
+            "accuracy": 0.9,
+            "wilson_95": [
+              0.8256,
+              0.9448
+            ]
+          }
+        ],
+        "spearman": {
+          "rho": -0.8,
+          "p_one_sided": 0.1667,
+          "mode": "exact",
+          "n_permutations": 24,
+          "min_attainable_p": 0.0417
+        },
+        "monotonic_non_increasing": false,
+        "pairwise": [
+          {
+            "depths": [
+              1,
+              2
+            ],
+            "accuracies": [
+              0.94,
+              0.91
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 1209
+          },
+          {
+            "depths": [
+              1,
+              3
+            ],
+            "accuracies": [
+              0.94,
+              0.93
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 9540
+          },
+          {
+            "depths": [
+              1,
+              4
+            ],
+            "accuracies": [
+              0.94,
+              0.9
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 721
+          },
+          {
+            "depths": [
+              2,
+              3
+            ],
+            "accuracies": [
+              0.91,
+              0.93
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 2888
+          },
+          {
+            "depths": [
+              2,
+              4
+            ],
+            "accuracies": [
+              0.91,
+              0.9
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 13495
+          },
+          {
+            "depths": [
+              3,
+              4
+            ],
+            "accuracies": [
+              0.93,
+              0.9
+            ],
+            "cis_overlap": true,
+            "n_per_depth_needed": 1356
+          }
+        ]
       },
-      "repro": {
-        "seed": 29,
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0",
-        "timestamp_utc": "2026-08-29T20:56:58+00:00"
+      "ci_separated_pairs": []
+    },
+    "exposure": {
+      "status": "computed",
+      "source": "persisted per-item flags",
+      "sets": {
+        "compositional::negation_blind": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 240,
+          "unexposed_accuracy": 0.6,
+          "unexposed_wilson_95": [
+            0.5369,
+            0.6599
+          ]
+        },
+        "compositional::openai": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 300,
+          "unexposed_accuracy": 0.6033,
+          "unexposed_wilson_95": [
+            0.547,
+            0.657
+          ]
+        },
+        "compositional::rule_based": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 240,
+          "unexposed_accuracy": 1.0,
+          "unexposed_wilson_95": [
+            0.9842,
+            1.0
+          ]
+        },
+        "real_criteria::negation_blind": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 926,
+          "unexposed_accuracy": 0.9698,
+          "unexposed_wilson_95": [
+            0.9566,
+            0.979
+          ]
+        },
+        "real_criteria::openai": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 926,
+          "unexposed_accuracy": 0.9352,
+          "unexposed_wilson_95": [
+            0.9175,
+            0.9493
+          ]
+        },
+        "real_criteria::rule_based": {
+          "exposed_n": 0,
+          "exposed_errors": 0,
+          "unexposed_n": 926,
+          "unexposed_accuracy": 1.0,
+          "unexposed_wilson_95": [
+            0.9959,
+            1.0
+          ]
+        }
+      }
+    },
+    "taxonomy": {
+      "heuristic": {
+        "pooled": {
+          "logical_composition": 199,
+          "negation_polarity": 140,
+          "none": 41,
+          "numeric_threshold": 6,
+          "temporal": 4
+        },
+        "per_run": {
+          "compositional_large::openai": {
+            "categories": {
+              "negation_polarity": 11,
+              "logical_composition": 21
+            },
+            "n_errors": 32,
+            "distinct_error_rationales": 32
+          },
+          "compositional_d2::openai": {
+            "categories": {
+              "logical_composition": 1,
+              "negation_polarity": 2
+            },
+            "n_errors": 3,
+            "distinct_error_rationales": 3
+          },
+          "compositional_d3::openai": {
+            "categories": {
+              "negation_polarity": 1,
+              "logical_composition": 2
+            },
+            "n_errors": 3,
+            "distinct_error_rationales": 3
+          },
+          "compositional_d4::openai": {
+            "categories": {
+              "logical_composition": 7,
+              "negation_polarity": 1
+            },
+            "n_errors": 8,
+            "distinct_error_rationales": 8
+          },
+          "compositional_d5::openai": {
+            "categories": {
+              "logical_composition": 14,
+              "negation_polarity": 3
+            },
+            "n_errors": 17,
+            "distinct_error_rationales": 17
+          },
+          "compositional_d6::openai": {
+            "categories": {
+              "negation_polarity": 10,
+              "logical_composition": 14
+            },
+            "n_errors": 24,
+            "distinct_error_rationales": 24
+          },
+          "compositional::negation_blind": {
+            "categories": {
+              "logical_composition": 57,
+              "negation_polarity": 39
+            },
+            "n_errors": 96,
+            "distinct_error_rationales": null
+          },
+          "compositional::openai": {
+            "categories": {
+              "logical_composition": 70,
+              "negation_polarity": 42,
+              "numeric_threshold": 6,
+              "temporal": 1
+            },
+            "n_errors": 119,
+            "distinct_error_rationales": 119
+          },
+          "compositional::rule_based": {
+            "categories": {},
+            "n_errors": 0,
+            "distinct_error_rationales": null
+          },
+          "real_criteria::negation_blind": {
+            "categories": {
+              "logical_composition": 8,
+              "negation_polarity": 20
+            },
+            "n_errors": 28,
+            "distinct_error_rationales": null
+          },
+          "real_criteria::openai": {
+            "categories": {
+              "logical_composition": 5,
+              "negation_polarity": 11,
+              "none": 41,
+              "temporal": 3
+            },
+            "n_errors": 60,
+            "distinct_error_rationales": 51
+          },
+          "real_criteria::rule_based": {
+            "categories": {},
+            "n_errors": 0,
+            "distinct_error_rationales": null
+          }
+        },
+        "labeller_versions": [
+          "1",
+          "2"
+        ],
+        "human_only_categories": [
+          "entity_conflation",
+          "fabrication",
+          "implicit_knowledge"
+        ],
+        "caveat": "Heuristic triage labels. The manuscript's distribution is the human consensus; three categories are unreachable by any counterfactual over the logical form."
       },
-      "selective_accuracy": {
-        "10%": 1.0,
-        "20%": 1.0,
-        "30%": 1.0,
-        "40%": 1.0,
-        "50%": 1.0,
-        "60%": 1.0,
-        "70%": 1.0,
-        "80%": 1.0,
-        "90%": 1.0,
-        "100%": 1.0
-      },
-      "n_abstain": 0,
-      "mean_confidence": 0.8011,
-      "error_items": []
+      "human": {
+        "status": "not run",
+        "fill_with": "scripts/annotation_export.py then scripts/annotation_report.py --adjudication ..."
+      }
     }
   },
-  "reference_implementation_validation": {
-    "rule_based_matching_micro_f1": 1.0,
-    "rule_based_compositional_accuracy": 1.0,
-    "rule_based_errors": 0,
-    "negation_blind_taxonomy_matching": {
-      "logical_composition": 8
-    },
-    "negation_blind_taxonomy_compositional": {
-      "negation_polarity": 10,
-      "logical_composition": 7
-    },
-    "negation_blind_depth_curve_large": {
-      "1": 0.68,
-      "2": 0.58,
-      "3": 0.6,
-      "4": 0.58
-    },
-    "interpretation": "Rule-based == oracle on already-structured forms, so its perfect scores are a software-validation artifact, NOT an empirical finding."
-  },
-  "taxonomy_codebook": {
-    "negation_polarity": "Inclusion/exclusion or NOT-scope flipped.",
-    "temporal": "Temporal window or tense reasoning error.",
-    "numeric_threshold": "Comparator or boundary value error.",
-    "logical_composition": "AND/OR/NOT composition resolved incorrectly.",
-    "entity_conflation": "Distinct clinical entities conflated.",
-    "implicit_knowledge": "Failed required unstated inference.",
-    "fabrication": "Asserted a constraint absent from the criterion.",
-    "none": "No attributable failure."
-  },
-  "reproducibility": {
-    "python": "3.12.10",
-    "platform": "Windows-11-10.0.26200-SP0",
-    "timestamp_utc": "2026-08-29T20:56:58+00:00",
-    "llm_model_id": "gpt-5-nano",
-    "llm_temperature_requested": 0.0,
-    "llm_temperature_effective": "none (API default)",
-    "llm_temperature_note": "gpt-5-nano rejects a custom temperature; the adapter drops it and retries, so every completion used the API default. The dropped parameter is not recorded per call \u2014 see results/DISCREPANCIES.md entry 3.",
-    "llm_response_cache_entries": 143,
-    "packages": [
-      "openai==3.6.0",
-      "pydantic==2.13.5",
-      "pytest==9.1.1",
-      "ruff==0.16.5"
-    ],
-    "tests": {
-      "passed": 55,
-      "failed": 0,
-      "exit_code": 0,
-      "summary": "55 passed in 0.54s"
-    },
-    "lint": {
-      "exit_code": 0,
-      "summary": "All checks passed!"
-    }
-  },
-  "cannot_fill": {
-    "7.1 Task A (structuring)": "Chia corpus not downloaded and no structuring model implemented (entity F1 / relation F1 / exact match unavailable).",
-    "7.1 Task B (typing & polarity)": "Requires Chia-derived labels and a classification model; tasks/typing_polarity.py is a task-name contract only.",
-    "7.1 Task C on REAL patients": "n2c2 2018 records are DUA-gated and absent; all Task C numbers here use synthetic patients over the real public criterion definitions.",
-    "6. Encoder baselines": "models/encoder.py raises NotImplementedError; needs transformers/torch plus a fine-tuned checkpoint (BioClinicalBERT / PubMedBERT / BioBERT).",
-    "6. Open-weight LLMs": "models/llm_local.py is a stub; needs an HF/vLLM runtime.",
-    "6. Additional API LLMs": "The available API project grants access to gpt-5-nano only; GPT-4-class and Claude-class models returned 403 model_not_found.",
-    "7.5 Ablations": "No prompt-design, few-shot-count, or retrieval ablation has been run; the toolkit ships a single fixed zero-shot prompt.",
-    "5. Human-vs-automatic kappa": "Requires the domain expert to fill human_category in results/errors_openai_*.csv, then run taxonomy.reliability.",
-    "5. Test-retest kappa": "Requires a second annotation pass after a washout interval."
-  },
-  "discrepancies": [
+  "gates": [
     {
-      "location": "Paper Sec. 3.4 vs criterialogic/tasks/compositional.py::_atom_pool",
-      "status": "resolved-in-code; Sec. 3.4 wording still needs an author decision",
-      "paper_says": "Task D atoms are 'extracted from real ClinicalTrials.gov criteria'.",
-      "code_does": "Atoms are now extracted from verbatim ClinicalTrials.gov v2 eligibility text into data/ctgov_atom_pool.json, each carrying its source NCT ID, source sentence, and the trial's first-posted date. The generator raises if the pool is absent instead of falling back to the n2c2 leaves.",
-      "action": "See results/DISCREPANCIES.md entry 1 for the four qualifications the Sec. 3.4 wording must respect (synthetic nesting, conservative extraction yield, polarity-free predicates, dated contamination claim)."
+      "level": "BLOCK",
+      "subject": "compositional::negation_blind",
+      "finding": "Every prediction carries the same confidence, so the selective-accuracy curve is flat at the overall accuracy and abstention cannot be evaluated.",
+      "action": "Report as providing no confidence signal. Do not present a curve."
     },
     {
-      "location": "Paper Sec. 7.2 hypothesis",
-      "paper_says": "Accuracy declines monotonically with nesting depth.",
-      "data_shows": "See 7.2 table: not monotonic for every system at these sample sizes.",
-      "action": "State the observed pattern; do not assert monotonicity without wider n."
+      "level": "NOTE",
+      "subject": "compositional::rule_based",
+      "finding": "Perfect score on n=240; the 95% lower bound is 0.9842, so this set cannot distinguish the system from one that is 98% accurate.",
+      "action": "If this is the oracle baseline, label it a software-validation artifact."
+    },
+    {
+      "level": "BLOCK",
+      "subject": "real_criteria::negation_blind",
+      "finding": "Every prediction carries the same confidence, so the selective-accuracy curve is flat at the overall accuracy and abstention cannot be evaluated.",
+      "action": "Report as providing no confidence signal. Do not present a curve."
+    },
+    {
+      "level": "BLOCK",
+      "subject": "real_criteria::openai",
+      "finding": "60 errors collapse to 51 distinct rationales \u2014 one systematic misreading replicated, not independent observations.",
+      "action": "Report both counts; compute any taxonomy percentage over distinct modes."
+    },
+    {
+      "level": "NOTE",
+      "subject": "real_criteria::rule_based",
+      "finding": "Perfect score on n=926; the 95% lower bound is 0.9959, so this set cannot distinguish the system from one that is 100% accurate.",
+      "action": "If this is the oracle baseline, label it a software-validation artifact."
+    },
+    {
+      "level": "BLOCK",
+      "subject": "depth sweep",
+      "finding": "Accuracy is not monotonically non-increasing with depth.",
+      "action": "State the observed pattern; do not assert monotonic decline."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depth sweep",
+      "finding": "Smallest attainable p with 5 levels is 0.0083.",
+      "action": "Report the floor wherever the p-value appears."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (2, 3)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=220 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (2, 5)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=138 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (3, 4)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=135 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (3, 5)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=3139 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (4, 5)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=214 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "depths (4, 6)",
+      "finding": "Indistinguishable at this sample size. Separating them needs n>=171 per depth.",
+      "action": "Do not claim a difference between these two depths individually."
+    },
+    {
+      "level": "NOTE",
+      "subject": "mixed-depth set",
+      "finding": "No pair of depths is separated at 95% confidence on the mixed set.",
+      "action": "This is the finding: the effect does not appear until beyond this depth range."
     }
   ]
 }

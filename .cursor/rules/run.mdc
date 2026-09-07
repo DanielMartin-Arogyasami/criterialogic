@@ -1,15 +1,26 @@
 ---
-description: How to set up and run CriteriaLogic with minimal model effort (turnkey command-runner)
+description: How to run things
 alwaysApply: true
 ---
-This project is turnkey — running it needs almost no reasoning. Prefer running the provided
-commands/scripts verbatim over reading, rewriting, or explaining code.
-Set up + offline smoke-test (no API key), one command:
-- macOS/Linux/WSL: `bash setup_and_run.sh`
-- Windows: `python -m venv .venv; .venv\Scripts\Activate.ps1; pip install -e ".[dev]"; python scripts/run_eval.py; pytest -q`
-Run a real OpenAI model (needs `OPENAI_API_KEY`):
-`pip install -e ".[llm]"` then `python scripts/run_eval.py --task compositional --model openai`
-The full command list is in `RUN.md`. Tests: `pytest -q`. Lint: `ruff check .`.
-Do NOT, unless explicitly asked: refactor, rewrite, reformat, or regenerate code; add dependencies;
-explain the codebase; or "improve" files. When asked to run something, run the matching command from
-`RUN.md` and report only its output. Keep replies to the command and its result — this keeps token use low.
+
+**The full execution sequence is in `CURSOR_START.md`.** Prefer `make` over hand-typed commands; the targets carry the arguments that make runs
+comparable (seeds, depth lists, prompt version, output directory).
+
+```
+make check        # preflight + pytest + ruff   <- run before trusting anything
+make data         # Arm 1 counts (fills the Section 3 brackets) + Arm 2 item set
+make run-offline  # both arms, diagnostic models, no API key
+make run-llm      # depth sweep + Arm 1 under prompt v2 (needs OPENAI_API_KEY)
+make paper        # regenerate results/PAPER_DATA.md
+make verify       # diff the manuscript against the artifacts; non-zero on drift
+make finish       # the whole deterministic chain
+```
+
+Nothing except `run-llm` needs a key or a network connection. The committed snapshot makes
+both arms reproducible offline.
+
+Two gates that must stay green: `make verify` (the paper cannot drift from its data) and
+`scripts/preflight.py` (the installation actually works). Both run in CI.
+
+Do not add a number to a results file, the README or the paper by hand. `make paper`
+generates them; if a figure is missing, the collector prints the command that fills it.

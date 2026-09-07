@@ -1,26 +1,27 @@
-"""logical_form.py — CriteriaLogic harmonized logical form.
-A canonical, source-agnostic representation of a single clinical-trial
-eligibility criterion. Both the **Chia** corpus (entity/relation annotations
-with AND/OR/negation/value/temporal) and the **n2c2 2018** cohort-selection
-criteria (13 patient-level met/not-met rules) map onto this one model, so every
-downstream benchmark task — (A) structuring, (B) typing & polarity,
-(C) patient–criterion matching, (D) compositional-logic stress test — operates
-on a single schema.
+"""logical_form.py — CriteriaLogic canonical logical form.
+
+A source-agnostic representation of a single clinical-trial eligibility criterion.
+Both benchmark arms operate on this one schema:
+
+* **Arm 1 — real criteria.** Criteria segmented from a dated ClinicalTrials.gov API v2
+  snapshot and mapped onto the form by :mod:`criterialogic.data.real_criteria`.
+* **Arm 2 — compositional stress test.** Nested AND/OR/NOT expressions of controlled
+  depth, composed from atoms extracted from the same snapshot.
+
 Design goals
 ------------
-- **Expressive:** nested AND/OR/NOT scoping plus the four constraint types
-  the benchmark targets (entity, temporal, numeric, polarity).
+- **Expressive:** nested AND/OR/NOT scoping plus the three constraint types the
+  benchmark targets (entity, temporal, numeric) and criterion-level polarity.
 - **Canonical:** one normal form per logic (`canonicalize`: operand sorting,
-  same-operator flattening, double-negation collapse, dedupe) so Task A's
-  logical-form *exact match* is meaningful rather than penalizing trivial
-  reorderings.
+  same-operator flattening, double-negation collapse, dedupe). Retained for
+  deduplication and for the deferred structuring task (see docs/V2_SCOPE.md).
 - **Round-trippable:** pure pydantic v2 — `model_dump_json()` /
   `model_validate_json()` reconstruct an identical object.
-- **Lossless to source:** criterion-level inclusion/exclusion polarity is kept
-  as a label and is *not* folded into the logical expression (see TRADEOFFS).
-Constraints: public/synthetic data only; solo/first-authorship project.
-Intrinsic structural validation lives here on the models; corpus-level checks
-(cross-criterion, leakage) belong in the sibling `validators.py`.
+- **Lossless to source:** criterion-level inclusion/exclusion polarity is kept as a
+  label and is *not* folded into the logical expression (see TRADEOFFS in the paper).
+
+Public-domain and synthetic data only. Intrinsic structural validation lives here on
+the models; corpus-level checks (cross-criterion, leakage) belong in `validators.py`.
 """
 from __future__ import annotations
 
@@ -38,14 +39,19 @@ class Polarity(str, Enum):
     INCLUSION = "inclusion"
     EXCLUSION = "exclusion"
 class Source(str, Enum):
-    """Provenance — drives licensing / redistribution handling downstream."""
-    CHIA = "chia"
-    N2C2_2018 = "n2c2_2018"
-    CTGOV = "ctgov"  # atoms extracted from verbatim ClinicalTrials.gov eligibility text
-    N2C2_DERIVED = "n2c2_derived"  # atoms derived from the public n2c2 criterion definitions
-    SYNTHETIC_EXAMPLE = "synthetic_example"  # hand-written illustrations; not from any corpus
+    """Provenance. Every released record comes from the public-domain snapshot or is
+    synthetic; there is no licence-restricted component in v0.2.
+
+    ``CTGOV`` marks a criterion or atom taken from verbatim ClinicalTrials.gov
+    eligibility text. ``SYNTHETIC_EXAMPLE`` marks hand-written illustrations used in
+    docstrings and tests, which are never part of an evaluated set.
+    """
+    CTGOV = "ctgov"
+    SYNTHETIC_EXAMPLE = "synthetic_example"
 class EntityType(str, Enum):
-    """Coarse clinical concept type; superset covering Chia + n2c2."""
+    """Coarse clinical concept type. Deliberately coarse: the benchmark tests logical
+    structure, and a fine-grained ontology would add mapping decisions without adding
+    anything the tasks measure."""
     CONDITION = "condition"
     DRUG = "drug"
     PROCEDURE = "procedure"
@@ -195,7 +201,7 @@ class LogicalForm(BaseModel):
     """Harmonized representation of one eligibility criterion (the unit of the benchmark)."""
     model_config = ConfigDict(extra="forbid")
     schema_version: str = SCHEMA_VERSION
-    criterion_id: str = Field(..., description="Stable id, e.g. 'n2c2:MI-6MOS' or 'chia:NCT00000000:42'.")
+    criterion_id: str = Field(..., description="Stable id, e.g. 'ctgov:NCT07675850:inc:00'.")
     source: Source
     polarity: Polarity
     text: str = Field(..., description="Verbatim criterion text from the source.")
@@ -263,7 +269,7 @@ def canonicalize(expr: Expression) -> Expression:
 # --------------------------------------------------------------------------- #
 def example_simple_inclusion() -> LogicalForm:
     """Simple inclusion: a single entity + one numeric constraint.
-    'Age 18 years or older.'  (maps cleanly from an n2c2-style demographic rule)
+    'Age 18 years or older.' — a single-atom demographic criterion.
     """
     return LogicalForm(
         criterion_id="example:age-18",

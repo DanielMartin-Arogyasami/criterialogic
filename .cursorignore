@@ -1,0 +1,24 @@
+# Keep the assistant's context small. Everything here is data or history that the
+# agent never needs to read: ~352k tokens of the repo's ~490k.
+#
+# It is all still on disk and still used at runtime — the scripts read these files
+# directly. Ignoring them only stops them being pulled into a chat context.
+
+# The committed ClinicalTrials.gov snapshot: 301 JSON files, ~169k tokens.
+data/ctgov_cache/
+# The atom pool: ~80k tokens. Read `data/README.md` instead.
+data/ctgov_atom_pool.json
+# Result artifacts: ~82k tokens of per-item predictions. Read `results/PAPER_DATA.md`
+# or `results/SECTION7.md`, which are the summaries these produce.
+results/*.json
+results/missing/*.json
+# v0.1 scripts, kept only as provenance. See legacy/README.md.
+legacy/
+# Test fixtures and caches.
+tests/fixtures/
+.criterialogic_cache/
+annotation/
+data/processed/
+data/raw/
+**/__pycache__/
+.venv/

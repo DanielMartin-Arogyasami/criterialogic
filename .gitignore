@@ -25,8 +25,17 @@ __pycache__/
 .ruff_cache/
 .criterialogic_cache/
 
-# Secrets: never commit API keys.
+# Secrets: never commit API keys or local env files.
 .env
+.env.*
+!.env.example
+
+# Manuscript stays local; do not publish the paper on GitHub.
+paper/
 
 # Single-file bundle used to bootstrap the repo; source of truth is the tree itself.
 CriteriaLogic_bundle.md
+
+# Added in v0.2
+annotation/    # annotation working files (may contain in-progress labels)
+results/leaderboard/*.tmp    # partial submissions

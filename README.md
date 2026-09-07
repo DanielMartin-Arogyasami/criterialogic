@@ -1,76 +1,182 @@
 # CriteriaLogic
-**A public benchmark for LLM reasoning over clinical-trial eligibility criteria.**
-LLM patient–trial matching systems often fail on the *logical structure* of
-eligibility criteria — nested AND/OR, negation/polarity, temporal windows, and
-numeric thresholds — and the field has no shared way to measure this.
-CriteriaLogic provides a harmonized benchmark, an open evaluation toolkit, a
-public leaderboard, and a seven-category reasoning-failure taxonomy.
-> **Data policy:** public/synthetic data only. Chia is CC-BY (releasable);
-> ClinicalTrials.gov is public; **n2c2 2018 is DUA-gated and never redistributed**
-> — we release the harness + a DUA pointer (see `data/README.md`).
+
+**A depth-parameterised stress test for logical reasoning over clinical-trial eligibility criteria.**
+
+Eligibility criteria nest AND/OR, negate, bound values, and scope things in time. A
+screening system can score well on average and still fail on the constructions where a
+wrong answer flips an eligibility decision. CriteriaLogic makes logical nesting depth an
+independent variable you can turn, with ground truth computed by a three-valued
+evaluator rather than annotated, so a drop in accuracy is attributable to structure
+rather than to vocabulary, topic, or prompt design.
+
+Two arms, one snapshot, no gated data:
+
+- **Arm 1 — real criteria.** Criteria segmented verbatim from a dated ClinicalTrials.gov
+  API v2 snapshot, carrying real inclusion/exclusion polarity.
+- **Arm 2 — compositional stress test.** Nested AND/OR/NOT expressions at controlled
+  depths 1–6, composed from atoms extracted from the same snapshot.
+- **Cross-cutting:** calibration and abstention (ECE, tie-aware selective accuracy).
+
+Plus a seven-category reasoning-failure taxonomy applied to every error by two
+annotators working from a published codebook.
+
+> **Data policy:** public-domain and synthetic only. Everything needed to reproduce both
+> arms is committed. No data-use agreement, no credentials.
+
+> **Working on this with an AI assistant?** Read `CURSOR_START.md` first (~500 tokens).
+> Short version: `make finish` does the deterministic remainder with no assistant at all,
+> and `.cursorignore` keeps ~352k tokens of data out of context. Remaining work is five
+> cards in `docs/TASKS.md`.
+
 ## Quickstart
+
 ```bash
-git clone https://github.com/USERNAME/criterialogic.git
+git clone https://github.com/darogyasami/criterialogic.git
 cd criterialogic
-python -m venv .venv && source .venv/bin/activate   # (Windows: .venv\Scripts\activate)
+python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -e .
-# Runs end-to-end with NO external data (real n2c2 criteria + synthetic patients):
+
+# Does this installation work? No network, no API key:
+python scripts/preflight.py
+
+# Runs both arms end-to-end with no network and no API key:
 python scripts/run_eval.py
 ```
-This evaluates two baselines (a rule-based logic floor and an illustrative
-negation-blind model) on the matching (Task C) and compositional (Task D) tasks,
-prints a Markdown report, and writes JSON results to `results/`.
-> Note: on the *synthetic* demo set the rule-based baseline evaluates an
-> already-structured form and is therefore an oracle (≈ perfect). The demo
-> exists to show the **pipeline + diagnostics** working (depth-stratified
-> accuracy, calibration, failure taxonomy), not to report benchmark findings.
-> Real findings come from the full data + LLM/encoder baselines.
-## Tasks
-- **A. Structuring** — free-text → LogicalForm (gold: Chia).
-- **B. Typing & polarity** — type / inclusion-exclusion / qualifiers (gold: Chia).
-- **C. Matching** — met/not-met for (record, criterion) (gold: n2c2 2018).
-- **D. Compositional logic** — controlled nested AND/OR/NOT (synthetic from ClinicalTrials.gov).
-- **Cross-cutting** — calibration & abstention (ECE, selective accuracy).
-## Add your model (leaderboard)
-Implement one method:
-```python
-from criterialogic.models.base import Model
-from criterialogic.tasks.base import Item, Prediction
-class MyModel(Model):
-    name = "my_model"
-    def predict(self, item: Item) -> Prediction:
-        ...  # return Prediction(item_id=item.item_id, label=<bool>, confidence=<0..1>)
-```
-Run it, emit a submission JSON, and validate/score with `criterialogic.leaderboard`.
-See `CONTRIBUTING.md`.
-## Run an LLM baseline (OpenAI)
-The compositional task (Task D) is synthetic by design, so you can produce **real** LLM results
-for it with no gated data — just an API key.
+
+`preflight.py` checks the interpreter, the dependency, the resolved data directory, the
+snapshot and the atom pool, then runs a real evaluation through both arms. Its exit code is
+the number of failed checks.
+
+That evaluates two offline diagnostics and writes JSON plus a Markdown report to
+`results/`.
+
+> **On those two diagnostics.** `rule_based` evaluates the already-structured logical
+> form, so on these item sets it *is* the oracle and scores perfectly by construction —
+> a software-validation artifact, not a finding. `negation_blind` is deliberately broken
+> to produce a known error signature. Neither belongs on the leaderboard, and neither
+> emits a varying confidence, so neither has an abstention curve worth reading.
+
+## Real results
+
 ```bash
 pip install -e ".[llm]"
 export OPENAI_API_KEY=sk-...
-export CRITERIALOGIC_LLM_MODEL=gpt-4o-mini      # optional; any chat model you can access
-python scripts/run_eval.py --task compositional --model openai
-python scripts/run_eval.py --task matching --model openai      # LLM on synthetic patients
+export CRITERIALOGIC_LLM_MODEL=gpt-4o-mini    # or any chat model you can reach
+
+# the depth sweep — this is the arm that carries the finding
+python scripts/run_eval.py --task compositional --depths 2,3,4,5,6 --n-per-depth 60 --model openai
+
+# the realism check
+python scripts/run_eval.py --task real_criteria --model openai
+
+# second and third systems — same prompt, OpenAI-compatible hosts
+# pip install -e ".[llm]"
+# $env:OPENROUTER_API_KEY="..."   # or TOGETHER_API_KEY
+python scripts/run_eval.py --task compositional --depths 2,3,4,5,6 --n-per-depth 60 --model openrouter
+python scripts/run_eval.py --task compositional --depths 2,3,4,5,6 --n-per-depth 60 --model together
 ```
-Responses are cached under `.criterialogic_cache/` (keyed by model + prompt), so re-runs are free
-and interrupted runs resume. Calls use `temperature=0` for reproducibility and fail gracefully
-per item (a bad call becomes a low-confidence abstain rather than aborting the run). The default
-`python scripts/run_eval.py` sweep stays offline (`rule_based`, `negation_blind`) and needs no key.
-To characterise the model's errors with the reasoning-failure taxonomy, export the error set for
-annotation and compute agreement (see `criterialogic/taxonomy/reliability.py`):
+
+Responses are cached under `.criterialogic_cache/`, keyed by model, prompt version, and
+the parameters the API actually applied, so re-runs are free, interrupted runs resume,
+and a parameter change invalidates the cache rather than silently reusing it.
+
+## Leaderboard
+
+Updated by hand. There is no hosted site, no automatic scoring, and no UI — see
+`docs/V2_SCOPE.md`. Point estimates are reported with 95% Wilson intervals because at
+these sample sizes adjacent rows are routinely indistinguishable.
+
+### Arm 2 — compositional accuracy by nesting depth
+
+| System | d2 | d3 | d4 | d5 | d6 | n/depth |
+|---|---|---|---|---|---|---|
+| gpt-4o-mini (prompt v2) | 0.800 [0.682, 0.882] | 0.683 [0.558, 0.787] | 0.517 [0.393, 0.638] | 0.650 [0.524, 0.758] | 0.367 [0.256, 0.493] | 60 |
+
+Spearman rho = −0.9, exact one-sided permutation p = 0.0417, pooled 0.603 [0.547, 0.657]. Not monotonic. Full intervals, provenance and caveats: [`results/PAPER_DATA.md`](results/PAPER_DATA.md).
+
+### Arm 1 — real criteria
+
+| System | micro-F1 | macro-F1 | n |
+|---|---|---|---|
+| gpt-4o-mini (prompt v2) | 0.935 | 0.935 | 926 |
+
+## Add your model
+
+Implement one method:
+
 ```python
-from criterialogic.taxonomy.reliability import export_error_set, reliability_report
-export_error_set(items, predictions, "errors.csv")   # fill the human_category column, then:
-print(reliability_report(items, predictions, "errors_annotated.csv"))
+from criterialogic.models.base import Model
+from criterialogic.tasks.base import Item, Prediction
+
+class MyModel(Model):
+    name = "my_model"
+
+    def predict(self, item: Item) -> Prediction:
+        # item.criterion is a LogicalForm; item.facts is a PatientFacts record.
+        # Return a met/not-met label and a calibrated confidence in [0, 1].
+        return Prediction(item_id=item.item_id, label=..., confidence=...)
 ```
-## Repository layout
-See `docs/index.md`. Core: `criterialogic/schema` (the logical form),
-`criterialogic/oracle.py` (3-valued evaluator), `tasks/`, `models/`, `metrics/`,
-`taxonomy/`, `eval/`, `leaderboard/`.
+
+Then produce and score a submission:
+
+```bash
+python scripts/make_submission.py --task compositional --model my_model --out sub.json
+python scripts/make_submission.py --task compositional --score sub.json
+```
+
+Open a PR adding your result JSON under `results/leaderboard/` and your row to the table
+above. Full details in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+**If that took you more than thirty minutes from a cold start, the instructions are at
+fault and we want the issue.** The one-interface design is the only thing making outside
+submission plausible for a project this size, so friction in it is a bug.
+
+## From results to the paper
+
+```bash
+python scripts/collect_paper_data.py            # -> results/PAPER_DATA.md (paste-ready)
+python scripts/collect_paper_data.py --verify   # diff the manuscript against the artifacts
+```
+
+The collector recomputes every figure from the persisted per-item predictions, runs the
+integrity gates (ceiling effects, degenerate confidence, rationale clustering, unanswerable
+items, depth-trend significance and the n that would resolve each unresolved pair) as part
+of collection, and prints a bracket with the command that fills it wherever an experiment
+has not been run. `--verify` runs in CI, so the paper cannot drift from the data.
+
+## Error taxonomy and annotation
+
+Seven categories: negation/polarity, temporal, numeric threshold, logical composition,
+entity conflation, implicit-knowledge gap, fabrication.
+
+```bash
+python scripts/annotation_export.py --results results/ --n 200 --out annotation/
+# both annotators fill category + clinical_judgement_required, blind to each other
+python scripts/annotation_report.py --a annotation/errors_annotator1.csv \
+                                    --b annotation/errors_annotator2.csv \
+                                    --adjudication-out annotation/adjudication.csv
+```
+
+The codebook is [`docs/CODEBOOK.md`](docs/CODEBOOK.md) and is the instrument, not a
+convenience. A heuristic labeller pre-sorts errors for triage; neither annotator sees its
+output while labelling, and its agreement with the human consensus is reported separately.
+
 ## Reproducibility
-Pinned deps (`pyproject.toml`), fixed seeds, and model identifiers + inference
-parameters logged into every result file. The synthetic logic set is regenerable
-(`scripts/build_logic_set.py`).
+
+Pinned dependencies, fixed seeds, and — recorded into every result file — the atom pool
+digest, the snapshot id, the schema version, the prompt-renderer version, the
+failure-labeller version, and the inference parameters the API *actually applied*
+alongside the ones requested. Per-item predictions are persisted so any aggregate can be
+recomputed without a rerun.
+
+Both item sets are regenerable: same seed plus same depth list plus same atom pool gives a
+byte-identical set, and the prompts are regenerable too.
+
+**Model responses are not.** The requested temperature of 0.0 was rejected by the evaluated
+model, so completions used the API default, and the response cache is not redistributed.
+`--prompt-version 1` reproduces the experiment, not the numbers; the released per-item
+predictions are the record of the run.
+
 ## Citation
-See `CITATION.cff`. License: MIT.
+
+See [`CITATION.cff`](CITATION.cff). License: MIT.

@@ -1,1 +1,2 @@
-"""Metrics: classification, n2c2-style matching, logic-by-depth, calibration, extraction."""
+"""Metrics: classification primitives, met/not-met decisions, accuracy by depth,
+calibration, and the stdlib-only statistics layer behind every reported interval."""

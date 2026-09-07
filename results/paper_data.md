@@ -1,148 +1,289 @@
-# CriteriaLogic — collected data for the paper
+# Paper data — generated 2026-09-07T19:57:27+00:00
 
-Generated 2026-08-29T20:56:58+00:00 · package v0.1.0 · schema v0.1.0 · Python 3.12.10
+> Every number here was produced by executing code against the released
+> artifacts, and every aggregate is recomputed from persisted per-item
+> predictions rather than carried forward from a stored aggregate. Bracketed
+> values mark experiments that have not been run; the command that fills each
+> one is given beside it. Read the integrity gates at the end before quoting
+> anything.
 
-> **INTEGRITY BANNER — read before using any number below.**
-> Task C here uses the *real, public* n2c2 criterion definitions paired with **synthetic patients**, not the DUA-gated n2c2 records. Task D is **synthetic by construction**. The `rule_based` baseline evaluates an already-structured logical form and is therefore *the oracle itself*: its perfect scores are a software-validation artifact (paper §7.6), **not** an empirical finding. Only the `openai` rows are genuine model measurements, and even those are measured against synthetic patients.
+**4 blocking finding(s), 10 note(s).** See the end of this file.
 
-## §3 Dataset composition (verified from code, not placeholders)
+## Section 3 — dataset composition
 
-- n2c2 criteria encoded as LogicalForms: **13** (all 13 official tags)
-- Task C items: **104** (13 criteria × 8 synthetic patients, seed 13); gold met-rate 0.6154
-- Task D demo set: **36** items, depths {1: 12, 2: 12, 3: 12}, seed 29; gold met-rate 0.5833
-- Task D large set: **400** items, depths {1: 100, 2: 100, 3: 100, 4: 100}; gold met-rate 0.4675
-- Atom pool for Task D: **522** distinct atoms — atoms extracted from verbatim ClinicalTrials.gov eligibility text
+- Snapshot `unrecorded`: **300 studies**, fetched 2026-08-29T20:28:40+00:00
+- Sampling frame (verbatim from the manifest): `AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]`
+- Atom pool: **522 distinct atoms from 222 trials**
+- Extraction matched **675 of 4869 candidate sentences (13.9%)**
+- By section: {'inclusion': 204, 'exclusion': 318}
+- Atom first-posted range: **2026-06-30 … 2026-08-28** (the contamination control)
 
-### Per-criterion structural profile (feeds §3.2 and S2)
+### Arm 1 (real criteria)
 
-| Tag | Polarity | Nesting depth | Atoms | Temporal | Numeric |
-|---|---|---|---|---|---|
-| ABDOMINAL | inclusion | 1 | 3 | no | no |
-| ADVANCED-CAD | inclusion | 2 | 12 | yes | yes |
-| ALCOHOL-ABUSE | inclusion | 0 | 1 | yes | no |
-| ASP-FOR-MI | inclusion | 0 | 1 | yes | no |
-| CREATININE | inclusion | 0 | 1 | no | yes |
-| DIETSUPP-2MOS | inclusion | 0 | 1 | yes | no |
-| DRUG-ABUSE | inclusion | 0 | 1 | yes | no |
-| ENGLISH | inclusion | 0 | 1 | no | no |
-| HBA1C | inclusion | 0 | 1 | no | yes |
-| KETO-1YR | inclusion | 0 | 1 | yes | no |
-| MAJOR-DIABETES | inclusion | 1 | 4 | no | no |
-| MAKES-DECISIONS | inclusion | 0 | 1 | no | no |
-| MI-6MOS | inclusion | 0 | 1 | yes | no |
+- **463 criteria from 219 trials**
+- Mapping rate: **0.1042**
+- Polarity: **{'inclusion': 186, 'exclusion': 277}**
+- Depth histogram: **{'0': 449, '1': 14}**
+- Coordinated (compound) criteria: **14**
+- Skipped by reason: {'boilerplate_phrase': 440, 'duplicate_of_earlier_trial': 127, 'length_out_of_range': 598, 'no_faithful_mapping': 2817}
 
-## §7.1 Main leaderboard (rows that can be filled today)
+## Section 7.1 — accuracy versus logical nesting depth
 
-| Task | System | Headline metric | Value | ECE | n |
-|---|---|---|---|---|---|
-| C matching | rule_based (= oracle) | micro-F1 | **1.000** (macro 1.000) | 0.014 | 104 |
-| C matching | negation_blind (illustrative) | micro-F1 | **0.923** (macro 0.921) | 0.223 | 104 |
-| C matching | gpt-5-nano | micro-F1 | **0.952** (macro 0.948) | 0.165 | 104 |
-| D compositional | rule_based (= oracle) | accuracy | **1.000** | 0.028 | 36 |
-| D compositional | negation_blind (illustrative) | accuracy | **0.528** | 0.172 | 36 |
-| D compositional | gpt-5-nano | accuracy | **1.000** | 0.199 | 36 |
-| D compositional (400-item) | rule_based (= oracle) | accuracy | **1.000** | 0.020 | 400 |
-| D compositional (400-item) | negation_blind (illustrative) | accuracy | **0.610** | 0.090 | 400 |
-
-Tasks A and B have no rows: see *Cannot fill* below.
-
-## §7.2 Accuracy versus logical nesting depth
-
-| System | Set | d=1 | d=2 | d=3 | d=4 | Δ(shallowest→deepest) |
+| Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence |
 |---|---|---|---|---|---|---|
-| rule_based | 36-item | 1.000 (n=12) | 1.000 (n=12) | 1.000 (n=12) | — | +0.000 |
-| negation_blind | 36-item | 0.750 (n=12) | 0.583 (n=12) | 0.250 (n=12) | — | -0.500 |
-| gpt-5-nano | 36-item | 1.000 (n=12) | 1.000 (n=12) | 1.000 (n=12) | — | +0.000 |
-| rule_based | 400-item | 1.000 (n=100) | 1.000 (n=100) | 1.000 (n=100) | 1.000 (n=100) | +0.000 |
-| negation_blind | 400-item | 0.680 (n=100) | 0.580 (n=100) | 0.600 (n=100) | 0.580 (n=100) | -0.100 |
+| 2 | 29 | **0.800** | [0.682, 0.882] | 12 | 0.075 | 0.875 |
+| 3 | 29 | **0.683** | [0.558, 0.787] | 19 | 0.173 | 0.857 |
+| 4 | 29 | **0.517** | [0.393, 0.638] | 29 | 0.283 | 0.800 |
+| 5 | 29 | **0.650** | [0.524, 0.758] | 21 | 0.142 | 0.788 |
+| 6 | 29 | **0.367** | [0.256, 0.493] | 38 | 0.423 | 0.790 |
 
-The 400-item set is the one to cite for the depth claim; the 36-item set is too small (12 per depth) to resolve a monotonic trend.
+Pooled: 181/300 = **0.603** [0.547, 0.657].
+Spearman rho = **-0.9**, exact one-sided permutation p = **0.0417** over 120 orderings (floor 0.0083).
+Monotonically non-increasing: **False**.
+CI-separated pairs: [(2, 4), (2, 6), (3, 6), (5, 6)].
+Overlapping pairs and the per-depth n that would separate them: (2, 3) n>=220, (2, 5) n>=138, (3, 4) n>=135, (3, 5) n>=3139, (4, 5) n>=214, (4, 6) n>=171.
 
-## §7.3 Failure-taxonomy breakdown per system
+## Section 7.2 — the mixed-depth set
 
-| Task | System | Total errors | Category counts |
+| Depth | Accuracy | 95% Wilson CI | n |
 |---|---|---|---|
-| matching | rule_based | 0 | none |
-| matching | negation_blind | 8 | logical_composition=8 |
-| matching | openai | 5 | temporal=5 |
-| compositional | rule_based | 0 | none |
-| compositional | negation_blind | 17 | logical_composition=7, negation_polarity=10 |
-| compositional | openai | 0 | none |
-| compositional_large | rule_based | 0 | none |
-| compositional_large | negation_blind | 156 | logical_composition=80, negation_polarity=76 |
+| 1 | 0.940 | [0.875, 0.972] | 100 |
+| 2 | 0.910 | [0.838, 0.952] | 100 |
+| 3 | 0.930 | [0.863, 0.966] | 100 |
+| 4 | 0.900 | [0.826, 0.945] | 100 |
 
-### Every gpt-5-nano error, itemized (feeds §7.3 and the S2 error appendix)
+Overall **0.920** [0.889, 0.943] on n=400.
+Spearman rho = -0.8, exact p = 0.1667. CI-separated pairs: none.
 
-| Item | Task | Gold | Predicted | Conf. | Heuristic category |
+## Section 7.3 — exposure to the renderer defect
+
+Source: persisted per-item flags.
+
+| Set | Exposed n | Errors in exposed | Unexposed n | Unexposed accuracy | 95% CI |
 |---|---|---|---|---|---|
-| `match:ALCOHOL-ABUSE:000` | matching | not_met | met | 0.85 | temporal |
-| `match:ASP-FOR-MI:000` | matching | not_met | met | 0.90 | temporal |
-| `match:ASP-FOR-MI:001` | matching | not_met | met | 0.90 | temporal |
-| `match:ASP-FOR-MI:003` | matching | not_met | met | 0.90 | temporal |
-| `match:ASP-FOR-MI:006` | matching | not_met | met | 0.90 | temporal |
+| compositional::negation_blind | 0 | 0 | 240 | 0.600 | [0.537, 0.660] |
+| compositional | 0 | 0 | 300 | 0.603 | [0.547, 0.657] |
+| compositional::rule_based | 0 | 0 | 240 | 1.000 | [0.984, 1.000] |
+| real_criteria::negation_blind | 0 | 0 | 926 | 0.970 | [0.957, 0.979] |
+| real_criteria | 0 | 0 | 926 | 0.935 | [0.917, 0.949] |
+| real_criteria::rule_based | 0 | 0 | 926 | 1.000 | [0.996, 1.000] |
 
-## §7.4 Calibration and abstention
+## Section 7.4 — calibration and abstention
 
-| Task | System | ECE | Mean conf. | Abstentions | acc@10% | acc@20% | acc@30% | acc@40% | acc@50% | acc@60% | acc@70% | acc@80% | acc@90% | acc@100% |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| matching | rule_based | 0.014 | 0.9856 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| matching | negation_blind | 0.223 | 0.7 | 0 | 0.727 | 0.714 | 0.812 | 0.857 | 0.885 | 0.905 | 0.918 | 0.929 | 0.915 | 0.923 |
-| matching | openai | 0.165 | 0.8272 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.984 | 0.945 | 0.941 | 0.947 | 0.952 |
-| compositional | rule_based | 0.028 | 0.9722 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| compositional | negation_blind | 0.172 | 0.7 | 0 | 1.000 | 0.750 | 0.818 | 0.733 | 0.722 | 0.682 | 0.654 | 0.586 | 0.545 | 0.528 |
-| compositional | openai | 0.199 | 0.8011 | 0 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Set | ECE | Mean conf. | @10% | @30% | @50% | @100% | Usable signal |
+|---|---|---|---|---|---|---|---|
+| compositional_large::openai | 0.139 | 0.781 | 0.9828 | 0.9833 | 0.9768 | 0.92 | yes |
+| compositional_d2::openai | 0.144 | 0.811 | 1.0 | 0.9861 | 0.9333 | 0.95 | yes |
+| compositional_d3::openai | 0.170 | 0.780 | 1.0 | 1.0 | 1.0 | 0.95 | yes |
+| compositional_d4::openai | 0.135 | 0.732 | 1.0 | 0.9778 | 0.9 | 0.8667 | yes |
+| compositional_d5::openai | 0.140 | 0.684 | 1.0 | 0.9167 | 0.7889 | 0.7167 | yes |
+| compositional_d6::openai | 0.122 | 0.659 | 0.8333 | 0.6667 | 0.6667 | 0.6 | yes |
+| compositional::negation_blind | 0.100 | 0.700 | 0.6 | 0.6 | 0.6 | 0.6 | **no** |
+| compositional::openai | 0.219 | 0.822 | 0.7926 | 0.7643 | 0.6747 | 0.6033 | yes |
+| compositional::rule_based | 0.019 | 0.981 | 1.0 | 1.0 | 1.0 | 1.0 | yes |
+| real_criteria::negation_blind | 0.270 | 0.700 | 0.9698 | 0.9698 | 0.9698 | 0.9698 | **no** |
+| real_criteria::openai | 0.048 | 0.889 | 0.995 | 0.9781 | 0.9608 | 0.9352 | yes |
+| real_criteria::rule_based | 0.029 | 0.971 | 1.0 | 1.0 | 1.0 | 1.0 | yes |
 
-## §7.6 Reference-implementation validation (software, not findings)
+## Section 7.5 — failure taxonomy
 
-- rule_based Task C micro-F1 = **1.000**, Task D accuracy = **1.000**, total errors = 0 — perfect by construction.
-- negation_blind error signature, Task C: {'logical_composition': 8}
-- negation_blind error signature, Task D: {'negation_polarity': 10, 'logical_composition': 7}
-- negation_blind depth curve (400-item): {'1': 0.68, '2': 0.58, '3': 0.6, '4': 0.58}
-- Rule-based == oracle on already-structured forms, so its perfect scores are a software-validation artifact, NOT an empirical finding.
+Heuristic labeller version(s) ['1', '2']. Heuristic triage labels. The manuscript's distribution is the human consensus; three categories are unreachable by any counterfactual over the logical form.
 
-## §5 Taxonomy codebook (as implemented)
-
-| Category | Definition |
+| Category | Pooled errors |
 |---|---|
-| negation_polarity | Inclusion/exclusion or NOT-scope flipped. |
-| temporal | Temporal window or tense reasoning error. |
-| numeric_threshold | Comparator or boundary value error. |
-| logical_composition | AND/OR/NOT composition resolved incorrectly. |
-| entity_conflation | Distinct clinical entities conflated. |
-| implicit_knowledge | Failed required unstated inference. |
-| fabrication | Asserted a constraint absent from the criterion. |
-| none | No attributable failure. |
+| logical_composition | 199 |
+| negation_polarity | 140 |
+| none | 41 |
+| numeric_threshold | 6 |
+| temporal | 4 |
 
-Annotation inputs are staged at `results/errors_openai_matching.csv` and `results/errors_openai_compositional.csv`, each with a blank `human_category` column. Cohen's κ and test–retest agreement remain uncomputed pending the human pass.
+Human-only categories, unreachable by the labeller: ['entity_conflation', 'fabrication', 'implicit_knowledge'].
 
-## §9 Reproducibility metadata
+**Human annotation: [not run].**
 
-- Python 3.12.10 on Windows-11-10.0.26200-SP0
-- LLM: `gpt-5-nano`, temperature requested 0.0, effective **none (API default)** — gpt-5-nano rejects a custom temperature; the adapter drops it and retries, so every completion used the API default. The dropped parameter is not recorded per call — see results/DISCREPANCIES.md entry 3.
-- Cached LLM responses: 143
-- Packages: openai==3.6.0, pydantic==2.13.5, pytest==9.1.1, ruff==0.16.5
-- Tests: 55 passed in 0.54s · Lint: All checks passed!
-- Seeds: {'matching': 13, 'compositional': 29, 'large_compositional': 29}
+To be reported: consensus distribution [...]; Cohen's kappa [k] with 95% CI
+[lo, hi]; percent agreement [x]; per-category kappa [...]; kappa by arm
+(compositional [k], real criteria [k]); fraction flagged as requiring
+clinical judgement [x] with kappa flagged [k] versus not [k]; disagreements
+adjudicated [n], of which clinical [n]; automatic-versus-consensus kappa [k]
+with [n] agreement-impossible items.
 
-## Cannot fill — what the paper still needs
+Fill with: `scripts/annotation_export.py then scripts/annotation_report.py --adjudication ...`
 
-- **7.1 Task A (structuring)** — Chia corpus not downloaded and no structuring model implemented (entity F1 / relation F1 / exact match unavailable).
-- **7.1 Task B (typing & polarity)** — Requires Chia-derived labels and a classification model; tasks/typing_polarity.py is a task-name contract only.
-- **7.1 Task C on REAL patients** — n2c2 2018 records are DUA-gated and absent; all Task C numbers here use synthetic patients over the real public criterion definitions.
-- **6. Encoder baselines** — models/encoder.py raises NotImplementedError; needs transformers/torch plus a fine-tuned checkpoint (BioClinicalBERT / PubMedBERT / BioBERT).
-- **6. Open-weight LLMs** — models/llm_local.py is a stub; needs an HF/vLLM runtime.
-- **6. Additional API LLMs** — The available API project grants access to gpt-5-nano only; GPT-4-class and Claude-class models returned 403 model_not_found.
-- **7.5 Ablations** — No prompt-design, few-shot-count, or retrieval ablation has been run; the toolkit ships a single fixed zero-shot prompt.
-- **5. Human-vs-automatic kappa** — Requires the domain expert to fill human_category in results/errors_openai_*.csv, then run taxonomy.reliability.
-- **5. Test-retest kappa** — Requires a second annotation pass after a washout interval.
+## Integrity gates
 
-## Discrepancies between the paper draft and the implementation
+### [BLOCK] compositional::negation_blind
 
-1. **Paper Sec. 3.4 vs criterialogic/tasks/compositional.py::_atom_pool**
-   - Paper: Task D atoms are 'extracted from real ClinicalTrials.gov criteria'.
-   - Reality: Atoms are now extracted from verbatim ClinicalTrials.gov v2 eligibility text into data/ctgov_atom_pool.json, each carrying its source NCT ID, source sentence, and the trial's first-posted date. The generator raises if the pool is absent instead of falling back to the n2c2 leaves.
-   - Action: See results/DISCREPANCIES.md entry 1 for the four qualifications the Sec. 3.4 wording must respect (synthetic nesting, conservative extraction yield, polarity-free predicates, dated contamination claim).
-2. **Paper Sec. 7.2 hypothesis**
-   - Paper: Accuracy declines monotonically with nesting depth.
-   - Reality: See 7.2 table: not monotonic for every system at these sample sizes.
-   - Action: State the observed pattern; do not assert monotonicity without wider n.
+Every prediction carries the same confidence, so the selective-accuracy curve is flat at the overall accuracy and abstention cannot be evaluated.
+
+**Action.** Report as providing no confidence signal. Do not present a curve.
+
+### [NOTE] compositional::rule_based
+
+Perfect score on n=240; the 95% lower bound is 0.9842, so this set cannot distinguish the system from one that is 98% accurate.
+
+**Action.** If this is the oracle baseline, label it a software-validation artifact.
+
+### [BLOCK] real_criteria::negation_blind
+
+Every prediction carries the same confidence, so the selective-accuracy curve is flat at the overall accuracy and abstention cannot be evaluated.
+
+**Action.** Report as providing no confidence signal. Do not present a curve.
+
+### [BLOCK] real_criteria::openai
+
+60 errors collapse to 51 distinct rationales — one systematic misreading replicated, not independent observations.
+
+**Action.** Report both counts; compute any taxonomy percentage over distinct modes.
+
+### [NOTE] real_criteria::rule_based
+
+Perfect score on n=926; the 95% lower bound is 0.9959, so this set cannot distinguish the system from one that is 100% accurate.
+
+**Action.** If this is the oracle baseline, label it a software-validation artifact.
+
+### [BLOCK] depth sweep
+
+Accuracy is not monotonically non-increasing with depth.
+
+**Action.** State the observed pattern; do not assert monotonic decline.
+
+### [NOTE] depth sweep
+
+Smallest attainable p with 5 levels is 0.0083.
+
+**Action.** Report the floor wherever the p-value appears.
+
+### [NOTE] depths (2, 3)
+
+Indistinguishable at this sample size. Separating them needs n>=220 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] depths (2, 5)
+
+Indistinguishable at this sample size. Separating them needs n>=138 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] depths (3, 4)
+
+Indistinguishable at this sample size. Separating them needs n>=135 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] depths (3, 5)
+
+Indistinguishable at this sample size. Separating them needs n>=3139 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] depths (4, 5)
+
+Indistinguishable at this sample size. Separating them needs n>=214 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] depths (4, 6)
+
+Indistinguishable at this sample size. Separating them needs n>=171 per depth.
+
+**Action.** Do not claim a difference between these two depths individually.
+
+### [NOTE] mixed-depth set
+
+No pair of depths is separated at 95% confidence on the mixed set.
+
+**Action.** This is the finding: the effect does not appear until beyond this depth range.
+
+## Provenance
+
+```json
+{
+  "results_dir": "results",
+  "data_dir": "C:\\Users\\danie\\Downloads\\Criterialogic\\data",
+  "runs_loaded": {
+    "compositional_large::openai": "results\\missing\\missing_runs.json",
+    "compositional_d2::openai": "results\\missing\\missing_runs.json",
+    "compositional_d3::openai": "results\\missing\\missing_runs.json",
+    "compositional_d4::openai": "results\\missing\\missing_runs.json",
+    "compositional_d5::openai": "results\\missing\\missing_runs.json",
+    "compositional_d6::openai": "results\\missing\\missing_runs.json",
+    "compositional::negation_blind": "results\\compositional__negation_blind.json",
+    "compositional::openai": "results\\compositional__openai.json",
+    "compositional::rule_based": "results\\compositional__rule_based.json",
+    "real_criteria::negation_blind": "results\\real_criteria__negation_blind.json",
+    "real_criteria::openai": "results\\real_criteria__openai.json",
+    "real_criteria::rule_based": "results\\real_criteria__rule_based.json"
+  },
+  "inference_parameters": {
+    "compositional_large::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional_d2::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional_d3::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional_d4::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional_d5::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional_d6::openai": {
+      "requested_temperature": 0.0,
+      "effective_temperature": "API default \u2014 gpt-5-nano rejects a custom temperature and the adapter drops it",
+      "warning": "Do not report requested temperature as if it were applied."
+    },
+    "compositional::negation_blind": {
+      "name": "negation_blind",
+      "type": "NegationBlindModel"
+    },
+    "compositional::openai": {
+      "name": "openai",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "prompt_version": "2",
+      "api_key_env": "OPENAI_API_KEY",
+      "requested_temperature": 0.0,
+      "effective_temperature": 0.0,
+      "dropped_parameters": []
+    },
+    "compositional::rule_based": {
+      "name": "rule_based",
+      "type": "RuleBasedModel"
+    },
+    "real_criteria::negation_blind": {
+      "name": "negation_blind",
+      "type": "NegationBlindModel"
+    },
+    "real_criteria::openai": {
+      "name": "openai",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "prompt_version": "2",
+      "api_key_env": "OPENAI_API_KEY",
+      "requested_temperature": 0.0,
+      "effective_temperature": 0.0,
+      "dropped_parameters": []
+    },
+    "real_criteria::rule_based": {
+      "name": "rule_based",
+      "type": "RuleBasedModel"
+    }
+  },
+  "reproducibility_note": "Item sets, gold labels and prompts are deterministic. Model completions are not: the requested temperature was rejected by the evaluated model so the API default applied, and the response cache is not redistributed. The per-item predictions are the record of the run."
+}
+```

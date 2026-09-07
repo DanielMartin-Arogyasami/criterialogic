@@ -1,4 +1,4 @@
-"""ClinicalTrials.gov API v2 adapter — the real source of the Task-D atom pool.
+"""ClinicalTrials.gov API v2 adapter — the real source of both benchmark arms.
 
 Two responsibilities, deliberately separated:
 
@@ -32,6 +32,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+from criterialogic.data.paths import default_cache_dir
 from criterialogic.schema.logical_form import (
     Atom,
     Comparator,
@@ -45,8 +46,11 @@ from criterialogic.schema.logical_form import (
 
 API_BASE = "https://clinicaltrials.gov/api/v2"
 STUDIES_URL = f"{API_BASE}/studies"
-DEFAULT_CACHE = Path("data/ctgov_cache")
 MANIFEST_NAME = "MANIFEST.json"
+
+#: Resolved rather than assumed, so the installed console script works from any working
+#: directory. See :mod:`criterialogic.data.paths`.
+DEFAULT_CACHE = default_cache_dir()
 
 #: Field paths requested from the API. Keeping this narrow keeps cached records small
 #: enough to check a fixture into version control.
@@ -62,7 +66,7 @@ FIELDS = (
 #: At most 2 requests/second against the public API.
 MIN_REQUEST_INTERVAL_S = 0.5
 
-_USER_AGENT = "CriteriaLogic/0.1 (+https://github.com/USERNAME/criterialogic)"
+_USER_AGENT = "CriteriaLogic/0.2 (+https://github.com/darogyasami/criterialogic)"
 
 #: Bumped whenever the extraction rules change, so a pool file built by an older
 #: version is identifiable rather than silently mixed with a newer one.
@@ -84,31 +88,67 @@ class CTGovUnavailable(CTGovError):
 class StudyQuery:
     """The sampling frame, recorded verbatim into the cache manifest.
 
-    Phase-IV interventional studies mirror Chia's frame. ``first_posted_from`` exists
-    for the contamination argument: restricting to trials first posted after a model's
-    training cutoff is what turns "probably unseen" into evidence.
+    The frame is deliberately method-scoped rather than disease-scoped: the benchmark
+    measures reasoning over logical structure, not oncology or cardiometabolic domain
+    knowledge, so restricting the draw to one condition would narrow the criterion
+    vocabulary without making the logic more representative. ``condition`` exists for
+    anyone who wants a disease-scoped rebuild, and whatever is set here is written into
+    the manifest, so the frame a paper describes is always the frame that ran.
+
+    Two fields carry arguments rather than conveniences:
+
+    ``first_posted_from``
+        The contamination control. Restricting to trials first posted after an
+        evaluated model's training cutoff is what turns "probably unseen" into
+        evidence. The committed snapshot uses it; see the manifest for the value.
+
+    ``overall_status``
+        Restricts to trials in a given recruitment state (``"RECRUITING"``).
+        Recruiting trials are the ones a screening system would actually be pointed at,
+        so a frame limited to them matches the deployment the benchmark is about.
+        Default ``None`` = no status filter, which is what the v0.2 snapshot used;
+        see the note in ``data/README.md`` before changing it, because a rebuild
+        changes the atom pool digest and therefore invalidates every reported number.
     """
 
-    phase: str = "PHASE4"
-    study_type: str = "INTERVENTIONAL"
-    first_posted_from: str | None = None  # ISO date, e.g. "2025-07-01"
+    phase: str | None = "PHASE4"
+    study_type: str | None = "INTERVENTIONAL"
+    first_posted_from: str | None = None  # ISO date, e.g. "2026-01-01"
+    overall_status: str | None = None  # e.g. "RECRUITING"
+    condition: str | None = None  # free-text condition term, e.g. "breast cancer"
     sort: str = "StudyFirstPostDate:desc"
     page_size: int = 100
 
     def advanced_expression(self) -> str:
-        parts = [f"AREA[Phase]{self.phase}", f"AREA[StudyType]{self.study_type}"]
+        parts: list[str] = []
+        if self.phase:
+            parts.append(f"AREA[Phase]{self.phase}")
+        if self.study_type:
+            parts.append(f"AREA[StudyType]{self.study_type}")
+        if self.overall_status:
+            parts.append(f"AREA[OverallStatus]{self.overall_status}")
         if self.first_posted_from:
             parts.append(f"AREA[StudyFirstPostDate]RANGE[{self.first_posted_from},MAX]")
+        if not parts:
+            raise ValueError(
+                "StudyQuery would match every study on ClinicalTrials.gov. Set at least "
+                "one filter so the sampling frame is describable."
+            )
         return " AND ".join(parts)
 
     def as_params(self) -> dict[str, str]:
-        return {
+        if not 1 <= self.page_size <= 1000:
+            raise ValueError(f"page_size must be in 1..1000; got {self.page_size}.")
+        params = {
             "filter.advanced": self.advanced_expression(),
             "fields": ",".join(FIELDS),
             "sort": self.sort,
             "pageSize": str(self.page_size),
             "countTotal": "true",
         }
+        if self.condition:
+            params["query.cond"] = self.condition
+        return params
 
 
 # --------------------------------------------------------------------------- #
@@ -135,11 +175,29 @@ class RateLimiter:
         self._last = now
 
 
+#: Cap on a single API response. A 100-study page of the requested fields runs well under
+#: a megabyte; 64 MB is generous. Without a cap, `json.load(resp)` will consume whatever
+#: the far end sends, and this runs unattended in a fetch loop.
+MAX_RESPONSE_BYTES = 64 * 1024 * 1024
+
+
 def _http_json(url: str, timeout: int = 60) -> dict[str, Any]:
+    if not url.startswith(f"{API_BASE}/"):
+        # Every URL in this module is built from API_BASE. Asserting it here means a future
+        # refactor cannot turn a caller-supplied string into an arbitrary request.
+        raise CTGovError(f"Refusing to fetch {url!r}: not a {API_BASE} URL.")
     req = urllib.request.Request(url, headers={"User-Agent": _USER_AGENT})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return json.load(resp)
+            raw = resp.read(MAX_RESPONSE_BYTES + 1)
+            if len(raw) > MAX_RESPONSE_BYTES:
+                raise CTGovError(
+                    f"Response from {url} exceeded {MAX_RESPONSE_BYTES} bytes and was not "
+                    f"parsed. Narrow the query or raise MAX_RESPONSE_BYTES deliberately."
+                )
+            return json.loads(raw.decode("utf-8"))
+    except json.JSONDecodeError as e:
+        raise CTGovError(f"ClinicalTrials.gov returned non-JSON for {url}: {e}") from e
     except urllib.error.HTTPError as e:  # pragma: no cover - network dependent
         raise CTGovError(f"ClinicalTrials.gov returned HTTP {e.code} for {url}: {e.reason}") from e
     except urllib.error.URLError as e:  # pragma: no cover - network dependent
@@ -180,8 +238,37 @@ def brief_title(study: dict) -> str | None:
 # --------------------------------------------------------------------------- #
 # Cache
 # --------------------------------------------------------------------------- #
+#: ClinicalTrials.gov identifiers are "NCT" followed by eight digits. Anchored, because
+#: this value arrives in a remote JSON response and is used to build a filename.
+_NCT_RE = re.compile(r"^NCT\d{8}$")
+
+
+class UnsafeIdentifier(CTGovError):
+    """A study identifier that cannot be trusted as a path component or URL segment."""
+
+
+def validate_nct_id(nct: str) -> str:
+    """Return ``nct`` if it is a well-formed NCT identifier, else raise.
+
+    This is a security boundary, not a data-quality check. ``nct_id()`` reads
+    ``protocolSection.identificationModule.nctId`` out of a response body, and that value
+    reaches :func:`cache_path` (a filename) and :func:`fetch_eligibility` (a URL path
+    segment). Without this check, a response carrying ``../../../etc/cron.d/x`` as its
+    identifier would cause a write outside the cache directory, and ``urllib.parse.quote``
+    does not escape ``/`` by default so the same value would traverse the API path too.
+    Nothing about the current API makes that likely; the check costs one regex.
+    """
+    if not isinstance(nct, str) or not _NCT_RE.match(nct):
+        raise UnsafeIdentifier(
+            f"Refusing to use {nct!r} as a study identifier: expected NCT followed by "
+            f"eight digits. This value came from a response body or a command line and is "
+            f"used to build a file path."
+        )
+    return nct
+
+
 def cache_path(nct: str, cache_dir: Path | str = DEFAULT_CACHE) -> Path:
-    return Path(cache_dir) / f"{nct}.json"
+    return Path(cache_dir) / f"{validate_nct_id(nct)}.json"
 
 
 def load_cached_study(nct: str, cache_dir: Path | str = DEFAULT_CACHE) -> dict | None:
@@ -198,13 +285,27 @@ def load_cached_studies(cache_dir: Path | str = DEFAULT_CACHE) -> list[dict]:
         return []
     out = []
     for p in sorted(d.glob("NCT*.json")):
-        out.append(json.loads(p.read_text(encoding="utf-8")))
+        if not _NCT_RE.match(p.stem):
+            continue  # ignore anything in the cache directory that is not a study record
+        try:
+            out.append(json.loads(p.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, UnicodeDecodeError) as e:
+            raise CTGovError(
+                f"Cached study {p} is not readable JSON ({e}). Delete it and re-fetch; "
+                f"silently skipping it would quietly change the sampling frame."
+            ) from e
     return out
 
 
 def _write_cache(study: dict, cache_dir: Path) -> None:
     nct = nct_id(study)
     if not nct:
+        return
+    try:
+        validate_nct_id(nct)
+    except UnsafeIdentifier:
+        # Skip rather than abort: one malformed record should not lose a 300-study fetch.
+        # It is counted by the caller's cache tally, which will come up short and visible.
         return
     cache_dir.mkdir(parents=True, exist_ok=True)
     cache_path(nct, cache_dir).write_text(
@@ -223,10 +324,22 @@ def write_manifest(cache_dir: Path | str, query: StudyQuery, n_studies: int,
         "query_params": query.as_params(),
         "advanced_expression": query.advanced_expression(),
         "fields": list(FIELDS),
+        # Every frame field is recorded separately as well as inside the query string,
+        # so a reader does not have to parse the expression to see what was excluded.
+        "frame": {
+            "phase": query.phase,
+            "study_type": query.study_type,
+            "overall_status": query.overall_status,
+            "condition": query.condition,
+            "first_posted_from": query.first_posted_from,
+            "sort": query.sort,
+        },
         "first_posted_from": query.first_posted_from,
         "n_studies_cached": n_studies,
         "pages_fetched": pages,
         "fetched_utc": fetched_utc,
+        "snapshot_id": f"ctgov-{fetched_utc[:10]}",
+        "extractor_version": EXTRACTOR_VERSION,
         "rate_limit_requests_per_second": round(1.0 / MIN_REQUEST_INTERVAL_S, 3),
     }
     p = d / MANIFEST_NAME
@@ -307,6 +420,7 @@ def fetch_eligibility(nct_ids: list[str], cache_dir: Path | str = DEFAULT_CACHE,
     cache = Path(cache_dir)
     out: dict[str, str] = {}
     for nct in nct_ids:
+        validate_nct_id(nct)
         study = load_cached_study(nct, cache)
         if study is None:
             limiter.wait()
@@ -318,7 +432,7 @@ def fetch_eligibility(nct_ids: list[str], cache_dir: Path | str = DEFAULT_CACHE,
 
 
 def search_trials(query: str, page_size: int = 20) -> list[str]:
-    """Free-text search returning NCT IDs. Retained for `scripts/download_data.py`."""
+    """Free-text search returning NCT IDs. Used for ad-hoc frame exploration."""
     params = urllib.parse.urlencode({
         "query.term": query,
         "pageSize": page_size,

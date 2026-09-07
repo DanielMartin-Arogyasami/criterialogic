@@ -3,4 +3,4 @@ eligibility criteria. Public/synthetic data only.
 """
 from criterialogic.schema.logical_form import SCHEMA_VERSION, LogicalForm  # noqa: F401
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

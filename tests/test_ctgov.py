@@ -154,13 +154,13 @@ def test_pool_digest_is_recorded_on_items(tmp_path):
 
 
 # --------------------------------------------------------------------------- #
-# Failing loudly — no silent fallback to the n2c2 leaves
+# Failing loudly — no silent fallback to any other atom source
 # --------------------------------------------------------------------------- #
 def test_missing_pool_raises_with_build_instructions(tmp_path):
     with pytest.raises(ap.AtomPoolUnavailable) as e:
         ap.load_ctgov_pool(tmp_path / "absent.json")
     msg = str(e.value)
-    assert "scripts/fetch_ctgov_atoms.py" in msg
+    assert "scripts/fetch_ctgov_snapshot.py" in msg
     assert str(tmp_path / "absent.json") in msg
 
 
@@ -179,19 +179,6 @@ def test_empty_pool_is_an_error(tmp_path):
 def test_unknown_atom_source_rejected():
     with pytest.raises(ValueError):
         ap.load_pool("wishful_thinking")
-
-
-# --------------------------------------------------------------------------- #
-# The n2c2-derived pool remains available, and is labelled as such
-# --------------------------------------------------------------------------- #
-def test_n2c2_derived_pool_is_explicit_and_labelled():
-    pool = ap.load_pool(ap.N2C2_DERIVED)
-    assert len(pool) > 0
-    assert pool.logical_form_source is Source.N2C2_DERIVED
-    assert all(e.nct_id is None for e in pool.entries)
-    items = generate_compositional_items(2, 2, 29, pool=pool)
-    assert all(i.criterion.source is Source.N2C2_DERIVED for i in items)
-    assert all("source_nct_ids" not in i.criterion.metadata for i in items)
 
 
 # --------------------------------------------------------------------------- #

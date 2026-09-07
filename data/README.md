@@ -1,24 +1,63 @@
 # Data
-`data/raw/` and `data/processed/` are **gitignored**; no corpus is committed there.
-The ClinicalTrials.gov cache and atom pool below *are* committed: they are small, public
-domain, and checking them in is what makes Task D reproducible without network access.
-## Chia (releasable, CC-BY)
-- figshare: https://doi.org/10.6084/m9.figshare.11855817
-- Hugging Face: https://huggingface.co/datasets/bigbio/chia
-- Place `.txt`/`.ann` under `data/raw/chia/`; load via `criterialogic.data.loaders.chia`.
-## ClinicalTrials.gov (public domain, US Government)
-- `ctgov_cache/` — raw API v2 records, one JSON per NCT ID, plus `MANIFEST.json` recording
-  the exact query that produced them. Never re-fetched on a cache hit.
-- `ctgov_atom_pool.json` — the Task D atom pool. Each atom carries its source NCT ID, the
-  verbatim sentence it was extracted from, that trial's first-posted date, and the
-  extraction rule that fired, so every generated item traces back to real trial text.
-- Rebuild: `python scripts/fetch_ctgov_atoms.py --limit 300 --first-posted-from YYYY-MM-DD`
-  (add `--offline` to rebuild the pool from the existing cache without any request).
-- The date filter is the contamination control: restricting to trials first posted after a
-  model's training cutoff is what gives §3.5 evidence rather than an assumption.
-## n2c2 2018 Track 1 — Cohort Selection (DUA-GATED, NOT redistributable)
-- Request access: https://n2c2.dbmi.hms.harvard.edu/
-- After approval, place patient XML under `data/raw/n2c2_2018/`.
-- The 13 criterion **definitions** are public and live in code
-  (`criterialogic.data.n2c2_criteria`); only the patient records are restricted.
-- We **never** commit or redistribute n2c2 records — only this pointer + the harness.
+
+`data/raw/` and `data/processed/` are **gitignored**. The ClinicalTrials.gov snapshot
+below *is* committed: it is small, US Government public domain, and checking it in is
+what makes both benchmark arms reproducible with no network access and no credentials.
+
+There is no licence-restricted component in v0.2. Nothing here needs a data-use
+agreement.
+
+## ClinicalTrials.gov snapshot (public domain, US Government)
+
+- `ctgov_cache/` — raw API v2 records, one JSON per NCT ID, plus `MANIFEST.json`
+  recording the exact query, the sampling frame field by field, the fetch timestamp, and
+  a snapshot id. A cached study is never re-fetched.
+- `ctgov_atom_pool.json` — the atom pool the compositional stress test composes over.
+  Each atom carries its source NCT ID, the verbatim sentence it was extracted from, that
+  trial's first-posted date, and the extraction rule that fired, so every generated item
+  traces back to real trial text.
+
+### The frame that produced the committed snapshot
+
+Read it from `ctgov_cache/MANIFEST.json` rather than from any prose, here or in the
+paper. As shipped it is Phase-4 interventional studies first posted on or after
+2026-01-01, sorted by first-posted date descending, 300 studies, fetched 2026-08-29.
+There is **no** recruitment-status filter on the committed snapshot.
+
+`StudyQuery` supports `overall_status` (and `scripts/fetch_ctgov_snapshot.py
+--recruiting`) for a status-restricted rebuild, which is the better frame for a paper
+about screening systems: recruiting trials are the ones such a system is pointed at.
+It is not applied to the committed snapshot for one reason only — see below.
+
+### Rebuilding invalidates published numbers
+
+The pool's SHA-256 is stamped on every generated item. A new pool means new items, which
+means every reported result has to be regenerated, which for the LLM rows means new API
+calls. Before rebuilding, read `results/SECTION7.md` and decide whether you are
+replacing the reported results or forking a new version of them.
+
+```bash
+# rebuild in place (invalidates results)
+python scripts/fetch_ctgov_snapshot.py --limit 300 --first-posted-from 2026-01-01
+# recruiting-restricted rebuild, e.g. for v0.3
+python scripts/fetch_ctgov_snapshot.py --recruiting --limit 300 --first-posted-from 2026-06-01
+# rebuild the pool from the existing cache, no requests
+python scripts/fetch_ctgov_snapshot.py --offline
+```
+
+### Why the date filter matters
+
+`--first-posted-from` is the contamination control. Restricting to trials first posted
+after an evaluated model's training cutoff is what makes "these criteria were not in
+training" evidence rather than an assumption. It is a property of the pool file, not of
+the method: the committed pool's atoms come from trials first posted between 2026-06-30
+and 2026-08-28, and a rebuild with a different date changes that range.
+
+## Extraction is deliberately conservative
+
+The extractor is a rule-based pass, not a parser. A sentence either matches one of its
+patterns or is skipped and counted as unmapped; nothing is coerced into an atom to raise
+the yield. Coordinated phrases, comma enumerations, and bounds stated relative to a
+reference range ("<= 3x ULN") are skipped rather than approximated, so the pool
+under-represents complex criteria by design. The yield ratio is recorded in the pool
+file under `extraction` and reported in the manuscript.

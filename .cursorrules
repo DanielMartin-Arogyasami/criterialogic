@@ -1,28 +1,58 @@
-CriteriaLogic — public benchmark for LLM reasoning over clinical-trial eligibility criteria.
-RUN
-- Install: pip install -e .            (Python >=3.10; only runtime dep is pydantic v2)
-- Demo (no external data): python scripts/run_eval.py        (or: criterialogic-eval)
-- Tests: pytest -q   (23 tests)        Lint: ruff check .
-LAYOUT
-- criterialogic/schema/logical_form.py  harmonized logical form (pydantic v2) + canonicalize()
-- criterialogic/oracle.py               three-valued (Kleene) evaluator = ground truth + rule-based engine
-- criterialogic/data/                   n2c2_criteria.py (13 public criteria), synthetic.py (seeded patients),
-                                         loaders/{chia,n2c2,ctgov}.py, harmonize.py, splits.py, download.py
-- criterialogic/tasks/                  base.py (Item, Prediction, expression_depth) + A–D + calibration
-- criterialogic/models/                 base.py (Model interface) + rule_based, naive(negation_blind); encoder/llm_* are stubs
-- criterialogic/metrics/                classification, matching, logic, calibration, extraction (all from scratch)
-- criterialogic/taxonomy/               7 failure categories + heuristic labeler
-- criterialogic/eval/ runner+report     criterialogic/leaderboard/ submit+score     criterialogic/cli.py
-HARD CONSTRAINTS
-- Public/synthetic data ONLY. NEVER commit data/raw/ (n2c2 2018 is DUA-gated).
-- Metrics implemented from scratch — do NOT add sklearn/numpy/pandas. Core stays stdlib + pydantic.
-- New models subclass Model and return Prediction(label: bool, confidence in 0..1). New metrics are pure functions.
-- Integrity: synthetic/oracle numbers are pipeline checks, NOT empirical findings.
-WORKING STYLE (to save tokens)
-- Be concise: no preamble/postamble, do not restate the request, prefer prose over bullets.
-- Make minimal targeted edits; show only changed lines — never reprint whole unchanged files.
-- Reuse existing patterns; don't re-derive run/test commands or re-summarize files already seen in the session.
-TURNKEY RUN
-- Setup + offline demo + tests: bash setup_and_run.sh
-- OpenAI model: pip install -e ".[llm]" && export OPENAI_API_KEY=... && python scripts/run_eval.py --task compositional --model openai
-- Full command list: RUN.md. Prefer running scripts over editing code.
+# CriteriaLogic — repository rules
+
+## What this project is
+A depth-parameterised stress test for logical reasoning over clinical-trial eligibility
+criteria. Two arms from one dated ClinicalTrials.gov snapshot: real segmented criteria,
+and generated nested AND/OR/NOT compositions at controlled depths with ground truth from a
+three-valued Kleene evaluator. Plus a calibration/abstention layer and a seven-category
+reasoning-failure taxonomy. Single-author, independent, MIT.
+
+## Integrity rules — these are not style preferences
+1. **Never write a number into a results file, the README, or the manuscript that was not
+   produced by executing code.** Not an estimate, not a projection, not a plausible value.
+2. **Code changes never rewrite a scientific claim.** If a change makes the code disagree
+   with the manuscript, add an entry to `results/DISCREPANCIES.md` naming the file and
+   symbol involved, and let the author decide the wording.
+3. **No silent fallbacks.** If the atom pool is missing, raise. If the API is unreachable,
+   raise. Substituting synthetic data for a source the manuscript names is what previously
+   let the paper describe a data source the code never touched.
+4. **Report what was applied, not what was requested.** Inference parameters, prompt
+   version, labeller version, pool digest — all recorded per run. A result file that
+   asserts `temperature=0` for a model that refused it is a false reproducibility claim.
+5. **Version anything that changes a number.** Prompt renderer, heuristic labeller, schema,
+   atom pool. A reported distribution must be attributable to the code that produced it.
+6. **Every point estimate carries an interval.** At 60 items per depth a bare mean is
+   misleading. Where intervals overlap, report the n that would separate them.
+7. Public-domain and synthetic data only. Nothing under `data/raw/` is ever committed.
+
+## Context budget — read this before attaching anything
+
+The repository is ~490k tokens, and ~352k of that is data the agent never needs:
+`data/ctgov_cache/` (169k), `data/ctgov_atom_pool.json` (80k), `results/**/*.json` (82k),
+`legacy/` (17k). `.cursorignore` excludes them. Do not remove it, do not attach those
+files, and do not paste the combined source bundle — it is for human review and costs
+~110k tokens to tell the agent what it can read itself.
+
+Read summaries instead of sources: `data/README.md` for the snapshot,
+`results/PAPER_DATA.md` or `results/SECTION7.md` for results, `docs/TASKS.md` for what is
+left. Do not read `paper/CriteriaLogic.md` in full (~15k) unless editing it.
+
+Most remaining work needs no agent: `make finish` runs the whole deterministic chain.
+
+## Design constraints
+- `criterialogic/metrics/stats.py` is standard-library only and imports nothing else from
+  the package. Keep it that way: the arithmetic behind every interval must be executable
+  without installing anything.
+- One `Model` interface (`predict(item) -> Prediction`). It is the only realistic lever for
+  outside submissions, so do not widen it.
+- Extraction and segmentation are conservative by design. A sentence that cannot be mapped
+  faithfully is skipped and counted, never coerced. Lower yield beats a mislabelled gold
+  item, which gets scored as a model failure.
+- Diagnostics are not baselines. `rule_based` is the oracle on structured input;
+  `negation_blind` is deliberately broken. Never present either as a system.
+
+## Before adding a task, corpus or model
+Read `docs/V2_SCOPE.md` first — it records what was deliberately cut in v0.2 (Chia
+structuring, n2c2 matching, typing/polarity, encoder baselines, open-weight stubs, the
+hosted leaderboard) and the restoration path for each. Restoring one is a decision, not a
+gap to fill in passing.

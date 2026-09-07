@@ -1,23 +1,24 @@
-"""The atom pool that Task D composes over, and its provenance.
+"""The atom pool the compositional stress test composes over, and its provenance.
 
-Task D builds nested AND/OR/NOT expressions out of *atoms*. Where those atoms come
-from is a claim the benchmark makes about itself, so it is explicit here rather than
-implicit in the generator:
+Arm 2 builds nested AND/OR/NOT expressions out of *atoms*. Where those atoms come from
+is a claim the benchmark makes about itself, so it is explicit here rather than
+implicit in the generator. There is exactly one pool:
 
 ``ctgov``
     Predicates extracted from verbatim ClinicalTrials.gov eligibility text by
-    :mod:`criterialogic.data.loaders.ctgov`. Each atom carries its source NCT ID and
-    source sentence, so any generated item resolves back to real trial prose. Built by
-    ``scripts/fetch_ctgov_atoms.py`` into ``data/ctgov_atom_pool.json``.
+    :mod:`criterialogic.data.loaders.ctgov`, drawn from the dated snapshot described in
+    ``data/ctgov_cache/MANIFEST.json``. Each atom carries its source NCT ID, source
+    sentence, and the trial's first-posted date, so any generated item resolves back to
+    real trial prose and the contamination argument is checkable rather than asserted.
+    Built by ``scripts/fetch_ctgov_snapshot.py`` into ``data/ctgov_atom_pool.json``.
 
-``n2c2_derived``
-    The leaf predicates of the 13 public n2c2 criterion definitions. This is what the
-    generator used historically. It is still available, but it must be requested
-    explicitly and it labels its output ``Source.N2C2_DERIVED``, because those criteria
-    long predate every evaluated model and support no contamination argument.
+v0.1 also shipped an ``n2c2_derived`` pool built from the leaf predicates of the 13
+public n2c2 criterion definitions. It is gone: those criteria predate every evaluated
+model and so support no contamination argument, and keeping a second pool invited
+silent mixing. See docs/V2_SCOPE.md.
 
-Only the *atoms* are real in either case. The nesting that combines them is synthetic
-by construction, and nothing here should be read as a claim that real trials state
+Only the *atoms* are real. The nesting that combines them is synthetic by
+construction, and nothing here should be read as a claim that real trials state
 criteria at these nesting depths.
 """
 from __future__ import annotations
@@ -27,23 +28,25 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from criterialogic.data.paths import default_pool_path
 from criterialogic.schema.logical_form import SCHEMA_VERSION, Atom, Source
 
-DEFAULT_POOL_PATH = Path("data/ctgov_atom_pool.json")
+#: Resolved rather than assumed, so the installed console script works from any working
+#: directory. See :mod:`criterialogic.data.paths`.
+DEFAULT_POOL_PATH = default_pool_path()
 POOL_FORMAT_VERSION = "1"
 
 CTGOV = "ctgov"
-N2C2_DERIVED = "n2c2_derived"
-ATOM_SOURCES = (CTGOV, N2C2_DERIVED)
+ATOM_SOURCES = (CTGOV,)
 
-_SOURCE_ENUM = {CTGOV: Source.CTGOV, N2C2_DERIVED: Source.N2C2_DERIVED}
+_SOURCE_ENUM = {CTGOV: Source.CTGOV}
 
 
 class AtomPoolUnavailable(FileNotFoundError):
     """The ClinicalTrials.gov atom pool has not been built.
 
-    Deliberately fatal. Falling back to the n2c2 leaves here is what previously let the
-    manuscript describe a data source the code never touched.
+    Deliberately fatal. Falling back to some other atom source here is what previously
+    let the manuscript describe a data source the code never touched.
     """
 
 
@@ -124,69 +127,56 @@ def load_ctgov_pool(path: Path | str = DEFAULT_POOL_PATH) -> AtomPool:
     """Load the ClinicalTrials.gov pool, or fail with instructions for building it."""
     p = Path(path)
     if not p.is_file():
+        from criterialogic.data.paths import describe_resolution
         raise AtomPoolUnavailable(
             f"ClinicalTrials.gov atom pool not found at '{p}'.\n"
+            f"Searched: {describe_resolution()['candidates']}\n"
+            f"Set CRITERIALOGIC_DATA_DIR to point at the committed snapshot, or run from "
+            f"a clone.\n"
             f"Build it with:\n"
-            f"    python scripts/fetch_ctgov_atoms.py --limit 200\n"
-            f"That fetches Phase-IV interventional studies from the public v2 API into "
+            f"    python scripts/fetch_ctgov_snapshot.py --limit 300\n"
+            f"That fetches studies from the public ClinicalTrials.gov v2 API into "
             f"data/ctgov_cache/ and writes the pool file. It needs network access once; "
-            f"afterwards the cache serves every run.\n"
-            f"To compose over the public n2c2 criterion leaves instead, pass "
-            f"atom_source='{N2C2_DERIVED}' explicitly — that pool supports no "
-            f"contamination claim and is labelled Source.N2C2_DERIVED."
+            f"afterwards the committed cache serves every run offline."
         )
-    raw = json.loads(p.read_text(encoding="utf-8"))
-    entries = tuple(
-        PooledAtom(
-            atom=Atom.model_validate(e["atom"]),
-            nct_id=e.get("nct_id"),
-            sentence=e.get("sentence"),
-            section=e.get("section"),
-            first_posted=e.get("first_posted"),
-            fetched_utc=e.get("fetched_utc"),
-            pattern=e.get("pattern"),
+    try:
+        raw = json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+        raise AtomPoolUnavailable(
+            f"Atom pool '{p}' is not readable JSON ({e}). Rebuild it with "
+            f"scripts/fetch_ctgov_snapshot.py --offline rather than editing it by hand: "
+            f"the pool digest is stamped on every generated item."
+        ) from e
+    if not isinstance(raw, dict):
+        raise AtomPoolUnavailable(f"Atom pool '{p}' must be a JSON object.")
+    try:
+        entries = tuple(
+            PooledAtom(
+                atom=Atom.model_validate(e["atom"]),
+                nct_id=e.get("nct_id"),
+                sentence=e.get("sentence"),
+                section=e.get("section"),
+                first_posted=e.get("first_posted"),
+                fetched_utc=e.get("fetched_utc"),
+                pattern=e.get("pattern"),
+            )
+            for e in raw.get("atoms", [])
         )
-        for e in raw.get("atoms", [])
-    )
+    except (KeyError, TypeError, ValueError) as e:
+        raise AtomPoolUnavailable(
+            f"Atom pool '{p}' has a malformed entry ({type(e).__name__}: {e}). Every entry "
+            f"needs an 'atom' matching the current schema; rebuild rather than patch."
+        ) from e
     if not entries:
         raise AtomPoolUnavailable(
-            f"Atom pool '{p}' contains no atoms. Re-run scripts/fetch_ctgov_atoms.py; "
+            f"Atom pool '{p}' contains no atoms. Re-run scripts/fetch_ctgov_snapshot.py; "
             f"an empty pool cannot generate Task D items."
         )
     meta = {k: v for k, v in raw.items() if k != "atoms"}
     return AtomPool(source=CTGOV, entries=entries, sha256=digest(p), metadata=meta)
 
 
-def load_n2c2_derived_pool() -> AtomPool:
-    """The historical pool: leaf predicates of the 13 public n2c2 criteria."""
-    from criterialogic.data.n2c2_criteria import n2c2_criteria_as_logical_forms
-    from criterialogic.data.synthetic import _collect_atoms
-
-    entries: list[PooledAtom] = []
-    seen: set[str] = set()
-    for form in n2c2_criteria_as_logical_forms():
-        tag = form.metadata.get("tag", form.criterion_id)
-        for atom in _collect_atoms(form.expression):
-            key = atom.model_dump_json()
-            if key in seen:
-                continue
-            seen.add(key)
-            entries.append(PooledAtom(atom=atom, nct_id=None, sentence=form.text,
-                                      section=form.polarity.value, first_posted=None,
-                                      fetched_utc=None, pattern=f"n2c2:{tag}"))
-    blob = json.dumps([e.atom.model_dump(mode="json") for e in entries], sort_keys=True)
-    return AtomPool(
-        source=N2C2_DERIVED,
-        entries=tuple(entries),
-        sha256=hashlib.sha256(blob.encode("utf-8")).hexdigest(),
-        metadata={"atom_source": N2C2_DERIVED, "n_atoms": len(entries),
-                  "note": "Leaf predicates of the 13 public n2c2 criterion definitions."},
-    )
-
-
 def load_pool(atom_source: str = CTGOV, path: Path | str = DEFAULT_POOL_PATH) -> AtomPool:
     if atom_source == CTGOV:
         return load_ctgov_pool(path)
-    if atom_source == N2C2_DERIVED:
-        return load_n2c2_derived_pool()
     raise ValueError(f"Unknown atom_source '{atom_source}'; expected one of {ATOM_SOURCES}.")
