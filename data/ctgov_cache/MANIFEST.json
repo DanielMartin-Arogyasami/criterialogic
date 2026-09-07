@@ -20,5 +20,7 @@
   "n_studies_cached": 300,
   "pages_fetched": 0,
   "fetched_utc": "2026-08-29T20:28:40+00:00",
+  "snapshot_id": "ctgov-2026-08-29",
+  "extractor_version": "1",
   "rate_limit_requests_per_second": 2.0
 }

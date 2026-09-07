@@ -1,4 +1,4 @@
-# Paper data — generated 2026-09-07T21:50:11+00:00
+# Paper data — generated 2026-09-07T22:49:58+00:00
 
 > Every number here was produced by executing code against the released
 > artifacts, and every aggregate is recomputed from persisted per-item
@@ -11,7 +11,7 @@
 
 ## Section 3 — dataset composition
 
-- Snapshot `unrecorded`: **300 studies**, fetched 2026-08-29T20:28:40+00:00
+- Snapshot `ctgov-2026-08-29`: **300 studies**, fetched 2026-08-29T20:28:40+00:00
 - Sampling frame (verbatim from the manifest): `AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]`
 - Atom pool: **522 distinct atoms from 222 trials**
 - Extraction matched **675 of 4869 candidate sentences (13.9%)**

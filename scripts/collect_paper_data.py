@@ -791,8 +791,8 @@ _MICRO_F1 = re.compile(r"micro-F1\s*\*{0,2}([\d.]+)\*{0,2}")
 #: 7.7 ablations. The spread between the best and worst depth under one fixed prompt.
 #: Both orders occur in drafts: "an accuracy range of 0.433" and "a 0.433 accuracy range".
 _ACC_RANGE = re.compile(
-    r"accuracy\s+range\s+of\s*\*{0,2}([\d.]+)\*{0,2}"
-    r"|\*{0,2}([\d.]+)\*{0,2}\s+accuracy\s+range")
+    r"accuracy\s+range\s+of\s*\*{0,2}(0\.\d+)\*{0,2}"
+    r"|\*{0,2}(0\.\d+)\*{0,2}\s+accuracy\s+range")
 
 
 def _section(text: str, number: str) -> str:

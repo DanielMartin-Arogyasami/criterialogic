@@ -60,4 +60,5 @@ annotation/*
 !annotation/errors_annotator2_FINAL.csv
 !annotation/adjudication.csv
 !annotation/report.json
-results/leaderboard/*.tmp    # partial submissions
+# partial submissions
+results/leaderboard/*.tmp

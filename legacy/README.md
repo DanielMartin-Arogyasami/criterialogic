@@ -33,4 +33,4 @@ paired with synthetic patients. The audit found that four of its five reported m
 were on items whose gold label rested on a fact the prompt never stated, so they were
 unanswerable rather than temporal-reasoning failures. It also reports a failure-taxonomy
 distribution produced by labeller v1, whose decision order made only two of seven
-categories reachable. Both are superseded by `results/SECTION7.md`.
+categories reachable. Both are superseded by `results/paper_data.md`.
