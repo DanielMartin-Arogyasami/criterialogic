@@ -5,13 +5,13 @@ structuring task, the n2c2 matching task, and the encoder baselines — all of w
 deliberately cut. See:
 
 - **`docs/V2_SCOPE.md`** — what was cut, why, and the restoration path for each.
-- **`results/SECTION7.md` §6** — what is not yet measured and what each gap needs.
+- **`results/paper_data.md` §6** — what is not yet measured and what each gap needs.
 - **`results/DISCREPANCIES.md`** — open items where the code and the manuscript disagree.
 
 ## The short list, in order
 
 1. **Re-run the depth sweep under prompt renderer v2.** The reported numbers were produced
-   under v1, which has a disclosed rendering defect (SECTION7.md §3). Needs an API key;
+   under v1, which has a disclosed rendering defect (paper_data.md §3). Needs an API key;
    costs roughly one sweep's worth of calls.
 2. **Run the real-criteria arm.** Item construction is offline
    (`scripts/build_real_criteria.py`); the model rows need a key.

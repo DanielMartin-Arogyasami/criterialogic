@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-07T21:50:11+00:00",
+  "generated_utc": "2026-09-07T22:49:58+00:00",
   "provenance": {
     "results_dir": "results",
     "data_dir": "data",
@@ -835,7 +835,7 @@
   },
   "section3": {
     "snapshot": {
-      "snapshot_id": "unrecorded",
+      "snapshot_id": "ctgov-2026-08-29",
       "frame": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
       "advanced_expression": "AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]",
       "n_studies": 300,

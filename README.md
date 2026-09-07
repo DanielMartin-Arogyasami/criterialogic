@@ -164,10 +164,12 @@ output while labelling, and its agreement with the human consensus is reported s
 ## Reproducibility
 
 Pinned dependencies, fixed seeds, and — recorded into every result file — the atom pool
-digest, the snapshot id, the schema version, the prompt-renderer version, the
-failure-labeller version, and the inference parameters the API *actually applied*
-alongside the ones requested. Per-item predictions are persisted so any aggregate can be
-recomputed without a rerun.
+digest, the schema version, the prompt-renderer version, the failure-labeller version,
+and the inference parameters the API *actually applied* alongside the ones requested.
+The snapshot id `ctgov-2026-08-29` is stamped on the committed manifest; the
+`gpt-4o-mini` run files were written before that field existed (`real_criteria` still
+says `ctgov-unknown`; the compositional run omits it). Per-item predictions are
+persisted so any aggregate can be recomputed without a rerun.
 
 Both item sets are regenerable: same seed plus same depth list plus same atom pool gives a
 byte-identical set, and the prompts are regenerable too.
