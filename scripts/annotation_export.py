@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """Draw the annotation sample and write the two blind annotator files.
 
-    python scripts/annotation_export.py --results results/ --n 200 --out annotation/
+    python scripts/annotation_export.py --results results/ \
+        --depths 2,3,4,5,6 --n-per-depth 60 --n 200 --out annotation/
+
+The generation arguments are not optional. Item sets are regenerated here rather than
+read back from the result files, so omitting them rebuilds a different set: the depth
+sweep comes back as 180 items instead of 300 and the sample is drawn from whichever
+subset happens to match.
 
 Reads the result files written by the evaluation runner, pools their errors, draws a
 sample stratified across models and nesting depths, and writes:
@@ -32,6 +38,11 @@ from criterialogic.taxonomy.reliability import (
     sample_error_set,
 )
 
+#: Neither is a system under test. `rule_based` is the oracle and produces no errors;
+#: `negation_blind` is deliberately broken and its errors all share one templated
+#: rationale, so labelling them is trivially consistent and inflates kappa.
+DIAGNOSTIC_MODELS = ("rule_based", "negation_blind")
+
 
 def _load_runs(results_dir: Path, args) -> dict:
     """Rebuild {label: (items, predictions)} from result files."""
@@ -59,7 +70,25 @@ def _load_runs(results_dir: Path, args) -> dict:
             print(f"[skip] {path.name}: no item ids matched the regenerated set — "
                   f"pass the same generation arguments the run used.")
             continue
-        label = f"{task}::{data['model'].get('name', path.stem)}"
+        name = data["model"].get("name", path.stem)
+        if args.models:
+            if name not in args.models:
+                print(f"[skip] {path.name}: {name} not in --models")
+                continue
+        elif not args.include_diagnostics and name in DIAGNOSTIC_MODELS:
+            print(f"[skip] {path.name}: {name} is a diagnostic, not a system under test")
+            continue
+
+        # A partial match is the dangerous case. No match already prints and skips, but
+        # matching 180 of 300 looks like success and silently annotates the wrong sample.
+        n_run = len(data["per_item_predictions"])
+        if len(kept) != n_run:
+            raise SystemExit(
+                f"{path.name}: regenerated set matched {len(kept)} of {n_run} items.\n"
+                f"Pass the generation arguments the run used. For the depth sweep:\n"
+                f"  --depths 2,3,4,5,6 --n-per-depth 60")
+
+        label = f"{task}::{name}"
         runs[label] = (kept, preds)
         print(f"[loaded] {path.name} -> {label} ({len(kept)} items)")
     return runs
@@ -76,6 +105,13 @@ def main() -> None:
                     help="Renderer version the evaluated run used. Pass 1 when annotating "
                          "the v0.2 reported results, so annotators see the prompt the "
                          "model actually saw.")
+    ap.add_argument("--models", default=None,
+                    help="Comma-separated allowlist of model names. Overrides the "
+                         "diagnostic exclusion.")
+    ap.add_argument("--include-diagnostics", action="store_true",
+                    help="Include rule_based and negation_blind. Off by default: they "
+                         "are diagnostics, and negation_blind's errors share one "
+                         "templated rationale.")
     ap.add_argument("--include-unanswerable", action="store_true",
                     help="Include items whose gold label rests on an unstated fact. Off "
                          "by default: those are renderer defects, not reasoning failures.")
@@ -86,6 +122,7 @@ def main() -> None:
     ap.add_argument("--max-per-study", type=int, default=4)
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
+    args.models = [m.strip() for m in args.models.split(",")] if args.models else None
 
     runs = _load_runs(Path(args.results), args)
     if not runs:

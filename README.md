@@ -149,7 +149,8 @@ Seven categories: negation/polarity, temporal, numeric threshold, logical compos
 entity conflation, implicit-knowledge gap, fabrication.
 
 ```bash
-python scripts/annotation_export.py --results results/ --n 200 --out annotation/
+python scripts/annotation_export.py --results results/ \
+    --depths 2,3,4,5,6 --n-per-depth 60 --n 200 --out annotation/
 # both annotators fill category + clinical_judgement_required, blind to each other
 python scripts/annotation_report.py --a annotation/errors_annotator1.csv \
                                     --b annotation/errors_annotator2.csv \

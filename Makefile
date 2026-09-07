@@ -63,8 +63,8 @@ verify:
 	$(PY) scripts/collect_paper_data.py --verify --results $(RESULTS)
 
 annotate-export:
-	$(PY) scripts/annotation_export.py --results $(RESULTS) --n 200 --out annotation \
-	  --prompt-version 2 --depths 2,3,4,5,6 --n-per-depth $(NPD)
+	$(PY) scripts/annotation_export.py --results $(RESULTS) \
+	  --depths 2,3,4,5,6 --n-per-depth $(NPD) --n 200 --out annotation/
 
 annotate-report:
 	$(PY) scripts/annotation_report.py --a annotation/errors_annotator1.csv \
