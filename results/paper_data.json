@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-12T20:33:28+00:00",
+  "generated_utc": "2026-09-12T20:58:18+00:00",
   "provenance": {
     "results_dir": "results",
     "data_dir": "data",
@@ -1712,8 +1712,827 @@
         "caveat": "Heuristic triage labels. The manuscript's distribution is the human consensus; three categories are unreachable by any counterfactual over the logical form."
       },
       "human": {
-        "status": "not run",
-        "fill_with": "scripts/annotation_export.py then scripts/annotation_report.py --adjudication ..."
+        "n_shared_items": 179,
+        "n_only_annotator1": 0,
+        "n_only_annotator2": 0,
+        "meets_minimum_sample": true,
+        "overall": {
+          "n": 179,
+          "kappa": 0.3369,
+          "ci_95": [
+            0.2521,
+            0.42
+          ],
+          "percent_agreement": 0.4804,
+          "n_bootstrap": 5000,
+          "per_category": {
+            "entity_conflation": {
+              "n_annotator_1": 2,
+              "n_annotator_2": 5,
+              "n_both": 0,
+              "kappa_one_vs_rest": -0.0162,
+              "percent_agreement": 0.9609
+            },
+            "fabrication": {
+              "n_annotator_1": 13,
+              "n_annotator_2": 1,
+              "n_both": 1,
+              "kappa_one_vs_rest": 0.1339,
+              "percent_agreement": 0.933
+            },
+            "implicit_knowledge": {
+              "n_annotator_1": 0,
+              "n_annotator_2": 4,
+              "n_both": 0,
+              "kappa_one_vs_rest": 0.0,
+              "percent_agreement": 0.9777
+            },
+            "logical_composition": {
+              "n_annotator_1": 45,
+              "n_annotator_2": 90,
+              "n_both": 33,
+              "kappa_one_vs_rest": 0.2312,
+              "percent_agreement": 0.6145
+            },
+            "negation_polarity": {
+              "n_annotator_1": 61,
+              "n_annotator_2": 19,
+              "n_both": 15,
+              "kappa_one_vs_rest": 0.2543,
+              "percent_agreement": 0.7207
+            },
+            "none": {
+              "n_annotator_1": 0,
+              "n_annotator_2": 13,
+              "n_both": 0,
+              "kappa_one_vs_rest": 0.0,
+              "percent_agreement": 0.9274
+            },
+            "numeric_threshold": {
+              "n_annotator_1": 18,
+              "n_annotator_2": 8,
+              "n_both": 3,
+              "kappa_one_vs_rest": 0.18,
+              "percent_agreement": 0.8883
+            },
+            "temporal": {
+              "n_annotator_1": 40,
+              "n_annotator_2": 39,
+              "n_both": 34,
+              "kappa_one_vs_rest": 0.8213,
+              "percent_agreement": 0.9385
+            }
+          },
+          "annotator1_distribution": {
+            "entity_conflation": 2,
+            "fabrication": 13,
+            "logical_composition": 45,
+            "negation_polarity": 61,
+            "numeric_threshold": 18,
+            "temporal": 40
+          },
+          "annotator2_distribution": {
+            "entity_conflation": 5,
+            "fabrication": 1,
+            "implicit_knowledge": 4,
+            "logical_composition": 90,
+            "negation_polarity": 19,
+            "none": 13,
+            "numeric_threshold": 8,
+            "temporal": 39
+          }
+        },
+        "by_arm": {
+          "compositional": {
+            "n": 119,
+            "kappa": 0.0885,
+            "ci_95": [
+              -0.011,
+              0.1912
+            ],
+            "percent_agreement": 0.3697,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 5,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0246,
+                "percent_agreement": 0.9412
+              },
+              "fabrication": {
+                "n_annotator_1": 10,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.916
+              },
+              "implicit_knowledge": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 4,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9664
+              },
+              "logical_composition": {
+                "n_annotator_1": 43,
+                "n_annotator_2": 87,
+                "n_both": 32,
+                "kappa_one_vs_rest": 0.0168,
+                "percent_agreement": 0.4454
+              },
+              "negation_polarity": {
+                "n_annotator_1": 46,
+                "n_annotator_2": 11,
+                "n_both": 7,
+                "kappa_one_vs_rest": 0.1133,
+                "percent_agreement": 0.6387
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 11,
+                "n_annotator_2": 7,
+                "n_both": 2,
+                "kappa_one_vs_rest": 0.162,
+                "percent_agreement": 0.8824
+              },
+              "temporal": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 5,
+                "n_both": 3,
+                "kappa_one_vs_rest": 0.4742,
+                "percent_agreement": 0.9496
+              }
+            },
+            "annotator1_distribution": {
+              "entity_conflation": 2,
+              "fabrication": 10,
+              "logical_composition": 43,
+              "negation_polarity": 46,
+              "numeric_threshold": 11,
+              "temporal": 7
+            },
+            "annotator2_distribution": {
+              "entity_conflation": 5,
+              "implicit_knowledge": 4,
+              "logical_composition": 87,
+              "negation_polarity": 11,
+              "numeric_threshold": 7,
+              "temporal": 5
+            }
+          },
+          "real_criteria": {
+            "n": 60,
+            "kappa": 0.5389,
+            "ci_95": [
+              0.403,
+              0.6784
+            ],
+            "percent_agreement": 0.7,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "fabrication": {
+                "n_annotator_1": 3,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.4872,
+                "percent_agreement": 0.9667
+              },
+              "logical_composition": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 3,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.375,
+                "percent_agreement": 0.95
+              },
+              "negation_polarity": {
+                "n_annotator_1": 15,
+                "n_annotator_2": 8,
+                "n_both": 8,
+                "kappa_one_vs_rest": 0.6316,
+                "percent_agreement": 0.8833
+              },
+              "none": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 13,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.7833
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.2275,
+                "percent_agreement": 0.9
+              },
+              "temporal": {
+                "n_annotator_1": 33,
+                "n_annotator_2": 34,
+                "n_both": 31,
+                "kappa_one_vs_rest": 0.8311,
+                "percent_agreement": 0.9167
+              }
+            },
+            "annotator1_distribution": {
+              "fabrication": 3,
+              "logical_composition": 2,
+              "negation_polarity": 15,
+              "numeric_threshold": 7,
+              "temporal": 33
+            },
+            "annotator2_distribution": {
+              "fabrication": 1,
+              "logical_composition": 3,
+              "negation_polarity": 8,
+              "none": 13,
+              "numeric_threshold": 1,
+              "temporal": 34
+            }
+          }
+        },
+        "clinical_judgement": {
+          "n_flagged": 27,
+          "fraction_flagged": 0.1508,
+          "flagged_by_annotator1": 11,
+          "flagged_by_annotator2": 18,
+          "flag_agreement": 0.8603,
+          "flagged": {
+            "n": 27,
+            "kappa": 0.3322,
+            "ci_95": [
+              0.218,
+              0.4578
+            ],
+            "percent_agreement": 0.4815,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 4,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.8519
+              },
+              "fabrication": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.198,
+                "percent_agreement": 0.7778
+              },
+              "negation_polarity": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9259
+              },
+              "none": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 9,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.6667
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 6,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.7778
+              },
+              "temporal": {
+                "n_annotator_1": 12,
+                "n_annotator_2": 13,
+                "n_both": 12,
+                "kappa_one_vs_rest": 0.9256,
+                "percent_agreement": 0.963
+              }
+            },
+            "annotator1_distribution": {
+              "fabrication": 7,
+              "negation_polarity": 2,
+              "numeric_threshold": 6,
+              "temporal": 12
+            },
+            "annotator2_distribution": {
+              "entity_conflation": 4,
+              "fabrication": 1,
+              "none": 9,
+              "temporal": 13
+            }
+          },
+          "not_flagged": {
+            "n": 152,
+            "kappa": 0.2981,
+            "ci_95": [
+              0.1981,
+              0.3931
+            ],
+            "percent_agreement": 0.4803,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 1,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0088,
+                "percent_agreement": 0.9803
+              },
+              "fabrication": {
+                "n_annotator_1": 6,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9605
+              },
+              "implicit_knowledge": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 4,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9737
+              },
+              "logical_composition": {
+                "n_annotator_1": 45,
+                "n_annotator_2": 90,
+                "n_both": 33,
+                "kappa_one_vs_rest": 0.1556,
+                "percent_agreement": 0.5461
+              },
+              "negation_polarity": {
+                "n_annotator_1": 59,
+                "n_annotator_2": 19,
+                "n_both": 15,
+                "kappa_one_vs_rest": 0.2411,
+                "percent_agreement": 0.6842
+              },
+              "none": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 4,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9737
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 12,
+                "n_annotator_2": 8,
+                "n_both": 3,
+                "kappa_one_vs_rest": 0.2528,
+                "percent_agreement": 0.9079
+              },
+              "temporal": {
+                "n_annotator_1": 28,
+                "n_annotator_2": 26,
+                "n_both": 22,
+                "kappa_one_vs_rest": 0.7749,
+                "percent_agreement": 0.9342
+              }
+            },
+            "annotator1_distribution": {
+              "entity_conflation": 2,
+              "fabrication": 6,
+              "logical_composition": 45,
+              "negation_polarity": 59,
+              "numeric_threshold": 12,
+              "temporal": 28
+            },
+            "annotator2_distribution": {
+              "entity_conflation": 1,
+              "implicit_knowledge": 4,
+              "logical_composition": 90,
+              "negation_polarity": 19,
+              "none": 4,
+              "numeric_threshold": 8,
+              "temporal": 26
+            }
+          }
+        },
+        "by_depth": {
+          "0": {
+            "n": 54,
+            "kappa": 0.5707,
+            "ci_95": [
+              0.4394,
+              0.7128
+            ],
+            "percent_agreement": 0.7222,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "fabrication": {
+                "n_annotator_1": 3,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.4857,
+                "percent_agreement": 0.963
+              },
+              "negation_polarity": {
+                "n_annotator_1": 15,
+                "n_annotator_2": 8,
+                "n_both": 8,
+                "kappa_one_vs_rest": 0.6228,
+                "percent_agreement": 0.8704
+              },
+              "none": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 13,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.7593
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.2249,
+                "percent_agreement": 0.8889
+              },
+              "temporal": {
+                "n_annotator_1": 29,
+                "n_annotator_2": 31,
+                "n_both": 29,
+                "kappa_one_vs_rest": 0.9251,
+                "percent_agreement": 0.963
+              }
+            },
+            "annotator1_distribution": {
+              "fabrication": 3,
+              "negation_polarity": 15,
+              "numeric_threshold": 7,
+              "temporal": 29
+            },
+            "annotator2_distribution": {
+              "fabrication": 1,
+              "negation_polarity": 8,
+              "none": 13,
+              "numeric_threshold": 1,
+              "temporal": 31
+            }
+          },
+          "1": {
+            "n": 6,
+            "kappa": 0.0,
+            "ci_95": [
+              -0.6667,
+              0.6667
+            ],
+            "percent_agreement": 0.5,
+            "n_bootstrap": 4990,
+            "per_category": {
+              "logical_composition": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 3,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.5
+              },
+              "temporal": {
+                "n_annotator_1": 4,
+                "n_annotator_2": 3,
+                "n_both": 2,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.5
+              }
+            },
+            "annotator1_distribution": {
+              "logical_composition": 2,
+              "temporal": 4
+            },
+            "annotator2_distribution": {
+              "logical_composition": 3,
+              "temporal": 3
+            }
+          },
+          "2": {
+            "n": 12,
+            "kappa": 0.301,
+            "ci_95": [
+              -0.0588,
+              0.64
+            ],
+            "percent_agreement": 0.5,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "implicit_knowledge": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 2,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.8333
+              },
+              "logical_composition": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 4,
+                "n_both": 3,
+                "kappa_one_vs_rest": 0.2105,
+                "percent_agreement": 0.5833
+              },
+              "negation_polarity": {
+                "n_annotator_1": 3,
+                "n_annotator_2": 3,
+                "n_both": 2,
+                "kappa_one_vs_rest": 0.5556,
+                "percent_agreement": 0.8333
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 1,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9167
+              },
+              "temporal": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 2,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.4,
+                "percent_agreement": 0.8333
+              }
+            },
+            "annotator1_distribution": {
+              "logical_composition": 7,
+              "negation_polarity": 3,
+              "temporal": 2
+            },
+            "annotator2_distribution": {
+              "implicit_knowledge": 2,
+              "logical_composition": 4,
+              "negation_polarity": 3,
+              "numeric_threshold": 1,
+              "temporal": 2
+            }
+          },
+          "3": {
+            "n": 19,
+            "kappa": -0.027,
+            "ci_95": [
+              -0.1832,
+              0.1255
+            ],
+            "percent_agreement": 0.3684,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 1,
+                "n_annotator_2": 2,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0755,
+                "percent_agreement": 0.8421
+              },
+              "fabrication": {
+                "n_annotator_1": 1,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9474
+              },
+              "logical_composition": {
+                "n_annotator_1": 9,
+                "n_annotator_2": 15,
+                "n_both": 7,
+                "kappa_one_vs_rest": -0.0215,
+                "percent_agreement": 0.4737
+              },
+              "negation_polarity": {
+                "n_annotator_1": 7,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.6316
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 1,
+                "n_annotator_2": 2,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0755,
+                "percent_agreement": 0.8421
+              }
+            },
+            "annotator1_distribution": {
+              "entity_conflation": 1,
+              "fabrication": 1,
+              "logical_composition": 9,
+              "negation_polarity": 7,
+              "numeric_threshold": 1
+            },
+            "annotator2_distribution": {
+              "entity_conflation": 2,
+              "logical_composition": 15,
+              "numeric_threshold": 2
+            }
+          },
+          "4": {
+            "n": 29,
+            "kappa": 0.0612,
+            "ci_95": [
+              -0.1941,
+              0.3024
+            ],
+            "percent_agreement": 0.3793,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "fabrication": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.931
+              },
+              "implicit_knowledge": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 1,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9655
+              },
+              "logical_composition": {
+                "n_annotator_1": 10,
+                "n_annotator_2": 19,
+                "n_both": 6,
+                "kappa_one_vs_rest": -0.0694,
+                "percent_agreement": 0.4138
+              },
+              "negation_polarity": {
+                "n_annotator_1": 13,
+                "n_annotator_2": 7,
+                "n_both": 4,
+                "kappa_one_vs_rest": 0.1256,
+                "percent_agreement": 0.5862
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.6506,
+                "percent_agreement": 0.9655
+              },
+              "temporal": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 1,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0482,
+                "percent_agreement": 0.8966
+              }
+            },
+            "annotator1_distribution": {
+              "fabrication": 2,
+              "logical_composition": 10,
+              "negation_polarity": 13,
+              "numeric_threshold": 2,
+              "temporal": 2
+            },
+            "annotator2_distribution": {
+              "implicit_knowledge": 1,
+              "logical_composition": 19,
+              "negation_polarity": 7,
+              "numeric_threshold": 1,
+              "temporal": 1
+            }
+          },
+          "5": {
+            "n": 21,
+            "kappa": 0.1026,
+            "ci_95": [
+              0.0099,
+              0.2478
+            ],
+            "percent_agreement": 0.2857,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 3,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.8571
+              },
+              "fabrication": {
+                "n_annotator_1": 5,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.7619
+              },
+              "logical_composition": {
+                "n_annotator_1": 5,
+                "n_annotator_2": 17,
+                "n_both": 5,
+                "kappa_one_vs_rest": 0.137,
+                "percent_agreement": 0.4286
+              },
+              "negation_polarity": {
+                "n_annotator_1": 5,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.7619
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 5,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.2759,
+                "percent_agreement": 0.8095
+              },
+              "temporal": {
+                "n_annotator_1": 1,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9524
+              }
+            },
+            "annotator1_distribution": {
+              "fabrication": 5,
+              "logical_composition": 5,
+              "negation_polarity": 5,
+              "numeric_threshold": 5,
+              "temporal": 1
+            },
+            "annotator2_distribution": {
+              "entity_conflation": 3,
+              "logical_composition": 17,
+              "numeric_threshold": 1
+            }
+          },
+          "6": {
+            "n": 38,
+            "kappa": 0.1163,
+            "ci_95": [
+              -0.0179,
+              0.2655
+            ],
+            "percent_agreement": 0.3684,
+            "n_bootstrap": 5000,
+            "per_category": {
+              "entity_conflation": {
+                "n_annotator_1": 1,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9737
+              },
+              "fabrication": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 0,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9474
+              },
+              "implicit_knowledge": {
+                "n_annotator_1": 0,
+                "n_annotator_2": 1,
+                "n_both": 0,
+                "kappa_one_vs_rest": 0.0,
+                "percent_agreement": 0.9737
+              },
+              "logical_composition": {
+                "n_annotator_1": 12,
+                "n_annotator_2": 32,
+                "n_both": 11,
+                "kappa_one_vs_rest": 0.0752,
+                "percent_agreement": 0.4211
+              },
+              "negation_polarity": {
+                "n_annotator_1": 18,
+                "n_annotator_2": 1,
+                "n_both": 1,
+                "kappa_one_vs_rest": 0.0583,
+                "percent_agreement": 0.5526
+              },
+              "numeric_threshold": {
+                "n_annotator_1": 3,
+                "n_annotator_2": 2,
+                "n_both": 0,
+                "kappa_one_vs_rest": -0.0674,
+                "percent_agreement": 0.8684
+              },
+              "temporal": {
+                "n_annotator_1": 2,
+                "n_annotator_2": 2,
+                "n_both": 2,
+                "kappa_one_vs_rest": 1.0,
+                "percent_agreement": 1.0
+              }
+            },
+            "annotator1_distribution": {
+              "entity_conflation": 1,
+              "fabrication": 2,
+              "logical_composition": 12,
+              "negation_polarity": 18,
+              "numeric_threshold": 3,
+              "temporal": 2
+            },
+            "annotator2_distribution": {
+              "implicit_knowledge": 1,
+              "logical_composition": 32,
+              "negation_polarity": 1,
+              "numeric_threshold": 2,
+              "temporal": 2
+            }
+          }
+        },
+        "n_disagreements": 93
       }
     }
   },

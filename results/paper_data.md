@@ -1,4 +1,4 @@
-# Paper data — generated 2026-09-12T20:33:28+00:00
+# Paper data — generated 2026-09-12T20:58:18+00:00
 
 > Every number here was produced by executing code against the released
 > artifacts, and every aggregate is recomputed from persisted per-item
@@ -103,16 +103,166 @@ Heuristic labeller version(s) ['1', '2']. Heuristic triage labels. The manuscrip
 
 Human-only categories, unreachable by the labeller: ['entity_conflation', 'fabrication', 'implicit_knowledge'].
 
-**Human annotation: [not run].**
+### Human annotation
 
-To be reported: consensus distribution [...]; Cohen's kappa [k] with 95% CI
-[lo, hi]; percent agreement [x]; per-category kappa [...]; kappa by arm
-(compositional [k], real criteria [k]); fraction flagged as requiring
-clinical judgement [x] with kappa flagged [k] versus not [k]; disagreements
-adjudicated [n], of which clinical [n]; automatic-versus-consensus kappa [k]
-with [n] agreement-impossible items.
-
-Fill with: `scripts/annotation_export.py then scripts/annotation_report.py --adjudication ...`
+```json
+{
+  "n_shared_items": 179,
+  "n_only_annotator1": 0,
+  "n_only_annotator2": 0,
+  "meets_minimum_sample": true,
+  "overall": {
+    "n": 179,
+    "kappa": 0.3369,
+    "ci_95": [
+      0.2521,
+      0.42
+    ],
+    "percent_agreement": 0.4804,
+    "n_bootstrap": 5000,
+    "per_category": {
+      "entity_conflation": {
+        "n_annotator_1": 2,
+        "n_annotator_2": 5,
+        "n_both": 0,
+        "kappa_one_vs_rest": -0.0162,
+        "percent_agreement": 0.9609
+      },
+      "fabrication": {
+        "n_annotator_1": 13,
+        "n_annotator_2": 1,
+        "n_both": 1,
+        "kappa_one_vs_rest": 0.1339,
+        "percent_agreement": 0.933
+      },
+      "implicit_knowledge": {
+        "n_annotator_1": 0,
+        "n_annotator_2": 4,
+        "n_both": 0,
+        "kappa_one_vs_rest": 0.0,
+        "percent_agreement": 0.9777
+      },
+      "logical_composition": {
+        "n_annotator_1": 45,
+        "n_annotator_2": 90,
+        "n_both": 33,
+        "kappa_one_vs_rest": 0.2312,
+        "percent_agreement": 0.6145
+      },
+      "negation_polarity": {
+        "n_annotator_1": 61,
+        "n_annotator_2": 19,
+        "n_both": 15,
+        "kappa_one_vs_rest": 0.2543,
+        "percent_agreement": 0.7207
+      },
+      "none": {
+        "n_annotator_1": 0,
+        "n_annotator_2": 13,
+        "n_both": 0,
+        "kappa_one_vs_rest": 0.0,
+        "percent_agreement": 0.9274
+      },
+      "numeric_threshold": {
+        "n_annotator_1": 18,
+        "n_annotator_2": 8,
+        "n_both": 3,
+        "kappa_one_vs_rest": 0.18,
+        "percent_agreement": 0.8883
+      },
+      "temporal": {
+        "n_annotator_1": 40,
+        "n_annotator_2": 39,
+        "n_both": 34,
+        "kappa_one_vs_rest": 0.8213,
+        "percent_agreement": 0.9385
+      }
+    },
+    "annotator1_distribution": {
+      "entity_conflation": 2,
+      "fabrication": 13,
+      "logical_composition": 45,
+      "negation_polarity": 61,
+      "numeric_threshold": 18,
+      "temporal": 40
+    },
+    "annotator2_distribution": {
+      "entity_conflation": 5,
+      "fabrication": 1,
+      "implicit_knowledge": 4,
+      "logical_composition": 90,
+      "negation_polarity": 19,
+      "none": 13,
+      "numeric_threshold": 8,
+      "temporal": 39
+    }
+  },
+  "by_arm": {
+    "compositional": {
+      "n": 119,
+      "kappa": 0.0885,
+      "ci_95": [
+        -0.011,
+        0.1912
+      ],
+      "percent_agreement": 0.3697,
+      "n_bootstrap": 5000,
+      "per_category": {
+        "entity_conflation": {
+          "n_annotator_1": 2,
+          "n_annotator_2": 5,
+          "n_both": 0,
+          "kappa_one_vs_rest": -0.0246,
+          "percent_agreement": 0.9412
+        },
+        "fabrication": {
+          "n_annotator_1": 10,
+          "n_annotator_2": 0,
+          "n_both": 0,
+          "kappa_one_vs_rest": 0.0,
+          "percent_agreement": 0.916
+        },
+        "implicit_knowledge": {
+          "n_annotator_1": 0,
+          "n_annotator_2": 4,
+          "n_both": 0,
+          "kappa_one_vs_rest": 0.0,
+          "percent_agreement": 0.9664
+        },
+        "logical_composition": {
+          "n_annotator_1": 43,
+          "n_annotator_2": 87,
+          "n_both": 32,
+          "kappa_one_vs_rest": 0.0168,
+          "percent_agreement": 0.4454
+        },
+        "negation_polarity": {
+          "n_annotator_1": 46,
+          "n_annotator_2": 11,
+          "n_both": 7,
+          "kappa_one_vs_rest": 0.1133,
+          "percent_agreement": 0.6387
+        },
+        "numeric_threshold": {
+          "n_annotator_1": 11,
+          "n_annotator_2": 7,
+          "n_both": 2,
+          "kappa_one_vs_rest": 0.162,
+          "percent_agreement": 0.8824
+        },
+        "temporal": {
+          "n_annotator_1": 7,
+          "n_annotator_2": 5,
+          "n_both": 3,
+          "kappa_one_vs_rest": 0.4742,
+          "percent_agreement": 0.9496
+        }
+      },
+      "annotator1_distribution": {
+        "entity_conflation": 2,
+        "fabrication": 10,
+        "logical_compositio
+```
 
 ## Integrity gates
 

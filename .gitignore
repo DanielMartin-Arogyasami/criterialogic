@@ -9,6 +9,7 @@ results/*
 !results/DISCREPANCIES.md
 !results/paper_data.json
 !results/paper_data.md
+!results/agreement.json
 !results/verify_extract.md
 !results/AUDIT.md
 !results/audit.json
