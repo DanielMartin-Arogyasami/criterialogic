@@ -58,20 +58,13 @@ paper/
 CriteriaLogic_bundle.md
 
 # Added in v0.2
-# Held-back automatic labels stay local. The blank annotator sheets and finished
-# labelled sets are released so the two-annotator pass can be shared.
+# Held-back automatic labels stay local. The two finished label files and the
+# agreement report are released; blank export sheets are not.
 !annotation/
 annotation/*
-!annotation/errors_annotator1.csv
-!annotation/errors_annotator2.csv
 !annotation/automatic_labels_HELD_BACK.csv
-!annotation/errors_annotator1_FINAL.csv
-!annotation/errors_annotator2_FINAL.csv
-!annotation/completed_errors_annotator1.csv
-!annotation/completed_errors_annotator2.csv
-!annotation/completed_errors_annotator3.csv
-!annotation/completed_errors_annotator4.csv
-!annotation/adjudication.csv
+!annotation/annotator1_labels.csv
+!annotation/annotator2_labels.csv
 !annotation/report.json
 # partial submissions
 results/leaderboard/*.tmp

@@ -57,6 +57,8 @@ docs/
 - **`results/DISCREPANCIES.md`** — the register of places where the manuscript and the
   code disagree, or where the code cannot support a claim the manuscript wants to make.
 - **`DATASHEET.md`** — datasheet for the released data.
+- **`paper/supplement/`** — S1, S3–S5 assembled for submission by
+  `python scripts/assemble_supplement.py` (schema, result tables, prompts, datasheet).
 
 ## Statistics without a scientific stack
 

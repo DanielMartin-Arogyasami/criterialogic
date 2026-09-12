@@ -117,6 +117,14 @@ python scripts/annotation_report.py --a annotation/errors_annotator1.csv \
     --out results/agreement.json
 ```
 
+To reproduce the reported agreement figures from the released labels:
+
+    python scripts/annotation_report.py \
+      --a annotation/annotator1_labels.csv \
+      --b annotation/annotator2_labels.csv \
+      --automatic annotation/automatic_labels_HELD_BACK.csv \
+      --out results/agreement.json
+
 ## 6. Rebuild the snapshot (only if you mean to)
 
 ```bash

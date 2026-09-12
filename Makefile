@@ -13,7 +13,7 @@ else
 VENV_PY = .venv/bin/python
 endif
 
-.PHONY: help setup check data run-offline run-llm paper verify verify-paper annotate-export annotate-report finish release clean
+.PHONY: help setup check data run-offline run-llm paper supplement verify verify-paper annotate-export annotate-report finish release clean
 
 help:
 	@echo "CriteriaLogic — make targets (in the order you need them)"
@@ -24,6 +24,7 @@ help:
 	@echo "  run-offline      both arms, diagnostic models, no key"
 	@echo "  run-llm          depth sweep + Arm 1 under prompt v2 (MODEL=, NPD=)  <- needs a key"
 	@echo "  paper            regenerate results/paper_data.md"
+	@echo "  supplement       assemble S1, S3–S5 into paper/supplement/ from repo files"
 	@echo "  verify           diff the numbers extract against the artifacts (exits non-zero on drift)"
 	@echo "  verify-paper     same check against paper/CriteriaLogic.md (local; the manuscript is gitignored)"
 	@echo "  annotate-export  draw the sample, write the two blind annotator files"
@@ -59,6 +60,9 @@ run-llm:
 
 paper:
 	$(PY) scripts/collect_paper_data.py --results $(RESULTS)
+
+supplement:
+	$(PY) scripts/assemble_supplement.py
 
 verify:
 	$(PY) scripts/collect_paper_data.py --verify --results $(RESULTS)
