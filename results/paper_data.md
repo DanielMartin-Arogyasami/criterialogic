@@ -1,4 +1,4 @@
-# Paper data — generated 2026-09-07T22:49:58+00:00
+# Paper data — generated 2026-09-12T20:58:18+00:00
 
 > Every number here was produced by executing code against the released
 > artifacts, and every aggregate is recomputed from persisted per-item
@@ -7,7 +7,7 @@
 > one is given beside it. Read the integrity gates at the end before quoting
 > anything.
 
-**4 blocking finding(s), 10 note(s).** See the end of this file.
+**4 blocking finding(s), 9 note(s).** See the end of this file.
 
 ## Section 3 — dataset composition
 
@@ -45,17 +45,17 @@ Overlapping pairs and the per-depth n that would separate them: (2, 3) n>=220, (
 
 ## Section 7.2 — the mixed-depth set
 
-**Legacy artifact.** `gpt-5-nano`, prompt v1, source `results/missing/missing_runs.json`. Not a measurement of the current run.
+**Current run.** `gpt-4o-mini`, prompt v2, source `results/mixed_v2/compositional__openai.json`.
 
 | Depth | Accuracy | 95% Wilson CI | n |
 |---|---|---|---|
-| 1 | 0.940 | [0.875, 0.972] | 100 |
-| 2 | 0.910 | [0.838, 0.952] | 100 |
-| 3 | 0.930 | [0.863, 0.966] | 100 |
-| 4 | 0.900 | [0.826, 0.945] | 100 |
+| 1 | 0.780 | [0.689, 0.850] | 100 |
+| 2 | 0.770 | [0.678, 0.842] | 100 |
+| 3 | 0.650 | [0.552, 0.736] | 100 |
+| 4 | 0.490 | [0.394, 0.587] | 100 |
 
-Overall **0.920** [0.889, 0.943] on n=400.
-Spearman rho = -0.8, exact p = 0.1667. CI-separated pairs: none.
+Overall **0.672** [0.625, 0.717] on n=400.
+Spearman rho = -1.0, exact p = 0.0417. CI-separated pairs: [(1, 4), (2, 4)].
 
 ## Section 7.3 — exposure to the renderer defect
 
@@ -69,6 +69,7 @@ Source: persisted per-item flags.
 | real_criteria::negation_blind | 0 | 0 | 926 | 0.970 | [0.957, 0.979] |
 | real_criteria | 0 | 0 | 926 | 0.935 | [0.917, 0.949] |
 | real_criteria::rule_based | 0 | 0 | 926 | 1.000 | [0.996, 1.000] |
+| compositional@mixed_v2 | 0 | 0 | 400 | 0.672 | [0.625, 0.717] |
 
 ## Section 7.4 — calibration and abstention
 
@@ -86,6 +87,7 @@ Source: persisted per-item flags.
 | real_criteria::negation_blind | 0.270 | 0.700 | 0.9698 | 0.9698 | 0.9698 | 0.9698 | **no** |
 | real_criteria::openai | 0.048 | 0.889 | 0.995 | 0.9781 | 0.9608 | 0.9352 | yes |
 | real_criteria::rule_based | 0.029 | 0.971 | 1.0 | 1.0 | 1.0 | 1.0 | yes |
+| compositional::openai@mixed_v2 | 0.188 | 0.860 | 0.8479 | 0.7803 | 0.7668 | 0.6725 | yes |
 
 ## Section 7.5 — failure taxonomy
 
@@ -101,16 +103,166 @@ Heuristic labeller version(s) ['1', '2']. Heuristic triage labels. The manuscrip
 
 Human-only categories, unreachable by the labeller: ['entity_conflation', 'fabrication', 'implicit_knowledge'].
 
-**Human annotation: [not run].**
+### Human annotation
 
-To be reported: consensus distribution [...]; Cohen's kappa [k] with 95% CI
-[lo, hi]; percent agreement [x]; per-category kappa [...]; kappa by arm
-(compositional [k], real criteria [k]); fraction flagged as requiring
-clinical judgement [x] with kappa flagged [k] versus not [k]; disagreements
-adjudicated [n], of which clinical [n]; automatic-versus-consensus kappa [k]
-with [n] agreement-impossible items.
-
-Fill with: `scripts/annotation_export.py then scripts/annotation_report.py --adjudication ...`
+```json
+{
+  "n_shared_items": 179,
+  "n_only_annotator1": 0,
+  "n_only_annotator2": 0,
+  "meets_minimum_sample": true,
+  "overall": {
+    "n": 179,
+    "kappa": 0.3369,
+    "ci_95": [
+      0.2521,
+      0.42
+    ],
+    "percent_agreement": 0.4804,
+    "n_bootstrap": 5000,
+    "per_category": {
+      "entity_conflation": {
+        "n_annotator_1": 2,
+        "n_annotator_2": 5,
+        "n_both": 0,
+        "kappa_one_vs_rest": -0.0162,
+        "percent_agreement": 0.9609
+      },
+      "fabrication": {
+        "n_annotator_1": 13,
+        "n_annotator_2": 1,
+        "n_both": 1,
+        "kappa_one_vs_rest": 0.1339,
+        "percent_agreement": 0.933
+      },
+      "implicit_knowledge": {
+        "n_annotator_1": 0,
+        "n_annotator_2": 4,
+        "n_both": 0,
+        "kappa_one_vs_rest": 0.0,
+        "percent_agreement": 0.9777
+      },
+      "logical_composition": {
+        "n_annotator_1": 45,
+        "n_annotator_2": 90,
+        "n_both": 33,
+        "kappa_one_vs_rest": 0.2312,
+        "percent_agreement": 0.6145
+      },
+      "negation_polarity": {
+        "n_annotator_1": 61,
+        "n_annotator_2": 19,
+        "n_both": 15,
+        "kappa_one_vs_rest": 0.2543,
+        "percent_agreement": 0.7207
+      },
+      "none": {
+        "n_annotator_1": 0,
+        "n_annotator_2": 13,
+        "n_both": 0,
+        "kappa_one_vs_rest": 0.0,
+        "percent_agreement": 0.9274
+      },
+      "numeric_threshold": {
+        "n_annotator_1": 18,
+        "n_annotator_2": 8,
+        "n_both": 3,
+        "kappa_one_vs_rest": 0.18,
+        "percent_agreement": 0.8883
+      },
+      "temporal": {
+        "n_annotator_1": 40,
+        "n_annotator_2": 39,
+        "n_both": 34,
+        "kappa_one_vs_rest": 0.8213,
+        "percent_agreement": 0.9385
+      }
+    },
+    "annotator1_distribution": {
+      "entity_conflation": 2,
+      "fabrication": 13,
+      "logical_composition": 45,
+      "negation_polarity": 61,
+      "numeric_threshold": 18,
+      "temporal": 40
+    },
+    "annotator2_distribution": {
+      "entity_conflation": 5,
+      "fabrication": 1,
+      "implicit_knowledge": 4,
+      "logical_composition": 90,
+      "negation_polarity": 19,
+      "none": 13,
+      "numeric_threshold": 8,
+      "temporal": 39
+    }
+  },
+  "by_arm": {
+    "compositional": {
+      "n": 119,
+      "kappa": 0.0885,
+      "ci_95": [
+        -0.011,
+        0.1912
+      ],
+      "percent_agreement": 0.3697,
+      "n_bootstrap": 5000,
+      "per_category": {
+        "entity_conflation": {
+          "n_annotator_1": 2,
+          "n_annotator_2": 5,
+          "n_both": 0,
+          "kappa_one_vs_rest": -0.0246,
+          "percent_agreement": 0.9412
+        },
+        "fabrication": {
+          "n_annotator_1": 10,
+          "n_annotator_2": 0,
+          "n_both": 0,
+          "kappa_one_vs_rest": 0.0,
+          "percent_agreement": 0.916
+        },
+        "implicit_knowledge": {
+          "n_annotator_1": 0,
+          "n_annotator_2": 4,
+          "n_both": 0,
+          "kappa_one_vs_rest": 0.0,
+          "percent_agreement": 0.9664
+        },
+        "logical_composition": {
+          "n_annotator_1": 43,
+          "n_annotator_2": 87,
+          "n_both": 32,
+          "kappa_one_vs_rest": 0.0168,
+          "percent_agreement": 0.4454
+        },
+        "negation_polarity": {
+          "n_annotator_1": 46,
+          "n_annotator_2": 11,
+          "n_both": 7,
+          "kappa_one_vs_rest": 0.1133,
+          "percent_agreement": 0.6387
+        },
+        "numeric_threshold": {
+          "n_annotator_1": 11,
+          "n_annotator_2": 7,
+          "n_both": 2,
+          "kappa_one_vs_rest": 0.162,
+          "percent_agreement": 0.8824
+        },
+        "temporal": {
+          "n_annotator_1": 7,
+          "n_annotator_2": 5,
+          "n_both": 3,
+          "kappa_one_vs_rest": 0.4742,
+          "percent_agreement": 0.9496
+        }
+      },
+      "annotator1_distribution": {
+        "entity_conflation": 2,
+        "fabrication": 10,
+        "logical_compositio
+```
 
 ## Integrity gates
 
@@ -192,12 +344,6 @@ Indistinguishable at this sample size. Separating them needs n>=171 per depth.
 
 **Action.** Do not claim a difference between these two depths individually.
 
-### [NOTE] mixed-depth set
-
-No pair of depths is separated at 95% confidence on the mixed set.
-
-**Action.** This is the finding: the effect does not appear until beyond this depth range.
-
 ## Provenance
 
 ```json
@@ -216,7 +362,8 @@ No pair of depths is separated at 95% confidence on the mixed set.
     "compositional::rule_based": "results/compositional__rule_based.json",
     "real_criteria::negation_blind": "results/real_criteria__negation_blind.json",
     "real_criteria::openai": "results/real_criteria__openai.json",
-    "real_criteria::rule_based": "results/real_criteria__rule_based.json"
+    "real_criteria::rule_based": "results/real_criteria__rule_based.json",
+    "compositional::openai@mixed_v2": "results/mixed_v2/compositional__openai.json"
   },
   "inference_parameters": {
     "compositional_large::openai": {
@@ -284,6 +431,16 @@ No pair of depths is separated at 95% confidence on the mixed set.
     "real_criteria::rule_based": {
       "name": "rule_based",
       "type": "RuleBasedModel"
+    },
+    "compositional::openai@mixed_v2": {
+      "name": "openai",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "prompt_version": "2",
+      "api_key_env": "OPENAI_API_KEY",
+      "requested_temperature": 0.0,
+      "effective_temperature": 0.0,
+      "dropped_parameters": []
     }
   },
   "reproducibility_note": "Item sets, gold labels and prompts are deterministic. For the current gpt-4o-mini / prompt v2 run, requested temperature 0.0 was applied (dropped_parameters empty). Completions are not redistributed; the per-item predictions are the record of the run."

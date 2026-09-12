@@ -65,6 +65,7 @@ S = _load_stats()
 REPORTED_SWEEP = {f"compositional_d{d}::openai": {"depth": d, "n_per_depth": 60,
                                                   "seed": 101 + d} for d in range(2, 7)}
 REPORTED_MIXED = "compositional_large::openai"
+CURRENT_MIXED_LABEL = "compositional::openai@mixed_v2"
 CURRENT_SWEEP_LABEL = "compositional::openai"
 CURRENT_SWEEP_MODEL = "gpt-4o-mini"
 CURRENT_SWEEP_PROMPT = "2"
@@ -106,8 +107,24 @@ def _identity(run: dict) -> dict:
 # --------------------------------------------------------------------------- #
 # Loading
 # --------------------------------------------------------------------------- #
+def _add_run_file(runs: dict, path: Path, label_suffix: str | None = None) -> None:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not data.get("per_item_predictions") or "task" not in data:
+        return
+    label = f"{data['task']}::{data.get('model', {}).get('name', path.stem)}"
+    if label_suffix:
+        label = f"{label}@{label_suffix}"
+    runs[label] = {"source": _repo_rel(path), **data}
+
+
 def load_runs(results_dir: Path) -> dict:
-    """Every run with persisted per-item predictions, keyed by label."""
+    """Every run with persisted per-item predictions, keyed by label.
+
+    Immediate subdirectories are loaded with an ``@dirname`` suffix so a file such as
+    ``results/mixed_v2/compositional__openai.json`` cannot overwrite the official
+    depth-sweep ``compositional::openai`` row. ``missing/`` is the legacy bundle and
+    is read separately.
+    """
     runs: dict = {}
     results_dir = Path(results_dir).resolve()
     legacy = results_dir / "missing" / "missing_runs.json"
@@ -120,12 +137,13 @@ def load_runs(results_dir: Path) -> dict:
                                "inference": payload.get("inference_parameters", {}),
                                **run}
     for path in sorted(results_dir.glob("*.json")):
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if not data.get("per_item_predictions") or "task" not in data:
-            continue
-        label = f"{data['task']}::{data.get('model', {}).get('name', path.stem)}"
-        src = _repo_rel(path)
-        runs[label] = {"source": src, **data}
+        _add_run_file(runs, path)
+    skip_dirs = {"missing", "leaderboard"}
+    for sub in sorted(p for p in results_dir.iterdir()
+                      if p.is_dir() and p.name not in skip_dirs
+                      and not p.name.startswith(("_", "."))):
+        for path in sorted(sub.glob("*.json")):
+            _add_run_file(runs, path, label_suffix=sub.name)
     return runs
 
 
@@ -322,7 +340,7 @@ def _current_combined(summaries: dict, runs: dict | None) -> str | None:
         if not lbl.startswith("compositional::"):
             continue
         ident = _identity(runs[lbl])
-        if ident["legacy"]:
+        if ident["legacy"] or "@" in lbl:
             continue
         name = None
         model = runs[lbl].get("model")
@@ -404,14 +422,27 @@ def depth_sweep(summaries: dict, runs: dict | None = None) -> dict:
     return _not_run_sweep()
 
 
+def _mixed_label(summaries: dict) -> str | None:
+    if CURRENT_MIXED_LABEL in summaries:
+        return CURRENT_MIXED_LABEL
+    tagged = [lbl for lbl in summaries if lbl.endswith("@mixed_v2")]
+    if tagged:
+        return tagged[0]
+    if REPORTED_MIXED in summaries:
+        return REPORTED_MIXED
+    return None
+
+
 def mixed_depth(summaries: dict, runs: dict | None = None) -> dict:
-    if REPORTED_MIXED not in summaries:
+    label = _mixed_label(summaries)
+    if label is None:
         return {"status": "not run",
                 "fill_with": ("python scripts/run_eval.py --task compositional "
-                              "--n-per-depth 100 --max-depth 4 --seed 29 --model openai")}
-    s = summaries[REPORTED_MIXED]
-    ident = _identity(runs[REPORTED_MIXED]) if runs and REPORTED_MIXED in runs else {
-        "model": "gpt-5-nano", "prompt_version": "1", "legacy": True, "source": None,
+                              "--n-per-depth 100 --max-depth 4 --seed 29 --model openai "
+                              "--outdir results/mixed_v2")}
+    s = summaries[label]
+    ident = _identity(runs[label]) if runs and label in runs else {
+        "model": None, "prompt_version": None, "legacy": True, "source": None,
     }
     per_depth = {int(d): (v["n_correct"], v["n"]) for d, v in s["by_depth"].items()}
     trend = S.depth_trend(per_depth) if len(per_depth) >= 2 else None
@@ -420,10 +451,11 @@ def mixed_depth(summaries: dict, runs: dict | None = None) -> dict:
             "by_depth": s["by_depth"], "trend": trend,
             "ci_separated_pairs": ([p["depths"] for p in trend["pairwise"]
                                     if not p["cis_overlap"]] if trend else []),
-            "legacy": ident.get("legacy", True),
-            "model": ident.get("model") or "gpt-5-nano",
-            "prompt_version": ident.get("prompt_version") or "1",
-            "source": ident.get("source")}
+            "legacy": ident.get("legacy", False),
+            "model": ident.get("model"),
+            "prompt_version": ident.get("prompt_version"),
+            "source": ident.get("source"),
+            "label": label}
 
 
 def exposure_stratification(runs: dict) -> dict:
@@ -496,6 +528,8 @@ def taxonomy(runs: dict, summaries: dict) -> dict:
     per_run: dict[str, dict] = {}
     labeller_versions = set()
     for lbl, r in runs.items():
+        if "@mixed_v2" in lbl:
+            continue
         counts = (r.get("failure_taxonomy", {}).get("categories")
                   or r.get("failure_taxonomy_raw") or {})
         if isinstance(r.get("failure_taxonomy"), dict):
@@ -580,9 +614,12 @@ def gates(summaries: dict, sweep: dict, mixed: dict, sec3: dict) -> list[dict]:
                 + ("" if n == -1 else f" Separating them needs n>={n} per depth."),
                 "Do not claim a difference between these two depths individually.")
     if mixed.get("status") == "computed" and not mixed["ci_separated_pairs"]:
+        action = ("This is the finding: the effect does not appear until beyond this "
+                  "depth range." if mixed.get("legacy") else
+                  "Do not claim a difference between individual depths; report the curve.")
         add("NOTE", "mixed-depth set",
             "No pair of depths is separated at 95% confidence on the mixed set.",
-            "This is the finding: the effect does not appear until beyond this depth range.")
+            action)
 
     arm1 = (sec3 or {}).get("arm1") or {}
     if arm1.get("status") == "computed":
@@ -693,6 +730,9 @@ def render(payload: dict) -> str:
             L += [f"**Legacy artifact.** `{mixed.get('model')}`, prompt v"
                   f"{mixed.get('prompt_version')}, source `{mixed.get('source')}`. "
                   "Not a measurement of the current run.", ""]
+        else:
+            L += [f"**Current run.** `{mixed.get('model')}`, prompt v"
+                  f"{mixed.get('prompt_version')}, source `{mixed.get('source')}`.", ""]
         L += ["| Depth | Accuracy | 95% Wilson CI | n |", "|---|---|---|---|"]
         for d, v in mixed["by_depth"].items():
             L.append(f"| {d} | {_pct(v['accuracy'])} | {_ci(v['wilson_95'])} | {v['n']} |")

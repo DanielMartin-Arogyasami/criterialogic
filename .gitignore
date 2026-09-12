@@ -9,6 +9,7 @@ results/*
 !results/DISCREPANCIES.md
 !results/paper_data.json
 !results/paper_data.md
+!results/agreement.json
 !results/verify_extract.md
 !results/AUDIT.md
 !results/audit.json
@@ -19,6 +20,10 @@ results/*
 !results/compositional__negation_blind.json
 !results/real_criteria__rule_based.json
 !results/real_criteria__negation_blind.json
+!results/mixed_v2/
+results/mixed_v2/*
+!results/mixed_v2/compositional__openai.json
+!results/mixed_v2/report.md
 !results/missing/
 results/missing/*
 !results/missing/AUDIT_missing.md
@@ -62,6 +67,10 @@ annotation/*
 !annotation/automatic_labels_HELD_BACK.csv
 !annotation/errors_annotator1_FINAL.csv
 !annotation/errors_annotator2_FINAL.csv
+!annotation/completed_errors_annotator1.csv
+!annotation/completed_errors_annotator2.csv
+!annotation/completed_errors_annotator3.csv
+!annotation/completed_errors_annotator4.csv
 !annotation/adjudication.csv
 !annotation/report.json
 # partial submissions
