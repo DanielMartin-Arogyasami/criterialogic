@@ -68,6 +68,8 @@ annotation/*
 !annotation/errors_annotator2_FINAL.csv
 !annotation/completed_errors_annotator1.csv
 !annotation/completed_errors_annotator2.csv
+!annotation/completed_errors_annotator3.csv
+!annotation/completed_errors_annotator4.csv
 !annotation/adjudication.csv
 !annotation/report.json
 # partial submissions
