@@ -17,14 +17,15 @@ Two arms, one snapshot, no gated data:
   depths 1–6, composed from atoms extracted from the same snapshot.
 - **Cross-cutting:** calibration and abstention (ECE, tie-aware selective accuracy).
 
-Plus a seven-category reasoning-failure taxonomy and a published codebook. Human
-annotation of the error set has not been run; the protocol is in `docs/CODEBOOK.md`.
+Plus a seven-category reasoning-failure taxonomy and a published codebook. Two annotators
+independently labelled all 179 errors from the evaluated runs; Cohen's κ = 0.337
+[0.252, 0.420]. Both label sets are released. Codebook: `docs/CODEBOOK.md`.
 
 > **Data policy:** public-domain and synthetic only. Everything needed to reproduce both
 > arms is committed. No data-use agreement, no credentials.
 
 > **Reproducing the results?** `RUN.md` has the turnkey commands, and `make finish` runs
-> the whole deterministic chain. Remaining work is five cards in `docs/TASKS.md`.
+> the whole deterministic chain. Remaining work is tracked in `docs/TASKS.md`.
 
 ## Quickstart
 
@@ -41,7 +42,7 @@ python scripts/preflight.py
 python scripts/run_eval.py
 ```
 
-`preflight.py` checks the interpreter, the dependency, the resolved data directory, the
+`scripts/preflight.py` checks the interpreter, the dependency, the resolved data directory, the
 snapshot and the atom pool, then runs a real evaluation through both arms. Its exit code is
 the number of failed checks.
 
@@ -92,6 +93,16 @@ these sample sizes adjacent rows are routinely indistinguishable.
 
 Spearman rho = −0.9, exact one-sided permutation p = 0.0417, pooled 0.603 [0.547, 0.657]. Not monotonic. Full intervals, provenance and caveats: [`results/paper_data.md`](results/paper_data.md).
 
+### Arm 2b — replication on an independently generated set
+
+| System | d1 | d2 | d3 | d4 | n/depth |
+|---|---|---|---|---|---|
+| gpt-4o-mini (prompt v2) | 0.780 [0.689, 0.850] | 0.770 [0.678, 0.842] | 0.650 [0.552, 0.736] | 0.490 [0.394, 0.587] | 100 |
+
+400 items generated separately from the sweep above. Spearman rho = −1.000, exact p = 0.0417
+(the floor for four levels), monotonic, pooled 0.672 [0.625, 0.717]. The two sets agree within
+0.033 at every overlapping depth, so the depth effect is not an artefact of one generation.
+
 ### Arm 1 — real criteria
 
 | System | micro-F1 | macro-F1 | n |
@@ -140,26 +151,48 @@ The collector recomputes every figure from the persisted per-item predictions, r
 integrity gates (ceiling effects, degenerate confidence, rationale clustering, unanswerable
 items, depth-trend significance and the n that would resolve each unresolved pair) as part
 of collection, and prints a bracket with the command that fills it wherever an experiment
-has not been run. `--verify` runs in CI and checks the five §7.1 depth rows plus Spearman
-rho and the permutation p in `results/verify_extract.md`.
+has not been run. `--verify` runs in CI against `results/verify_extract.md` and
+checks the five §7.1 depth rows, Spearman rho, the permutation p, the §3.2 composition
+counts, the §7.6 micro-F1 and the §7.7 accuracy range — 36 figures in all. It does not
+cover the agreement statistics; those live in `results/agreement.json`.
 
 ## Error taxonomy and annotation
 
 Seven categories: negation/polarity, temporal, numeric threshold, logical composition,
 entity conflation, implicit-knowledge gap, fabrication.
 
+Two annotators labelled all 179 errors from the evaluated runs independently and blind to
+each other. Cohen's κ = 0.337 [0.252, 0.420] over 179 items, 0.539 on real criteria and
+0.088 on synthetic nested logic. Only `temporal` is applied reliably (κ = 0.821). Released:
+
+| File | Contents |
+|---|---|
+| `annotation/annotator1_labels.csv` | annotator 1, all 179 rows |
+| `annotation/annotator2_labels.csv` | annotator 2, all 179 rows |
+| `annotation/report.json` | agreement statistics, also at `results/agreement.json` |
+| `annotation/automatic_labels_HELD_BACK.csv` | heuristic labeller output, withheld during labelling |
+
+Reproduce the reported figures from the released labels:
+
 ```bash
-python scripts/annotation_export.py --results results/ \
+python scripts/annotation_report.py --a annotation/annotator1_labels.csv \
+                                    --b annotation/annotator2_labels.csv \
+                                    --automatic annotation/automatic_labels_HELD_BACK.csv \
+                                    --out results/agreement.json
+```
+
+To annotate a new error set from scratch:
+
+```bash
+python scripts/annotation_export.py --results results/ --prompt-version 2 \
     --depths 2,3,4,5,6 --n-per-depth 60 --n 200 --out annotation/
 # both annotators fill category + clinical_judgement_required, blind to each other
-python scripts/annotation_report.py --a annotation/errors_annotator1.csv \
-                                    --b annotation/errors_annotator2.csv \
-                                    --adjudication-out annotation/adjudication.csv
 ```
 
 The codebook is [`docs/CODEBOOK.md`](docs/CODEBOOK.md) and is the instrument, not a
-convenience. A heuristic labeller pre-sorts errors for triage; neither annotator sees its
-output while labelling, and its agreement with the human consensus is reported separately.
+convenience. A heuristic labeller pre-sorts errors for triage and neither annotator saw its
+output while labelling. **Adjudication was not run**, so no consensus label set exists and
+no taxonomy distribution is reported; both annotators' raw labels are released instead.
 
 ## Reproducibility
 
