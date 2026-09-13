@@ -1,6 +1,6 @@
 """Assemble manuscript supplements S1, S3, S4, S5 from files already in the repo.
 
-Writes ``paper/supplement/``. Does not invent figures: tables are copied from
+Writes ``supplement/``. Does not invent figures: tables are copied from
 ``results/paper_data.md``, prompts and the v1/v2 rendering difference are taken
 from ``criterialogic.models.llm_api``, and S5 is ``DATASHEET.md`` verbatim.
 """
@@ -11,7 +11,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "paper" / "supplement"
+OUT = ROOT / "supplement"
 
 RUN_FILES = [
     "results/compositional__openai.json",

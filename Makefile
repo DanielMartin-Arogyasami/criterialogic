@@ -24,7 +24,7 @@ help:
 	@echo "  run-offline      both arms, diagnostic models, no key"
 	@echo "  run-llm          depth sweep + Arm 1 under prompt v2 (MODEL=, NPD=)  <- needs a key"
 	@echo "  paper            regenerate results/paper_data.md"
-	@echo "  supplement       assemble S1, S3–S5 into paper/supplement/ from repo files"
+	@echo "  supplement       assemble S1, S3–S5 into supplement/ from repo files"
 	@echo "  verify           diff the numbers extract against the artifacts (exits non-zero on drift)"
 	@echo "  verify-paper     same check against paper/CriteriaLogic.md (local; the manuscript is gitignored)"
 	@echo "  annotate-export  draw the sample, write the two blind annotator files"
