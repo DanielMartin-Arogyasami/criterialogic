@@ -57,3 +57,51 @@ def test_generation_is_deterministic():
 def test_impossible_parameters_are_refused(leaves, groups, nots, depths):
     with pytest.raises(ValueError):
         _check_params(leaves, groups, nots, depths)
+
+
+# --------------------------------------------------------------------------- #
+# The converse design: size varies at fixed depth
+# --------------------------------------------------------------------------- #
+@pytest.fixture(scope="module")
+def sweep():
+    from criterialogic.tasks.size_matched import generate_size_sweep_items
+    return generate_size_sweep_items(n_per_size=10, seed=5)
+
+
+def test_size_sweep_holds_depth_and_scales_size(sweep):
+    from criterialogic.tasks.size_matched import DEFAULT_SWEEP_SIZES
+    by_leaves = {}
+    for it in sweep:
+        s = expression_stats(it.criterion.expression)
+        assert s["depth"] == 3 and s["canonical_depth"] == 3 and it.depth == 3
+        by_leaves.setdefault(s["leaves"], []).append((s["groups"], s["nots"], it.gold))
+    assert sorted(by_leaves) == [a for a, _, _ in DEFAULT_SWEEP_SIZES]
+    for leaves, groups, nots in DEFAULT_SWEEP_SIZES:
+        rows = by_leaves[leaves]
+        assert all(g == groups and n == nots for g, n, _ in rows)
+        assert len(rows) == 10 and sum(1 for *_, gold in rows if gold) == 5
+
+
+def test_size_sweep_ids_are_unique_and_deterministic(sweep):
+    from criterialogic.tasks.size_matched import generate_size_sweep_items
+    assert len({it.item_id for it in sweep}) == len(sweep)
+    again = generate_size_sweep_items(n_per_size=10, seed=5)
+    assert [x.model_dump(mode="json") for x in again] == [x.model_dump(mode="json") for x in sweep]
+
+
+def test_size_matched_released_set_is_unchanged_by_the_shared_helper():
+    # Guards the refactor that added the size sweep: the committed size-matched item set
+    # must still regenerate byte-for-byte from the default arguments.
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[1] / "data/processed/logic_set_size_matched.json"
+    if not path.is_file():
+        pytest.skip("size-matched item set not generated in this checkout")
+    # The pool digest is a hash of the pool file's bytes, so a checkout that converts it to
+    # CRLF stamps a different digest on otherwise identical items; compare without it.
+    def strip(rows):
+        for r in rows:
+            r["criterion"]["metadata"].pop("atom_pool_sha256", None)
+        return rows
+    regenerated = strip([it.model_dump(mode="json") for it in generate_size_matched_items()])
+    committed = strip(json.loads(path.read_text(encoding="utf-8")))
+    assert regenerated == committed

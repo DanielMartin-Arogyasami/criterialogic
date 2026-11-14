@@ -13,7 +13,7 @@ else
 VENV_PY = .venv/bin/python
 endif
 
-.PHONY: help setup check data run-offline run-llm paper supplement verify verify-paper annotate-export annotate-report finish release clean revision run-size-matched
+.PHONY: help setup check data run-offline run-llm paper supplement verify verify-paper annotate-export annotate-report finish release clean revision run-size-matched run-size-sweep
 
 help:
 	@echo "CriteriaLogic — make targets (in the order you need them)"
@@ -32,6 +32,7 @@ help:
 	@echo "  finish           setup -> check -> data -> run-offline -> paper -> verify"
 	@echo "  revision         per-depth structure, Arm 1 re-score, size-matched offline check (no key)"
 	@echo "  run-size-matched size-matched set on gpt-4o-mini, prompt v2   <- needs a key"
+	@echo "  run-size-sweep   fixed-depth size sweep on gpt-4o-mini, prompt v2   <- needs a key"
 	@echo "  release          pre-release gate: clean tree, tests, verify, no placeholders"
 
 setup:
@@ -101,6 +102,10 @@ revision:
 	$(PY) scripts/depth_structure.py
 	$(PY) scripts/rescore_real_criteria.py
 	$(PY) scripts/run_size_matched.py
+	$(PY) scripts/run_size_sweep.py
 
 run-size-matched:
 	$(PY) scripts/run_size_matched.py --model $(MODEL)
+
+run-size-sweep:
+	$(PY) scripts/run_size_sweep.py --model $(MODEL)
