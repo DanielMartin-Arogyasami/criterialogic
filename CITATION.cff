@@ -1,14 +1,24 @@
 cff-version: 1.2.0
-title: "CriteriaLogic: A Depth-Parameterised Stress Test for Logical Reasoning over Clinical-Trial Eligibility Criteria"
+title: "CriteriaLogic: Separating Nesting Depth from Expression Size in LLM Reasoning over Clinical-Trial Eligibility Criteria"
 message: "If you use this benchmark, please cite it."
 type: software
 authors:
   - family-names: "Arogyasami"
     given-names: "Daniel Martin"
     affiliation: "Independent Researcher"
-version: 0.2.0
+    orcid: "https://orcid.org/0009-0002-8296-3611"
+version: 0.3.0
 license: MIT
-repository-code: "https://github.com/darogyasami/criterialogic"
+repository-code: "https://github.com/DanielMartin-Arogyasami/criterialogic"
+abstract: >-
+  Evaluation toolkit and data for LLM reasoning over clinical-trial eligibility
+  criteria. A real-criteria arm uses criteria segmented verbatim from a dated
+  ClinicalTrials.gov snapshot, with each mapped form checked against its source
+  sentence. A compositional arm composes predicates from the same snapshot into
+  nested AND/OR/NOT expressions labelled by a three-valued evaluator, in designs
+  that vary nesting depth and expression size separately. Released with the
+  snapshot, the atom pool, the item sets, per-item predictions, the
+  reasoning-failure codebook and both annotators' labels.
 keywords:
   - clinical trial eligibility
   - patient-trial matching

@@ -66,7 +66,7 @@ FIELDS = (
 #: At most 2 requests/second against the public API.
 MIN_REQUEST_INTERVAL_S = 0.5
 
-_USER_AGENT = "CriteriaLogic/0.2 (+https://github.com/darogyasami/criterialogic)"
+_USER_AGENT = "CriteriaLogic/0.3 (+https://github.com/DanielMartin-Arogyasami/criterialogic)"
 
 #: Bumped whenever the extraction rules change, so a pool file built by an older
 #: version is identifiable rather than silently mixed with a newer one.

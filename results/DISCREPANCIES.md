@@ -445,7 +445,7 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
 
 ## 24. The size claim needs size varied at fixed depth
 
-- **Status:** resolved-in-code; run pending
+- **Status:** resolved-in-code — run complete; **the author decides the wording**
 - **Location:** `criterialogic/tasks/size_matched.py::generate_size_sweep_items`;
   `scripts/run_size_sweep.py`
 - **Problem.** Entry 22's result moves the manuscript's claim to expression size, but in the
@@ -454,6 +454,11 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   with groups and NOT nodes in the size-matched ratio and the gold label half met at every
   size; its 14-leaf level is the size-matched depth-3 configuration drawn again. The trend is
   reported per doubling of leaves.
+- **Result.** The `gpt-4o-mini` run (`results/size_sweep/compositional__openai.json`, 500 items)
+  scores 0.70, 0.67, 0.58, 0.58 and 0.53 at 7, 14, 28, 56 and 112 leaves; odds ratio per
+  doubling of leaves 0.833 [0.732, 0.948], likelihood-ratio p = 0.0052, permutation p for a
+  decline 0.0024 (`results/size_sweep/structure__openai.md`). Its 14-leaf level scores 0.67,
+  against 0.71 for depth 3 in the size-matched set.
 
 ## 23. Inter-annotator agreement falls once Arm 1 label artefacts are removed
 
@@ -463,3 +468,22 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   headline subset (entries 20-21), so they are not established model failures. Removing them
   leaves 132 errors with kappa 0.165 [0.068, 0.266], against 0.337 [0.252, 0.420] on all 179;
   the compositional arm alone is unchanged at 0.088.
+
+## 25. Repository metadata still described the submitted manuscript
+
+- **Status:** resolved-in-code
+- **Location:** `CITATION.cff`; `pyproject.toml`; `criterialogic/data/loaders/ctgov.py::_USER_AGENT`;
+  `README.md`; `Makefile::release`; versus the manuscript title and §9
+- **Problem.** `CITATION.cff`, `pyproject.toml` and the snapshot fetcher's user agent gave the
+  repository as `github.com/darogyasami/criterialogic`, not the
+  `github.com/DanielMartin-Arogyasami/criterialogic` that §9 cites, and the release gate looked
+  only for the literal placeholder. `CITATION.cff` and `pyproject.toml` carried the submitted
+  title and description, and the README presented the decline as an effect of depth and Arm 1
+  at 0.935 on all 926 items, which the revised manuscript no longer claims (entries 20, 22).
+  The README also attributed the missing snapshot id in the compositional run to its date;
+  the compositional generator never records one and identifies its source by the atom pool
+  digest instead.
+- **Resolution in code.** Title, description and URLs corrected; version 0.3.0. The README
+  reports the size-matched set, the size sweep and the verified Arm 1 subset beside the
+  original figures. `make release` now also fails on the stale handle, and no longer passes
+  without checking anything when `paper/` is absent.
