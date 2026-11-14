@@ -139,7 +139,7 @@
           0.5672,
           0.8041
         ],
-        "p_lr_two_sided": 5.2518503980910335e-06,
+        "p_lr_two_sided": 5.251850398091032e-06,
         "p_perm_one_sided_decline": 4.999750012499375e-05,
         "n_permutations": 20000,
         "mode": "monte_carlo"

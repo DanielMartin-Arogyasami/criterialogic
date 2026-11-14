@@ -6294,8 +6294,8 @@
   },
   "repro": {
     "seed": 29,
-    "python": "3.13.18",
-    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
-    "timestamp_utc": "2026-11-14T18:08:17+00:00"
+    "python": "3.13.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "timestamp_utc": "2026-11-14T18:14:45+00:00"
   }
 }

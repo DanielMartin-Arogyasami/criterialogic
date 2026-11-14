@@ -1,7 +1,7 @@
 {
   "name": "Size-matched set: negation_blind",
-  "items": "data/processed/logic_set_size_matched.json",
-  "predictions": "results/size_matched/compositional__negation_blind.json",
+  "items": "data\\processed\\logic_set_size_matched.json",
+  "predictions": "results\\size_matched\\compositional__negation_blind.json",
   "model": {
     "name": "negation_blind",
     "type": "NegationBlindModel"

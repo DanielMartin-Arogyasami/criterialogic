@@ -1,7 +1,7 @@
 {
   "name": "Size-matched set: rule_based",
-  "items": "data/processed/logic_set_size_matched.json",
-  "predictions": "results/size_matched/compositional__rule_based.json",
+  "items": "data\\processed\\logic_set_size_matched.json",
+  "predictions": "results\\size_matched\\compositional__rule_based.json",
   "model": {
     "name": "rule_based",
     "type": "RuleBasedModel"
