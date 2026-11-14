@@ -4,6 +4,7 @@ data/raw/
 data/processed/*
 !data/processed/logic_set_depth_sweep.json
 !data/processed/logic_set_mixed.json
+!data/processed/logic_set_size_matched.json
 # Generated run artifacts are transient; only the curated collection outputs below are tracked.
 results/*
 !results/DISCREPANCIES.md
@@ -14,6 +15,18 @@ results/*
 !results/AUDIT.md
 !results/audit.json
 !results/selective_accuracy_corrected.json
+!results/depth_structure.json
+!results/depth_structure.md
+!results/real_criteria_verified.json
+!results/real_criteria_verified.md
+!results/size_matched/
+results/size_matched/*
+!results/size_matched/compositional__*.json
+!results/size_matched/report__*.md
+!results/size_matched/structure__*.json
+!results/size_matched/structure__*.md
+!results/size_matched/structure_vs_released.json
+!results/size_matched/structure_vs_released.md
 !results/compositional__openai.json
 !results/real_criteria__openai.json
 !results/compositional__rule_based.json
@@ -66,5 +79,7 @@ annotation/*
 !annotation/annotator1_labels.csv
 !annotation/annotator2_labels.csv
 !annotation/report.json
+!annotation/arm1_verification.csv
+!annotation/ARM1_VERIFICATION.md
 # partial submissions
 results/leaderboard/*.tmp

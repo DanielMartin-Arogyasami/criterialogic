@@ -1,0 +1,464 @@
+criterion_id,trial_id,polarity,criterion_text,mapped_form,verdict,reason
+ctgov:NCT07675850:inc:00,NCT07675850,inclusion,Patients aged 19 to 79 years undergoing elective non-cardiac surgery expected to last 60 minutes or longer under general anesthesia with endotracheal intubation,age between 19.0 and 79.0 years,drop,drops a required condition: elective non-cardiac surgery under general anaesthesia
+ctgov:NCT07675850:exc:01,NCT07675850,exclusion,Body Mass Index (BMI) ≥ 35 kg/㎡,body mass index >= 35.0 kg/,keep,
+ctgov:NCT07675850:exc:02,NCT07675850,exclusion,Contraindication or history of hypersensitivity to remimazolam,hypersensitivity to remimazolam (at any time in history),keep,"drops a disjunct (contraindication), which cannot change the label while that condition is undocumented"
+ctgov:NCT07675850:exc:03,NCT07675850,exclusion,Contraindication or history of hypersensitivity to flumazenil,hypersensitivity to flumazenil (at any time in history),keep,"drops a disjunct (contraindication), which cannot change the label while that condition is undocumented"
+ctgov:NCT07678268:inc:00,NCT07678268,inclusion,Age ≥18 years,age >= 18.0 years,keep,
+ctgov:NCT07678385:inc:00,NCT07678385,inclusion,Adults aged 18 to 45 years.,age between 18.0 and 45.0 years,keep,
+ctgov:NCT07678385:exc:01,NCT07678385,exclusion,History of cardiac conduction disorders or documented arrhythmias.,(cardiac conduction disorders (at any time in history) OR arrhythmias),keep,
+ctgov:NCT07678385:exc:02,NCT07678385,exclusion,Known or suspected hypersensitivity to amide-type local anesthetics.,hypersensitivity to amide-type local anesthetics,keep,
+ctgov:NCT07679282:exc:00,NCT07679282,exclusion,History of liver disease,liver disease (at any time in history),keep,
+ctgov:NCT07679685:inc:00,NCT07679685,inclusion,"Age 18-70 years (inclusive), male or female;",age between 18.0 and 70.0 years,keep,
+ctgov:NCT07680140:inc:00,NCT07680140,inclusion,Diagnosis of Major Depressive Disorder (by DSM-5 criteria),major depressive disorder,keep,
+ctgov:NCT07680140:exc:01,NCT07680140,exclusion,Lifetime history of PCP/ketamine abuse,pcp/ketamine abuse (at any time in history),keep,
+ctgov:NCT07680153:inc:00,NCT07680153,inclusion,Diagnosis of Bipolar Disorder (by DSM-V criteria),bipolar disorder,keep,
+ctgov:NCT07680478:inc:00,NCT07680478,inclusion,Be 18-75 years old,age between 18.0 and 75.0 years,keep,
+ctgov:NCT07682662:inc:00,NCT07682662,inclusion,"Confirmed Sickle Cell Disease (any genotype), Presenting to the Emergency Department with Vaso-occlusive crisis/pain crisis, Consent obtained",sickle cell disease,drop,drops required conditions: ED presentation with vaso-occlusive crisis; consent
+ctgov:NCT07682922:inc:00,NCT07682922,inclusion,Aged 18 to 80 years (inclusive).,age between 18.0 and 80.0 years,keep,
+ctgov:NCT07682922:exc:01,NCT07682922,exclusion,Patients receiving intravenous thrombolysis alone.,intravenous thrombolysis alone,keep,
+ctgov:NCT07683520:inc:00,NCT07683520,inclusion,No use of antibiotic three months before treatment.,NOT (antibiotic three months),drop,time window folded into the entity name ('antibiotic three months')
+ctgov:NCT07683520:exc:01,NCT07683520,exclusion,Patients with allergy to pollen.,allergy to pollen,keep,
+ctgov:NCT07683923:exc:00,NCT07683923,exclusion,Coronary artery disease (CAD) requiring secondary preventive therapy with APT.,apt,drop,entity is a fragment ('apt'); drops coronary artery disease
+ctgov:NCT07683923:exc:01,NCT07683923,exclusion,"History of major bleeding, BARC class ≥3 within 3 months before study in-clusion.",major bleeding (within the past 3.0 months),keep,
+ctgov:NCT07683923:exc:02,NCT07683923,exclusion,Known bleeding diathesis.,bleeding diathesis,keep,
+ctgov:NCT07684365:exc:00,NCT07684365,exclusion,Receiving magnesium sulfate,magnesium sulfate,keep,
+ctgov:NCT07684365:exc:01,NCT07684365,exclusion,Known major spine pathology,major spine pathology,keep,
+ctgov:NCT07684469:inc:00,NCT07684469,inclusion,Fasting triglycerides <4.52 mmol/L (<400 mg/dL) at screening.,triglycerides < 4.52 mmol/L,keep,
+ctgov:NCT07684469:inc:01,NCT07684469,inclusion,Estimated glomerular filtration rate (eGFR) >30 mL/min at screening.,egfr > 30.0 mL/min,keep,
+ctgov:NCT07684469:exc:02,NCT07684469,exclusion,New York Heart Association (NYHA) class IIIb or IV heart failure or last known left ventricular ejection fraction <25%.,ejection fraction < 25.0 %,keep,"drops a disjunct (NYHA IIIb/IV), which cannot change the label while that condition is undocumented"
+ctgov:NCT07684469:exc:03,NCT07684469,exclusion,Homozygous familial hypercholesterolemia (HoFH) defined as LDL-C ≥ 12 mmol/L.,ldl-c >= 12.0 mmol/L,keep,
+ctgov:NCT07684625:inc:00,NCT07684625,inclusion,Patients receiving Lumbricus Rubellus extract therapy during outpatient care at the Endocrinology Clinic.,lumbricus rubellus extract therapy,keep,
+ctgov:NCT07684625:exc:01,NCT07684625,exclusion,Patients with diabetic foot ulcer grade 1-2.,diabetic foot ulcer grade 1-2,keep,
+ctgov:NCT07684625:exc:02,NCT07684625,exclusion,Patients with Diabetic Kidney Disease (DKD) Stage 5.,diabetic kidney disease stage 5,keep,
+ctgov:NCT07684625:exc:03,NCT07684625,exclusion,Patients with chronic liver disease.,chronic liver disease,keep,
+ctgov:NCT07684742:exc:00,NCT07684742,exclusion,"Platelet count <100,000/mm3 or WBC count <3,000/mm3",platelet count < 100.0,keep,"drops a disjunct (WBC count), which cannot change the label while that condition is undocumented"
+ctgov:NCT07685743:exc:00,NCT07685743,exclusion,History of venous thromboembolism (DVT or PE),venous thromboembolism (at any time in history),keep,
+ctgov:NCT07685769:inc:00,NCT07685769,inclusion,Participants have previous insufficient response and/or prior intolerance to at least one triptan or documented contraindication to the use of triptan.,triptan (at any time in history),drop,"entity loses its condition: insufficient response or intolerance to a triptan, not any triptan use"
+ctgov:NCT07685769:inc:01,NCT07685769,inclusion,Documented contraindication to triptans -,contraindication to triptans,keep,
+ctgov:NCT07685769:inc:02,NCT07685769,inclusion,Documented hypersensitivity to triptan,hypersensitivity to triptan,keep,
+ctgov:NCT07685769:exc:03,NCT07685769,exclusion,"any previous lifetime history of suicidal behavior: ""Yes"" to answer to any of the suicidal behavior items of the C-SSRS.",suicidal behavior (at any time in history),keep,
+ctgov:NCT07685886:exc:00,NCT07685886,exclusion,History of major psychiatric disorder,major psychiatric disorder (at any time in history),keep,
+ctgov:NCT07686042:exc:00,NCT07686042,exclusion,Hemoglobin ≤80 g/L,hemoglobin <= 80.0 g/L,keep,
+ctgov:NCT07686042:exc:01,NCT07686042,exclusion,Platelet count ≤75×10⁹/L,platelet count <= 75.0,keep,
+ctgov:NCT07686042:exc:02,NCT07686042,exclusion,Estimated glomerular filtration rate (eGFR) ≤30 mL/min/1.73m²,egfr <= 30.0 mL/min/1.73m²,keep,
+ctgov:NCT07686679:inc:00,NCT07686679,inclusion,"Men or women aged 19 to 75 years, inclusive",age between 19.0 and 75.0 years,keep,
+ctgov:NCT07686679:inc:01,NCT07686679,inclusion,Subjects with a history of organic diseases that could cause dyspepsia,organic diseases (at any time in history),drop,drops a qualifier: diseases that could cause dyspepsia
+ctgov:NCT07686692:inc:00,NCT07686692,inclusion,Ambulatory adults age >=65 years with HFpEF (EF >50%),age >= 65.0 years,drop,drops a required condition: HFpEF (EF > 50%)
+ctgov:NCT07686692:exc:01,NCT07686692,exclusion,Known hypersensitivity/allergy to any IV iron formulation,hypersensitivity/allergy to any iv iron formulation,keep,
+ctgov:NCT07686692:exc:02,NCT07686692,exclusion,"History of iron overload (i.e., hemochromatosis)",iron overload (at any time in history),keep,
+ctgov:NCT07686692:exc:03,NCT07686692,exclusion,Hemoglobin <9 g/dL or >13.5 (women)/>15.0 (men) g/dL,hemoglobin < 9.0 g/dL,keep,"drops a disjunct (high haemoglobin), which cannot change the label while that condition is undocumented"
+ctgov:NCT07686757:inc:00,NCT07686757,inclusion,Age ≥21 years at the time of enrollment,age >= 21.0 years,keep,
+ctgov:NCT07686757:inc:01,NCT07686757,inclusion,"Eligible for treatment with biologic therapy for IBD, defined as failure of prior conventional therapy and/or prior biologic therapy (excluding IL-23p19 antagonists)",biologic therapy for ibd (at any time in history),drop,changes meaning: eligibility for biologic therapy read as a history of it
+ctgov:NCT07686757:exc:02,NCT07686757,exclusion,"History of extensive colorectal resection, including:",extensive colorectal resection (at any time in history),keep,
+ctgov:NCT07686861:inc:00,NCT07686861,inclusion,"Meets the diagnostic criteria of the Cirrhosis Ascites Diagnosis and Treatment Guidelines (2023 edition), confirmed cirrhosis ascites SBP",cirrhosis ascites sbp,keep,
+ctgov:NCT07686861:exc:01,NCT07686861,exclusion,Patients with liver cirrhosis who have non-bacterial peritonitis caused by reasons other than SBP,liver cirrhosis,drop,drops a required condition: non-bacterial peritonitis not caused by SBP
+ctgov:NCT07687160:inc:00,NCT07687160,inclusion,Standardized office systolic blood pressure ≥130 mmHg or diastolic blood pressure ≥80 mmHg.,(systolic blood pressure >= 130.0 mmHg OR diastolic blood pressure >= 80.0 mmHg),keep,
+ctgov:NCT07687160:inc:01,NCT07687160,inclusion,"Not currently receiving antihypertensive therapy, OR",NOT (antihypertensive therapy),drop,drops 'currently' under a negation; the sentence is a fragment ending in OR
+ctgov:NCT07687160:exc:02,NCT07687160,exclusion,Standardized office systolic blood pressure >170 mmHg if untreated OR >150 mmHg if receiving one antihypertensive medication.,(systolic blood pressure > 170.0 mmHg OR one antihypertensive medication),drop,wrong second disjunct: drops the > 150 mmHg threshold for treated patients
+ctgov:NCT07687160:exc:03,NCT07687160,exclusion,Known diagnosis of PA requiring specialist-directed management.,pa requiring specialist-directed management,keep,
+ctgov:NCT07687394:inc:00,NCT07687394,inclusion,Patients aged 20 to 80 years diagnosed with gastric cancer by endoscopic biopsy who are scheduled for minimally invasive radical gastrectomy (laparoscopic or robotic),age between 20.0 and 80.0 years,drop,"drops required conditions: gastric cancer, scheduled gastrectomy"
+ctgov:NCT07688460:inc:00,NCT07688460,inclusion,Confirmed presence of amyloid pathology (positive amyloid PET scan or CSF biomarkers).,amyloid pathology,keep,
+ctgov:NCT07688460:exc:01,NCT07688460,exclusion,Use of anticoagulants that cannot be safely interrupted.,anticoagulants,drop,drops a qualifier: cannot be safely interrupted
+ctgov:NCT07688512:exc:00,NCT07688512,exclusion,Patients with a known major coagulopathy,major coagulopathy,keep,
+ctgov:NCT07688512:exc:01,NCT07688512,exclusion,Patients with significant thrombocytopenia limiting neuraxial anesthesia (<70k),significant thrombocytopenia limiting neuraxial anesthesia,keep,
+ctgov:NCT07688512:exc:02,NCT07688512,exclusion,Patients with severe cardiac disease contraindicating oxytocin,severe cardiac disease contraindicating oxytocin,keep,
+ctgov:NCT07688512:exc:03,NCT07688512,exclusion,Patients with an allergy to oxytocin,allergy to oxytocin,keep,
+ctgov:NCT07689149:inc:00,NCT07689149,inclusion,Male or female participants aged 18 to 65 years.,age between 18.0 and 65.0 years,keep,
+ctgov:NCT07689149:exc:01,NCT07689149,exclusion,Known or suspected hereditary complement deficiency.,hereditary complement deficiency,keep,
+ctgov:NCT07689578:inc:00,NCT07689578,inclusion,eGFR ≥20 ml/min/1.73 m2 (CKD-EPI formula).,egfr >= 20.0 ml/min/1.73,keep,
+ctgov:NCT07689578:exc:01,NCT07689578,exclusion,Haemoglobin <8 g/dL,haemoglobin < 8.0 g/dL,keep,
+ctgov:NCT07689578:exc:02,NCT07689578,exclusion,Thrombocytopenia: Platelets <100 G/L,platelets < 100.0 G/L,keep,
+ctgov:NCT07690007:inc:00,NCT07690007,inclusion,Age 20-45 years at delivery,age between 20.0 and 45.0 years,keep,
+ctgov:NCT07690397:inc:00,NCT07690397,inclusion,"Diagnosis of primary open-angle glaucoma or ocular hypertension, confirmed by the treating ophthalmologist.",by the treating ophthalmologist,drop,entity is a fragment ('by the treating ophthalmologist'); drops the diagnosis
+ctgov:NCT07690397:exc:01,NCT07690397,exclusion,Patients with any of the following conditions will be excluded:,following conditions will be excluded,drop,"section header, not a criterion"
+ctgov:NCT07690397:exc:02,NCT07690397,exclusion,"History of corneal refractive surgery (LASIK, PRK, SMILE).",corneal refractive surgery (at any time in history),keep,
+ctgov:NCT07690800:inc:00,NCT07690800,inclusion,Adults aged 20 to 70 years.,age between 20.0 and 70.0 years,keep,
+ctgov:NCT07691125:inc:00,NCT07691125,inclusion,Diagnosed with Short Bowel Syndrome (SBS);,short bowel syndrome,keep,
+ctgov:NCT07691125:exc:01,NCT07691125,exclusion,Subjects with a prior diagnosis of malignant tumors before screening.,malignant tumors (at any time in history),keep,
+ctgov:NCT07691138:inc:00,NCT07691138,inclusion,Aged 16 years or older.,age >= 16.0 years,keep,
+ctgov:NCT07691138:inc:01,NCT07691138,inclusion,Patient-confirmed compliance with PPI therapy (>75% of prescribed doses),compliance with ppi therapy,drop,drops a threshold: > 75% of prescribed doses
+ctgov:NCT07691138:exc:02,NCT07691138,exclusion,History of dementia,dementia (at any time in history),keep,
+ctgov:NCT07691138:exc:03,NCT07691138,exclusion,Active history of mental illness,mental illness (at any time in history),drop,time qualifier changed: 'active' read as any history
+ctgov:NCT07691359:inc:00,NCT07691359,inclusion,Male or female participant aged 50 years or older.,age >= 50.0 years,keep,
+ctgov:NCT07691359:inc:01,NCT07691359,inclusion,Diagnosis of osteoporosis established by the treating rheumatologist.,osteoporosis established by the treating rheumatologist,keep,
+ctgov:NCT07693166:inc:00,NCT07693166,inclusion,Pregnant women/people aged ≥19 years,age >= 19.0 years,drop,drops a required condition: pregnancy
+ctgov:NCT07693166:inc:01,NCT07693166,inclusion,Confirmed diagnosis of HIV,hiv,keep,
+ctgov:NCT07693205:inc:00,NCT07693205,inclusion,Adult cataract patients aged ≥22 years scheduled for cataract surgery in both eyes due to visually significant cataracts.,age >= 22.0 years,drop,drops a required condition: scheduled bilateral cataract surgery
+ctgov:NCT07694700:exc:00,NCT07694700,exclusion,Patients are admitted to intensive care unit younger than 18 years or older than 70 years.,age >= 18.0 years,drop,inverted: 'younger than 18 or older than 70' mapped to age >= 18
+ctgov:NCT07694700:exc:01,NCT07694700,exclusion,Patients are chronic kidney disease (CKD on hemodialysis or baseline creatinine clearance (crcl) < 10 ml/min (estimated by Cockcroft Gault equation).,creatinine < 10.0 ml/min,drop,wrong entity: creatinine instead of creatinine clearance
+ctgov:NCT07695259:inc:00,NCT07695259,inclusion,Platelets ≥ 100×109/L;,platelets >= 100.0,keep,
+ctgov:NCT07695259:inc:01,NCT07695259,inclusion,Hemoglobin ≥ 90g/L;,hemoglobin >= 90.0 g/L,keep,
+ctgov:NCT07695298:inc:00,NCT07695298,inclusion,No prior treatment with anti-VEGF agents in the study eye within 6 months prior to screening,NOT (anti-vegf agents in the study eye (within the past 6.0 months)),keep,
+ctgov:NCT07695298:exc:01,NCT07695298,exclusion,Use of systemic corticosteroids within 1 month prior to Day 1,systemic corticosteroids (within the past 1.0 months),keep,
+ctgov:NCT07695298:exc:02,NCT07695298,exclusion,History of endophthalmitis in the study eye,endophthalmitis in the study eye (at any time in history),keep,
+ctgov:NCT07695298:exc:03,NCT07695298,exclusion,"Presence of any ocular condition that could interfere with study assessments or the safety of the patient, including but not limited to:",ocular condition,drop,drops a qualifier: could interfere with study assessments or safety
+ctgov:NCT07695337:exc:00,NCT07695337,exclusion,Known adrenal insufficiency.,adrenal insufficiency,keep,
+ctgov:NCT07695389:exc:00,NCT07695389,exclusion,The potential subject has participated in a clinical trial involving treatment with an investigational product within the previous 30 days.,investigational product (within the past 30.0 days),keep,
+ctgov:NCT07695701:inc:00,NCT07695701,inclusion,Confirmed diagnosis of ATTR-CM requiring targeted therapy,attr-cm requiring targeted therapy,keep,
+ctgov:NCT07695701:inc:01,NCT07695701,inclusion,Confirmed diagnosis of AL amyloidosis at screening.,al amyloidosis,keep,
+ctgov:NCT07695701:inc:02,NCT07695701,inclusion,Prior or current treatment with acoramidis.,acoramidis (at any time in history),keep,
+ctgov:NCT07696208:inc:00,NCT07696208,inclusion,Clinical diagnosis of AIS.,ais,keep,
+ctgov:NCT07696208:inc:01,NCT07696208,inclusion,CT/MRI-confirmed absence of intracranial hemorrhage.,absence of intracranial hemorrhage,keep,
+ctgov:NCT07696351:inc:00,NCT07696351,inclusion,Female patients aged 18 to 39 years.,age between 18.0 and 39.0 years,drop,drops a required condition: female
+ctgov:NCT07696806:inc:00,NCT07696806,inclusion,Clinical diagnosis of melasma.,melasma,keep,
+ctgov:NCT07696806:exc:01,NCT07696806,exclusion,Use of hormonal contraceptives.,hormonal contraceptives,keep,
+ctgov:NCT07697391:exc:00,NCT07697391,exclusion,Body weight change >5% within 12 weeks before screening.,weight > 5.0 %,drop,wrong entity: weight > 5% instead of a > 5% weight change within 12 weeks
+ctgov:NCT07697391:exc:01,NCT07697391,exclusion,Hypertension with systolic blood pressure >150 mmHg and/or diastolic blood pressure >90 mmHg after stable antihypertensive treatment.,diastolic blood pressure > 90.0 mmHg,drop,drops a required condition: after stable antihypertensive treatment
+ctgov:NCT07697404:inc:00,NCT07697404,inclusion,Aged 1 to 12 years,age between 1.0 and 12.0 years,keep,
+ctgov:NCT07697404:exc:01,NCT07697404,exclusion,Body mass index (BMI) ≥ 30 kg/m² or ≤ 15 kg/m²,body mass index >= 30.0 kg/m²,keep,"drops a disjunct (BMI <= 15), which cannot change the label while that condition is undocumented"
+ctgov:NCT07697404:exc:02,NCT07697404,exclusion,History of sedative medication use,sedative medication use (at any time in history),keep,
+ctgov:NCT07697833:exc:00,NCT07697833,exclusion,Concurrent or anticipated use of long-acting nitrates.,long-acting nitrates,keep,
+ctgov:NCT07698223:inc:00,NCT07698223,inclusion,Confirmed diagnosis of Type 2 diabetes mellitus; AND,type 2 diabetes mellitus,keep,
+ctgov:NCT07698223:inc:01,NCT07698223,inclusion,Renal biopsy confirmed as isolated diabetic nephropathy; AND,as isolated diabetic nephropathy,keep,
+ctgov:NCT07698223:inc:02,NCT07698223,inclusion,Estimated glomerular filtration rate (eGFR) >= 45 mL/min/1.73m^2.,egfr >= 45.0 mL/min/1.73m^2,keep,
+ctgov:NCT07698223:exc:03,NCT07698223,exclusion,Decline in eGFR of > 30% within the past 3 months.,egfr > 30.0 %,drop,wrong entity: eGFR > 30% instead of a > 30% decline in eGFR within 3 months
+ctgov:NCT07699107:inc:00,NCT07699107,inclusion,Weight must be ≥15kg,weight >= 15.0 kg,keep,
+ctgov:NCT07699107:inc:01,NCT07699107,inclusion,"≥180 days on a stable dose of adalimumab or biosimilar of adalimumab; dose must be no greater than 20mg (if weight <30kg), or 40mg (if weight ≥30kg), injected every two weeks",weight < 30.0 kg,drop,wrong: a dosing rule mapped to weight < 30 kg; drops the stable adalimumab requirement
+ctgov:NCT07699107:exc:02,NCT07699107,exclusion,Use of topical corticosteroid eye drops within the last 90 days,topical corticosteroid eye drops (within the past 90.0 days),keep,
+ctgov:NCT07699107:exc:03,NCT07699107,exclusion,Use of nonsteroidal anti-inflammatory drug (NSAID) eye drops within the last 90 days,nonsteroidal anti-inflammatory drug eye drops (within the past 90.0 days),keep,
+ctgov:NCT07699315:inc:00,NCT07699315,inclusion,Patients between ages 18-60 years,age between 18.0 and 60.0 years,keep,
+ctgov:NCT07699445:exc:00,NCT07699445,exclusion,Current or prior treatment with lumateperone.,lumateperone (at any time in history),keep,
+ctgov:NCT07699445:exc:01,NCT07699445,exclusion,History of seizure disorder.,seizure disorder (at any time in history),keep,
+ctgov:NCT07699744:exc:00,NCT07699744,exclusion,Body mass index (BMI) ≥ 35 kg/m²,body mass index >= 35.0 kg/m²,keep,
+ctgov:NCT07699744:exc:01,NCT07699744,exclusion,Long-term use of steroids,steroids,drop,drops a qualifier: long-term use
+ctgov:NCT07699744:exc:02,NCT07699744,exclusion,Long-term use of analgesics,analgesics,drop,drops a qualifier: long-term use
+ctgov:NCT07699770:inc:00,NCT07699770,inclusion,"Patients with comorbid neuropathic pain, DN4 ≥ 4; no change in medication dosage within the past month;",comorbid neuropathic pain,drop,drops required conditions: DN4 >= 4; no change in medication dosage
+ctgov:NCT07699770:inc:01,NCT07699770,inclusion,First-time use of Crisugabalin Capsules.,crisugabalin capsules,drop,inverted: first-time use mapped to prior use
+ctgov:NCT07700446:inc:00,NCT07700446,inclusion,"Platelet count > 100,000/μL;",platelet count > 100.0,keep,
+ctgov:NCT07700446:inc:01,NCT07700446,inclusion,Hemoglobin > 10 g/dL.,hemoglobin > 10.0 g/dL,keep,
+ctgov:NCT07700446:exc:02,NCT07700446,exclusion,Subject with current diagnosis of Crohn's Disease or diagnosis of indeterminate colitis.,(crohn's disease (current / ongoing) OR indeterminate colitis),keep,
+ctgov:NCT07700446:exc:03,NCT07700446,exclusion,Current diagnosis of fulminant colitis and/or toxic megacolon.,fulminant colitis and/or toxic megacolon (current / ongoing),keep,
+ctgov:NCT07700615:exc:00,NCT07700615,exclusion,"History of Human Immunodeficiency Virus (HIV), syphilis, hepatitis B, and/or hepatitis C",human immunodeficiency virus (at any time in history),keep,"drops a disjunct (syphilis, hepatitis B/C), which cannot change the label while that condition is undocumented"
+ctgov:NCT07700940:inc:00,NCT07700940,inclusion,"eGFR ≥ 30 ml.min1.1.73m-2,",egfr >= 30.0 ml.min1.1.73m-2,keep,
+ctgov:NCT07700940:inc:01,NCT07700940,inclusion,Urinary protein creatinine ratio (uPCR) > 1000 mg/g.,creatinine > 1000.0 mg/g,drop,wrong entity: creatinine instead of urinary protein-creatinine ratio
+ctgov:NCT07700940:exc:02,NCT07700940,exclusion,eGFR < 30 ml.min-1.1.73m-2.,egfr < 30.0 ml.min-1.1.73m-,keep,
+ctgov:NCT07701967:exc:00,NCT07701967,exclusion,"A known immunodeficiency (e.g., human immunodeficiency virus - HIV), other than that explained by the use of corticosteroids (CSs) taken as therapy for asthma",corticosteroids taken as therapy for asthma,drop,"inverted: the form is the exception clause, not the immunodeficiency"
+ctgov:NCT07703098:exc:00,NCT07703098,exclusion,Known organic disease of the pituitary-adrenal axis.,organic disease of the pituitary-adrenal axis,keep,
+ctgov:NCT07704190:inc:00,NCT07704190,inclusion,Body mass index ≥ 23 kg/m²;,body mass index >= 23.0 kg/m²,keep,
+ctgov:NCT07704190:inc:01,NCT07704190,inclusion,Serum triglycerides ≥ 3.51 mmol/L;,triglycerides >= 3.51 mmol/L,keep,
+ctgov:NCT07704190:inc:02,NCT07704190,inclusion,UACR ≥ 200 mg/g with eGFR ≥ 60 mL/min/1.73 m² and documented albuminuria.,(egfr >= 60.0 mL/min/1.73 AND albuminuria),drop,drops a required condition: UACR >= 200 mg/g
+ctgov:NCT07704190:inc:03,NCT07704190,inclusion,Have documented atherosclerotic cardiovascular disease (at least one):,atherosclerotic cardiovascular disease,keep,
+ctgov:NCT07704359:exc:00,NCT07704359,exclusion,Known fistula-in-ano at presentation,fistula-in-ano at presentation,keep,
+ctgov:NCT07704359:exc:01,NCT07704359,exclusion,Known or suspected anorectal malignancy,anorectal malignancy,keep,
+ctgov:NCT07704658:inc:00,NCT07704658,inclusion,Platelet count ≥ 75 × 10⁹/L.,platelet count >= 75.0,keep,
+ctgov:NCT07704658:inc:01,NCT07704658,inclusion,Hemoglobin ≥ 9 g/dL.,hemoglobin >= 9.0 g/dL,keep,
+ctgov:NCT07704658:inc:02,NCT07704658,inclusion,Total bilirubin ≤ 1.5 × ULN (≤ 3 × ULN in patients with Gilbert syndrome).,gilbert syndrome,drop,"wrong: the form is Gilbert syndrome, not the bilirubin threshold"
+ctgov:NCT07704658:inc:03,NCT07704658,inclusion,Creatinine clearance ≥ 40 mL/min using the Cockcroft-Gault equation.,creatinine >= 40.0 mL/min,drop,wrong entity: creatinine instead of creatinine clearance
+ctgov:NCT07704957:exc:00,NCT07704957,exclusion,"Taking concomitant medications which may impact doxycycline metabolism (e.g., systemic retinoids, antacids, barbiturates, carbamazepine, phenytoin, iron, warfarin, rifampin)",concomitant medications,drop,drops a qualifier: medications that may impact doxycycline metabolism
+ctgov:NCT07706075:inc:00,NCT07706075,inclusion,"Hemodynamically stable at the time of enrollment (systolic blood pressure ≥90 mmHg, no shock, no acute pulmonary edema)",systolic blood pressure >= 90.0 mmHg,drop,"drops required conditions: no shock, no acute pulmonary oedema"
+ctgov:NCT07706075:exc:01,NCT07706075,exclusion,"Known pre-excitation syndrome (e.g., Wolff-Parkinson-White syndrome) on baseline ECG",pre-excitation syndrome on baseline ecg,keep,
+ctgov:NCT07706075:exc:02,NCT07706075,exclusion,Severe hepatic impairment (Child-Pugh Class C) or acute renal failure (eGFR <15 mL/min/1.73 m²),egfr < 15.0 mL/min/1.73,keep,"drops a disjunct (Child-Pugh C), which cannot change the label while that condition is undocumented"
+ctgov:NCT07706088:inc:00,NCT07706088,inclusion,BMI >= 27 KG/metre 2.,bmi >= 27.0 KG/metre,keep,
+ctgov:NCT07706088:exc:01,NCT07706088,exclusion,history of leprosy,leprosy (at any time in history),keep,
+ctgov:NCT07706088:exc:02,NCT07706088,exclusion,use of oral contraceptives.,oral contraceptives,keep,
+ctgov:NCT07706868:inc:00,NCT07706868,inclusion,"Male or female patients, 8 months of age or older with a body weight ≥ 10 kg.",weight >= 10.0 kg,drop,drops a required condition: age >= 8 months
+ctgov:NCT07706868:inc:01,NCT07706868,inclusion,Diagnosis of Still's disease.,still's disease,keep,
+ctgov:NCT07706868:inc:02,NCT07706868,inclusion,"In case of use of oral contraception, women should have been stable on the same brand (or generic equivalent) for a minimum of 3 months before taking study treatment.",oral contraception,drop,drops a required condition: stable on the same brand for 3 months
+ctgov:NCT07706868:exc:03,NCT07706868,exclusion,Treatment with an investigational drug within 5 half-lives prior to enrollment.,investigational drug (at any time in history),drop,time qualifier changed: within 5 half-lives read as any history
+ctgov:NCT07707063:inc:00,NCT07707063,inclusion,Inclusion: Patients with Stage II-IV Periodontitis; at least one bleeding pocket > 4 mm minimum in every quadrant.,stage ii-iv periodontitis,drop,drops a required condition: bleeding pocket > 4 mm in every quadrant
+ctgov:NCT07708233:exc:00,NCT07708233,exclusion,"Presence of other conditions that may affect diabetic peripheral neuropathy or neuropathic pain, including:",conditions,drop,entity is a fragment ('conditions')
+ctgov:NCT07708233:exc:01,NCT07708233,exclusion,Adjustment of glucose-lowering medication doses or HbA1c >8% within 3 months prior to study enrollment.,hba1c > 8.0 %,keep,"drops a disjunct (dose adjustment), which cannot change the label while that condition is undocumented"
+ctgov:NCT07708480:inc:00,NCT07708480,inclusion,Adults aged 18 to 40 years.,age between 18.0 and 40.0 years,keep,
+ctgov:NCT07708948:exc:00,NCT07708948,exclusion,Receiving Tongluo Kaibi Tablets at enrollment;,tongluo kaibi tablets at enrollment,keep,
+ctgov:NCT07709611:exc:00,NCT07709611,exclusion,"Pregnant or lactating women, as well as patients with mental illnesses;",mental illnesses,keep,"drops a disjunct (pregnant or lactating), which cannot change the label while that condition is undocumented"
+ctgov:NCT07709884:inc:00,NCT07709884,inclusion,Initial diagnosis of multiple myeloma;,multiple myeloma,keep,
+ctgov:NCT07709884:exc:01,NCT07709884,exclusion,Creatinine clearance rate < 30 ml/min;,creatinine < 30.0 ml/min,drop,wrong entity: creatinine instead of creatinine clearance
+ctgov:NCT07710014:exc:00,NCT07710014,exclusion,Use of a monoamine oxidase inhibitor currently or within the past 14 days,monoamine oxidase inhibitor (within the past 14.0 days),keep,
+ctgov:NCT07710430:exc:00,NCT07710430,exclusion,"Use of following within 8 weeks prior to screening or during the study: medications affecting gonadotropin or sex hormone, systemic steroids, herbal medications",following (within the past 8.0 weeks),drop,entity is a fragment ('following')
+ctgov:NCT07710430:exc:01,NCT07710430,exclusion,Use of medications associated with seizures,medications associated with seizures,keep,
+ctgov:NCT07710430:exc:02,NCT07710430,exclusion,Known or suspected malignancy,malignancy,keep,
+ctgov:NCT07711171:inc:00,NCT07711171,inclusion,age: 40-75 years old;,age between 40.0 and 75.0 years,keep,
+ctgov:NCT07711171:exc:01,NCT07711171,exclusion,use of other oral hypoglycemic drugs within 90 days prior to enrollment except for metformin;,oral hypoglycemic drugs (within the past 90.0 days),keep,
+ctgov:NCT07711808:inc:00,NCT07711808,inclusion,Adult patients with a clinical diagnosis of overactive bladder syndrome.,overactive bladder syndrome,keep,
+ctgov:NCT07711964:exc:00,NCT07711964,exclusion,Receiving systemic steroid therapy,systemic steroid therapy,keep,
+ctgov:NCT07712328:inc:00,NCT07712328,inclusion,Preoperatively confirmed central diabetes insipidus (CDI);,central diabetes insipidus,keep,
+ctgov:NCT07712510:exc:00,NCT07712510,exclusion,History of bleeding / clotting disorder,bleeding / clotting disorder (at any time in history),keep,
+ctgov:NCT07712991:inc:00,NCT07712991,inclusion,Patient diagnosed with irreversible pulpitis,irreversible pulpitis,keep,
+ctgov:NCT07712991:exc:01,NCT07712991,exclusion,Patient already treated with root canal,root canal,keep,
+ctgov:NCT07713186:inc:00,NCT07713186,inclusion,"Both genders, ages from 3 to 12 years old with mild to moderate atopic dermatitis",age between 3.0 and 12.0 years,drop,drops a required condition: mild to moderate atopic dermatitis
+ctgov:NCT07713212:exc:00,NCT07713212,exclusion,History of photosensitivity disorders,photosensitivity disorders (at any time in history),keep,
+ctgov:NCT07713602:inc:00,NCT07713602,inclusion,Body weight ≥ 2 kg to < 5kg,weight >= 2.0 kg,drop,drops a required condition: weight < 5 kg
+ctgov:NCT07713602:inc:01,NCT07713602,inclusion,Patients with severe malaria according to WHO definition (See Appendix 3).,severe malaria according,keep,
+ctgov:NCT07713602:inc:02,NCT07713602,inclusion,Patients taking drugs that are known to prolong the QTc interval,drugs,drop,drops a qualifier: known to prolong the QTc interval
+ctgov:NCT07713875:exc:00,NCT07713875,exclusion,"Already receiving therapeutic anticoagulation for another indication (e.g., atrial fibrillation, prior VTE, mechanical heart valve)",therapeutic anticoagulation for another indication (at any time in history),drop,time qualifier changed: 'already receiving' read as any history
+ctgov:NCT07713875:exc:01,NCT07713875,exclusion,"History of pathological bleeding (e.g., intracranial hemorrhage, gastrointestinal bleeding requiring transfusion or endoscopic intervention within the past 6 months)",pathological bleeding (within the past 6.0 months),drop,time window taken from an example and applied to the whole criterion
+ctgov:NCT07713875:exc:02,NCT07713875,exclusion,Known severe hepatic impairment (Child-Pugh Class C),severe hepatic impairment,keep,
+ctgov:NCT07713875:exc:03,NCT07713875,exclusion,"History of proximal gastrointestinal resection (i.e., gastrectomy and/or proximal small bowel resection) that might alter oral drug absorption",proximal gastrointestinal resection (at any time in history),keep,
+ctgov:NCT07713914:exc:00,NCT07713914,exclusion,Known contraindication to prostacyclin pathway agents (including iloprost or selexipag),contraindication to prostacyclin pathway agents,keep,
+ctgov:NCT07713914:exc:01,NCT07713914,exclusion,Known contraindication to sildenafil dose escalation,contraindication to sildenafil dose escalation,keep,
+ctgov:NCT07715448:inc:00,NCT07715448,inclusion,Newly diagnosed with benign prostatic hyperplasia (BPH).,benign prostatic hyperplasia,drop,drops a qualifier: newly diagnosed
+ctgov:NCT07715448:inc:01,NCT07715448,inclusion,Prostate volume >40 mL confirmed by transrectal ultrasonography (TRUS).,by transrectal ultrasonography,drop,entity is a fragment ('by transrectal ultrasonography'); drops prostate volume > 40 mL
+ctgov:NCT07715448:exc:02,NCT07715448,exclusion,History of prostate cancer.,prostate cancer (at any time in history),keep,
+ctgov:NCT07715448:exc:03,NCT07715448,exclusion,Current use of medications known to significantly affect sexual function.,significantly affect sexual function (current / ongoing),drop,entity is a fragment ('significantly affect sexual function')
+ctgov:NCT07715929:exc:00,NCT07715929,exclusion,Left ventricular ejection fraction (LVEF) <35% at screening,ejection fraction < 35.0 %,keep,
+ctgov:NCT07717684:exc:00,NCT07717684,exclusion,Body Mass Index (BMI) < 17.5 kg/m² or > 30 kg/m²,body mass index < 17.5 kg/m²,keep,"drops a disjunct (BMI > 30), which cannot change the label while that condition is undocumented"
+ctgov:NCT07717736:exc:00,NCT07717736,exclusion,Current evidence or a history of SCC in the area that will undergo pz-cel application.,scc in the area (at any time in history),keep,
+ctgov:NCT07717931:inc:00,NCT07717931,inclusion,Gestational age ≥ 24-weeks (on LMP method) and,age >= 24.0 years,drop,wrong: gestational age in weeks mapped to age in years
+ctgov:NCT07717931:inc:01,NCT07717931,inclusion,Past medical history of pre-eclampsia (on medical record),pre-eclampsia (at any time in history),keep,
+ctgov:NCT07718360:inc:00,NCT07718360,inclusion,Gestational age ≥ 37 weeks,age >= 37.0 years,drop,wrong: gestational age in weeks mapped to age in years
+ctgov:NCT07718360:exc:01,NCT07718360,exclusion,BMI > 35 kg/m²,bmi > 35.0 kg/m²,keep,
+ctgov:NCT07718529:inc:00,NCT07718529,inclusion,Without known risk factors for venous thromboembolism (VTE).,NOT (risk factors for venous thromboembolism),keep,
+ctgov:NCT07718529:inc:01,NCT07718529,inclusion,Without known risk factors for malignancy.,NOT (risk factors for malignancy),keep,
+ctgov:NCT07718529:exc:02,NCT07718529,exclusion,Known risk factors for VTE.,risk factors for vte,keep,
+ctgov:NCT07718529:exc:03,NCT07718529,exclusion,Known risk factors for MACE.,risk factors for mace,keep,
+ctgov:NCT07719140:inc:00,NCT07719140,inclusion,"Age ≥6 years and <18 years, with body weight ≥20 kg",age >= 6.0 years,drop,drops required conditions: age < 18; weight >= 20 kg
+ctgov:NCT07719140:inc:01,NCT07719140,inclusion,"At screening: 24-hour urinary protein ≥1.0 g (or ≥25 mg/kg), or urine protein-to-creatinine ratio (UPCR) ≥1.0 g/g",creatinine >= 1.0 g/g,drop,wrong entity: creatinine instead of protein-creatinine ratio
+ctgov:NCT07719140:exc:02,NCT07719140,exclusion,"Peripheral blood hemoglobin <60 g/L, platelet count <10 × 10⁹/L, or concomitant aplastic anemia",platelet count < 10.0,keep,"drops a disjunct (haemoglobin, aplastic anaemia), which cannot change the label while that condition is undocumented"
+ctgov:NCT07719140:exc:03,NCT07719140,exclusion,Estimated glomerular filtration rate (eGFR) <60 mL/min/1.73 m²,egfr < 60.0 mL/min/1.73,keep,
+ctgov:NCT07719894:inc:00,NCT07719894,inclusion,Individuals with HbA1c ≤ 9.9%,hba1c <= 9.9 %,keep,
+ctgov:NCT07719894:exc:01,NCT07719894,exclusion,Patients with heart failure (NYHA I~IV),heart failure,keep,
+ctgov:NCT07719894:exc:02,NCT07719894,exclusion,Patients recently diagnosed with gastrointestinal ulcerative disease,gastrointestinal ulcerative disease,drop,drops a qualifier: recently diagnosed
+ctgov:NCT07719894:exc:03,NCT07719894,exclusion,"Patients with inadequately controlled hypertension, defined as systolic blood pressure ≥ 180 mmHg or diastolic blood pressure ≥ 110 mmHg",diastolic blood pressure >= 110.0 mmHg,keep,"drops a disjunct (SBP >= 180), which cannot change the label while that condition is undocumented"
+ctgov:NCT07720037:inc:00,NCT07720037,inclusion,No prior history of Helicobacter pylori eradication therapy,NOT (helicobacter pylori eradication therapy (at any time in history)),keep,
+ctgov:NCT07720037:exc:01,NCT07720037,exclusion,History of upper gastrointestinal surgery,upper gastrointestinal surgery (at any time in history),keep,
+ctgov:NCT07720037:exc:02,NCT07720037,exclusion,History of allergy to study medications,allergy to study medications (at any time in history),keep,
+ctgov:NCT07720037:exc:03,NCT07720037,exclusion,Use of bismuth agents or antibiotics within 4 weeks prior to enrollment; use of acid-suppressive agents within 2 weeks prior to enrollment,(bismuth agents OR acid-suppressive agents (within the past 4.0 weeks)),drop,wrong time windows: bismuth untimed; acid-suppressive agents given 4 weeks instead of 2
+ctgov:NCT07720232:exc:00,NCT07720232,exclusion,Severe hepatic or renal dysfunction (serum creatinine >177 μmol/L or ALT >150 U/L);,creatinine > 177.0 μmol/L,keep,"drops a disjunct (ALT > 150), which cannot change the label while that condition is undocumented"
+ctgov:NCT07720232:exc:01,NCT07720232,exclusion,History of lactose intolerance;,lactose intolerance (at any time in history),keep,
+ctgov:NCT07720726:exc:00,NCT07720726,exclusion,Documented allergy to Abobotulinumtoxin-A,allergy to abobotulinumtoxin-a,keep,
+ctgov:NCT07720791:exc:00,NCT07720791,exclusion,Planned use of regional anesthesia techniques for postoperative pain,regional anesthesia techniques for postoperative pain,keep,
+ctgov:NCT07721129:exc:00,NCT07721129,exclusion,History of previous intracranial hemorrhage.,intracranial hemorrhage (at any time in history),keep,
+ctgov:NCT07721142:exc:00,NCT07721142,exclusion,History of active tuberculosis;,tuberculosis (at any time in history),drop,drops a qualifier: active tuberculosis
+ctgov:NCT07721142:exc:01,NCT07721142,exclusion,Recent close contact with patients with active tuberculosis;,tuberculosis (current / ongoing),drop,wrong: close contact with a TB patient mapped to the patient having TB
+ctgov:NCT07721142:exc:02,NCT07721142,exclusion,"Presence or history of active infections, including:",infections (at any time in history),drop,drops a qualifier: active infections
+ctgov:NCT07721142:exc:03,NCT07721142,exclusion,"Hemoglobin <100.0 g/L in males, or <90.0 g/L in females;",hemoglobin < 100.0 g/L,drop,sex-specific thresholds collapsed to the male threshold
+ctgov:NCT07721818:exc:00,NCT07721818,exclusion,presence of substernal goiter,substernal goiter,keep,
+ctgov:NCT07721922:inc:00,NCT07721922,inclusion,History of COPD based on EMR or confirmed verbally by the patient,(copd based on emr (at any time in history) OR verbally by the patient),drop,second disjunct is a fragment ('verbally by the patient')
+ctgov:NCT07721922:inc:01,NCT07721922,inclusion,Presenting to the ED with a primary diagnosis of ECOPD or acute respiratory failure with a secondary diagnosis of COPD,(ecopd OR copd),drop,weakened disjunct: acute respiratory failure with COPD read as any COPD
+ctgov:NCT07721922:exc:02,NCT07721922,exclusion,Patients with a current diagnosis of lung cancer requiring treatment,lung cancer requiring treatment (current / ongoing),keep,
+ctgov:NCT07721922:exc:03,NCT07721922,exclusion,Patients with a history of glaucoma deemed significant by the investigator,glaucoma deemed significant by the investigator (at any time in history),keep,
+ctgov:NCT07722624:exc:00,NCT07722624,exclusion,History of Stevens-Johnson syndrome,stevens-johnson syndrome (at any time in history),keep,
+ctgov:NCT07722624:exc:01,NCT07722624,exclusion,History of ocular malignancy,ocular malignancy (at any time in history),keep,
+ctgov:NCT07723183:inc:00,NCT07723183,inclusion,Patient aged 18 to 35 years old.,age between 18.0 and 35.0 years,keep,
+ctgov:NCT07723183:exc:01,NCT07723183,exclusion,Retained roots of mandibular third molar with history of removal of unerupted/impacted M3.,removal of unerupted/impacted m3 (at any time in history),drop,drops a required condition: retained roots of the mandibular third molar
+ctgov:NCT07723183:exc:02,NCT07723183,exclusion,Current or previous bisphosphonate therapy or history of radiotherapy to the jaws.,radiotherapy to the jaws (at any time in history),keep,"drops a disjunct (bisphosphonate therapy), which cannot change the label while that condition is undocumented"
+ctgov:NCT07725822:exc:00,NCT07725822,exclusion,Current diagnosis of drug-induced psoriasis.,drug-induced psoriasis (current / ongoing),keep,
+ctgov:NCT07725822:exc:01,NCT07725822,exclusion,Known or suspected:,suspected,drop,entity is a fragment ('suspected')
+ctgov:NCT07725822:exc:02,NCT07725822,exclusion,known HIV infection,hiv infection,keep,
+ctgov:NCT07725822:exc:03,NCT07725822,exclusion,"history of severe depression, suicidal ideation",severe depression (at any time in history),keep,"drops a disjunct (suicidal ideation), which cannot change the label while that condition is undocumented"
+ctgov:NCT07726862:exc:00,NCT07726862,exclusion,Age under 18 or over 65 years,age <= 18.0 years,keep,"drops a disjunct (over 65), which cannot change the label while that condition is undocumented; <= versus < cannot matter for sampled ages"
+ctgov:NCT07726862:exc:01,NCT07726862,exclusion,"Use of influenza antiviral medications (e.g., oseltamivir, zanamivir) within 48 hours prior to vaccination or planned use within 14 days after vaccination",influenza antiviral medications (within the past 14.0 days),drop,wrong time window: 48 hours before or 14 days after vaccination read as the past 14 days
+ctgov:NCT07726862:exc:02,NCT07726862,exclusion,History of Guillain-Barré syndrome following influenza vaccination,guillain-barré syndrome following influenza vaccination (at any time in history),keep,
+ctgov:NCT07727681:inc:00,NCT07727681,inclusion,Age 60 years or older.,age >= 60.0 years,keep,
+ctgov:NCT07727681:inc:01,NCT07727681,inclusion,Sinus rhythm documented by a preoperative electrocardiogram.,by a preoperative electrocardiogram,drop,entity is a fragment ('by a preoperative electrocardiogram'); drops sinus rhythm
+ctgov:NCT07727681:exc:02,NCT07727681,exclusion,Personal or family history of an inherited muscle disorder.,inherited muscle disorder (at any time in history),keep,
+ctgov:NCT07728097:exc:00,NCT07728097,exclusion,Has history of SE in the 3 months prior to screening.,se in the 3 months (at any time in history),drop,time window folded into the entity and read as any history
+ctgov:NCT07728825:exc:00,NCT07728825,exclusion,Documented hypersensitivity to bleomycin,hypersensitivity to bleomycin,keep,
+ctgov:NCT07728825:exc:01,NCT07728825,exclusion,Renal impairment (serum creatinine > 1.5 mg/dL or estimated glomerular filtration rate < 60 mL/min/1.73 m²),creatinine > 1.5 mg/dL,keep,"drops a disjunct (eGFR < 60), which cannot change the label while that condition is undocumented"
+ctgov:NCT07729332:inc:00,NCT07729332,inclusion,History of BMI ≥30 kg/m²,bmi >= 30.0 kg/m²,keep,
+ctgov:NCT07729332:exc:01,NCT07729332,exclusion,History of pancreatitis,pancreatitis (at any time in history),keep,
+ctgov:NCT07729332:exc:02,NCT07729332,exclusion,Any history of a suicide attempt,suicide attempt (at any time in history),keep,
+ctgov:NCT07729332:exc:03,NCT07729332,exclusion,"Use of medications known to cause significant weight gain (e.g., olanzapine, lithium) within the last 3 months.",cause significant weight gain (within the past 3.0 months),drop,entity is a fragment ('cause significant weight gain')
+ctgov:NCT07729514:exc:00,NCT07729514,exclusion,History of malignancy,malignancy (at any time in history),keep,
+ctgov:NCT07730814:inc:00,NCT07730814,inclusion,Clinical diagnosis of AOM.,aom,keep,
+ctgov:NCT07730814:exc:01,NCT07730814,exclusion,History of renal impairment,renal impairment (at any time in history),keep,
+ctgov:NCT07730814:exc:02,NCT07730814,exclusion,History of hepatic impairment,hepatic impairment (at any time in history),keep,
+ctgov:NCT07730814:exc:03,NCT07730814,exclusion,History of craniofacial abnormalities,craniofacial abnormalities (at any time in history),keep,
+ctgov:NCT07731217:exc:00,NCT07731217,exclusion,Patients with suspected or confirmed foreign body aspiration.,(suspected OR foreign body aspiration),drop,wrong: 'suspected' parsed as a separate disjunct
+ctgov:NCT07731217:exc:01,NCT07731217,exclusion,Patients with concurrent croup.,concurrent croup,keep,
+ctgov:NCT07731217:exc:02,NCT07731217,exclusion,Patients with pneumonia.,pneumonia,keep,
+ctgov:NCT07731217:exc:03,NCT07731217,exclusion,"Patients with air leaks (pneumothorax, pneumomediastinum).",air leaks,keep,
+ctgov:NCT07731802:inc:00,NCT07731802,inclusion,Age younger than 18 or older than 65,age <= 18.0 years,keep,"drops a disjunct (over 65), which cannot change the label while that condition is undocumented; <= versus < cannot matter for sampled ages"
+ctgov:NCT07731802:inc:01,NCT07731802,inclusion,Current use of hormone replacement medications such as testosterone,hormone replacement medications such as testosterone (current / ongoing),keep,
+ctgov:NCT07731802:inc:02,NCT07731802,inclusion,Recent use of acne treatment within 3 months,acne treatment (within the past 3.0 months),keep,
+ctgov:NCT07732010:inc:00,NCT07732010,inclusion,Patients diagnosed with dry eye disease,dry eye disease,keep,
+ctgov:NCT07732010:exc:01,NCT07732010,exclusion,Patients with current steroid use,steroid use (current / ongoing),keep,
+ctgov:NCT07732218:exc:00,NCT07732218,exclusion,Previous or current treatment with any glucagon-like peptide-1 receptor agonist.,glucagon-like peptide-1 receptor agonist (at any time in history),keep,
+ctgov:NCT07732452:inc:00,NCT07732452,inclusion,Women aged ≥ 45 years.,age >= 45.0 years,drop,drops a required condition: women
+ctgov:NCT07732452:inc:01,NCT07732452,inclusion,"Presence of at least one cardiovascular risk factor, defined as either:",at least one cardiovascular risk factor,keep,
+ctgov:NCT07732452:inc:02,NCT07732452,inclusion,"Dyslipidemia (diagnosed dyslipidemia, use of lipid-lowering therapy, LDL ≥ 3.0 mmol/L, or total cholesterol ≥ 5.2 mmol/L).",ldl >= 3.0 mmol/L,keep,"drops a disjunct (diagnosis, therapy, total cholesterol), which cannot change the label while that condition is undocumented"
+ctgov:NCT07732452:inc:03,NCT07732452,inclusion,"Type 2 diabetes mellitus, defined as HbA1c ≥ 6.5%, fasting plasma glucose ≥ 7.0 mmol/L, or use of glucose-lowering medication.",fasting plasma glucose >= 7.0 mmol/L,keep,"drops a disjunct (HbA1c, glucose-lowering medication), which cannot change the label while that condition is undocumented"
+ctgov:NCT07732751:inc:00,NCT07732751,inclusion,Clinical diagnosis of sleep bruxism.,sleep bruxism,keep,
+ctgov:NCT07732751:inc:01,NCT07732751,inclusion,Presence of jaw muscle pain.,jaw muscle pain,keep,
+ctgov:NCT07732751:exc:02,NCT07732751,exclusion,Use of medications affecting neuromuscular function.,medications affecting neuromuscular function,keep,
+ctgov:NCT07733232:exc:00,NCT07733232,exclusion,Patients receiving specialized treatment for hyperthyroidism (Graves' disease) or with a history of thyroid malignancy.,(specialized treatment for hyperthyroidism OR thyroid malignancy (at any time in history)),keep,
+ctgov:NCT07733232:exc:01,NCT07733232,exclusion,"Patients with severe immunosuppression (neutrophil count < 1500/mm³, lymphocyte count < 500/mm³).",severe immunosuppression,keep,
+ctgov:NCT07733232:exc:02,NCT07733232,exclusion,Patients with intestinal mucosal injury of unknown etiology.,intestinal mucosal injury of unknown etiology,keep,
+ctgov:NCT07733232:exc:03,NCT07733232,exclusion,Patients with active extraintestinal infection requiring treatment with broad-spectrum antibiotics.,broad-spectrum antibiotics (current / ongoing),drop,wrong entity: the antibiotics rather than the active extraintestinal infection
+ctgov:NCT07733414:exc:00,NCT07733414,exclusion,Use of central nervous system depressants within the past 3 months.,central nervous system depressants (within the past 3.0 months),keep,
+ctgov:NCT07733414:exc:01,NCT07733414,exclusion,"Use of long-acting sedative-hypnotics (e.g., clonazepam) within the past 3 months.",long-acting sedative-hypnotics (within the past 3.0 months),keep,
+ctgov:NCT07734766:inc:00,NCT07734766,inclusion,Histologically confirmed as hepatocellular carcinoma without metastasis;,as hepatocellular carcinoma without metastasis,keep,
+ctgov:NCT07735130:inc:00,NCT07735130,inclusion,Male or female aged 40 years or older,age >= 40.0 years,keep,
+ctgov:NCT07735130:inc:01,NCT07735130,inclusion,Left ventricular ejection fraction (LVEF) >40% before TAVR,ejection fraction > 40.0 %,keep,
+ctgov:NCT07735130:exc:02,NCT07735130,exclusion,Hypotension (systolic blood pressure <90 mmHg) or hemodynamic instability defined as a need for continuous intravenous vasopressor support at screening,systolic blood pressure < 90.0 mmHg,keep,"drops a disjunct (vasopressor support), which cannot change the label while that condition is undocumented"
+ctgov:NCT07735130:exc:03,NCT07735130,exclusion,"Estimated glomerular filtration rate (eGFR) <30 mL/min/1.73 m^2 by the CKD-EPI equation, or currently undergoing renal replacement therapy",egfr < 30.0 mL/min/1.73,keep,"drops a disjunct (renal replacement therapy), which cannot change the label while that condition is undocumented"
+ctgov:NCT07737665:inc:00,NCT07737665,inclusion,IBD patients with clinical remission Crohn's disease: HBI < 5 Ulcerative colitis: Partial Mayo score 0-1 w/o bloody stool,clinical remission crohn's disease,keep,
+ctgov:NCT07738861:exc:00,NCT07738861,exclusion,"Presence of active oral infection, including pericoronitis, at the surgical site.",oral infection (current / ongoing),keep,
+ctgov:NCT07739329:inc:00,NCT07739329,inclusion,Patients with high-risk PSD;,high-risk psd,keep,
+ctgov:NCT07739537:exc:00,NCT07739537,exclusion,Estimated glomerular filtration rate (eGFR) < 45 mg/min/1.73m2 per the Modification of Diet in Renal Disease equation,egfr < 45.0 mg/min/1.73m2,keep,
+ctgov:NCT07739589:exc:00,NCT07739589,exclusion,Known or suspected pregnancy,pregnancy,keep,
+ctgov:NCT07739589:exc:01,NCT07739589,exclusion,Diagnosis of sickle cell,sickle cell,keep,
+ctgov:NCT07739589:exc:02,NCT07739589,exclusion,"Known or suspected carcinoma of the breast, including past personal history of breast cancer",breast cancer (at any time in history),keep,
+ctgov:NCT07739589:exc:03,NCT07739589,exclusion,"Elevated blood pressure, defined as screening sitting blood pressure ≥ 140 mm Hg systolic or ≥ 90 mm Hg diastolic; or hypertension with known vascular disease",vascular disease,drop,weakened disjunct: hypertension with vascular disease read as any vascular disease
+ctgov:NCT07739719:inc:00,NCT07739719,inclusion,"Household: Households with at least one child aged 2 to 17 years, living in Burlington, Ontario Individual: 1) Residence in an eligible household 2) Age 2 years to 59 years",age between 2.0 and 17.0 years,drop,drops household and residence requirements; age range taken from the household rule
+ctgov:NCT07739719:exc:01,NCT07739719,exclusion,History of Guillain-Barre syndrome within 6 weeks of receiving a previous influenza vaccine,influenza vaccine (within the past 6.0 weeks),drop,wrong: GBS within 6 weeks of a vaccine read as a vaccine within the past 6 weeks
+ctgov:NCT07740330:exc:00,NCT07740330,exclusion,history of subarachnoid hemorrhage;,subarachnoid hemorrhage (at any time in history),keep,
+ctgov:NCT07740577:exc:00,NCT07740577,exclusion,Psychiatric illness or current use of psychotropic medications,psychotropic medications (current / ongoing),keep,"drops a disjunct (psychiatric illness), which cannot change the label while that condition is undocumented"
+ctgov:NCT07740655:inc:00,NCT07740655,inclusion,Adults aged 18 to 79 years.,age between 18.0 and 79.0 years,keep,
+ctgov:NCT07740655:exc:01,NCT07740655,exclusion,Body mass index (BMI) > 40 kg/m².,body mass index > 40.0 kg/m²,keep,
+ctgov:NCT07741292:inc:00,NCT07741292,inclusion,Participants with stage 3 to 5 chronic kidney disease who are not receiving dialysis.,dialysis,drop,inverted: 'not receiving dialysis' mapped to dialysis; drops CKD stage 3-5
+ctgov:NCT07741292:exc:01,NCT07741292,exclusion,Known allergy to Niaoduqing Granules.,allergy to niaoduqing granules,keep,
+ctgov:NCT07743034:inc:00,NCT07743034,inclusion,Men ≥ 50 years old with a definitive diagnosis of BPH by a urologist colleague.,bph by a urologist colleague,drop,drops required conditions: men aged >= 50
+ctgov:NCT07743034:inc:01,NCT07743034,inclusion,"No prior use of alpha-blockers (tamsulosin, silodosin, doxazosin, etc.)",NOT (alpha-blockers),keep,
+ctgov:NCT07743034:exc:02,NCT07743034,exclusion,History of intraocular surgery,intraocular surgery (at any time in history),keep,
+ctgov:NCT07743060:inc:00,NCT07743060,inclusion,Men ≥ 50 years of age with a definitive diagnosis of BPH by a collaborating urologist.,bph by a collaborating urologist,drop,drops required conditions: men aged >= 50
+ctgov:NCT07743060:inc:01,NCT07743060,inclusion,"No prior use of any alpha-blocker (tamsulosin, silodosin, doxazosin, etc.)",NOT (alpha-blocker),keep,
+ctgov:NCT07743060:inc:02,NCT07743060,inclusion,No use of pupil-affecting eye drops within the past 2 weeks,NOT (pupil-affecting eye drops (within the past 2.0 weeks)),keep,
+ctgov:NCT07744061:inc:00,NCT07744061,inclusion,Age 35 to 65 years.,age between 35.0 and 65.0 years,keep,
+ctgov:NCT07744191:inc:00,NCT07744191,inclusion,A history of psoriasis as confirmed by a board-certified dermatologist OR,by a board-certified dermatologist (at any time in history),drop,entity is a fragment ('by a board-certified dermatologist'); drops psoriasis
+ctgov:NCT07744191:inc:01,NCT07744191,inclusion,A history of psoriatic arthritis as confirmed by a board-certified rheumatologist,by a board-certified rheumatologist (at any time in history),drop,entity is a fragment ('by a board-certified rheumatologist'); drops psoriatic arthritis
+ctgov:NCT07744191:exc:02,NCT07744191,exclusion,Uncontrolled hypertension resting systolic blood pressure > 180 mm Hg or diabetes HbA1c > 10%,(systolic blood pressure > 180.0 mm OR hba1c > 10.0 %),keep,
+ctgov:NCT07744191:exc:03,NCT07744191,exclusion,Known active cancer receiving treatment,treatment (current / ongoing),drop,entity is a fragment ('treatment'); drops active cancer
+ctgov:NCT07744698:exc:00,NCT07744698,exclusion,2. Requirement for long-term treatment with a strong P-glycoprotein inhibitor that cannot be discontinued during the study.,strong p-glycoprotein inhibitor,drop,"drops qualifiers: long-term, cannot be discontinued"
+ctgov:NCT07745062:exc:00,NCT07745062,exclusion,"Use of topical ophthalmic medications that cannot be discontinued (e.g., topical antibiotics, corticosteroids).",topical ophthalmic medications,drop,drops a qualifier: cannot be discontinued
+ctgov:NCT07745062:exc:01,NCT07745062,exclusion,Known hypersensitivity: allergy to any component of Systane PRO PF or Blink Triple Care PF.,hypersensitivity,drop,"entity too broad: hypersensitivity to anything, not the named products"
+ctgov:NCT07746219:exc:00,NCT07746219,exclusion,Does not meet the diagnosis of upper urinary tract stones.,upper urinary tract stones,drop,inverted: 'does not meet the diagnosis' mapped to having the stones
+ctgov:NCT07746336:inc:00,NCT07746336,inclusion,Diagnosis of structural heart disease (ischemic or non-ischemic cardiomyopathy).,structural heart disease,keep,
+ctgov:NCT07746895:exc:00,NCT07746895,exclusion,Initiated treatment with pegcetacoplan in an interventional study.,pegcetacoplan in an interventional study,keep,
+ctgov:NCT07748247:exc:00,NCT07748247,exclusion,Personal or family history of malignant hyperthermia.,malignant hyperthermia (at any time in history),keep,
+ctgov:NCT07748884:inc:00,NCT07748884,inclusion,"Age 6 to 12 years, both sexes;",age between 6.0 and 12.0 years,keep,
+ctgov:NCT07749001:inc:00,NCT07749001,inclusion,Moderate exacerbations must have been treated with systemic corticosteroids.,systemic corticosteroids,drop,drops a required condition: moderate exacerbations
+ctgov:NCT07749001:inc:01,NCT07749001,inclusion,Documented hysterectomy.,hysterectomy,keep,
+ctgov:NCT07749001:inc:02,NCT07749001,inclusion,Documented bilateral salpingectomy.,bilateral salpingectomy,keep,
+ctgov:NCT07749001:exc:03,NCT07749001,exclusion,"Participants with a known immunodeficiency (e.g., human immunodeficiency virus-HIV).",immunodeficiency,keep,
+ctgov:NCT07750496:inc:00,NCT07750496,inclusion,Diagnosis of epilepsy,epilepsy,keep,
+ctgov:NCT07750496:inc:01,NCT07750496,inclusion,Taking at least 1 antiseizure medication prior to enrollment,at least 1 antiseizure medication (at any time in history),drop,time qualifier changed: current use at enrollment read as any history
+ctgov:NCT07750496:exc:02,NCT07750496,exclusion,History of epilepsy surgery,epilepsy surgery (at any time in history),keep,
+ctgov:NCT07750938:inc:00,NCT07750938,inclusion,No prior history of H. pylori eradication therapy.,NOT (h. pylori eradication therapy (at any time in history)),keep,
+ctgov:NCT07753200:inc:00,NCT07753200,inclusion,Patients with AF requiring oral anticoagulation therapy (CHA2DS2-VaSc 2 or more),af requiring oral anticoagulation therapy,keep,
+ctgov:NCT07753200:exc:01,NCT07753200,exclusion,Severe renal impairment (creatinine clearance <15 mL/min) or dialysis,creatinine < 15.0 mL/min,drop,wrong entity: creatinine instead of creatinine clearance
+ctgov:NCT07753447:inc:00,NCT07753447,inclusion,Confirmed diagnosis of type 2 diabetes,type 2 diabetes,keep,
+ctgov:NCT07753447:inc:01,NCT07753447,inclusion,Diagnosed with diabetes within the past 6 years,diabetes (within the past 6.0 years),keep,
+ctgov:NCT07753447:exc:02,NCT07753447,exclusion,"Presence of endocrine disorders that may affect body weight, such as Cushing's syndrome",endocrine disorders,drop,drops a qualifier: disorders that may affect body weight
+ctgov:NCT07753447:exc:03,NCT07753447,exclusion,Use of medications (other than glucose-lowering agents for diabetes) known to affect blood glucose levels within the past 6 months,affect blood glucose levels (within the past 6.0 months),drop,entity is a fragment ('affect blood glucose levels')
+ctgov:NCT07753616:exc:00,NCT07753616,exclusion,Previous treatment with Fluocinolone acetonide (Iluvien) in the study eye.,fluocinolone acetonide in the study eye (at any time in history),keep,
+ctgov:NCT07753720:exc:00,NCT07753720,exclusion,Current use of nitrates.,nitrates (current / ongoing),keep,
+ctgov:NCT07753720:exc:01,NCT07753720,exclusion,History of priapism.,priapism (at any time in history),keep,
+ctgov:NCT07753772:exc:00,NCT07753772,exclusion,Uncontrolled hyperthyroidism or history of pheochromocytoma;,pheochromocytoma (at any time in history),keep,"drops a disjunct (uncontrolled hyperthyroidism), which cannot change the label while that condition is undocumented"
+ctgov:NCT07754370:inc:00,NCT07754370,inclusion,Neonates diagnosed with primary congenital hypothyroidism.,primary congenital hypothyroidism,keep,
+ctgov:NCT07754812:inc:00,NCT07754812,inclusion,"Age 70 years or older, regardless of sex.",age >= 70.0 years,keep,
+ctgov:NCT07754812:inc:01,NCT07754812,inclusion,"Histologically confirmed non-small cell lung cancer, clinical stage IIA-IIIB according to the 8th edition of the AJCC staging system.",non-small cell lung cancer,drop,drops a required condition: clinical stage IIA-IIIB
+ctgov:NCT07754812:exc:02,NCT07754812,exclusion,Active autoimmune disease or a history of autoimmune disease requiring systemic immunosuppressive treatment.,autoimmune disease requiring systemic immunosuppressive treatment (at any time in history),keep,"drops a disjunct (active autoimmune disease), which cannot change the label while that condition is undocumented"
+ctgov:NCT07755085:inc:00,NCT07755085,inclusion,Patients must be between 18-90 years of age,age between 18.0 and 90.0 years,keep,
+ctgov:NCT07755085:exc:01,NCT07755085,exclusion,Patients currently taking biologic medications that suppress the immune system,biologic medications (current / ongoing),drop,drops a qualifier: biologics that suppress the immune system
+ctgov:NCT07755085:exc:02,NCT07755085,exclusion,Patients currently taking GLP-1 medications,glp-1 medications (current / ongoing),keep,
+ctgov:NCT07755085:exc:03,NCT07755085,exclusion,Patients with a contraindication to GLP-1 medication,contraindication to glp-1 medication,keep,
+ctgov:NCT07756359:exc:00,NCT07756359,exclusion,BMI <20 at the time of study screening,bmi < 20.0,keep,
+ctgov:NCT07756359:exc:01,NCT07756359,exclusion,Personal or family history of medullary thyroid carcinoma or in patients with Multiple Endocrine Neoplasia syndrome type 2,multiple endocrine neoplasia syndrome type 2 (at any time in history),keep,"drops a disjunct (medullary thyroid carcinoma), which cannot change the label while that condition is undocumented"
+ctgov:NCT07756359:exc:02,NCT07756359,exclusion,Known clinically significant chronic nausea and/or vomiting in the past,clinically significant chronic nausea and/or vomiting,keep,
+ctgov:NCT07756801:exc:00,NCT07756801,exclusion,Acute intoxication necessitating use of renal replacement therapy,renal replacement therapy,drop,drops a required condition: acute intoxication
+ctgov:NCT07757919:exc:00,NCT07757919,exclusion,"Presence of other behaviors that may increase disease risks, such as heavy alcohol consumption, drug abuse, etc.",behaviors,drop,entity is a fragment ('behaviors')
+ctgov:NCT07758335:exc:00,NCT07758335,exclusion,Patients with autoimmune diseases.,autoimmune diseases,keep,
+ctgov:NCT07758335:exc:01,NCT07758335,exclusion,Patients with colorectal cancer.,colorectal cancer,keep,
+ctgov:NCT07759336:inc:00,NCT07759336,inclusion,Age: 45-80 years old,age between 45.0 and 80.0 years,keep,
+ctgov:NCT07759336:exc:01,NCT07759336,exclusion,Recent use of duloxetine defined as any use within the last 3 months,duloxetine defined as any use (within the past 3.0 months),keep,
+ctgov:NCT07759336:exc:02,NCT07759336,exclusion,"Inability to walk or climb stairs without significant assistance (e.g. a one-person assist, use a wheelchair; use of a cane does not exclude the participant).",cane does not exclude the participant,drop,entity is a fragment that inverts the criterion ('cane does not exclude the participant')
+ctgov:NCT07759336:exc:03,NCT07759336,exclusion,History of brain surgery,brain surgery (at any time in history),keep,
+ctgov:NCT07759778:inc:00,NCT07759778,inclusion,BMI≥28 kg/m2,bmi >= 28.0 kg/m2,keep,
+ctgov:NCT07759778:exc:01,NCT07759778,exclusion,History of difficult airway (Mallampati Grade IV or expected difficult airway),difficult airway (at any time in history),keep,
+ctgov:NCT07759778:exc:02,NCT07759778,exclusion,Long-term use of opioids (regular use of opioids for more than 7 days within 3 months before operation),opioids (within the past 3.0 months),drop,drops a threshold: regular use for more than 7 days
+ctgov:NCT07760207:inc:00,NCT07760207,inclusion,Pediatric patients aged 8-15 years undergoing elective tonsillectomy.,age between 8.0 and 15.0 years,drop,drops a required condition: elective tonsillectomy
+ctgov:NCT07760207:exc:01,NCT07760207,exclusion,Patients younger than 8 years or older than 15 years.,age >= 8.0 years,drop,inverted: 'younger than 8 or older than 15' mapped to age >= 8
+ctgov:NCT07760480:inc:00,NCT07760480,inclusion,Age 16-70 years,age between 16.0 and 70.0 years,keep,
+ctgov:NCT07760480:exc:01,NCT07760480,exclusion,"History of hepatitis B, hepatitis C, tuberculosis and/or HIV",hepatitis b (at any time in history),keep,"drops a disjunct (hepatitis C, tuberculosis, HIV), which cannot change the label while that condition is undocumented"
+ctgov:NCT07760480:exc:02,NCT07760480,exclusion,Treatment with any of the following agents within one month before screening:,following agents,drop,entity is a fragment ('following agents')
+ctgov:NCT07760480:exc:03,NCT07760480,exclusion,"tacrolimus, belimumab, anifrolumab - Treatment with any of the following agents within 6 months before screening: rituximab, daratumumab, eculizumab",following agents (within the past 6.0 months),drop,entity is a fragment ('following agents')
+ctgov:NCT07760610:inc:00,NCT07760610,inclusion,"Histologically confirmed newly diagnosed diffuse large B-cell lymphoma (DLBCL), with at least a partial response (PR) after first-line therapy.",newly diagnosed diffuse large b-cell lymphoma,drop,drops a required condition: at least a partial response after first-line therapy
+ctgov:NCT07760610:exc:01,NCT07760610,exclusion,Presence of another active malignancy that is untreated or currently being treated.,another active malignancy (current / ongoing),keep,
+ctgov:NCT07760610:exc:02,NCT07760610,exclusion,Current treatment with other investigational drugs.,investigational drugs (current / ongoing),keep,
+ctgov:NCT07760922:exc:00,NCT07760922,exclusion,Planned use of NSAIDs affecting platelet function;,nsaids affecting platelet function,keep,
+ctgov:NCT07760922:exc:01,NCT07760922,exclusion,"Other structural brain disease (vascular malformation, tumor, abscess, multiple sclerosis, etc.) confirmed by CT/MRI;",by ct/mri,drop,entity is a fragment ('by ct/mri'); drops structural brain disease
+ctgov:NCT07761312:exc:00,NCT07761312,exclusion,"Congestive heart failure classified as NYHA Class II or above, or left ventricular ejection fraction (LVEF) < 50%.",ejection fraction < 50.0 %,keep,"drops a disjunct (NYHA >= II), which cannot change the label while that condition is undocumented"
+ctgov:NCT07762755:exc:00,NCT07762755,exclusion,Treatment with icosapent ethyl within 12 months before enrollment.,icosapent ethyl (within the past 12.0 months),keep,
+ctgov:NCT07762794:inc:00,NCT07762794,inclusion,Patient must have confirmed health insurance,health insurance,keep,
+ctgov:NCT07762794:exc:01,NCT07762794,exclusion,Known socioeconomic reasons (such as being homeless) that preclude the patient from being suitable for long-term follow-up,socioeconomic reasons,drop,drops a qualifier: preclude long-term follow-up
+ctgov:NCT07763405:inc:00,NCT07763405,inclusion,Randomization within 24 hours of last known well;,well,drop,entity is a fragment ('well'); drops the 24-hour window
+ctgov:NCT07763548:inc:00,NCT07763548,inclusion,Receiving propofol for induction.,propofol for induction,keep,
+ctgov:NCT07763665:inc:00,NCT07763665,inclusion,Patients with moderate (GCS = 9-12) traumatic brain injury.,moderate traumatic brain injury,keep,
+ctgov:NCT07763665:exc:01,NCT07763665,exclusion,BMI>35 kg/m2.,bmi > 35.0 kg/m2,keep,
+ctgov:NCT07763678:inc:00,NCT07763678,inclusion,Diagnosis of chronic migraine according to ICHD-3 criteria (1).,chronic migraine according to ichd-3 criteria,keep,
+ctgov:NCT07763678:exc:01,NCT07763678,exclusion,Known hypersensitivity to local anesthetic agents.,hypersensitivity to local anesthetic agents,keep,
+ctgov:NCT07766109:inc:00,NCT07766109,inclusion,"patients treated with SGLT-2 inhibitors, including combined treatment with metformin, for at least 4 weeks",metformin (for at least 4.0 weeks),drop,wrong entity: metformin instead of SGLT-2 inhibitors
+ctgov:NCT07766122:exc:00,NCT07766122,exclusion,"Conditions contraindicating magnetic resonance imaging (MRI), such as the presence of internal metallic devices.",internal metallic devices,keep,"drops a disjunct (other MRI contraindications), which cannot change the label while that condition is undocumented"
+ctgov:NCT07766122:exc:01,NCT07766122,exclusion,Chronic kidney disease with an eGFR ≤ 60 mL/min,egfr <= 60.0 mL/min,keep,
+ctgov:NCT07767383:inc:00,NCT07767383,inclusion,Age 18 to 85 years.,age between 18.0 and 85.0 years,keep,
+ctgov:NCT07769047:inc:00,NCT07769047,inclusion,Aged 46-55 years,age between 46.0 and 55.0 years,keep,
+ctgov:NCT07769047:inc:01,NCT07769047,inclusion,Body mass index (BMI) ≥ 30 kg/m^²,body mass index >= 30.0 kg/m^²,keep,
+ctgov:NCT07769047:inc:02,NCT07769047,inclusion,Current use of an aromatase inhibitor,aromatase inhibitor (current / ongoing),keep,
+ctgov:NCT07769047:exc:03,NCT07769047,exclusion,> 5% change in weight during the 3 months prior to screening and/or weight fluctuation of ≥ 20 pounds within the past 6 months (self-report),weight >= 20.0 pounds,drop,wrong entity: weight >= 20 lb instead of a >= 20 lb fluctuation
+ctgov:NCT07769476:exc:00,NCT07769476,exclusion,Obstructed fallopian tubes documented on hysterosalpingography and,on hysterosalpingography,drop,entity is a fragment ('on hysterosalpingography'); drops obstructed tubes
+ctgov:NCT07770152:inc:00,NCT07770152,inclusion,12-18 years of age,age between 12.0 and 18.0 years,keep,
+ctgov:NCT07770152:inc:01,NCT07770152,inclusion,Epic-confirmed diagnosis of ASD,asd,keep,
+ctgov:NCT07771010:inc:00,NCT07771010,inclusion,"Newly diagnosed type 2 diabetes mellitus, confirmed no more than 2 years prior to enrollment",no more than 2 years (at any time in history),drop,entity is a fragment ('no more than 2 years'); drops type 2 diabetes
+ctgov:NCT07771010:exc:01,NCT07771010,exclusion,Type 2 diabetes mellitus known for more than 2 years,for more than 2 years,drop,entity is a fragment ('for more than 2 years'); drops type 2 diabetes
+ctgov:NCT07771010:exc:02,NCT07771010,exclusion,Known mitochondrial disease,mitochondrial disease,keep,
+ctgov:NCT07771595:exc:00,NCT07771595,exclusion,"History of cardiovascular, cerebrovascular disease",cardiovascular (at any time in history),keep,"drops a disjunct (cerebrovascular disease), which cannot change the label while that condition is undocumented"
+ctgov:NCT07771595:exc:01,NCT07771595,exclusion,Participation in a study that involves the use of medication in the past 3 months,medication,drop,drops a required condition: study participation in the past 3 months
+ctgov:NCT07772453:exc:00,NCT07772453,exclusion,Evidence of iron overload (serum ferritin > 1000 μg/L) or a history of hemochromatosis.,hemochromatosis (at any time in history),keep,"drops a disjunct (ferritin > 1000), which cannot change the label while that condition is undocumented"
+ctgov:NCT07772609:inc:00,NCT07772609,inclusion,The subject has osteoporosis at screening defined as a T-score of -2.5 or lower at the total hip or lumbar spine (L1-L4) on central reader confirmed bone densitometry by DXA.,bone densitometry by dxa,drop,entity is a fragment ('bone densitometry by dxa'); drops the T-score threshold
+ctgov:NCT07772609:exc:01,NCT07772609,exclusion,Any previous use of romosozumab.,romosozumab (at any time in history),keep,
+ctgov:NCT07772609:exc:02,NCT07772609,exclusion,"Use of systemic estrogen, selective estrogen receptor modulator within 3 months.",systemic estrogen (within the past 3.0 months),keep,"drops a disjunct (SERM), which cannot change the label while that condition is undocumented"
+ctgov:NCT07772986:exc:00,NCT07772986,exclusion,"Post-deroofing presence of healthy vital pulp, presenting as uniformly reddish pink vascular tissue.",healthy vital pulp,keep,
+ctgov:NCT07773623:exc:00,NCT07773623,exclusion,Signs or symptoms suggestive of active TB during history taking and/or physical examination at screening;,and/or physical examination (current / ongoing),drop,entity is a fragment ('and/or physical examination')
+ctgov:NCT07773909:exc:00,NCT07773909,exclusion,Previous treatment with a hypomethylating agent,hypomethylating agent (at any time in history),keep,
+ctgov:NCT07774741:inc:00,NCT07774741,inclusion,Birth weight ≥2500 g.,weight >= 2500.0 g,keep,
+ctgov:NCT07775248:exc:00,NCT07775248,exclusion,History of alcohol abuse,alcohol abuse (at any time in history),keep,
+ctgov:NCT07775846:inc:00,NCT07775846,inclusion,Body Mass Index (BMI) ≥ 24.0 kg/m2.,body mass index >= 24.0 kg/m2,keep,
+ctgov:NCT07775846:inc:01,NCT07775846,inclusion,"Mean urine albumin-to-creatinine ratio (UACR) ≥ 100 mg/g and < 5000 mg/g, calculated from first morning void urine samples collected over 3 consecutive days.",creatinine >= 100.0 mg/g,drop,wrong entity: creatinine instead of albumin-creatinine ratio; drops the < 5000 bound
+ctgov:NCT07775846:exc:02,NCT07775846,exclusion,"Definite diagnosis of non-diabetic kidney disease (e.g., IgA nephropathy, polycystic kidney disease, lupus nephritis, etc).",non-diabetic kidney disease,keep,
+ctgov:NCT07775846:exc:03,NCT07775846,exclusion,History of diabetic ketoacidosis (DKA).,diabetic ketoacidosis (at any time in history),keep,
+ctgov:NCT07776028:exc:00,NCT07776028,exclusion,"Use of treatments which may affect hair growth (eg, minoxidil, chemotherapy) within 6 months",treatments (within the past 6.0 months),drop,drops a qualifier: treatments that may affect hair growth
+ctgov:NCT07776054:exc:00,NCT07776054,exclusion,Previous use of an SGLT2 inhibitor,sglt2 inhibitor (at any time in history),keep,
+ctgov:NCT07776821:inc:00,NCT07776821,inclusion,Left ventricular ejection fraction (LVEF) ≥ 50%;,ejection fraction >= 50.0 %,keep,
+ctgov:NCT07776821:inc:01,NCT07776821,inclusion,"Bone marrow function: absolute neutrophil count (ANC) ≥ 1.5 × 10⁹/L, hemoglobin ≥ 90 g/dL, platelets (PLT) ≥ 100 × 10⁹/L;",hemoglobin >= 90.0 g/dL,drop,drops required conditions: ANC and platelet thresholds
+ctgov:NCT07776821:exc:02,NCT07776821,exclusion,Patients with active tuberculosis or a history of tuberculosis;,(tuberculosis (current / ongoing) OR tuberculosis (at any time in history)),keep,
+ctgov:NCT07777276:inc:00,NCT07777276,inclusion,"Children aged 2 - 15 years,",age between 2.0 and 15.0 years,keep,
+ctgov:NCT07777276:exc:01,NCT07777276,exclusion,"Currently taking regular steroids, including inhaled corticosteroids",regular steroids (current / ongoing),keep,
+ctgov:NCT07777575:inc:00,NCT07777575,inclusion,Have a body mass index (BMI) of ≥ 30 kg/m2,body mass index >= 30.0 kg/m2,keep,
+ctgov:NCT07777575:exc:01,NCT07777575,exclusion,Have a self-reported reduction in body weight >5 kg within 3 months prior to screening,weight > 5.0 kg,drop,wrong entity: weight > 5 kg instead of a > 5 kg weight loss within 3 months
+ctgov:NCT07777575:exc:02,NCT07777575,exclusion,Have uncontrolled hypertension (systolic blood pressure ≥160 mmHg and/or diastolic blood pressure ≥100 mmHg),diastolic blood pressure >= 100.0 mmHg,keep,"drops a disjunct (SBP >= 160), which cannot change the label while that condition is undocumented"
+ctgov:NCT07777575:exc:03,NCT07777575,exclusion,"≥20 ng/L, if eGFR ≥60 mL/min/1.73 m2, or",egfr >= 60.0 mL/min/1.73,drop,"sentence fragment; the form is the condition attached to a threshold, not the criterion"
+ctgov:NCT07777926:exc:00,NCT07777926,exclusion,Patients with known bleeding disorders,bleeding disorders,keep,
+ctgov:NCT07777965:inc:00,NCT07777965,inclusion,"Male and female participants must be 18 to 55 years of age, inclusive, at the time of screening. At least 20% of participants randomized into the Treatment Phase should be female.",age between 18.0 and 55.0 years,keep,
+ctgov:NCT07779057:exc:00,NCT07779057,exclusion,"Platelet count < 150,000/mm^3",platelet count < 150.0,keep,
+ctgov:NCT07779356:exc:00,NCT07779356,exclusion,History of receiving Iheezo,iheezo (at any time in history),keep,
+ctgov:NCT07780292:inc:00,NCT07780292,inclusion,Documented clinical and radiological diagnosis of Chronic Rhinosinusitis with Nasal Polyps (CRSWNP).,(clinical AND chronic rhinosinusitis with nasal polyps),drop,spurious conjunct: 'clinical' parsed as an entity
+ctgov:NCT07780292:exc:01,NCT07780292,exclusion,"Presence of unilateral nasal polyps, antrochoanal polyps, granuloma / granulomatous lesions, fungal",unilateral nasal polyps,keep,"drops a disjunct (other lesions), which cannot change the label while that condition is undocumented"
+ctgov:NCT07780812:inc:00,NCT07780812,inclusion,Current or history of laryngeal malignancy,laryngeal malignancy (at any time in history),keep,
+ctgov:NCT07780812:inc:01,NCT07780812,inclusion,History of laryngeal surgery,laryngeal surgery (at any time in history),keep,
+ctgov:NCT07781462:inc:00,NCT07781462,inclusion,"Confirmed active ICU delirium at enrollment, as defined by:",icu delirium at enrollment (current / ongoing),keep,
+ctgov:NCT07781462:exc:01,NCT07781462,exclusion,"Severe hepatic dysfunction (e.g., Child-Pugh Class C) or renal impairment (eGFR < 30 mL/min/1.73m²).",egfr < 30.0 mL/min/1.73m²,keep,"drops a disjunct (Child-Pugh C), which cannot change the label while that condition is undocumented"
+ctgov:NCT07781722:exc:00,NCT07781722,exclusion,"Contraindication for tacrolimus or diclofenac (allergy, potassium >5 mmol/L, eGFR <30 mL/min)",egfr < 30.0 mL/min,keep,"drops a disjunct (allergy, potassium), which cannot change the label while that condition is undocumented"
+ctgov:NCT07782242:exc:00,NCT07782242,exclusion,"Recent history of acute severe ulcerative colitis (ASUC), toxic megacolon, etc.",acute severe ulcerative colitis (at any time in history),drop,drops a qualifier: recent
+ctgov:NCT07782242:exc:01,NCT07782242,exclusion,Patients with stomas or patients with UC scheduled for inpatient surgical intervention.,(stomas OR uc scheduled for inpatient surgical intervention),keep,
+ctgov:NCT07783854:exc:00,NCT07783854,exclusion,History or planned bariatric surgery or use of a weight-loss device during the trial.,weight-loss device,keep,"drops a disjunct (bariatric surgery), which cannot change the label while that condition is undocumented"
+ctgov:NCT07783854:exc:01,NCT07783854,exclusion,"History of major depressive disorder or a diagnosis of other severe psychiatric disorders (e.g., schizophrenia, bipolar disorder) within 2 years prior to screening.",severe psychiatric disorders (within the past 2.0 years),keep,"drops a disjunct (major depressive disorder), which cannot change the label while that condition is undocumented"
+ctgov:NCT07783854:exc:02,NCT07783854,exclusion,History of attempted suicide.,attempted suicide (at any time in history),keep,
+ctgov:NCT07786740:exc:00,NCT07786740,exclusion,Known optic nerve pathology,optic nerve pathology,keep,
+ctgov:NCT07787585:exc:00,NCT07787585,exclusion,TSH >10 mIU/L at any time documented in the institutional electronic health record.,in the institutional electronic health record,drop,entity is a fragment ('in the institutional electronic health record'); drops TSH > 10
+ctgov:NCT07787585:exc:01,NCT07787585,exclusion,"Severe dyslipidemia, defined as LDL cholesterol >190 mg/dL.",ldl > 190.0 mg/dL,keep,
+ctgov:NCT07788456:inc:00,NCT07788456,inclusion,Confirmed newly diagnosed primary ITP with a platelet count <30 × 10^9/L.,platelet count < 30.0,drop,drops a required condition: newly diagnosed primary ITP
+ctgov:NCT07788456:exc:01,NCT07788456,exclusion,Current treatment with another investigational drug.,another investigational drug (current / ongoing),keep,
+ctgov:NCT07788586:inc:00,NCT07788586,inclusion,"4. Treatment with caspofungin for candidemia, initially proven by Candida-positive blood culture.",caspofungin for candidemia,keep,
+ctgov:NCT07788586:exc:01,NCT07788586,exclusion,a. History of candidemia within 3 months prior to the current candidemia episode.,candidemia (within the past 3.0 months),keep,
+ctgov:NCT07788742:exc:00,NCT07788742,exclusion,Use of other acid suppressive medications.,acid suppressive medications,keep,
+ctgov:NCT07788742:exc:01,NCT07788742,exclusion,Treatment with another investigational product within 30 days prior to consent.,another investigational product (within the past 30.0 days),keep,
+ctgov:NCT07788742:exc:02,NCT07788742,exclusion,Current use of rilpivirine-containing products.,rilpivirine-containing products (current / ongoing),keep,
+ctgov:NCT07788924:inc:00,NCT07788924,inclusion,"Aged 19-40 years old at the inclusion of the study, both female and male subjects.",age between 19.0 and 40.0 years,keep,
+ctgov:NCT07788924:exc:01,NCT07788924,exclusion,Use of metformin within 3 months prior to the start of the study,metformin (within the past 3.0 months),keep,
+ctgov:NCT07789548:exc:00,NCT07789548,exclusion,Morbid obesity (BMI ≥ 35 kg/m²).,bmi >= 35.0 kg/m²,keep,
+ctgov:NCT07789639:exc:00,NCT07789639,exclusion,"Subject has any known communicable disease(s) (e.g. HIV, STD's, Hepatitis B, Hepatitis C, etc.)",communicable disease,keep,
+ctgov:NCT07790419:inc:00,NCT07790419,inclusion,"Pathologically confirmed hepatocellular carcinoma, with complete resection of all tumor nodules and negative surgical margins;",hepatocellular carcinoma,drop,drops required conditions: complete resection with negative margins
+ctgov:NCT07790419:inc:01,NCT07790419,inclusion,Hemoglobin ≥80 g/L;,hemoglobin >= 80.0 g/L,keep,
+ctgov:NCT07790419:inc:02,NCT07790419,inclusion,Platelet count ≥50×109/L;,platelet count >= 50.0,keep,
+ctgov:NCT07791095:inc:00,NCT07791095,inclusion,CT-confirmed naso-orbito-ethmoidal (NOE) fracture (unilateral or bilateral) requiring operative fixation (ORIF).,naso-orbito-ethmoidal fracture requiring operative fixation,keep,
+ctgov:NCT07792512:exc:00,NCT07792512,exclusion,History of drug induced lichenoid lesion.,drug induced lichenoid lesion (at any time in history),keep,
+ctgov:NCT07793461:inc:00,NCT07793461,inclusion,Taking dopamine replacement therapy currently,dopamine replacement therapy (current / ongoing),keep,
+ctgov:NCT07793617:inc:00,NCT07793617,inclusion,Children aged 2 to 13 years admitted for tonsillectomy/tonsillotomy with or without adenoidectomy;,age between 2.0 and 13.0 years,drop,drops a required condition: admitted for tonsillectomy or tonsillotomy
+ctgov:NCT07793617:exc:01,NCT07793617,exclusion,Children with a history of chronic orofacial pain;,chronic orofacial pain (at any time in history),keep,
+ctgov:NCT07793630:exc:00,NCT07793630,exclusion,Recent venous thrombosis or known thrombophilia.,thrombophilia,keep,"drops a disjunct (recent venous thrombosis), which cannot change the label while that condition is undocumented"
+ctgov:NCT07793630:exc:01,NCT07793630,exclusion,Use of anticoagulant therapy.,anticoagulant therapy,keep,
+ctgov:NCT07793630:exc:02,NCT07793630,exclusion,Known allergy to polidocanol.,allergy to polidocanol,keep,
+ctgov:NCT07793643:inc:00,NCT07793643,inclusion,"Age 22-65 years old, presenting to the Emergency Department (ED) who are undergoing antibody testing as part of universal screening",age between 22.0 and 65.0 years,drop,drops required conditions: ED presentation; undergoing antibody testing
+ctgov:NCT07793643:exc:01,NCT07793643,exclusion,Known prior liver biopsy showing cirrhosis,liver biopsy showing cirrhosis (at any time in history),keep,
+ctgov:NCT07793643:exc:02,NCT07793643,exclusion,Known or suspected Hepatocellular carcinoma,hepatocellular carcinoma,keep,

@@ -1,0 +1,145 @@
+{
+  "name": "Size-matched set: openai",
+  "items": "data\\processed\\logic_set_size_matched.json",
+  "predictions": "results\\size_matched\\compositional__openai.json",
+  "model": {
+    "name": "openai",
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "prompt_version": "2",
+    "api_key_env": "OPENAI_API_KEY",
+    "requested_temperature": 0.0,
+    "effective_temperature": 0.0,
+    "dropped_parameters": []
+  },
+  "n_items": 500,
+  "per_depth": [
+    {
+      "depth": 2,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 2.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.2,
+      "prompt_chars_mean": 1283,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.68,
+      "accuracy": 0.72,
+      "wilson_95": [
+        0.6251,
+        0.7986
+      ],
+      "balanced_accuracy": 0.72
+    },
+    {
+      "depth": 3,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 3.0,
+      "undocumented_mean": 2.3,
+      "currency_ambiguous_mean": 6.5,
+      "prompt_chars_mean": 1294,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.65,
+      "accuracy": 0.71,
+      "wilson_95": [
+        0.6146,
+        0.7899
+      ],
+      "balanced_accuracy": 0.71
+    },
+    {
+      "depth": 4,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 4.0,
+      "undocumented_mean": 2.6,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1269,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.67,
+      "accuracy": 0.65,
+      "wilson_95": [
+        0.5525,
+        0.7364
+      ],
+      "balanced_accuracy": 0.65
+    },
+    {
+      "depth": 5,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 5.0,
+      "undocumented_mean": 2.5,
+      "currency_ambiguous_mean": 5.9,
+      "prompt_chars_mean": 1306,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.68,
+      "accuracy": 0.66,
+      "wilson_95": [
+        0.5628,
+        0.7454
+      ],
+      "balanced_accuracy": 0.66
+    },
+    {
+      "depth": 6,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 6.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1301,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.72,
+      "accuracy": 0.7,
+      "wilson_95": [
+        0.6042,
+        0.7811
+      ],
+      "balanced_accuracy": 0.7
+    }
+  ],
+  "item_level_trend_over_depth": {
+    "n": 500,
+    "n_correct": 344,
+    "degenerate": false,
+    "slope_logit_per_unit": -0.042,
+    "se": 0.0683,
+    "odds_ratio_per_unit": 0.9589,
+    "or_ci95": [
+      0.8388,
+      1.0963
+    ],
+    "p_lr_two_sided": 0.5389716553986313,
+    "p_perm_one_sided_decline": 0.2821358932053397,
+    "n_permutations": 20000,
+    "mode": "monte_carlo"
+  },
+  "pearson_depth_vs_log2_leaves": 0.0
+}

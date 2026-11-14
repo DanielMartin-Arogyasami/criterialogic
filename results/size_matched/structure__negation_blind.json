@@ -1,0 +1,139 @@
+{
+  "name": "Size-matched set: negation_blind",
+  "items": "data\\processed\\logic_set_size_matched.json",
+  "predictions": "results\\size_matched\\compositional__negation_blind.json",
+  "model": {
+    "name": "negation_blind",
+    "type": "NegationBlindModel"
+  },
+  "n_items": 500,
+  "per_depth": [
+    {
+      "depth": 2,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 2.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.2,
+      "prompt_chars_mean": 1283,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.11,
+      "accuracy": 0.51,
+      "wilson_95": [
+        0.4135,
+        0.6058
+      ],
+      "balanced_accuracy": 0.51
+    },
+    {
+      "depth": 3,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 3.0,
+      "undocumented_mean": 2.3,
+      "currency_ambiguous_mean": 6.5,
+      "prompt_chars_mean": 1294,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.19,
+      "accuracy": 0.65,
+      "wilson_95": [
+        0.5525,
+        0.7364
+      ],
+      "balanced_accuracy": 0.65
+    },
+    {
+      "depth": 4,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 4.0,
+      "undocumented_mean": 2.6,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1269,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.19,
+      "accuracy": 0.53,
+      "wilson_95": [
+        0.4329,
+        0.6249
+      ],
+      "balanced_accuracy": 0.53
+    },
+    {
+      "depth": 5,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 5.0,
+      "undocumented_mean": 2.5,
+      "currency_ambiguous_mean": 5.9,
+      "prompt_chars_mean": 1306,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.29,
+      "accuracy": 0.59,
+      "wilson_95": [
+        0.492,
+        0.6813
+      ],
+      "balanced_accuracy": 0.59
+    },
+    {
+      "depth": 6,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 6.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1301,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.31,
+      "accuracy": 0.53,
+      "wilson_95": [
+        0.4329,
+        0.6249
+      ],
+      "balanced_accuracy": 0.53
+    }
+  ],
+  "item_level_trend_over_depth": {
+    "n": 500,
+    "n_correct": 281,
+    "degenerate": false,
+    "slope_logit_per_unit": -0.0081,
+    "se": 0.0637,
+    "odds_ratio_per_unit": 0.9919,
+    "or_ci95": [
+      0.8754,
+      1.1239
+    ],
+    "p_lr_two_sided": 0.8985640385428167,
+    "p_perm_one_sided_decline": 0.45642717864106797,
+    "n_permutations": 20000,
+    "mode": "monte_carlo"
+  },
+  "pearson_depth_vs_log2_leaves": 0.0
+}

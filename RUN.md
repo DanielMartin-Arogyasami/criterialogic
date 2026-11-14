@@ -141,3 +141,29 @@ Read `data/README.md` first.
 pytest -q
 ruff check .
 ```
+
+## 8. Revision R1: the reviewer-requested analyses
+
+Everything except the size-matched LLM run is offline and needs no key.
+
+```bash
+# per-depth structure of the released sets + item-level trend   -> results/depth_structure.md
+python scripts/depth_structure.py
+
+# Arm 1 re-scored on the verified criteria, and agreement without   -> results/real_criteria_verified.md
+# the Arm 1 errors outside that subset (reads annotation/arm1_verification.csv)
+python scripts/rescore_real_criteria.py
+
+# the size-matched set: offline check first, then the real run       -> results/size_matched/
+python scripts/run_size_matched.py
+python scripts/run_size_matched.py --model openai      # gpt-4o-mini, prompt v2; needs OPENAI_API_KEY
+
+# the size-matched run in the same per-depth table
+python scripts/depth_structure.py --out results/size_matched/structure_vs_released \
+  --set "Depth sweep" data/processed/logic_set_depth_sweep.json results/compositional__openai.json \
+  --set "Mixed set" data/processed/logic_set_mixed.json results/mixed_v2/compositional__openai.json \
+  --set "Size-matched" data/processed/logic_set_size_matched.json results/size_matched/compositional__openai.json
+```
+
+`make revision` runs the three offline steps; `make run-size-matched` runs the LLM step.
+How to check the Arm 1 verdicts: `annotation/ARM1_VERIFICATION.md`.

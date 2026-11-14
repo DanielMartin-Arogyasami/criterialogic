@@ -1,0 +1,129 @@
+{
+  "name": "Size-matched set: rule_based",
+  "items": "data\\processed\\logic_set_size_matched.json",
+  "predictions": "results\\size_matched\\compositional__rule_based.json",
+  "model": {
+    "name": "rule_based",
+    "type": "RuleBasedModel"
+  },
+  "n_items": 500,
+  "per_depth": [
+    {
+      "depth": 2,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 2.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.2,
+      "prompt_chars_mean": 1283,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.5,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.963,
+        1.0
+      ],
+      "balanced_accuracy": 1.0
+    },
+    {
+      "depth": 3,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 3.0,
+      "undocumented_mean": 2.3,
+      "currency_ambiguous_mean": 6.5,
+      "prompt_chars_mean": 1294,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.5,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.963,
+        1.0
+      ],
+      "balanced_accuracy": 1.0
+    },
+    {
+      "depth": 4,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 4.0,
+      "undocumented_mean": 2.6,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1269,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.5,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.963,
+        1.0
+      ],
+      "balanced_accuracy": 1.0
+    },
+    {
+      "depth": 5,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 2.9,
+      "or_mean": 3.1,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 5.0,
+      "undocumented_mean": 2.5,
+      "currency_ambiguous_mean": 5.9,
+      "prompt_chars_mean": 1306,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.5,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.963,
+        1.0
+      ],
+      "balanced_accuracy": 1.0
+    },
+    {
+      "depth": 6,
+      "n": 100,
+      "leaves_mean": 14.0,
+      "leaves_min": 14,
+      "leaves_max": 14,
+      "and_mean": 3.0,
+      "or_mean": 3.0,
+      "not_mean": 4.0,
+      "canonical_depth_mean": 6.0,
+      "undocumented_mean": 2.4,
+      "currency_ambiguous_mean": 6.3,
+      "prompt_chars_mean": 1301,
+      "gold_met_rate": 0.5,
+      "model_met_rate": 0.5,
+      "accuracy": 1.0,
+      "wilson_95": [
+        0.963,
+        1.0
+      ],
+      "balanced_accuracy": 1.0
+    }
+  ],
+  "item_level_trend_over_depth": {
+    "n": 500,
+    "n_correct": 500,
+    "degenerate": true,
+    "note": "every item has the same outcome, so no trend is estimable"
+  },
+  "pearson_depth_vs_log2_leaves": 0.0
+}

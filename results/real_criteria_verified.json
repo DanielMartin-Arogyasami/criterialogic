@@ -1,0 +1,110 @@
+{
+  "all_items": {
+    "n_items": 926,
+    "n_criteria": 463,
+    "n_trials": 219,
+    "n_errors": 60,
+    "accuracy": 0.9352,
+    "wilson_95": [
+      0.9175,
+      0.9493
+    ],
+    "macro_f1": 0.9351,
+    "balanced_accuracy": 0.9384,
+    "gold_met_rate": 0.5443,
+    "model_met_rate": 0.5032,
+    "ece": 0.0481
+  },
+  "verified_criteria": {
+    "n_items": 674,
+    "n_criteria": 337,
+    "n_trials": 194,
+    "n_errors": 28,
+    "accuracy": 0.9585,
+    "wilson_95": [
+      0.9406,
+      0.9711
+    ],
+    "macro_f1": 0.9581,
+    "balanced_accuracy": 0.9596,
+    "gold_met_rate": 0.5564,
+    "model_met_rate": 0.5415,
+    "ece": 0.0694
+  },
+  "verified_no_currency_convention": {
+    "n_items": 376,
+    "n_criteria": 238,
+    "n_trials": 156,
+    "n_errors": 13,
+    "accuracy": 0.9654,
+    "wilson_95": [
+      0.9418,
+      0.9797
+    ],
+    "macro_f1": 0.9614,
+    "balanced_accuracy": 0.9642,
+    "gold_met_rate": 0.3351,
+    "model_met_rate": 0.3431,
+    "ece": 0.1029
+  },
+  "n_criteria_dropped": 126,
+  "n_criteria_total": 463,
+  "agreement_all_errors": {
+    "n": 179,
+    "overall": {
+      "kappa": 0.3369,
+      "ci_95": [
+        0.2521,
+        0.42
+      ],
+      "percent_agreement": 0.4804
+    },
+    "by_arm": {
+      "compositional": {
+        "n": 119,
+        "kappa": 0.0885,
+        "ci_95": [
+          -0.011,
+          0.1912
+        ]
+      },
+      "real_criteria": {
+        "n": 60,
+        "kappa": 0.5389,
+        "ci_95": [
+          0.403,
+          0.6784
+        ]
+      }
+    }
+  },
+  "agreement_verified_errors": {
+    "n": 132,
+    "overall": {
+      "kappa": 0.1647,
+      "ci_95": [
+        0.0682,
+        0.2664
+      ],
+      "percent_agreement": 0.4015
+    },
+    "by_arm": {
+      "compositional": {
+        "n": 119,
+        "kappa": 0.0885,
+        "ci_95": [
+          -0.011,
+          0.1912
+        ]
+      },
+      "real_criteria": {
+        "n": 13,
+        "kappa": 0.4951,
+        "ci_95": [
+          0.1574,
+          0.8523
+        ]
+      }
+    }
+  }
+}

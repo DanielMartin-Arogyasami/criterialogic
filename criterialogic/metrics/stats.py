@@ -220,6 +220,120 @@ def depth_trend(per_depth: dict[int, tuple[int, int]]) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# Item-level trend
+# --------------------------------------------------------------------------- #
+def _sigmoid(t: float) -> float:
+    if t >= 0:
+        return 1.0 / (1.0 + math.exp(-t))
+    e = math.exp(t)
+    return e / (1.0 + e)
+
+
+def _bernoulli_loglik(y: list[int], p: list[float]) -> float:
+    eps = 1e-15
+    return sum(math.log(max(pi, eps)) if yi else math.log(max(1.0 - pi, eps)) for yi, pi in zip(y, p))
+
+
+def _logistic_fit(x: list[float], y: list[int], max_iter: int = 100, tol: float = 1e-10):
+    """Newton-Raphson fit of ``logit P(y=1) = a + b*x``.
+
+    Returns ``(a, b, var_b, loglik)``, or None when the information matrix is singular
+    (x constant) or the fit runs away (complete separation).
+    """
+    a, b = 0.0, 0.0
+    for _ in range(max_iter):
+        g0 = g1 = h00 = h01 = h11 = 0.0
+        for xi, yi in zip(x, y):
+            p = _sigmoid(a + b * xi)
+            r, w = yi - p, p * (1.0 - p)
+            g0 += r
+            g1 += r * xi
+            h00 += w
+            h01 += w * xi
+            h11 += w * xi * xi
+        det = h00 * h11 - h01 * h01
+        if det <= 1e-12:
+            return None
+        da = (h11 * g0 - h01 * g1) / det
+        db = (h00 * g1 - h01 * g0) / det
+        a, b = a + da, b + db
+        if abs(b) > 50:
+            return None
+        if abs(da) < tol and abs(db) < tol:
+            break
+    h00 = h01 = h11 = 0.0
+    probs = []
+    for xi in x:
+        p = _sigmoid(a + b * xi)
+        probs.append(p)
+        w = p * (1.0 - p)
+        h00 += w
+        h01 += w * xi
+        h11 += w * xi * xi
+    det = h00 * h11 - h01 * h01
+    if det <= 1e-12:
+        return None
+    return a, b, h00 / det, _bernoulli_loglik(y, probs)
+
+
+def item_level_trend(x: list[float], y: list[bool], n_mc: int = 20000, seed: int = 0) -> dict:
+    """Trend of item-level correctness ``y`` over an ordered variable ``x`` (e.g. depth).
+
+    Replaces the rank correlation over per-depth summaries for the headline trend
+    test. With four or five depth levels that test sees only four or five numbers: its
+    smallest attainable p is 1/24 or 1/120 however many items stand behind each level,
+    and it cannot weigh a level of 60 items differently from one of 600. Here every
+    item counts.
+
+    Two quantities are reported:
+
+    * a logistic regression of correctness on ``x`` — the change in log-odds of a
+      correct answer per unit of ``x``, as an odds ratio with a Wald 95% interval, and
+      a likelihood-ratio p (two-sided, one degree of freedom);
+    * a Monte Carlo permutation p for a *decline*, permuting outcomes across items
+      against the statistic ``sum(x * y)`` — the permutation form of the
+      Cochran-Armitage trend test, which needs no distributional assumption.
+    """
+    n = len(x)
+    yi = [1 if v else 0 for v in y]
+    k = sum(yi)
+    out: dict = {"n": n, "n_correct": k}
+    if n == 0 or k in (0, n):
+        out.update({"degenerate": True,
+                    "note": "every item has the same outcome, so no trend is estimable"})
+        return out
+    fit = _logistic_fit(x, yi)
+    if fit is None:
+        out.update({"degenerate": True,
+                    "note": "the logistic fit did not converge (constant x or separation)"})
+    else:
+        a, b, var_b, ll_full = fit
+        se = math.sqrt(var_b)
+        p0 = k / n
+        ll_null = _bernoulli_loglik(yi, [p0] * n)
+        lr = max(0.0, 2.0 * (ll_full - ll_null))
+        out.update({
+            "degenerate": False,
+            "slope_logit_per_unit": round(b, 4),
+            "se": round(se, 4),
+            "odds_ratio_per_unit": round(math.exp(b), 4),
+            "or_ci95": (round(math.exp(b - Z95 * se), 4), round(math.exp(b + Z95 * se), 4)),
+            "p_lr_two_sided": math.erfc(math.sqrt(lr / 2.0)),
+        })
+    observed = sum(xv * yv for xv, yv in zip(x, yi))
+    rng = random.Random(seed)
+    pool = list(yi)
+    hits = 0
+    for _ in range(n_mc):
+        rng.shuffle(pool)
+        if sum(xv * yv for xv, yv in zip(x, pool)) <= observed + 1e-12:
+            hits += 1
+    out.update({"p_perm_one_sided_decline": (hits + 1) / (n_mc + 1),
+                "n_permutations": n_mc, "mode": "monte_carlo"})
+    return out
+
+
+# --------------------------------------------------------------------------- #
 # Calibration and abstention
 # --------------------------------------------------------------------------- #
 def expected_calibration_error(rows: list[tuple[float, bool]], n_bins: int = 10) -> float:

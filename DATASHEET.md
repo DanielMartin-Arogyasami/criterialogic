@@ -24,11 +24,18 @@ licence-restricted component.
   the section they came from. Precision over recall: a sentence that cannot be mapped
   faithfully is skipped and counted, never coerced. Exact counts, mapping rate, polarity
   split and depth histogram: `python scripts/build_real_criteria.py --stats`.
+  **Not every mapped form says what its sentence says.** A criterion-by-criterion check
+  (`annotation/arm1_verification.csv`, rule in `annotation/ARM1_VERIFICATION.md`) marks
+  126 of 463 forms as dropping a required condition or changing the meaning, some by
+  inverting it. Report Arm 1 on the kept criteria only (`scripts/rescore_real_criteria.py`).
 - **Arm 2 — compositional stress test.** Nested AND/OR/NOT expressions at controlled
   depths, composed from atoms extracted from the same snapshot, paired with seeded
   synthetic patient records. The atoms are real trial predicates carrying their source
   NCT IDs; **the nesting and the patients are synthetic by construction**, and every item
-  records `metadata["composition"] = "synthetic"`.
+  records `metadata["composition"] = "synthetic"`. In the released depth sets, expression
+  size grows with depth (about 5 leaves at depth 2, about 150 at depth 6), so depth and size
+  are confounded there; the **size-matched set** (`scripts/run_size_matched.py`) holds leaves,
+  groups, NOT nodes and the gold base rate fixed while depth varies.
 
 The committed snapshot: 300 studies, frame recorded field by field in
 `data/ctgov_cache/MANIFEST.json`, fetched 2026-08-29, atoms from trials first posted
