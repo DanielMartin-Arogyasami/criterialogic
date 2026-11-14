@@ -1,6 +1,6 @@
 # Arm 1 verification: does the mapped form say what the criterion says?
 
-**Status: first pass, AI-assisted. Not yet confirmed by the author.**
+**Status: first pass AI-assisted; every verdict confirmed by the author on 2026-11-14.**
 When the check below is done, replace this line with "Confirmed by the author on DATE".
 
 ## Why this exists
