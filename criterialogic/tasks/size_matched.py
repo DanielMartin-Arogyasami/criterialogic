@@ -24,6 +24,12 @@ every depth.
 Atoms come from the same pool and patients from the same fact sampler as the released
 sets, so the only systematic difference between depth levels is the shape of the tree.
 Deterministic in (seed, depths, leaves, groups, nots, n_per_depth, pool contents).
+
+The companion design, :func:`generate_size_sweep_items`, does the converse: depth is
+held at 3 while the number of leaves doubles from 7 to 112, with groups and NOT nodes
+scaled in the same ratio as the size-matched set (6 groups and 4 NOTs per 14 leaves), so
+the 14-leaf level reproduces the size-matched set's depth-3 configuration. Together the
+two sets vary depth at fixed size and size at fixed depth.
 """
 from __future__ import annotations
 
@@ -123,6 +129,59 @@ def build_matched_expression(
     return build(0)
 
 
+def _fill_level(
+    *,
+    depth: int,
+    n_items: int,
+    n_leaves: int,
+    n_groups: int,
+    n_nots: int,
+    pool: AtomPool,
+    rng: random.Random,
+    id_prefix: str,
+    record_prefix: str,
+    metadata: dict,
+    max_attempts_per_item: int,
+) -> list[Item]:
+    """Draw items with fixed structure until half are met and half are not."""
+    quota = {True: n_items // 2, False: n_items - n_items // 2}
+    accepted: list[Item] = []
+    attempts = 0
+    while quota[True] or quota[False]:
+        attempts += 1
+        if attempts > max_attempts_per_item * n_items:
+            raise RuntimeError(f"could not fill {id_prefix}: quota left {quota}")
+        expr = build_matched_expression(depth, pool.atoms, rng, n_leaves, n_groups, n_nots)
+        if expression_depth(expr) != depth or expression_depth(canonicalize(expr)) != depth:
+            continue  # cannot happen by construction; kept as a guard
+        facts: dict[str, Fact] = {}
+        for atom in _leaves(expr):
+            f = _sample_fact_for_atom(atom, rng)
+            if f is not None:
+                facts[atom.entity.text] = f
+        i = len(accepted)
+        meta = dict(metadata)
+        nct_ids = pool.nct_ids_for(_leaves(expr))
+        if nct_ids:
+            meta["source_nct_ids"] = ",".join(nct_ids)
+        form = LogicalForm(
+            criterion_id=f"{pool.source}:{id_prefix}:{i:03d}",
+            source=pool.logical_form_source,
+            polarity=Polarity.INCLUSION,
+            text="(synthetic composition over real extracted atoms)",
+            expression=expr,
+            metadata=meta,
+        )
+        patient = PatientFacts(record_id=f"{record_prefix}-{i:03d}", facts=facts)
+        gold = is_met(form, patient)
+        if not quota[gold]:
+            continue
+        quota[gold] -= 1
+        accepted.append(Item(item_id=f"{id_prefix}:{i:03d}", task=TASK_NAME,
+                             criterion=form, facts=patient, gold=gold, depth=depth))
+    return accepted
+
+
 def generate_size_matched_items(
     depths: Sequence[int] = DEFAULT_DEPTHS,
     n_per_depth: int = 100,
@@ -141,52 +200,63 @@ def generate_size_matched_items(
     rng = random.Random(seed)
     items: list[Item] = []
     for depth in depths:
-        quota = {True: n_per_depth // 2, False: n_per_depth - n_per_depth // 2}
-        accepted: list[Item] = []
-        attempts = 0
-        while quota[True] or quota[False]:
-            attempts += 1
-            if attempts > max_attempts_per_item * n_per_depth:
-                raise RuntimeError(f"could not fill depth {depth}: quota left {quota}")
-            expr = build_matched_expression(depth, pool.atoms, rng, n_leaves, n_groups, n_nots)
-            if expression_depth(expr) != depth or expression_depth(canonicalize(expr)) != depth:
-                continue  # cannot happen by construction; kept as a guard
-            facts: dict[str, Fact] = {}
-            for atom in _leaves(expr):
-                f = _sample_fact_for_atom(atom, rng)
-                if f is not None:
-                    facts[atom.entity.text] = f
-            i = len(accepted)
-            metadata = {
-                "atom_source": pool.source,
-                "atom_pool_sha256": pool.sha256,
-                "composition": "synthetic",
-                "generator": "size_matched",
-                "generator_seed": str(seed),
-                "generator_depths": ",".join(str(d) for d in depths),
-                "n_leaves": str(n_leaves),
-                "n_groups": str(n_groups),
-                "n_nots": str(n_nots),
-            }
-            nct_ids = pool.nct_ids_for(_leaves(expr))
-            if nct_ids:
-                metadata["source_nct_ids"] = ",".join(nct_ids)
-            form = LogicalForm(
-                criterion_id=f"{pool.source}:match:d{depth}:{i:03d}",
-                source=pool.logical_form_source,
-                polarity=Polarity.INCLUSION,
-                text="(synthetic composition over real extracted atoms)",
-                expression=expr,
-                metadata=metadata,
-            )
-            patient = PatientFacts(record_id=f"synthM-{depth}-{i:03d}", facts=facts)
-            gold = is_met(form, patient)
-            if not quota[gold]:
-                continue
-            quota[gold] -= 1
-            accepted.append(Item(item_id=f"match:d{depth}:{i:03d}", task=TASK_NAME,
-                                 criterion=form, facts=patient, gold=gold, depth=depth))
-        items.extend(accepted)
+        metadata = {
+            "atom_source": pool.source,
+            "atom_pool_sha256": pool.sha256,
+            "composition": "synthetic",
+            "generator": "size_matched",
+            "generator_seed": str(seed),
+            "generator_depths": ",".join(str(d) for d in depths),
+            "n_leaves": str(n_leaves),
+            "n_groups": str(n_groups),
+            "n_nots": str(n_nots),
+        }
+        items.extend(_fill_level(depth=depth, n_items=n_per_depth, n_leaves=n_leaves,
+                                 n_groups=n_groups, n_nots=n_nots, pool=pool, rng=rng,
+                                 id_prefix=f"match:d{depth}", record_prefix=f"synthM-{depth}",
+                                 metadata=metadata, max_attempts_per_item=max_attempts_per_item))
+    return items
+
+
+#: Sizes for the fixed-depth sweep: (leaves, groups, NOT nodes). Leaves double from 7 to
+#: 112; groups and NOTs keep the size-matched set's ratio (6 and 4 per 14 leaves), so the
+#: second level is exactly the size-matched configuration.
+DEFAULT_SWEEP_DEPTH = 3
+DEFAULT_SWEEP_SIZES = ((7, 3, 2), (14, 6, 4), (28, 12, 8), (56, 24, 16), (112, 48, 32))
+
+
+def generate_size_sweep_items(
+    sizes: Sequence[tuple[int, int, int]] = DEFAULT_SWEEP_SIZES,
+    depth: int = DEFAULT_SWEEP_DEPTH,
+    n_per_size: int = 100,
+    seed: int = 29,
+    atom_source: str = CTGOV,
+    pool_path: Path | str = DEFAULT_POOL_PATH,
+    pool: AtomPool | None = None,
+    max_attempts_per_item: int = 200,
+) -> list[Item]:
+    """Build a set in which only size varies: depth fixed, gold half met at every size."""
+    for n_leaves, n_groups, n_nots in sizes:
+        _check_params(n_leaves, n_groups, n_nots, [depth])
+    pool = pool if pool is not None else load_pool(atom_source, pool_path)
+    rng = random.Random(seed)
+    items: list[Item] = []
+    for n_leaves, n_groups, n_nots in sizes:
+        metadata = {
+            "atom_source": pool.source,
+            "atom_pool_sha256": pool.sha256,
+            "composition": "synthetic",
+            "generator": "size_sweep",
+            "generator_seed": str(seed),
+            "generator_sizes": ";".join(f"{a},{b},{c}" for a, b, c in sizes),
+            "n_leaves": str(n_leaves),
+            "n_groups": str(n_groups),
+            "n_nots": str(n_nots),
+        }
+        items.extend(_fill_level(depth=depth, n_items=n_per_size, n_leaves=n_leaves,
+                                 n_groups=n_groups, n_nots=n_nots, pool=pool, rng=rng,
+                                 id_prefix=f"size:L{n_leaves:03d}", record_prefix=f"synthS-{n_leaves}",
+                                 metadata=metadata, max_attempts_per_item=max_attempts_per_item))
     return items
 
 

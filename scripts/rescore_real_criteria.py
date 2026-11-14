@@ -40,7 +40,8 @@ VERDICTS = ("keep", "drop")
 
 def load_verdicts(path: str) -> dict[str, str]:
     out: dict[str, str] = {}
-    with open(path, newline="", encoding="utf-8") as fh:
+    # utf-8-sig: Excel's "CSV UTF-8" format starts the file with a byte-order mark.
+    with open(path, newline="", encoding="utf-8-sig") as fh:
         for row in csv.DictReader(fh):
             v = (row.get("verdict") or "").strip().lower()
             if v not in VERDICTS:

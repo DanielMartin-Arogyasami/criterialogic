@@ -144,7 +144,7 @@ ruff check .
 
 ## 8. Revision R1: the reviewer-requested analyses
 
-Everything except the size-matched LLM run is offline and needs no key.
+Everything except the two LLM runs (size-matched, size sweep) is offline and needs no key.
 
 ```bash
 # per-depth structure of the released sets + item-level trend   -> results/depth_structure.md
@@ -163,7 +163,11 @@ python scripts/depth_structure.py --out results/size_matched/structure_vs_releas
   --set "Depth sweep" data/processed/logic_set_depth_sweep.json results/compositional__openai.json \
   --set "Mixed set" data/processed/logic_set_mixed.json results/mixed_v2/compositional__openai.json \
   --set "Size-matched" data/processed/logic_set_size_matched.json results/size_matched/compositional__openai.json
+
+# the converse: size varies at fixed depth 3 (7 to 112 leaves)       -> results/size_sweep/
+python scripts/run_size_sweep.py
+python scripts/run_size_sweep.py --model openai        # gpt-4o-mini, prompt v2; needs OPENAI_API_KEY
 ```
 
-`make revision` runs the three offline steps; `make run-size-matched` runs the LLM step.
+`make revision` runs the offline steps; `make run-size-matched` and `make run-size-sweep` run the LLM steps.
 How to check the Arm 1 verdicts: `annotation/ARM1_VERIFICATION.md`.

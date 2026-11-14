@@ -438,6 +438,22 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   so canonical depth equals nominal depth. `scripts/run_size_matched.py --model openai` runs it.
   The 4-5 point Spearman tests are supplemented by an item-level trend
   (`metrics.stats.item_level_trend`).
+- **Result.** The size-matched `gpt-4o-mini` run (`results/size_matched/compositional__openai.json`,
+  500 items) scores 0.72, 0.71, 0.65, 0.66 and 0.70 at depths 2-6: no decline with depth at
+  fixed size. The claim the manuscript can make moves from depth to expression size; the
+  author decides the wording.
+
+## 24. The size claim needs size varied at fixed depth
+
+- **Status:** resolved-in-code; run pending
+- **Location:** `criterialogic/tasks/size_matched.py::generate_size_sweep_items`;
+  `scripts/run_size_sweep.py`
+- **Problem.** Entry 22's result moves the manuscript's claim to expression size, but in the
+  released sets size was only ever varied together with depth.
+- **Resolution in code.** A converse set holds depth at 3 while leaves double from 7 to 112,
+  with groups and NOT nodes in the size-matched ratio and the gold label half met at every
+  size; its 14-leaf level is the size-matched depth-3 configuration drawn again. The trend is
+  reported per doubling of leaves.
 
 ## 23. Inter-annotator agreement falls once Arm 1 label artefacts are removed
 

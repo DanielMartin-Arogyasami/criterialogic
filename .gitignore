@@ -5,6 +5,7 @@ data/processed/*
 !data/processed/logic_set_depth_sweep.json
 !data/processed/logic_set_mixed.json
 !data/processed/logic_set_size_matched.json
+!data/processed/logic_set_size_sweep.json
 # Generated run artifacts are transient; only the curated collection outputs below are tracked.
 results/*
 !results/DISCREPANCIES.md
@@ -27,6 +28,12 @@ results/size_matched/*
 !results/size_matched/structure__*.md
 !results/size_matched/structure_vs_released.json
 !results/size_matched/structure_vs_released.md
+!results/size_sweep/
+results/size_sweep/*
+!results/size_sweep/compositional__*.json
+!results/size_sweep/report__*.md
+!results/size_sweep/structure__*.json
+!results/size_sweep/structure__*.md
 !results/compositional__openai.json
 !results/real_criteria__openai.json
 !results/compositional__rule_based.json
