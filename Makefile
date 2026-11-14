@@ -13,7 +13,7 @@ else
 VENV_PY = .venv/bin/python
 endif
 
-.PHONY: help setup check data run-offline run-llm paper supplement verify verify-paper annotate-export annotate-report finish release clean
+.PHONY: help setup check data run-offline run-llm paper supplement verify verify-paper annotate-export annotate-report finish release clean revision run-size-matched
 
 help:
 	@echo "CriteriaLogic — make targets (in the order you need them)"
@@ -30,6 +30,8 @@ help:
 	@echo "  annotate-export  draw the sample, write the two blind annotator files"
 	@echo "  annotate-report  kappa + adjudication sheet"
 	@echo "  finish           setup -> check -> data -> run-offline -> paper -> verify"
+	@echo "  revision         per-depth structure, Arm 1 re-score, size-matched offline check (no key)"
+	@echo "  run-size-matched size-matched set on gpt-4o-mini, prompt v2   <- needs a key"
 	@echo "  release          pre-release gate: clean tree, tests, verify, no placeholders"
 
 setup:
@@ -93,3 +95,12 @@ release: check verify
 
 clean:
 	rm -rf .venv **/__pycache__ .criterialogic_cache
+
+# --- Revision R1: reviewer-requested analyses ------------------------------------------
+revision:
+	$(PY) scripts/depth_structure.py
+	$(PY) scripts/rescore_real_criteria.py
+	$(PY) scripts/run_size_matched.py
+
+run-size-matched:
+	$(PY) scripts/run_size_matched.py --model $(MODEL)

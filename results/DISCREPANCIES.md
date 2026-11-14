@@ -389,3 +389,61 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
 - **What would resolve it.** Either scoring the depth sets separately, which would restore a
   per-depth abstention claim, or a wording pass. Paste-ready replacements are in
   `paper/DATA.md`, which is not committed.
+
+## 20. Some Arm 1 forms misread their criterion, and the prompt does not say which governs
+
+- **Status:** open — **the author confirms the verdicts and decides the wording**
+- **Location:** `criterialogic/data/real_criteria.py::sentence_to_expression`;
+  `criterialogic/models/llm_api.py::render_criterion`; `annotation/arm1_verification.csv`;
+  `scripts/rescore_real_criteria.py`
+- **Problem.** Raised by both reviewers. The v2 prompt shows the verbatim criterion and the
+  mapped form together, with no instruction on which one governs, and the gold label follows
+  the form. Entry 11 recorded that forms are partial readings; a criterion-by-criterion pass
+  finds that some also change the meaning. "Patients younger than 8 years or older than 15
+  years" maps to `age >= 8`; "not receiving dialysis" maps to `dialysis`; "First-time use of
+  Crisugabalin Capsules" maps to `crisugabalin capsules`. On the first pass 126 of 463
+  criteria are marked `drop`.
+- **Resolution in code.** `scripts/rescore_real_criteria.py` re-scores the released
+  predictions on the kept criteria, and separately without items whose label rests on the
+  currency convention (entry 21). First-pass output: 0.965 [0.942, 0.980] on 376 items,
+  against 0.935 on all 926. The mapper is not changed, so the released set still regenerates.
+
+## 21. "Present, not currently active" is rendered for facts the oracle counts as met
+
+- **Status:** open — mitigated, not removed
+- **Location:** `criterialogic/data/synthetic.py::_sample_fact_for_atom` (sets `current` only
+  for atoms with a `current` qualifier); `criterialogic/models/llm_api.py::render_patient` (v2
+  states currency for every present finding); `criterialogic/oracle.py` (an untimed atom is met
+  by any present fact)
+- **Problem.** Every present fact for an atom with no time qualifier is rendered as "present,
+  not currently active", and the oracle counts it as met. Against a present-tense criterion
+  ("Receiving propofol for induction") a reader can reasonably answer not met. In the released
+  Arm 1 run, 43 of the 60 errors involve such a fact (`metrics.structure.currency_ambiguous_leaves`).
+- **Mitigation.** Arm 1: the headline subset excludes those items. Arm 2: about half of all
+  leaves carry the convention in every released set; the size-matched set holds its count
+  flat across depth (`results/size_matched/structure__*.md`), so it cannot drive a depth effect
+  there. Removing it would change the prompt or the generator and invalidate the released runs.
+
+## 22. Depth and expression size are confounded in the released compositional sets
+
+- **Status:** resolved-in-code — **the author decides the wording**
+- **Location:** `criterialogic/tasks/compositional.py::_build_expr`; versus manuscript §1, §3.4, §7.1-7.2
+- **Problem.** Raised by both reviewers. `_build_expr` builds full trees with two or three
+  operands per group, so leaves average 5.2 at depth 2 and 152.5 at depth 6; the item-level
+  correlation between depth and log2(leaves) is 0.981 (sweep) and 0.973 (mixed set). No
+  analysis of these sets can separate depth from size. At depth 6 the model answers "met" on
+  0.97 of items against a gold met-rate of 0.40 (`results/depth_structure.md`).
+- **Resolution in code.** `criterialogic/tasks/size_matched.py` holds leaves (14), groups (6),
+  NOT nodes (4) and the gold base rate (0.5) fixed while depth runs 2-6, with AND/OR alternating
+  so canonical depth equals nominal depth. `scripts/run_size_matched.py --model openai` runs it.
+  The 4-5 point Spearman tests are supplemented by an item-level trend
+  (`metrics.stats.item_level_trend`).
+
+## 23. Inter-annotator agreement falls once Arm 1 label artefacts are removed
+
+- **Status:** open — **the author decides the wording**
+- **Location:** `scripts/rescore_real_criteria.py`; versus manuscript §5, §7.5, §11
+- **Problem.** 47 of the 60 Arm 1 errors that were annotated fall outside the verified
+  headline subset (entries 20-21), so they are not established model failures. Removing them
+  leaves 132 errors with kappa 0.165 [0.068, 0.266], against 0.337 [0.252, 0.420] on all 179;
+  the compositional arm alone is unchanged at 0.088.

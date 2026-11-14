@@ -99,3 +99,36 @@ def test_per_category_agreement_splits_by_category():
 def test_n_per_group_needed():
     assert S.n_per_group_needed(0.5, 0.5) == -1
     assert S.n_per_group_needed(0.95, 0.60) < S.n_per_group_needed(0.95, 0.867)
+
+
+# --------------------------------------------------------------------------- #
+# Item-level trend (replaces the rank correlation over 4-5 per-depth summaries)
+# --------------------------------------------------------------------------- #
+def test_item_level_trend_matches_closed_form_for_a_binary_predictor():
+    # x = 0: 8 of 10 correct; x = 1: 4 of 10 correct. With one binary predictor the
+    # logistic MLE is closed-form: slope = logit(0.4) - logit(0.8), and the Wald SE is
+    # sqrt(1/8 + 1/2 + 1/4 + 1/6) from the four cell counts.
+    x = [0.0] * 10 + [1.0] * 10
+    y = [True] * 8 + [False] * 2 + [True] * 4 + [False] * 6
+    t = S.item_level_trend(x, y, n_mc=2000)
+    slope = math.log(0.4 / 0.6) - math.log(0.8 / 0.2)
+    assert abs(t["slope_logit_per_unit"] - slope) < 1e-3
+    assert abs(t["odds_ratio_per_unit"] - math.exp(slope)) < 1e-3
+    assert abs(t["se"] - math.sqrt(1 / 8 + 1 / 2 + 1 / 4 + 1 / 6)) < 1e-3
+    assert t["or_ci95"][0] < t["odds_ratio_per_unit"] < t["or_ci95"][1]
+
+
+def test_item_level_trend_detects_a_decline_and_not_a_flat_line():
+    depths = [float(d) for d in range(1, 6) for _ in range(100)]
+    falling = [(i % 100) < int(90 - 15 * (depths[i] - 1)) for i in range(500)]
+    flat = [(i % 100) < 60 for i in range(500)]
+    t_fall = S.item_level_trend(depths, falling, n_mc=2000)
+    t_flat = S.item_level_trend(depths, flat, n_mc=2000)
+    assert t_fall["odds_ratio_per_unit"] < 1 and t_fall["p_perm_one_sided_decline"] < 0.001
+    assert t_fall["p_lr_two_sided"] < 1e-6
+    assert abs(t_flat["slope_logit_per_unit"]) < 1e-6 and t_flat["p_perm_one_sided_decline"] > 0.3
+
+
+def test_item_level_trend_reports_degenerate_outcomes_instead_of_a_number():
+    t = S.item_level_trend([1.0, 2.0, 3.0], [True, True, True], n_mc=10)
+    assert t["degenerate"] is True and "odds_ratio_per_unit" not in t
