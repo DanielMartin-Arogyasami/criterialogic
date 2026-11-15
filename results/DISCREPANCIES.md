@@ -487,3 +487,18 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   reports the size-matched set, the size sweep and the verified Arm 1 subset beside the
   original figures. `make release` now also fails on the stale handle, and no longer passes
   without checking anything when `paper/` is absent.
+
+## 26. Supplement S3 did not contain the revision's tables
+
+- **Status:** resolved-in-code
+- **Location:** `scripts/assemble_supplement.py::assemble_s3`; versus manuscript §14 (S3)
+- **Problem.** The revised manuscript describes S3 as per-depth and per-size tables for every
+  run, the size-matched set and the size sweep included, with their structure tables. The
+  assembler copied only the original runs' tables from `results/paper_data.md` and listed only
+  the original run files. The copied headings carried the submitted manuscript's section
+  numbers, and the summary line pointed to integrity gates that S3 left out.
+- **Resolution in code.** S3 embeds `results/depth_structure.md`, the size-matched and
+  size-sweep structure tables and `results/real_criteria_verified.md`; lists all four item
+  sets and every run file; renumbers the copied headings (mixed set §7.1, renderer check
+  §7.8); and includes the integrity gates. Text the assembler expects but cannot find fails
+  loudly.
