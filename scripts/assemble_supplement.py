@@ -57,14 +57,20 @@ REVISION_TABLES = [
 ]
 
 #: Edits to the copied paper_data.md text. Its headings carry the submitted manuscript's
-#: section numbers, and S3 goes with the revision, where the mixed set moved into §7.1 and
-#: the renderer check to §7.8. Its pointers to "the end of this file" mean the integrity
-#: gates, which S3 places directly after the tables. Text that is not found fails loudly
-#: rather than leaving a stale number or a dangling pointer.
+#: section numbers, and S3 goes with the revision, laid out in the journal's format: the
+#: dataset composition is in Section 3.2, the depth sweep and the mixed set in Section 4.1,
+#: calibration in Section 4.4 and the renderer check in Appendix B.4. Its pointers to "the
+#: end of this file" mean the integrity gates, which S3 places directly after the tables.
+#: Text that is not found fails loudly rather than leaving a stale number or a dangling
+#: pointer.
 PAPER_DATA_EDITS = [
-    ("## Section 7.2 — the mixed-depth set", "## Section 7.1 — the mixed-depth set"),
+    ("## Section 3 — dataset composition", "## Section 3.2 — dataset composition"),
+    ("## Section 7.1 — accuracy versus logical nesting depth",
+     "## Section 4.1 — accuracy versus logical nesting depth"),
+    ("## Section 7.2 — the mixed-depth set", "## Section 4.1 — the mixed-depth set"),
     ("## Section 7.3 — exposure to the renderer defect",
-     "## Section 7.8 — exposure to the renderer defect"),
+     "## Appendix B.4 — exposure to the renderer defect"),
+    ("## Section 7.4 — calibration and abstention", "## Section 4.4 — calibration and abstention"),
     ("Read the integrity gates at the end before quoting",
      "Read the integrity gates below before quoting"),
     ("See the end of this file.", "See the integrity gates below."),
@@ -187,7 +193,7 @@ def assemble_s3() -> str:
             n = sum(1 for _ in csv.DictReader(fh))
         lines.append(f"- `{rel}` ({n} rows)")
     lines.append("")
-    lines.append("- `results/agreement.json` (Cohen's κ and the rest of §7.5)")
+    lines.append("- `results/agreement.json` (Cohen's κ and the rest of Section 4.6)")
     lines.append("")
     return "\n".join(lines)
 

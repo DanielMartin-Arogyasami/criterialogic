@@ -835,21 +835,25 @@ _ACC_RANGE = re.compile(
     r"|\*{0,2}(0\.\d+)\*{0,2}\s+accuracy\s+range")
 
 
-def _section(text: str, number: str) -> str:
-    """Return the body of the section whose heading contains `number`.
+def _section(text: str, *names: str) -> str:
+    """Return the body of the first section whose heading contains one of `names`.
 
     Scoping is not cosmetic. Section 2 cites another system's micro-F1 and another
     corpus's criteria-and-trials counts, so an unscoped search checks the paper's
     background against this paper's artifacts and reports a mismatch that is not one.
-    Falls back to the whole text when no heading matches, so a numbers extract with no
-    headings still verifies.
+    Names are tried in order: the section number of the submitted manuscript (which the
+    numbers extract keeps), then the heading the section has in the journal's layout.
+    Falls back to the whole text only when the text has no headings at all, so a numbers
+    extract with no headings still verifies; a manuscript with none of the headings
+    returns nothing, and the check is skipped rather than run against the wrong section.
     """
-    heading = re.compile(rf"^#{{1,6}}\s.*\b{re.escape(number)}\b.*$", re.M)
-    m = heading.search(text)
-    if not m:
-        return text
-    nxt = re.compile(r"^#{1,6}\s", re.M).search(text, m.end())
-    return text[m.end():nxt.start() if nxt else len(text)]
+    for name in names:
+        heading = re.compile(rf"^#{{1,6}}\s.*\b{re.escape(name)}\b.*$", re.M)
+        m = heading.search(text)
+        if m:
+            nxt = re.compile(r"^#{1,6}\s", re.M).search(text, m.end())
+            return text[m.end():nxt.start() if nxt else len(text)]
+    return "" if re.search(r"^#{1,6}\s", text, re.M) else text
 
 
 def verify(paper: Path, payload: dict) -> list[str]:
@@ -900,7 +904,7 @@ def verify(paper: Path, payload: dict) -> list[str]:
     # Absent is not an error: a numbers extract legitimately omits section 3. Present but
     # wrong is, because these two counts are the ones the whole of Arm 1 is scaled from.
     arm1 = payload["section3"]["arm1"]
-    comp_m = _ARM1_COMPOSITION.search(_section(text, "3.2"))
+    comp_m = _ARM1_COMPOSITION.search(_section(text, "3.2", "Data sources"))
     if comp_m and arm1.get("status") == "computed":
         for name, got, want in (("criteria", int(comp_m.group(1)), arm1["n_criteria"]),
                                 ("trials", int(comp_m.group(2)), arm1["n_trials"])):
@@ -911,14 +915,14 @@ def verify(paper: Path, payload: dict) -> list[str]:
     # micro-F1 == accuracy on this arm (every item carries one label), so the accuracy
     # already recomputed from the per-item predictions is the reference.
     arm1_run = payload["runs"].get("real_criteria::openai")
-    f1_m = _MICRO_F1.search(_section(text, "7.6"))
+    f1_m = _MICRO_F1.search(_section(text, "7.6", "Real-criteria arm"))
     if f1_m and arm1_run:
         got, want = float(f1_m.group(1)), arm1_run["accuracy_3dp"]
         if abs(got - want) > 0.0006:
             problems.append(f"7.6 micro-F1: paper says {got}, artifacts say {want}")
 
     # ---- 7.7 accuracy range across depths -----------------------------------
-    range_m = _ACC_RANGE.search(_section(text, "7.7"))
+    range_m = _ACC_RANGE.search(_section(text, "7.7", "Ablations", "Discussion"))
     if range_m:
         accs = [r["accuracy"] for r in sweep["rows"]]
         want = round(max(accs) - min(accs), 3)

@@ -1,4 +1,4 @@
-"""Two checks behind the size claim, reported in §7.2 and §7.3 of the revised manuscript.
+"""Two checks behind the size claim, reported in Sections 4.2 and 4.3 of the revised manuscript.
 
 1. Power. Could the size-matched design (depths 2-6, 100 items per depth) have found a
    depth effect as large as the original depth sweep's? The design is simulated under the
