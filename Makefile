@@ -107,6 +107,7 @@ revision:
 	$(PY) scripts/rescore_real_criteria.py
 	$(PY) scripts/run_size_matched.py
 	$(PY) scripts/run_size_sweep.py
+	$(PY) scripts/size_checks.py
 
 run-size-matched:
 	$(PY) scripts/run_size_matched.py --model $(MODEL)

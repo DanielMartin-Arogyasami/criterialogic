@@ -52,6 +52,8 @@ REVISION_TABLES = [
      "results/size_sweep/structure__openai.md"),
     ("Real-criteria arm on the verified subsets",
      "results/real_criteria_verified.md"),
+    ("Power of the size-matched design, and a size-only model",
+     "results/size_checks.md"),
 ]
 
 #: Edits to the copied paper_data.md text. Its headings carry the submitted manuscript's
@@ -277,7 +279,7 @@ def main() -> None:
         "`criterialogic/schema/validators.py` |\n"
         "| `S3_results.md` | `results/paper_data.md` tables and integrity gates; "
         "`results/depth_structure.md`, `results/size_matched/structure__openai.md`, "
-        "`results/size_sweep/structure__openai.md`, `results/real_criteria_verified.md`; "
+        "`results/size_sweep/structure__openai.md`, `results/real_criteria_verified.md`, `results/size_checks.md`; "
         "item-set and run JSON paths; label-file row counts |\n"
         "| `annotator1_labels.csv` | `annotation/annotator1_labels.csv` |\n"
         "| `annotator2_labels.csv` | `annotation/annotator2_labels.csv` |\n"

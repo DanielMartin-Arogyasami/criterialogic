@@ -8,8 +8,8 @@ wrong answer flips an eligibility decision. CriteriaLogic generates nested crite
 structure you set, with ground truth computed by a three-valued evaluator rather than
 annotated. Depth and size have to be varied separately, because in a naturally built tree
 they move together: in the original depth sweep the number of conditions grows about
-2.3-fold per level, and depth tracks log₂ of it at r = 0.98. On `gpt-4o-mini`, accuracy did
-not change with depth at a fixed 14 conditions, and fell as the number of conditions doubled
+2.3-fold per level, and depth tracks log₂ of it at r = 0.98. On `gpt-4o-mini`, accuracy
+showed no detectable trend with depth at a fixed 14 conditions, and fell as the number of conditions doubled
 at a fixed depth of 3 (leaderboard below).
 
 Two arms, one snapshot, no gated data:
@@ -29,7 +29,7 @@ independently labelled all 179 errors from the evaluated runs; Cohen's κ = 0.33
 [0.252, 0.420], and 0.165 [0.068, 0.266] without the Arm 1 errors outside the verified
 subset. Both label sets are released. Codebook: `docs/CODEBOOK.md`.
 
-> **Data policy:** public-domain and synthetic only. Everything needed to reproduce both
+> **Data policy:** public registry data and synthetic data only. Everything needed to reproduce both
 > arms is committed. No data-use agreement, no credentials.
 
 > **Reproducing the results?** `RUN.md` has the turnkey commands, and `make finish` runs
@@ -258,4 +258,10 @@ the record of the run.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). License: MIT.
+See [`CITATION.cff`](CITATION.cff). Archived on Zenodo: all versions
+[doi:10.5281/zenodo.24236661](https://doi.org/10.5281/zenodo.24236661); the
+ClinicalTrials.gov snapshot on its own
+[doi:10.5281/zenodo.24236790](https://doi.org/10.5281/zenodo.24236790).
+
+License: MIT for the code. Registry text remains under the ClinicalTrials.gov terms and
+conditions.

@@ -15,7 +15,7 @@ one of the patterns in ``_PATTERNS`` or it is skipped and counted as unmapped. N
 is coerced into an atom to raise the yield. Every atom it emits carries the NCT ID and
 the verbatim sentence it came from, so any downstream item resolves back to source text.
 
-The data is US Government public-domain and needs no DUA, but it is fetched over the
+The data is publicly available under the ClinicalTrials.gov terms and conditions and needs no DUA, but it is fetched over the
 network: the cache is what makes offline and CI runs possible.
 """
 from __future__ import annotations

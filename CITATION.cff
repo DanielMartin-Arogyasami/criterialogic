@@ -7,7 +7,15 @@ authors:
     given-names: "Daniel Martin"
     affiliation: "Independent Researcher"
     orcid: "https://orcid.org/0009-0002-8296-3611"
-version: 0.3.0
+version: 0.3.1
+doi: 10.5281/zenodo.24236661
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24236661
+    description: All versions of the software archive on Zenodo.
+  - type: doi
+    value: 10.5281/zenodo.24236790
+    description: The ClinicalTrials.gov snapshot ctgov-2026-08-29.
 license: MIT
 repository-code: "https://github.com/DanielMartin-Arogyasami/criterialogic"
 abstract: >-

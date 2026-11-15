@@ -502,3 +502,26 @@ a spreadsheet; and it ingests leaderboard submissions from strangers.
   sets and every run file; renumbers the copied headings (mixed set §7.1, renderer check
   §7.8); and includes the integrity gates. Text the assembler expects but cannot find fails
   loudly.
+
+## 27. The datasheet, docstrings and two analyses lagged the revised manuscript
+
+- **Status:** resolved-in-code
+- **Location:** `DATASHEET.md` (S5); docstrings in `criterialogic/schema/logical_form.py` (S1)
+  and `criterialogic/data/loaders/`; `README.md`; `CONTRIBUTING.md`; `scripts/size_checks.py`;
+  versus manuscript §3.2, §7.2-7.3, §9, §10 and §14
+- **Problem.** Found in the final pre-submission review. The datasheet still said that a
+  change in accuracy across depth is attributable to structure, that real criteria are
+  overwhelmingly shallow, that ClinicalTrials.gov records are US Government public domain,
+  and that it covers v0.2; the schema and loader docstrings copied into S1 also said public
+  domain. ClinicalTrials.gov's terms state that the data carry copyright outside the United
+  States and that some may be subject to third-party copyright. Two figures in the
+  manuscript, the power of the size-matched design against the original depth effect
+  (§7.2) and a size-only model's predictions at the size sweep's sizes (§7.3), had been
+  computed outside the released code.
+- **Resolution in code.** The datasheet, docstrings, README and CONTRIBUTING describe the
+  registry text as publicly available and used under the ClinicalTrials.gov terms; the
+  datasheet credits neither depth nor size alone and covers release 0.3.1.
+  `scripts/size_checks.py` computes both figures from the released predictions
+  (`results/size_checks.md`: 1,000 of 1,000 simulated replicates detect the original
+  effect; size-only predictions 0.716, 0.650, 0.578, 0.503 and 0.427), and S3 includes
+  them. Version 0.3.1; the Zenodo DOIs are in `CITATION.cff` and the README.
