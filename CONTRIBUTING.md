@@ -42,7 +42,7 @@ pytest -q
 ruff check .
 ```
 
-- Public-domain and synthetic data only. Never commit anything under `data/raw/`.
+- Public registry data and synthetic data only. Never commit anything under `data/raw/`.
 - `criterialogic/metrics/stats.py` is standard-library only and must stay that way, so
   the arithmetic behind every reported interval can be executed without installing
   anything.

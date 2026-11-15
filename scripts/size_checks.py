@@ -1,0 +1,153 @@
+"""Two checks behind the size claim, reported in §7.2 and §7.3 of the revised manuscript.
+
+1. Power. Could the size-matched design (depths 2-6, 100 items per depth) have found a
+   depth effect as large as the original depth sweep's? The design is simulated under the
+   sweep's item-level odds ratio per depth level, centred on the size-matched set's pooled
+   accuracy, and the item-level likelihood-ratio test is run on every replicate.
+2. A size-only model. Correctness is regressed on log2(leaves) alone over the 700 items of
+   the two original sets, so the model knows nothing about depth, and its predictions are
+   set beside the observed accuracy at the five sizes of the fixed-depth size sweep.
+
+Reads released item sets and per-item predictions only; no network, no key.
+
+    python scripts/size_checks.py        # -> results/size_checks.md, results/size_checks.json
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import random
+from pathlib import Path
+
+from criterialogic.eval.structure_report import _load
+from criterialogic.metrics.stats import _logistic_fit, _sigmoid, item_level_trend
+from criterialogic.metrics.structure import expression_stats
+
+ROOT = Path(__file__).resolve().parents[1]
+
+ORIGINAL_SETS = [
+    ("Depth sweep", "data/processed/logic_set_depth_sweep.json", "results/compositional__openai.json"),
+    ("Mixed set", "data/processed/logic_set_mixed.json", "results/mixed_v2/compositional__openai.json"),
+]
+SIZE_MATCHED = ("data/processed/logic_set_size_matched.json",
+                "results/size_matched/compositional__openai.json")
+SIZE_SWEEP = ("data/processed/logic_set_size_sweep.json",
+              "results/size_sweep/compositional__openai.json")
+
+
+def _rows(items_path: str, preds_path: str) -> list[dict]:
+    items, _, preds = _load(str(ROOT / items_path), str(ROOT / preds_path))
+    rows = []
+    for it in items:
+        if (preds[it.item_id]["gold"] == "met") != it.gold:
+            raise SystemExit(f"Gold label mismatch for {it.item_id}: item set and result file disagree.")
+        rows.append({"depth": it.depth,
+                     "leaves": expression_stats(it.criterion.expression)["leaves"],
+                     "correct": bool(preds[it.item_id]["correct"])})
+    return rows
+
+
+def power_check(n_rep: int, seed: int, alpha: float = 0.05) -> dict:
+    sweep = _rows(*ORIGINAL_SETS[0][1:])
+    fit = _logistic_fit([r["depth"] for r in sweep], [int(r["correct"]) for r in sweep])
+    if fit is None:
+        raise SystemExit("The logistic fit on the original depth sweep did not converge.")
+    beta = fit[1]
+    matched = _rows(*SIZE_MATCHED)
+    depths = sorted({r["depth"] for r in matched})
+    n_per = {d: sum(1 for r in matched if r["depth"] == d) for d in depths}
+    pooled = sum(r["correct"] for r in matched) / len(matched)
+    centre = sum(depths) / len(depths)
+    a = math.log(pooled / (1.0 - pooled))
+    rng = random.Random(seed)
+    detected = 0
+    for _ in range(n_rep):
+        x: list[float] = []
+        y: list[bool] = []
+        for d in depths:
+            p = _sigmoid(a + beta * (d - centre))
+            for _ in range(n_per[d]):
+                x.append(d)
+                y.append(rng.random() < p)
+        t = item_level_trend(x, y, n_mc=0)
+        if not t.get("degenerate") and t["odds_ratio_per_unit"] < 1 and t["p_lr_two_sided"] < alpha:
+            detected += 1
+    return {"original_or_per_level": round(math.exp(beta), 4), "depths": depths,
+            "items_per_depth": n_per, "pooled_accuracy": round(pooled, 4),
+            "replicates": n_rep, "seed": seed, "alpha": alpha,
+            "criterion": "likelihood-ratio p < alpha with an odds ratio below 1",
+            "detected": detected, "power": round(detected / n_rep, 4)}
+
+
+def size_only_model() -> dict:
+    rows: list[dict] = []
+    for _, items_path, preds_path in ORIGINAL_SETS:
+        rows += _rows(items_path, preds_path)
+    fit = _logistic_fit([math.log2(r["leaves"]) for r in rows], [int(r["correct"]) for r in rows])
+    if fit is None:
+        raise SystemExit("The size-only fit did not converge.")
+    a, b = fit[0], fit[1]
+    sweep = _rows(*SIZE_SWEEP)
+    sizes = sorted({r["leaves"] for r in sweep})
+    table = []
+    for n_leaves in sizes:
+        level = [r for r in sweep if r["leaves"] == n_leaves]
+        table.append({"leaves": n_leaves,
+                      "predicted": round(_sigmoid(a + b * math.log2(n_leaves)), 3),
+                      "observed": round(sum(r["correct"] for r in level) / len(level), 3),
+                      "n": len(level)})
+    return {"n_items": len(rows), "intercept": round(a, 4), "slope_per_doubling": round(b, 4),
+            "odds_ratio_per_doubling": round(math.exp(b), 4), "sizes": table}
+
+
+def to_markdown(power: dict, model: dict) -> str:
+    out = [
+        "# Size checks: power of the size-matched design, and a size-only model",
+        "",
+        "Generated by `scripts/size_checks.py` from released item sets and per-item predictions.",
+        "",
+        "## Power of the size-matched design against the original depth effect",
+        "",
+        f"Original depth sweep, item-level odds ratio per depth level: {power['original_or_per_level']}. "
+        f"Simulated design: depths {power['depths'][0]}-{power['depths'][-1]}, "
+        f"{next(iter(power['items_per_depth'].values()))} items per depth, centred on the size-matched "
+        f"set's pooled accuracy ({power['pooled_accuracy']}); {power['replicates']:,} replicates, "
+        f"seed {power['seed']}.",
+        "",
+        f"Detected ({power['criterion']}, alpha {power['alpha']}): {power['detected']:,} of "
+        f"{power['replicates']:,} replicates (power {power['power']:.3f}).",
+        "",
+        "## A model of correctness on log2(leaves) alone",
+        "",
+        f"Fitted to the {model['n_items']} items of the original depth sweep and mixed set, with no "
+        f"depth term: odds ratio per doubling of leaves {model['odds_ratio_per_doubling']}.",
+        "",
+        "| Leaves | Predicted accuracy | Observed in the size sweep | n |",
+        "|---|---|---|---|",
+    ]
+    out += [f"| {r['leaves']} | {r['predicted']:.3f} | {r['observed']:.3f} | {r['n']} |"
+            for r in model["sizes"]]
+    return "\n".join(out) + "\n"
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("--replicates", type=int, default=1000)
+    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--out", default="results/size_checks")
+    args = ap.parse_args()
+    power = power_check(args.replicates, args.seed)
+    model = size_only_model()
+    out = ROOT / args.out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.with_suffix(".json").write_text(
+        json.dumps({"generated_by": "scripts/size_checks.py", "power": power, "size_only_model": model},
+                   indent=2) + "\n", encoding="utf-8", newline="\n")
+    out.with_suffix(".md").write_text(to_markdown(power, model), encoding="utf-8", newline="\n")
+    print(f"[wrote] {out.with_suffix('.md')}  power {power['detected']}/{power['replicates']}; "
+          f"size-only predictions {[r['predicted'] for r in model['sizes']]}")
+
+
+if __name__ == "__main__":
+    main()

@@ -20,6 +20,8 @@ results/*
 !results/depth_structure.md
 !results/real_criteria_verified.json
 !results/real_criteria_verified.md
+!results/size_checks.json
+!results/size_checks.md
 !results/size_matched/
 results/size_matched/*
 !results/size_matched/compositional__*.json

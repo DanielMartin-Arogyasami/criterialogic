@@ -20,7 +20,7 @@ Design goals
 - **Lossless to source:** criterion-level inclusion/exclusion polarity is kept as a
   label and is *not* folded into the logical expression (see TRADEOFFS in the paper).
 
-Public-domain and synthetic data only. Intrinsic structural validation lives here on
+Public registry data and synthetic data only. Intrinsic structural validation lives here on
 the models; corpus-level checks (cross-criterion, leakage) belong in `validators.py`.
 """
 from __future__ import annotations
@@ -39,8 +39,8 @@ class Polarity(str, Enum):
     INCLUSION = "inclusion"
     EXCLUSION = "exclusion"
 class Source(str, Enum):
-    """Provenance. Every released record comes from the public-domain snapshot or is
-    synthetic; there is no licence-restricted component in v0.2.
+    """Provenance. Every released record comes from the ClinicalTrials.gov snapshot or is
+    synthetic; there is no licence-restricted component.
 
     ``CTGOV`` marks a criterion or atom taken from verbatim ClinicalTrials.gov
     eligibility text. ``SYNTHETIC_EXAMPLE`` marks hand-written illustrations used in

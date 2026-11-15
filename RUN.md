@@ -167,6 +167,10 @@ python scripts/depth_structure.py --out results/size_matched/structure_vs_releas
 # the converse: size varies at fixed depth 3 (7 to 112 leaves)       -> results/size_sweep/
 python scripts/run_size_sweep.py
 python scripts/run_size_sweep.py --model openai        # gpt-4o-mini, prompt v2; needs OPENAI_API_KEY
+
+# two checks on the size claim: power of the size-matched design against the original
+# depth effect, and a size-only model's predictions at the sweep's sizes  -> results/size_checks.md
+python scripts/size_checks.py
 ```
 
 `make revision` runs the offline steps; `make run-size-matched` and `make run-size-sweep` run the LLM steps.

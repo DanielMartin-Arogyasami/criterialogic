@@ -1,13 +1,14 @@
 # Data
 
 `data/raw/` and `data/processed/` are **gitignored**. The ClinicalTrials.gov snapshot
-below *is* committed: it is small, US Government public domain, and checking it in is
-what makes both benchmark arms reproducible with no network access and no credentials.
+below *is* committed: it is small, publicly available under the ClinicalTrials.gov terms
+and conditions, and checking it in means every reported figure can be recomputed with no
+network access and no credentials.
 
-There is no licence-restricted component in v0.2. Nothing here needs a data-use
+There is no licence-restricted component. Nothing here needs a data-use
 agreement.
 
-## ClinicalTrials.gov snapshot (public domain, US Government)
+## ClinicalTrials.gov snapshot (publicly available; ClinicalTrials.gov terms and conditions)
 
 - `ctgov_cache/` — raw API v2 records, one JSON per NCT ID, plus `MANIFEST.json`
   recording the exact query, the sampling frame field by field, the fetch timestamp, and

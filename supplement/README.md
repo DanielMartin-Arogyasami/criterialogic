@@ -5,7 +5,7 @@ Assembled by `python scripts/assemble_supplement.py` from files already in the r
 | File | Source |
 |---|---|
 | `S1_schema.md` | `criterialogic/schema/logical_form.py`, `criterialogic/schema/validators.py` |
-| `S3_results.md` | `results/paper_data.md` tables and integrity gates; `results/depth_structure.md`, `results/size_matched/structure__openai.md`, `results/size_sweep/structure__openai.md`, `results/real_criteria_verified.md`; item-set and run JSON paths; label-file row counts |
+| `S3_results.md` | `results/paper_data.md` tables and integrity gates; `results/depth_structure.md`, `results/size_matched/structure__openai.md`, `results/size_sweep/structure__openai.md`, `results/real_criteria_verified.md`, `results/size_checks.md`; item-set and run JSON paths; label-file row counts |
 | `annotator1_labels.csv` | `annotation/annotator1_labels.csv` |
 | `annotator2_labels.csv` | `annotation/annotator2_labels.csv` |
 | `S4_prompts.md` | `criterialogic/models/llm_api.py` (`_SYSTEM_V1`, `_SYSTEM_V2`, `render_patient`) |

@@ -1,6 +1,6 @@
 # Datasheet for CriteriaLogic
 
-Following *Datasheets for Datasets* (Gebru et al., 2021). Covers the v0.2 release.
+Following *Datasheets for Datasets* (Gebru et al., 2021). Covers release 0.3.1.
 
 ## Motivation
 
@@ -8,9 +8,10 @@ CriteriaLogic was created to measure whether a system resolves the **logical str
 of clinical-trial eligibility criteria — nested AND/OR, negation and criterion-level
 polarity, temporal windows, numeric thresholds — as opposed to recognising the right
 entities or judging topical relevance. Its distinguishing property is that logical
-nesting depth is an independent variable with programmatically-derived ground truth, so
-a change in accuracy across depth is attributable to structure and not to vocabulary,
-topic, or prompt design.
+structure is set by design, with programmatically derived ground truth, and that nesting
+depth and expression size are varied separately (the size-matched set and the fixed-depth
+size sweep): in a naturally built tree the two move together, so neither can be credited
+with a change in accuracy unless the other is held fixed.
 
 Created by the author as independent research. No funding. No institutional data access.
 
@@ -50,8 +51,12 @@ measures reasoning over a stated record, not evidence-finding in a real clinical
 
 ## Collection
 
-ClinicalTrials.gov records are US Government public domain, retrieved from the public v2
-REST API at no more than two requests per second. No human subjects are recruited and no
+ClinicalTrials.gov records are publicly available and are redistributed here under the
+ClinicalTrials.gov terms and conditions, which ask that the source be attributed, the
+date the data were processed be shown and any changes be described; the data carry
+copyright outside the United States, and some may be subject to third-party copyright.
+They were retrieved from the public v2 REST API on 2026-08-29 at no more than two
+requests per second, and are stored as returned, re-serialised with sorted keys. No human subjects are recruited and no
 new patient data is collected. Synthetic patient facts are generated deterministically
 from a seed, sampled near constraint boundaries so that both sides of each threshold
 occur.
@@ -74,14 +79,17 @@ design premise is that aggregates hide construction-specific failures.
 
 Known unsuitable uses: estimating real-world screening performance (synthetic patients);
 claiming coverage of complex criteria (extraction is conservative by design); treating
-depth-5 or depth-6 accuracy as a frequency-weighted estimate of anything (real criteria
-are overwhelmingly shallow — see the depth histogram).
+depth-5 or depth-6 accuracy, or a 112-condition item, as a frequency-weighted estimate of
+anything (generated nesting is not a sample of real criteria, and the criteria this
+mapper recovers are shallow — see the depth histogram).
 
 ## Distribution
 
-MIT licence, on GitHub, with the snapshot and atom pool committed. The snapshot is
-deposited with the release under its own identifier so a specific version of the data can
-be cited independently of the code.
+Code under the MIT licence, on GitHub, with the snapshot and atom pool committed; the
+registry text they contain remains under the ClinicalTrials.gov terms and conditions.
+Archived on Zenodo (all versions: doi:10.5281/zenodo.24236661). The snapshot is also
+deposited on its own (doi:10.5281/zenodo.24236790), so the data can be cited
+independently of the code.
 
 ## Maintenance
 
