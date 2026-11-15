@@ -89,9 +89,13 @@ finish: check data run-offline paper verify
 	@echo "Remaining, in order:  make run-llm   ->   make paper verify   ->   annotation"
 
 # Pre-release gate. Fails loudly rather than letting a placeholder reach a preprint.
+# Also fails on the stale handle `darogyasami`, which the placeholder was once filled with.
+# paper/ is gitignored and may be absent; $(wildcard) keeps grep from erroring on it, since
+# an error exit would make the negated check pass without looking at anything.
 release: check verify
-	@! grep -rn 'GITHUB-HANDLE\|\[email\]' paper/ README.md CITATION.cff pyproject.toml \
-	  || (echo 'Unfilled placeholder above.' && exit 1)
+	@! grep -rnI --exclude-dir=__pycache__ 'GITHUB-HANDLE\|\[email\]\|darogyasami' \
+	  $(wildcard paper/) README.md CITATION.cff pyproject.toml criterialogic/ \
+	  || (echo 'Unfilled or stale placeholder above.' && exit 1)
 	@echo "Release gate passed."
 
 clean:

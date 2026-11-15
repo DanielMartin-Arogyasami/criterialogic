@@ -1,8 +1,9 @@
 """Assemble manuscript supplements S1, S3, S4, S5 from files already in the repo.
 
 Writes ``supplement/``. Does not invent figures: tables are copied from
-``results/paper_data.md``, prompts and the v1/v2 rendering difference are taken
-from ``criterialogic.models.llm_api``, and S5 is ``DATASHEET.md`` verbatim.
+``results/paper_data.md`` and from the results tables added in revision, prompts
+and the v1/v2 rendering difference are taken from ``criterialogic.models.llm_api``,
+and S5 is ``DATASHEET.md`` verbatim. S7 is two repository files and is not copied.
 """
 from __future__ import annotations
 
@@ -17,16 +18,60 @@ RUN_FILES = [
     "results/compositional__openai.json",
     "results/real_criteria__openai.json",
     "results/mixed_v2/compositional__openai.json",
+    "results/size_matched/compositional__openai.json",
+    "results/size_sweep/compositional__openai.json",
     "results/compositional__rule_based.json",
     "results/compositional__negation_blind.json",
     "results/real_criteria__rule_based.json",
     "results/real_criteria__negation_blind.json",
+    "results/size_matched/compositional__rule_based.json",
+    "results/size_matched/compositional__negation_blind.json",
+    "results/size_sweep/compositional__rule_based.json",
+    "results/size_sweep/compositional__negation_blind.json",
+]
+
+ITEM_SET_FILES = [
+    "data/processed/logic_set_depth_sweep.json",
+    "data/processed/logic_set_mixed.json",
+    "data/processed/logic_set_size_matched.json",
+    "data/processed/logic_set_size_sweep.json",
 ]
 
 LABEL_FILES = [
     "annotation/annotator1_labels.csv",
     "annotation/annotator2_labels.csv",
 ]
+
+#: Results tables added in revision, embedded in S3 under these headings.
+REVISION_TABLES = [
+    ("Per-depth structure of the original depth sweep and mixed set",
+     "results/depth_structure.md"),
+    ("Size-matched set: depth varies at 14 leaves",
+     "results/size_matched/structure__openai.md"),
+    ("Fixed-depth size sweep: size varies at depth 3",
+     "results/size_sweep/structure__openai.md"),
+    ("Real-criteria arm on the verified subsets",
+     "results/real_criteria_verified.md"),
+]
+
+#: Edits to the copied paper_data.md text. Its headings carry the submitted manuscript's
+#: section numbers, and S3 goes with the revision, where the mixed set moved into §7.1 and
+#: the renderer check to §7.8. Its pointers to "the end of this file" mean the integrity
+#: gates, which S3 places directly after the tables. Text that is not found fails loudly
+#: rather than leaving a stale number or a dangling pointer.
+PAPER_DATA_EDITS = [
+    ("## Section 7.2 — the mixed-depth set", "## Section 7.1 — the mixed-depth set"),
+    ("## Section 7.3 — exposure to the renderer defect",
+     "## Section 7.8 — exposure to the renderer defect"),
+    ("Read the integrity gates at the end before quoting",
+     "Read the integrity gates below before quoting"),
+    ("See the end of this file.", "See the integrity gates below."),
+]
+
+GATES_NOTE = (
+    "The collector's reporting rules for the original runs. A [BLOCK] names a way a "
+    "figure must not be reported, not a failed computation."
+)
 
 
 def _read(rel: str) -> str:
@@ -43,6 +88,15 @@ def _cut_paper_data_tables(text: str) -> str:
     if stop < 0:
         raise ValueError("results/paper_data.md has no Section 7.5 heading")
     return text[:stop].rstrip() + "\n"
+
+
+def _paper_data_gates(text: str) -> str:
+    """The integrity gates, which the summary line at the top of paper_data.md points to."""
+    start, stop = text.find("## Integrity gates\n"), text.find("## Provenance")
+    if start < 0 or stop < start:
+        raise ValueError("results/paper_data.md has no Integrity gates section before Provenance")
+    heading = "## Integrity gates\n"
+    return heading + "\n" + GATES_NOTE + "\n" + text[start + len(heading):stop].rstrip() + "\n"
 
 
 def assemble_s1() -> str:
@@ -65,25 +119,62 @@ def assemble_s1() -> str:
     )
 
 
+def _edit_paper_data(text: str) -> str:
+    for old, new in PAPER_DATA_EDITS:
+        if old not in text:
+            raise ValueError(f"results/paper_data.md no longer contains {old!r}")
+        text = text.replace(old, new)
+    return text
+
+
+def _demote(text: str) -> str:
+    """Push every Markdown heading down one level, so a copied file nests under S3."""
+    return "\n".join("#" + ln if ln.startswith("#") else ln for ln in text.splitlines()) + "\n"
+
+
+def _embed(title: str, rel: str) -> str:
+    """A results table file under its own S3 heading, with the file's title dropped."""
+    body = _read(rel).splitlines()
+    if body and body[0].startswith("# "):
+        body = body[1:]
+    return f"## {title}\n\nSource: `{rel}`.\n" + _demote("\n".join(body))
+
+
+def _listed(rels: list[str]) -> list[str]:
+    for rel in rels:
+        if not (ROOT / rel).is_file():
+            raise FileNotFoundError(ROOT / rel)
+    return [f"- `{rel}`" for rel in rels]
+
+
 def assemble_s3() -> str:
-    tables = _cut_paper_data_tables(_read("results/paper_data.md"))
+    paper_data = _read("results/paper_data.md")
+    tables = _demote(_edit_paper_data(
+        _cut_paper_data_tables(paper_data) + "\n" + _paper_data_gates(paper_data)
+    ))
     lines = [
-        "# S3. Per-depth and per-item result tables\n",
-        "Per-depth tables below are copied from `results/paper_data.md`, which "
-        "`scripts/collect_paper_data.py` recomputes from persisted per-item "
-        "predictions. Per-item predictions themselves are the JSON run files "
-        "listed at the end; they are not inlined. Human labels cover the 179 "
-        "`gpt-4o-mini` errors only (`annotation/annotator1_labels.csv`, "
-        "`annotation/annotator2_labels.csv`). Diagnostic and legacy runs have "
-        "no human labels. The full agreement record is `results/agreement.json`.\n",
+        "# S3. Per-level and per-item result tables\n",
+        "The per-depth and calibration tables of the original runs, with the collector's "
+        "integrity gates, are copied from `results/paper_data.md`, which "
+        "`scripts/collect_paper_data.py` recomputes from persisted per-item predictions; "
+        "their section numbers follow the revised manuscript. The tables added in "
+        "revision follow them: for each of the four "
+        "compositional item sets, the structure of every level (leaves, AND/OR/NOT counts, "
+        "undocumented leaves, prompt length, gold and model met rates) with its accuracy "
+        "and the item-level trend; and the real-criteria arm on the verified subsets. "
+        "Per-item predictions themselves are the JSON run files listed at the end; they "
+        "are not inlined. Human labels cover the 179 `gpt-4o-mini` errors only "
+        "(`annotation/annotator1_labels.csv`, `annotation/annotator2_labels.csv`). "
+        "Diagnostic and legacy runs have no human labels. The full agreement record is "
+        "`results/agreement.json`.\n",
         tables,
-        "## Per-item prediction files\n",
     ]
-    for rel in RUN_FILES:
-        path = ROOT / rel
-        if not path.is_file():
-            raise FileNotFoundError(path)
-        lines.append(f"- `{rel}`")
+    lines += [_embed(title, rel) for title, rel in REVISION_TABLES]
+    lines.append("## Item sets\n")
+    lines += _listed(ITEM_SET_FILES)
+    lines.append("")
+    lines.append("## Per-item prediction files\n")
+    lines += _listed(RUN_FILES)
     lines.append("")
     lines.append("## Human labels (`gpt-4o-mini` errors only)\n")
     for rel in LABEL_FILES:
@@ -178,12 +269,16 @@ def main() -> None:
         "# Supplementary files (S1, S3–S5)\n\n"
         "Assembled by `python scripts/assemble_supplement.py` from files "
         "already in the repository. S2 is `docs/CODEBOOK.md` and is not "
-        "copied here. S6 is the AI-assistance paragraph in the manuscript.\n\n"
+        "copied here. S6 is the AI-assistance paragraph in the manuscript. S7 is "
+        "`annotation/ARM1_VERIFICATION.md` with `annotation/arm1_verification.csv` "
+        "and is not copied here.\n\n"
         "| File | Source |\n|---|---|\n"
         "| `S1_schema.md` | `criterialogic/schema/logical_form.py`, "
         "`criterialogic/schema/validators.py` |\n"
-        "| `S3_results.md` | `results/paper_data.md` tables; run JSON paths; "
-        "label-file row counts |\n"
+        "| `S3_results.md` | `results/paper_data.md` tables and integrity gates; "
+        "`results/depth_structure.md`, `results/size_matched/structure__openai.md`, "
+        "`results/size_sweep/structure__openai.md`, `results/real_criteria_verified.md`; "
+        "item-set and run JSON paths; label-file row counts |\n"
         "| `annotator1_labels.csv` | `annotation/annotator1_labels.csv` |\n"
         "| `annotator2_labels.csv` | `annotation/annotator2_labels.csv` |\n"
         "| `S4_prompts.md` | `criterialogic/models/llm_api.py` "

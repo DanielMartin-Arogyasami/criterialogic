@@ -34,8 +34,11 @@ licence-restricted component.
   NCT IDs; **the nesting and the patients are synthetic by construction**, and every item
   records `metadata["composition"] = "synthetic"`. In the released depth sets, expression
   size grows with depth (about 5 leaves at depth 2, about 150 at depth 6), so depth and size
-  are confounded there; the **size-matched set** (`scripts/run_size_matched.py`) holds leaves,
-  groups, NOT nodes and the gold base rate fixed while depth varies.
+  are confounded there. Two further sets separate them: the **size-matched set**
+  (`scripts/run_size_matched.py`) holds leaves, groups, NOT nodes and the gold base rate fixed
+  while depth varies, and the **fixed-depth size sweep** (`scripts/run_size_sweep.py`) holds
+  depth at 3 while the number of leaves doubles from 7 to 112, with the gold label half met
+  at every size.
 
 The committed snapshot: 300 studies, frame recorded field by field in
 `data/ctgov_cache/MANIFEST.json`, fetched 2026-08-29, atoms from trials first posted

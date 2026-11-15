@@ -1,7 +1,6 @@
 # Arm 1 verification: does the mapped form say what the criterion says?
 
 **Status: first pass AI-assisted; every verdict confirmed by the author on 2026-11-14.**
-When the check below is done, replace this line with "Confirmed by the author on DATE".
 
 ## Why this exists
 
@@ -15,14 +14,14 @@ it only where the label follows from the criterion as written.
 (`keep` / `drop`) and a short `reason`. `scripts/rescore_real_criteria.py` reads it and
 re-scores the released predictions. No model calls are needed.
 
-## How to check it (about 1-2 hours)
+## How to re-check it
 
 1. Open `arm1_verification.csv` in Excel or Google Sheets.
 2. Read `criterion_text` against `mapped_form`. Where you disagree with `verdict`, change
    it and edit `reason`. Leave rows you agree with alone.
 3. Save as CSV (UTF-8) with the same columns, then run
    `python scripts/rescore_real_criteria.py`.
-4. Update the status line above.
+4. Record who checked and when in the status line above.
 
 ## The rule
 
@@ -58,8 +57,9 @@ counts such a leaf as met; the v2 prompt renders it as "present, not currently a
 and a present-tense criterion ("Receiving propofol for induction") does not settle which
 reading is meant. `metrics.structure.currency_ambiguous_leaves` applies the rule.
 
-## First-pass result (before the author's check)
+## Result
 
-337 criteria kept, 126 dropped. On the released predictions, accuracy is
-0.965 [0.942, 0.980] on the 376 items in the headline subset, against 0.935 on all 926
-items. Regenerate with `python scripts/rescore_real_criteria.py`.
+337 criteria kept, 126 dropped; the author's check changed none of the first-pass
+verdicts. On the released predictions, accuracy is 0.965 [0.942, 0.980] on the 376 items
+in the headline subset, against 0.935 on all 926 items. Regenerate with
+`python scripts/rescore_real_criteria.py`.

@@ -1,25 +1,33 @@
 # CriteriaLogic
 
-**A depth-parameterised stress test for logical reasoning over clinical-trial eligibility criteria.**
+**A controlled test of LLM reasoning over clinical-trial eligibility criteria, with item designs that vary nesting depth and expression size separately.**
 
 Eligibility criteria nest AND/OR, negate, bound values, and scope things in time. A
 screening system can score well on average and still fail on the constructions where a
-wrong answer flips an eligibility decision. CriteriaLogic makes logical nesting depth an
-independent variable you can turn, with ground truth computed by a three-valued
-evaluator rather than annotated, so a drop in accuracy is attributable to structure
-rather than to vocabulary, topic, or prompt design.
+wrong answer flips an eligibility decision. CriteriaLogic generates nested criteria whose
+structure you set, with ground truth computed by a three-valued evaluator rather than
+annotated. Depth and size have to be varied separately, because in a naturally built tree
+they move together: in the original depth sweep the number of conditions grows about
+2.3-fold per level, and depth tracks log₂ of it at r = 0.98. On `gpt-4o-mini`, accuracy did
+not change with depth at a fixed 14 conditions, and fell as the number of conditions doubled
+at a fixed depth of 3 (leaderboard below).
 
 Two arms, one snapshot, no gated data:
 
 - **Arm 1 — real criteria.** Criteria segmented verbatim from a dated ClinicalTrials.gov
-  API v2 snapshot, carrying real inclusion/exclusion polarity.
-- **Arm 2 — compositional stress test.** Nested AND/OR/NOT expressions at controlled
-  depths 1–6, composed from atoms extracted from the same snapshot.
+  API v2 snapshot, carrying real inclusion/exclusion polarity. Every mapped form has been
+  checked against its source sentence (`annotation/arm1_verification.csv`, rule in
+  `annotation/ARM1_VERIFICATION.md`); the headline uses verified forms only.
+- **Arm 2 — compositional stress test.** Nested AND/OR/NOT expressions composed from atoms
+  extracted from the same snapshot, in four item sets: the original depth sweep (depths 2–6)
+  and mixed set (depths 1–4), in which size grows with depth; a size-matched set (depths
+  2–6 at 14 conditions); and a fixed-depth size sweep (depth 3, 7 to 112 conditions).
 - **Cross-cutting:** calibration and abstention (ECE, tie-aware selective accuracy).
 
 Plus a seven-category reasoning-failure taxonomy and a published codebook. Two annotators
 independently labelled all 179 errors from the evaluated runs; Cohen's κ = 0.337
-[0.252, 0.420]. Both label sets are released. Codebook: `docs/CODEBOOK.md`.
+[0.252, 0.420], and 0.165 [0.068, 0.266] without the Arm 1 errors outside the verified
+subset. Both label sets are released. Codebook: `docs/CODEBOOK.md`.
 
 > **Data policy:** public-domain and synthetic only. Everything needed to reproduce both
 > arms is committed. No data-use agreement, no credentials.
@@ -62,10 +70,14 @@ pip install -e ".[llm]"
 export OPENAI_API_KEY=sk-...
 export CRITERIALOGIC_LLM_MODEL=gpt-4o-mini    # or any chat model you can reach
 
-# the depth sweep — this is the arm that carries the finding
+# the two designs that separate depth from size
+python scripts/run_size_matched.py --model openai    # depths 2–6 at 14 conditions
+python scripts/run_size_sweep.py --model openai      # depth 3, 7 to 112 conditions
+
+# the original depth sweep, in which depth and size vary together
 python scripts/run_eval.py --task compositional --depths 2,3,4,5,6 --n-per-depth 60 --model openai
 
-# the realism check
+# the real-criteria arm
 python scripts/run_eval.py --task real_criteria --model openai
 
 # second and third systems — same prompt, OpenAI-compatible hosts
@@ -79,13 +91,37 @@ Responses are cached under `.criterialogic_cache/`, keyed by model, prompt versi
 the parameters the API actually applied, so re-runs are free, interrupted runs resume,
 and a parameter change invalidates the cache rather than silently reusing it.
 
+The offline analyses that go with these runs (per-depth structure, the Arm 1 re-score) are
+in `RUN.md` §8; `make revision` runs them.
+
 ## Leaderboard
 
 Updated by hand. There is no hosted site, no automatic scoring, and no UI — see
 `docs/V2_SCOPE.md`. Point estimates are reported with 95% Wilson intervals because at
 these sample sizes adjacent rows are routinely indistinguishable.
 
-### Arm 2 — compositional accuracy by nesting depth
+### Arm 2 — depth at fixed size (size-matched set)
+
+| System | d2 | d3 | d4 | d5 | d6 | n/depth |
+|---|---|---|---|---|---|---|
+| gpt-4o-mini (prompt v2) | 0.720 [0.625, 0.799] | 0.710 [0.615, 0.790] | 0.650 [0.552, 0.736] | 0.660 [0.563, 0.745] | 0.700 [0.604, 0.781] | 100 |
+
+14 conditions, six groups and four NOT nodes at every depth; half the items met. Odds ratio
+per depth level 0.959 [0.839, 1.096], likelihood-ratio p = 0.54: no detectable effect of
+depth at fixed size. Details: [`results/size_matched/structure__openai.md`](results/size_matched/structure__openai.md).
+
+### Arm 2 — size at fixed depth (size sweep)
+
+| System | 7 | 14 | 28 | 56 | 112 | n/size |
+|---|---|---|---|---|---|---|
+| gpt-4o-mini (prompt v2) | 0.700 [0.604, 0.781] | 0.670 [0.573, 0.754] | 0.580 [0.482, 0.672] | 0.580 [0.482, 0.672] | 0.530 [0.433, 0.625] | 100 |
+
+Depth 3 throughout; the columns are the number of conditions, with groups and NOT nodes in
+the same ratio; half the items met at every size. Odds ratio per doubling 0.833
+[0.732, 0.948], likelihood-ratio p = 0.0052; permutation p for a decline 0.0024. Details:
+[`results/size_sweep/structure__openai.md`](results/size_sweep/structure__openai.md).
+
+### Arm 2 — the original sets, in which depth and size vary together
 
 | System | d2 | d3 | d4 | d5 | d6 | n/depth |
 |---|---|---|---|---|---|---|
@@ -93,21 +129,27 @@ these sample sizes adjacent rows are routinely indistinguishable.
 
 Spearman rho = −0.9, exact one-sided permutation p = 0.0417, pooled 0.603 [0.547, 0.657]. Not monotonic. Full intervals, provenance and caveats: [`results/paper_data.md`](results/paper_data.md).
 
-### Arm 2b — replication on an independently generated set
-
 | System | d1 | d2 | d3 | d4 | n/depth |
 |---|---|---|---|---|---|
 | gpt-4o-mini (prompt v2) | 0.780 [0.689, 0.850] | 0.770 [0.678, 0.842] | 0.650 [0.552, 0.736] | 0.490 [0.394, 0.587] | 100 |
 
 400 items generated separately from the sweep above. Spearman rho = −1.000, exact p = 0.0417
 (the floor for four levels), monotonic, pooled 0.672 [0.625, 0.717]. The two sets agree within
-0.033 at every overlapping depth, so the depth effect is not an artefact of one generation.
+0.033 at every overlapping depth. In both, the number of conditions grows about 2.3-fold per
+depth level (5.2 at depth 2, 152.5 at depth 6), so neither can separate depth from size
+([`results/depth_structure.md`](results/depth_structure.md)); the two designs above do.
 
 ### Arm 1 — real criteria
 
-| System | micro-F1 | macro-F1 | n |
-|---|---|---|---|
-| gpt-4o-mini (prompt v2) | 0.935 | 0.935 | 926 |
+| System | Items | Accuracy | Macro-F1 | n |
+|---|---|---|---|---|
+| gpt-4o-mini (prompt v2) | verified forms, no rendering-convention items | 0.965 [0.942, 0.980] | 0.961 | 376 |
+| gpt-4o-mini (prompt v2) | all items, as first released | 0.935 [0.917, 0.949] | 0.935 | 926 |
+
+126 of the 463 mapped forms omit a required condition or change the meaning of their
+sentence, so the all-items figure is not accuracy on real criteria
+([`results/real_criteria_verified.md`](results/real_criteria_verified.md)). The verified items
+are almost all single predicates: they measure predicate-level resolution, not full criteria.
 
 ## Add your model
 
@@ -196,19 +238,21 @@ no taxonomy distribution is reported; both annotators' raw labels are released i
 
 ## Reproducibility
 
-Pinned dependencies, fixed seeds, and — recorded into every result file — the atom pool
-digest, the schema version, the prompt-renderer version, the failure-labeller version,
-and the inference parameters the API *actually applied* alongside the ones requested.
-The snapshot id `ctgov-2026-08-29` is stamped on the committed manifest; the
-`gpt-4o-mini` run files were written before that field existed (`real_criteria` still
-says `ctgov-unknown`; the compositional run omits it). Per-item predictions are
-persisted so any aggregate can be recomputed without a rerun.
+Pinned dependencies, fixed seeds, and — recorded into every result file — the schema
+version, the prompt-renderer version, the failure-labeller version, the item provenance
+(the atom pool digest for compositional sets, the snapshot id for real criteria), and the
+inference parameters the API *actually applied* alongside the ones requested. The snapshot
+id `ctgov-2026-08-29` is stamped on the committed manifest. The real-criteria items were
+built before that field existed, so `real_criteria` says `ctgov-unknown`; the compositional
+generator does not record a snapshot id, and all four compositional result files carry the
+same atom pool digest. Per-item predictions are persisted so any aggregate can be
+recomputed without a rerun.
 
-Both item sets are regenerable: same seed plus same depth list plus same atom pool gives a
+All four item sets are regenerable: the same seed, design parameters and atom pool give a
 byte-identical set, and the prompts are regenerable too.
 
-**Model responses are not redistributed.** For the current `gpt-4o-mini` / prompt v2 run,
-requested temperature 0.0 was applied (`effective_temperature` 0.0, `dropped_parameters`
+**Model responses are not redistributed.** For every `gpt-4o-mini` / prompt v2 run released
+here, requested temperature 0.0 was applied (`effective_temperature` 0.0, `dropped_parameters`
 empty). The response cache is not redistributed; the released per-item predictions are
 the record of the run.
 
