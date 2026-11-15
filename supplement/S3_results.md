@@ -13,7 +13,7 @@ The per-depth and calibration tables of the original runs, with the collector's 
 
 **4 blocking finding(s), 9 note(s).** See the integrity gates below.
 
-### Section 3 — dataset composition
+### Section 3.2 — dataset composition
 
 - Snapshot `ctgov-2026-08-29`: **300 studies**, fetched 2026-08-29T20:28:40+00:00
 - Sampling frame (verbatim from the manifest): `AREA[Phase]PHASE4 AND AREA[StudyType]INTERVENTIONAL AND AREA[StudyFirstPostDate]RANGE[2026-01-01,MAX]`
@@ -31,7 +31,7 @@ The per-depth and calibration tables of the original runs, with the collector's 
 - Coordinated (compound) criteria: **14**
 - Skipped by reason: {'boilerplate_phrase': 440, 'duplicate_of_earlier_trial': 127, 'length_out_of_range': 598, 'no_faithful_mapping': 2817}
 
-### Section 7.1 — accuracy versus logical nesting depth
+### Section 4.1 — accuracy versus logical nesting depth
 
 | Depth | Seed | Accuracy | 95% Wilson CI | Errors | ECE | Mean confidence | Model |
 |---|---|---|---|---|---|---|---|
@@ -47,7 +47,7 @@ Monotonically non-increasing: **False**.
 CI-separated pairs: [(2, 4), (2, 6), (3, 6), (5, 6)].
 Overlapping pairs and the per-depth n that would separate them: (2, 3) n>=220, (2, 5) n>=138, (3, 4) n>=135, (3, 5) n>=3139, (4, 5) n>=214, (4, 6) n>=171.
 
-### Section 7.1 — the mixed-depth set
+### Section 4.1 — the mixed-depth set
 
 **Current run.** `gpt-4o-mini`, prompt v2, source `results/mixed_v2/compositional__openai.json`.
 
@@ -61,7 +61,7 @@ Overlapping pairs and the per-depth n that would separate them: (2, 3) n>=220, (
 Overall **0.672** [0.625, 0.717] on n=400.
 Spearman rho = -1.0, exact p = 0.0417. CI-separated pairs: [(1, 4), (2, 4)].
 
-### Section 7.8 — exposure to the renderer defect
+### Appendix B.4 — exposure to the renderer defect
 
 Source: persisted per-item flags.
 
@@ -75,7 +75,7 @@ Source: persisted per-item flags.
 | real_criteria::rule_based | 0 | 0 | 926 | 1.000 | [0.996, 1.000] |
 | compositional@mixed_v2 | 0 | 0 | 400 | 0.672 | [0.625, 0.717] |
 
-### Section 7.4 — calibration and abstention
+### Section 4.4 — calibration and abstention
 
 | Set | ECE | Mean conf. | @10% | @30% | @50% | @100% | Usable signal |
 |---|---|---|---|---|---|---|---|
@@ -328,4 +328,4 @@ Fitted to the 700 items of the original depth sweep and mixed set, with no depth
 - `annotation/annotator1_labels.csv` (179 rows)
 - `annotation/annotator2_labels.csv` (179 rows)
 
-- `results/agreement.json` (Cohen's κ and the rest of §7.5)
+- `results/agreement.json` (Cohen's κ and the rest of Section 4.6)

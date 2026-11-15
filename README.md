@@ -194,8 +194,8 @@ integrity gates (ceiling effects, degenerate confidence, rationale clustering, u
 items, depth-trend significance and the n that would resolve each unresolved pair) as part
 of collection, and prints a bracket with the command that fills it wherever an experiment
 has not been run. `--verify` runs in CI against `results/verify_extract.md` and
-checks the five §7.1 depth rows, Spearman rho, the permutation p, the §3.2 composition
-counts, the §7.6 micro-F1 and the §7.7 accuracy range — 36 figures in all. It does not
+checks the five depth rows, Spearman rho, the permutation p, the Arm 1 composition
+counts, the real-criteria micro-F1 and the accuracy range across depths — 36 figures in all. It does not
 cover the agreement statistics; those live in `results/agreement.json`.
 
 ## Error taxonomy and annotation
